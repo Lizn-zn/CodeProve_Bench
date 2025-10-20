@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_16576_codeexercises_25447
+
+
 -- Precondition definitions
 @[reducible, simp]
 def unique_notes_precond (notes : List String) : Prop :=
@@ -33,3 +36,4 @@ theorem unique_notes_postcond_satisfied (notes: List String) (h_precond : unique
   sorry
   -- !benchmark @end proof
 
+end no_16576_codeexercises_25447

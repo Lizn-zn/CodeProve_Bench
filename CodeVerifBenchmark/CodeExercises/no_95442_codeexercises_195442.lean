@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_95442_codeexercises_195442
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sum_even_numbers_precond (numbers_list : List Int) : Prop :=
@@ -45,3 +48,5 @@ theorem sum_even_numbers_postcond_satisfied (numbers_list: List Int) (h_precond 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_95442_codeexercises_195442

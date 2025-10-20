@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_14229_codeexercises_114229
+
+
 -- Precondition definitions
 @[reducible, simp]
 def append_unique_elements_precond (elements : List String) (new_elements : List String) : Prop :=
@@ -53,3 +56,4 @@ theorem append_unique_elements_postcond_satisfied (elements: List String) (new_e
   sorry
   -- !benchmark @end proof
 
+end no_14229_codeexercises_114229

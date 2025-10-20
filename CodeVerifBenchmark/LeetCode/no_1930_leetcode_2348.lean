@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1930_leetcode_2348
+
+
 -- Precondition auxiliary definitions
 /-- A helper function that counts the number of zero-filled subarrays in a list of integers. -/
 def countZeroSubarraysAux : List Int → Nat
@@ -51,3 +54,5 @@ theorem countZeroSubarrays_postcond_satisfied (nums: List Int) (h_precond : coun
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1930_leetcode_2348

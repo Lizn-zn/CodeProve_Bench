@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8083_syn_1_iter_8083
+
+
 -- Precondition auxiliary definitions
 structure MinHeap where
   data : Array Nat
@@ -91,3 +94,5 @@ theorem format_heap_after_insertions_postcond_satisfied (heap: MinHeap) (element
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8083_syn_1_iter_8083

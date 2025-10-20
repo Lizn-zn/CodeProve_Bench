@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_26003_codeexercises_126003
+
+
 -- Precondition definitions
 @[reducible, simp]
 def delete_element_precond (lst : List α) (element : α) : Prop :=
@@ -47,3 +50,5 @@ theorem delete_element_postcond_satisfied [DecidableEq α] (lst: List α) (eleme
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_26003_codeexercises_126003

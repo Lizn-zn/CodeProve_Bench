@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3758_codeexercises_103758
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_true_values_precond (lst : List Bool) : Prop :=
@@ -32,3 +35,5 @@ theorem count_true_values_postcond_satisfied (lst: List Bool) (h_precond : count
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3758_codeexercises_103758

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_840_leetcode_1680
+
+
 -- Precondition auxiliary definitions
 def binLen (n : Nat) : Nat :=
   if n = 0 then 1 else n.log2 + 1
@@ -67,3 +70,5 @@ theorem concatenatedBinary_postcond_satisfied (n: Nat) (h_precond : concatenated
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_840_leetcode_1680

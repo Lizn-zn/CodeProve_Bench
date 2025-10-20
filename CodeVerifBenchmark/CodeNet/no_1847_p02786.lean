@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1847_p02786
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minAttacksToDefeatMonster_precond (H : Nat) : Prop :=
@@ -75,3 +78,4 @@ theorem minAttacksToDefeatMonster_postcond_satisfied (H: Nat) (h_precond : minAt
   sorry
   -- !benchmark @end proof
 
+end no_1847_p02786

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2467_p03479
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxSequenceLength_precond (X : Nat) (Y : Nat) : Prop :=
@@ -55,3 +58,4 @@ theorem maxSequenceLength_postcond_satisfied (X: Nat) (Y: Nat) (h_precond : maxS
   sorry
   -- !benchmark @end proof
 
+end no_2467_p03479

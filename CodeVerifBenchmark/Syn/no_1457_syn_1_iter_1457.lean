@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1457_syn_1_iter_1457
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_consecutive_sequences_precond (arr : Array Char) : Prop :=
@@ -63,3 +66,5 @@ theorem find_consecutive_sequences_postcond_satisfied (arr: Array Char) (h_preco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1457_syn_1_iter_1457

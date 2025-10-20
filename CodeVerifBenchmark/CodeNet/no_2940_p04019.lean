@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2940_p04019
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -59,3 +62,5 @@ theorem canReturnHome_postcond_satisfied (s: String) (h_precond : canReturnHome_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2940_p04019

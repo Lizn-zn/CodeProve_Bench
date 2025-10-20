@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_23681_codeexercises_123681
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -50,3 +53,4 @@ theorem find_faulty_wire_postcond_satisfied (wires_status: List Bool) (h_precond
   sorry
   -- !benchmark @end proof
 
+end no_23681_codeexercises_123681

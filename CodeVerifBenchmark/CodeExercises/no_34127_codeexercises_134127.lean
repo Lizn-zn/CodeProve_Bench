@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_34127_codeexercises_134127
+
+
 -- Precondition definitions
 @[reducible, simp]
 def intersection_precond (range_start : Int) (range_end : Int) (negative_integers : List Int) : Prop :=
@@ -41,3 +44,5 @@ theorem intersection_postcond_satisfied (range_start: Int) (range_end: Int) (neg
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_34127_codeexercises_134127

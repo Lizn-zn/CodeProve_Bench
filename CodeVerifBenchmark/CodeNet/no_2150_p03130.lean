@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2150_p03130
+
+
 -- Precondition definitions
 @[reducible, simp]
 def canVisitAllTowns_precond (roads : List (Nat × Nat)) : Prop :=
@@ -67,3 +70,5 @@ theorem canVisitAllTowns_postcond_satisfied (roads: List (Nat × Nat)) (h_precon
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2150_p03130

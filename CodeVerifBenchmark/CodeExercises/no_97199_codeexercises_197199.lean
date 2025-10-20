@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_97199_codeexercises_197199
+
+
 -- Precondition definitions
 @[reducible, simp]
 def list_modification_precond (nested_set_list : List (List (Set â„¤))) : Prop :=
@@ -43,3 +46,4 @@ theorem list_modification_postcond_satisfied (nested_set_list: List (List (Set â
   sorry
   -- !benchmark @end proof
 
+end no_97199_codeexercises_197199

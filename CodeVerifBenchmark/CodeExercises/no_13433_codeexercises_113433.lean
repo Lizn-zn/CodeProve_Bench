@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_13433_codeexercises_113433
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_total_income_precond (income_list : List Float) : Prop :=
@@ -30,3 +33,4 @@ theorem calculate_total_income_postcond_satisfied (income_list: List Float) (h_p
   sorry
   -- !benchmark @end proof
 
+end no_13433_codeexercises_113433

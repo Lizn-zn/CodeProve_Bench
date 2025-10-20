@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_16895_codeexercises_116895
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_duplicates_precond (t : List α) (n : Nat) : Prop :=
@@ -42,3 +45,4 @@ theorem find_duplicates_postcond_satisfied (t: List α) (n: Nat) (h_precond : fi
   sorry
   -- !benchmark @end proof
 
+end no_16895_codeexercises_116895

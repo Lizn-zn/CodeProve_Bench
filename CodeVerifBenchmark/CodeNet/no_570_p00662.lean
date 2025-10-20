@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_570_p00662
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxContests_precond (nMath : Nat) (nGreedy : Nat) (nGeometry : Nat) (nDP : Nat) (nGraph : Nat) (nOther : Nat) : Prop :=
@@ -103,3 +106,4 @@ theorem maxContests_postcond_satisfied (nMath: Nat) (nGreedy: Nat) (nGeometry: N
   sorry
   -- !benchmark @end proof
 
+end no_570_p00662

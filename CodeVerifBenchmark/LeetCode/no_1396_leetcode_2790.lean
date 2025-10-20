@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1396_leetcode_2790
+
+
 -- Precondition auxiliary definitions
 /-- `sortedUsageLimits` represents the sorted version of the input list `usageLimits`. -/
 def sortedUsageLimits (usageLimits : List Nat) : List Nat :=
@@ -79,3 +82,5 @@ theorem maxIncreasingGroups_postcond_satisfied (usageLimits: List Nat) (h_precon
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1396_leetcode_2790

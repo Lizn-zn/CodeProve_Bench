@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1014_leetcode_2049
+
+
 -- Precondition auxiliary definitions
 def isValidBinaryTree (parents : List Int) : Prop :=
   let n := parents.length
@@ -173,3 +176,5 @@ theorem countHighestScoreNodes_postcond_satisfied (parents: List Int) (h_precond
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1014_leetcode_2049

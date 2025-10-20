@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_376_codeexercises_554
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -63,3 +66,5 @@ theorem calculate_area_of_intersection_postcond_satisfied (circle1: Prod (Prod â
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_376_codeexercises_554

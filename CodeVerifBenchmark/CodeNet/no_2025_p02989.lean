@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2025_p02989
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -68,3 +71,4 @@ theorem countValidThresholds_postcond_satisfied (n: Nat) (difficulties: List Nat
   sorry
   -- !benchmark @end proof
 
+end no_2025_p02989

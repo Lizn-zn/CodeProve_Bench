@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_88049_codeexercises_188049
+
+
 -- Precondition auxiliary definitions
 -- All files in the list must exist and be readable
 axiom file_exists (filename : String) : Prop
@@ -53,3 +56,5 @@ theorem concat_files_postcond_satisfied (file_list: List String) (h_precond : co
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_88049_codeexercises_188049

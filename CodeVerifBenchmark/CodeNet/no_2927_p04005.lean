@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2927_p04005
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minBlockDifference_precond (A : Nat) (B : Nat) (C : Nat) : Prop :=
@@ -57,3 +60,5 @@ theorem minBlockDifference_postcond_satisfied (A: Nat) (B: Nat) (C: Nat) (h_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2927_p04005

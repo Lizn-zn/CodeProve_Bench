@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_57847_codeexercises_157847
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_duplicates_precond (s : String) : Prop :=
@@ -51,3 +54,5 @@ theorem count_duplicates_postcond_satisfied (s: String) (h_precond : count_dupli
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_57847_codeexercises_157847

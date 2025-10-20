@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_50329_codeexercises_150329
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_profit_precond (fertilizer_cost : Nat) (crop_yield : Nat) (market_price : Nat) : Prop :=
@@ -33,3 +36,4 @@ theorem calculate_profit_postcond_satisfied (fertilizer_cost: Nat) (crop_yield: 
   sorry
   -- !benchmark @end proof
 
+end no_50329_codeexercises_150329

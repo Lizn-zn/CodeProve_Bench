@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1022_leetcode_2058
+
+
 -- Precondition auxiliary definitions
 def IsLocalMaxima (lst : List Int) (index : Nat) : Prop :=
   index > 0 ∧ index + 1 < lst.length ∧
@@ -84,3 +87,5 @@ theorem criticalPointsDistances_postcond_satisfied (head: List Int) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1022_leetcode_2058

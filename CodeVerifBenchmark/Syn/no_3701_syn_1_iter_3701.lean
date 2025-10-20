@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3701_syn_1_iter_3701
+
+
 -- Precondition definitions
 @[reducible, simp]
 def first_char_ascii_and_list_precond (chars : List Char) : Prop :=
@@ -34,3 +37,4 @@ theorem first_char_ascii_and_list_postcond_satisfied (chars: List Char) (h_preco
   sorry
   -- !benchmark @end proof
 
+end no_3701_syn_1_iter_3701

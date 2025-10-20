@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8779_syn_1_iter_8779
+
+
 -- Precondition definitions
 @[reducible, simp]
 def generate_ascii_array_precond (c : Char) : Prop :=
@@ -39,3 +42,5 @@ theorem generate_ascii_array_postcond_satisfied (c: Char) (h_precond : generate_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8779_syn_1_iter_8779

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2168_p03149
+
+
 -- Precondition definitions
 @[reducible, simp]
 def canArrangeTo1974_precond (n1 : Nat) (n2 : Nat) (n3 : Nat) (n4 : Nat) : Prop :=
@@ -49,3 +52,5 @@ theorem canArrangeTo1974_postcond_satisfied (n1: Nat) (n2: Nat) (n3: Nat) (n4: N
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2168_p03149

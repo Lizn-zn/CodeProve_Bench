@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4940_syn_1_iter_4940
+
+
 -- Precondition definitions
 @[reducible, simp]
 def to_finset_precond (arr : Array (Nat ⊕ Int)) : Prop :=
@@ -36,3 +39,5 @@ theorem to_finset_postcond_satisfied (arr: Array (Nat ⊕ Int)) (h_precond : to_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4940_syn_1_iter_4940

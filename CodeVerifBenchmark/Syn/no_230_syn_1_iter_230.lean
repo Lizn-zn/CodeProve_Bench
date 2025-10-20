@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_230_syn_1_iter_230
+
+
 -- Precondition definitions
 @[reducible, simp]
 def char_nat_pairs_to_ascii_product_set_precond (pairs : List (Char × Nat)) : Prop :=
@@ -45,3 +48,5 @@ theorem char_nat_pairs_to_ascii_product_set_postcond_satisfied (pairs: List (Cha
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_230_syn_1_iter_230

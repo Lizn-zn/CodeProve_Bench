@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3357_codeexercises_5117
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_infinite_list_precond : Prop :=
@@ -39,3 +42,5 @@ theorem create_infinite_list_postcond_satisfied (h_precond : create_infinite_lis
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3357_codeexercises_5117

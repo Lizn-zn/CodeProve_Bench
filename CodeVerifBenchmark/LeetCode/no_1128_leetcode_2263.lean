@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1128_leetcode_2263
+
+
 -- Precondition auxiliary definitions
 def IsNonDecreasing (lst : List Nat) : Prop :=
   ∀ i j : Fin lst.length, i < j → lst.get i ≤ lst.get j
@@ -113,3 +116,5 @@ theorem minOperationsToMonotonic_postcond_satisfied (nums: List Nat) (h_precond 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1128_leetcode_2263

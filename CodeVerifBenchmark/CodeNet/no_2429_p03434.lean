@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2429_p03434
+
+
 -- Precondition definitions
 @[reducible, simp]
 def aliceBobCardGame_precond (cards : List Nat) : Prop :=
@@ -56,3 +59,4 @@ theorem aliceBobCardGame_postcond_satisfied (cards: List Nat) (h_precond : alice
   sorry
   -- !benchmark @end proof
 
+end no_2429_p03434

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1176_codeexercises_1775
+
+
 -- Precondition definitions
 @[reducible, simp]
 def copy_set_to_list_precond (set_elements : Set α) : Prop :=
@@ -34,3 +37,5 @@ theorem copy_set_to_list_postcond_satisfied (set_elements: Set α) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1176_codeexercises_1775

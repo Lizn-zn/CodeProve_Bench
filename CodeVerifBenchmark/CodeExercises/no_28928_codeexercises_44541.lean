@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_28928_codeexercises_44541
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_odd_numbers_precond (sequence : List Int) : Prop :=
@@ -36,3 +39,5 @@ theorem count_odd_numbers_postcond_satisfied (sequence: List Int) (h_precond : c
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_28928_codeexercises_44541

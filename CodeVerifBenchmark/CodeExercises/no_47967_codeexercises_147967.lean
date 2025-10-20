@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_47967_codeexercises_147967
+
+
 -- Precondition definitions
 @[reducible, simp]
 def athlete_performance_precond (scores : List Nat) : Prop :=
@@ -44,3 +47,5 @@ theorem athlete_performance_postcond_satisfied (scores: List Nat) (h_precond : a
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_47967_codeexercises_147967

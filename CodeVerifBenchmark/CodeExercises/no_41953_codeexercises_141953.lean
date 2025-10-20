@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_41953_codeexercises_141953
+
+
 -- Precondition auxiliary definitions
 inductive Nucleotide : Type
   | A : Nucleotide
@@ -64,3 +67,5 @@ theorem get_dna_base_composition_postcond_satisfied (dna_sequence: String) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_41953_codeexercises_141953

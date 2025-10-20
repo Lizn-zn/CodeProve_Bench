@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_311_p00335
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minPancakeFlips_precond (n : Nat) (required_flips : Array Nat) : Prop :=
@@ -100,3 +103,5 @@ theorem minPancakeFlips_postcond_satisfied (n: Nat) (required_flips: Array Nat) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_311_p00335

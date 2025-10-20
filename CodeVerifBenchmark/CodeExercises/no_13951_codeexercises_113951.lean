@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_13951_codeexercises_113951
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_for_quotes_precond (articles : List String) : Prop :=
@@ -41,3 +44,4 @@ theorem check_for_quotes_postcond_satisfied (articles: List String) (h_precond :
   sorry
   -- !benchmark @end proof
 
+end no_13951_codeexercises_113951

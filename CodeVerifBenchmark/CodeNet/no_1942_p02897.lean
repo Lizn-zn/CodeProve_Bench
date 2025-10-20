@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1942_p02897
+
+
 -- Precondition definitions
 @[reducible, simp]
 def oddProbability_precond (N : Nat) : Prop :=
@@ -59,3 +62,5 @@ theorem oddProbability_postcond_satisfied (N: Nat) (h_precond : oddProbability_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1942_p02897

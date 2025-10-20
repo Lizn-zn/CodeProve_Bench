@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_26404_codeexercises_126404
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_odd_indexes_precond (lst : List α) : Prop :=
@@ -44,3 +47,5 @@ theorem get_odd_indexes_postcond_satisfied (lst: List α) (h_precond : get_odd_i
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_26404_codeexercises_126404

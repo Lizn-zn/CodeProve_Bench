@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_17068_codeexercises_117068
+
+
 -- Precondition definitions
 @[reducible, simp]
 def generate_outfit_combinations_precond (items : List (List String)) : Prop :=
@@ -45,3 +48,5 @@ theorem generate_outfit_combinations_postcond_satisfied (items: List (List Strin
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_17068_codeexercises_117068

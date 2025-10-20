@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_88507_codeexercises_188507
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -55,3 +58,5 @@ theorem check_dance_moves_postcond_satisfied (dancer: String) (moves: List Strin
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_88507_codeexercises_188507

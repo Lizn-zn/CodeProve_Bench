@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_854_leetcode_1018
+
+
 -- Precondition auxiliary definitions
 def isBinaryNat : Nat → Prop
   | 0 => True
@@ -67,3 +70,4 @@ theorem prefixesDivByFive_postcond_satisfied (nums: List Nat) (h_precond : prefi
   sorry
   -- !benchmark @end proof
 
+end no_854_leetcode_1018

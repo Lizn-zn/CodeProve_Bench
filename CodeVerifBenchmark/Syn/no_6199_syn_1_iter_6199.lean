@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6199_syn_1_iter_6199
+
+
 -- Define MinHeap structure first
 structure MinHeap (α : Type) where
   value : α
@@ -63,3 +66,5 @@ theorem get_distinct_values_postcond_satisfied (heap: MinHeap UInt8) (h_precond 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6199_syn_1_iter_6199

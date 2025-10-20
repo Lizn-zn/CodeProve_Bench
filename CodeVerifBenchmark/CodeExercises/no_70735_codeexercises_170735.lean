@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_70735_codeexercises_170735
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_zoologist_range_operation_precond (start : ℂ) (end_val : ℂ) (operation : String) : Prop :=
@@ -44,3 +47,5 @@ theorem calculate_zoologist_range_operation_postcond_satisfied (start: ℂ) (end
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_70735_codeexercises_170735

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1173_leetcode_1427
+
+
 -- Precondition auxiliary definitions
 def validShift (shift : Int × Int) : Prop :=
   let (dir, amount) := shift
@@ -87,3 +90,5 @@ theorem performShifts_postcond_satisfied (s: String) (shift: List (Int × Int)) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1173_leetcode_1427

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_24311_codeexercises_37446
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_output_precond (inputs : List Bool) : Prop :=
@@ -42,3 +45,4 @@ theorem get_output_postcond_satisfied (inputs: List Bool) (h_precond : get_outpu
   sorry
   -- !benchmark @end proof
 
+end no_24311_codeexercises_37446

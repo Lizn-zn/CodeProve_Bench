@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3681_syn_1_iter_3681
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_positive_less_than_256_precond (nums : List Int) : Prop :=
@@ -42,3 +45,5 @@ theorem count_positive_less_than_256_postcond_satisfied (nums: List Int) (h_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3681_syn_1_iter_3681

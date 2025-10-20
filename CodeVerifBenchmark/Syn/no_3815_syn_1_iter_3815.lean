@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3815_syn_1_iter_3815
+
+
 -- Precondition definitions
 @[reducible, simp]
 def list_length_precond (lst : List Nat) : Prop :=
@@ -32,3 +35,4 @@ theorem list_length_postcond_satisfied (lst: List Nat) (h_precond : list_length_
   sorry
   -- !benchmark @end proof
 
+end no_3815_syn_1_iter_3815

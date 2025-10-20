@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8606_syn_1_iter_8606
+
+
 -- Precondition definitions
 @[reducible, simp]
 def char_with_index_precond (chars : List Char) : Prop :=
@@ -41,3 +44,5 @@ theorem char_with_index_postcond_satisfied (chars: List Char) (h_precond : char_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8606_syn_1_iter_8606

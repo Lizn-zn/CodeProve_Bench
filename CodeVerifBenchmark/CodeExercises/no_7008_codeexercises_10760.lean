@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7008_codeexercises_10760
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_set_precond (photos : List String) (categories : List String) : Prop :=
@@ -41,3 +44,4 @@ theorem create_set_postcond_satisfied (photos: List String) (categories: List St
   sorry
   -- !benchmark @end proof
 
+end no_7008_codeexercises_10760

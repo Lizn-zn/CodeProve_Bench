@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_87406_codeexercises_187406
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_elements_precond (electrical_appliances : List α) (tools : List α) : Prop :=
@@ -36,3 +39,5 @@ theorem find_common_elements_postcond_satisfied [BEq α] (electrical_appliances:
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_87406_codeexercises_187406

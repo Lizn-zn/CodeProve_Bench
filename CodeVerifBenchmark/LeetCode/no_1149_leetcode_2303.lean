@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1149_leetcode_2303
+
+
 -- Precondition auxiliary definitions
 /-- Checks whether a list of tax brackets is valid according to problem constraints. -/
 def isValidBracketList (brackets : List (Nat × Nat)) : Prop :=
@@ -75,3 +78,5 @@ theorem calculateTax_postcond_satisfied (brackets : List (Nat × Nat)) (income :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1149_leetcode_2303

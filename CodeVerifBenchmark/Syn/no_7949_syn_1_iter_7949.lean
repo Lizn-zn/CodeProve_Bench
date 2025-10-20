@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7949_syn_1_iter_7949
+
+
 -- Precondition auxiliary definitions
 structure MinHeap (α : Type) [LE α] [Inhabited α] where
   data : Array α
@@ -42,3 +45,5 @@ theorem heap_to_finset_postcond_satisfied (heap: MinHeap Nat) (h_precond : heap_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_7949_syn_1_iter_7949

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_21286_codeexercises_121286
+
+
 -- Precondition definitions
 @[reducible, simp]
 def append_positive_elevations_precond (elevations : List Int) : Prop :=
@@ -45,3 +48,4 @@ theorem append_positive_elevations_postcond_satisfied (elevations: List Int) (h_
   sorry
   -- !benchmark @end proof
 
+end no_21286_codeexercises_121286

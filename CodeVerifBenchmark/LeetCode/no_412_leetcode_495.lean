@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_412_leetcode_495
+
+
 -- Precondition auxiliary definitions
 def nonDecreasing : List Nat → Prop
   | [] => True
@@ -63,3 +66,5 @@ theorem findPoisonedDuration_postcond_satisfied (timeSeries: List Nat) (duration
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_412_leetcode_495

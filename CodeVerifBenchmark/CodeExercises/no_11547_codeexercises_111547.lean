@@ -27,7 +27,7 @@ instance : DecidableEq Firefighter :=
 partial def find_firefighter_break_aux (firefighters : List Firefighter) (target : Firefighter) : Option Firefighter :=
   match firefighters with
   | [] => none
-  | f :: rest => 
+  | f :: rest =>
     if f == target then some f
     else find_firefighter_break_aux rest target
 

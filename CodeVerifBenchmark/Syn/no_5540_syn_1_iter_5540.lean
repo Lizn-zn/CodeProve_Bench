@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_5540_syn_1_iter_5540
+
+
 -- Precondition definitions
 @[reducible, simp]
 def filter_elements_by_indices_precond (arr : Array Int) (index_set : Finset Nat) : Prop :=
@@ -33,3 +36,5 @@ theorem filter_elements_by_indices_postcond_satisfied (arr: Array Int) (index_se
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_5540_syn_1_iter_5540

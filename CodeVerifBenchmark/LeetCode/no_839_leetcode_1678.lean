@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_839_leetcode_1678
+
+
 -- Precondition auxiliary definitions
 /-- Check if a given command is valid according to the grammar:
     validCommand ::= 'G' | '()' | '(al)' | validCommand* -/
@@ -107,3 +110,4 @@ theorem interpretCommand_postcond_satisfied (command: String) (h_precond : inter
   sorry
   -- !benchmark @end proof
 
+end no_839_leetcode_1678

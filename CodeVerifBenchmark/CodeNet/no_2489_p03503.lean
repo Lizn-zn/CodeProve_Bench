@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2489_p03503
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxShopProfit_precond (n : Nat) (shopSchedules : List (List Nat)) (profitTables : List (List Int)) : Prop :=
@@ -82,3 +85,5 @@ theorem maxShopProfit_postcond_satisfied (n: Nat) (shopSchedules: List (List Nat
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2489_p03503

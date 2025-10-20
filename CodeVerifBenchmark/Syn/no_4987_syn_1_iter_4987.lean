@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4987_syn_1_iter_4987
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_positive_in_set_precond (xs : List Int) (s : Finset Nat) : Prop :=
@@ -37,3 +40,5 @@ theorem count_positive_in_set_postcond_satisfied (xs: List Int) (s: Finset Nat) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4987_syn_1_iter_4987

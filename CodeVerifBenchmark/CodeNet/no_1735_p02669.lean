@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1735_p02669
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -109,3 +112,5 @@ theorem minCoinsToReachN_postcond_satisfied (n: Nat) (a: Nat) (b: Nat) (c: Nat) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1735_p02669

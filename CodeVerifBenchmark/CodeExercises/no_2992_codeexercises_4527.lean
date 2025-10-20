@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2992_codeexercises_4527
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_average_word_length_precond (text : List String) : Prop :=
@@ -41,3 +44,5 @@ theorem calculate_average_word_length_postcond_satisfied (text: List String) (h_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2992_codeexercises_4527

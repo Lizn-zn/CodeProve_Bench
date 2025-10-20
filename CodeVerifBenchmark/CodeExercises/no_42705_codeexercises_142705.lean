@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_42705_codeexercises_142705
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -49,3 +52,5 @@ theorem extinguish_fire_postcond_satisfied (fire_location: String) (water_supply
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_42705_codeexercises_142705

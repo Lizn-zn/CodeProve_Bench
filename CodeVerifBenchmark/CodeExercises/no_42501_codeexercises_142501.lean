@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_42501_codeexercises_142501
+
+
 -- Precondition definitions
 @[reducible, simp]
 def xor_shortcircuit_precond (a : Bool) (b : Bool) (c : Bool) : Prop :=
@@ -41,3 +44,5 @@ theorem xor_shortcircuit_postcond_satisfied (a: Bool) (b: Bool) (c: Bool) (h_pre
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_42501_codeexercises_142501

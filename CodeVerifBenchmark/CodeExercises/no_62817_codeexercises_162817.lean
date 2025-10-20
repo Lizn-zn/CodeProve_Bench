@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_62817_codeexercises_162817
+
+
 -- Precondition definitions
 @[reducible, simp]
 def fix_exercise_data_precond (data : List String) : Prop :=
@@ -44,3 +47,4 @@ theorem fix_exercise_data_postcond_satisfied (data: List String) (h_precond : fi
   sorry
   -- !benchmark @end proof
 
+end no_62817_codeexercises_162817

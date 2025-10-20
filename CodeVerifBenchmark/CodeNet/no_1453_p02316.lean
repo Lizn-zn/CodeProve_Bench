@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1453_p02316
+
+
 -- Precondition definitions
 @[reducible, simp]
 def unboundedKnapsack_precond (items : List (Nat × Nat)) (capacity : Nat) : Prop :=
@@ -74,3 +77,5 @@ theorem unboundedKnapsack_postcond_satisfied (items: List (Nat × Nat)) (capacit
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1453_p02316

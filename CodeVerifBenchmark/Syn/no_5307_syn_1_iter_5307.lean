@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_5307_syn_1_iter_5307
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sum_natural_numbers_precond (pairs : List (Char × Nat)) : Prop :=
@@ -35,3 +38,5 @@ theorem sum_natural_numbers_postcond_satisfied (pairs: List (Char × Nat)) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_5307_syn_1_iter_5307

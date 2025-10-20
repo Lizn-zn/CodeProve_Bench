@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_35393_codeexercises_135393
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_tags_precond (photos : String) (tags : String) : Prop :=
@@ -41,3 +44,5 @@ theorem find_common_tags_postcond_satisfied (photos: String) (tags: String) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_35393_codeexercises_135393

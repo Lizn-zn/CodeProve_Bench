@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_40801_codeexercises_140801
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_eligibility_precond (income : Float) (assets : Float) : Prop :=
@@ -33,3 +36,4 @@ theorem calculate_eligibility_postcond_satisfied (income: Float) (assets: Float)
   sorry
   -- !benchmark @end proof
 
+end no_40801_codeexercises_140801

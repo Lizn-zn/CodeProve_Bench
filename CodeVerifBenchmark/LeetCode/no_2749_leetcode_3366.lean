@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2749_leetcode_3366
+
+
 -- Precondition auxiliary definitions
 /-- `div2RoundUp n` divides `n` by 2, rounding up. -/
 def div2RoundUp (n : Nat) : Nat :=
@@ -135,3 +138,5 @@ theorem minArraySum_postcond_satisfied (nums: List Nat) (k: Nat) (op1: Nat) (op2
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2749_leetcode_3366

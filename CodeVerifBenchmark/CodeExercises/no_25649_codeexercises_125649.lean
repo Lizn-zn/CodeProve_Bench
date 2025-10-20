@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_25649_codeexercises_125649
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_produce_common_to_all_precond (farmers : List (Set String)) : Prop :=
@@ -43,3 +46,5 @@ theorem find_produce_common_to_all_postcond_satisfied (farmers: List (Set String
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_25649_codeexercises_125649

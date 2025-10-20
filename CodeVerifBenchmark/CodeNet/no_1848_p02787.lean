@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1848_p02787
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minMagicPoints_precond (H : Nat) (N : Nat) (spells : List (Nat Ã— Nat)) : Prop :=
@@ -70,3 +73,4 @@ theorem minMagicPoints_postcond_satisfied (H: Nat) (N: Nat) (spells: List (Nat Ã
   sorry
   -- !benchmark @end proof
 
+end no_1848_p02787

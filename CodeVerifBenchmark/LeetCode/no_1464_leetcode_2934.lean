@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1464_leetcode_2934
+
+
 -- Precondition auxiliary definitions
 def maxList (l : List Nat) : Nat :=
   match l with
@@ -158,3 +161,5 @@ theorem minOperationsToSatisfyConditions_postcond_satisfied (nums1: List Nat) (n
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1464_leetcode_2934

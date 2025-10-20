@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_391_leetcode_772
+
+
 -- Precondition auxiliary definitions
 /-- `is_valid_char c` is true if `c` is a valid character in the expression -/
 def is_valid_char (c : Char) : Prop :=
@@ -234,3 +237,5 @@ theorem calculate_postcond_satisfied (s: String) (h_precond : calculate_precond 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_391_leetcode_772

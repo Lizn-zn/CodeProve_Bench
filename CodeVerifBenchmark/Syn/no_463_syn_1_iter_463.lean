@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_463_syn_1_iter_463
+
+
 -- Precondition definitions
 @[reducible, simp]
 def repeat_int_with_separators_precond (x : Int) (n : Nat) : Prop :=
@@ -64,3 +67,5 @@ theorem repeat_int_with_separators_postcond_satisfied (x: Int) (n: Nat) (h_preco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_463_syn_1_iter_463

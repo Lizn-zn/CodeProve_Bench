@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1628_leetcode_3255
+
+
 -- Precondition auxiliary definitions
 def IsConsecutiveAndSorted (arr : Array Int) : Bool :=
   if arr.size = 0 then
@@ -64,3 +67,5 @@ theorem findSubarrayPowers_postcond_satisfied (nums: Array Int) (k: Nat) (h_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1628_leetcode_3255

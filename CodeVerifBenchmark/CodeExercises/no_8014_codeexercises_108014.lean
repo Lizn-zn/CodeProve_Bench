@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8014_codeexercises_108014
+
+
 -- Precondition definitions
 @[reducible, simp]
 def compare_tuples_precond (tuple1 : List α) (tuple2 : List α) : Prop :=
@@ -37,3 +40,5 @@ theorem compare_tuples_postcond_satisfied [BEq α] (tuple1: List α) (tuple2: Li
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8014_codeexercises_108014

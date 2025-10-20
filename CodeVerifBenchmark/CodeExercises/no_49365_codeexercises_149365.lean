@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_49365_codeexercises_149365
+
+
 -- Precondition definitions
 @[reducible, simp]
 def polar_to_rectangular_precond (polar_coordinates : Prod ℝ ℝ) : Prop :=
@@ -34,3 +37,5 @@ theorem polar_to_rectangular_postcond_satisfied (polar_coordinates: Prod ℝ ℝ
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_49365_codeexercises_149365

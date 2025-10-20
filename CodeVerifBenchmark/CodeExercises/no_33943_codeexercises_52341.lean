@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_33943_codeexercises_52341
+
+
 -- Precondition definitions
 @[reducible, simp]
 def filter_keys_by_value_precond (dictionary : List (Prod String Nat)) : Prop :=
@@ -33,3 +36,5 @@ theorem filter_keys_by_value_postcond_satisfied (dictionary: List (Prod String N
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_33943_codeexercises_52341

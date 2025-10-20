@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1895_leetcode_2305
+
+
 -- Precondition auxiliary definitions
 def distributeCookies (cookies : List Nat) (k : Nat) : List (List Nat) → Prop :=
   fun dist : List (List Nat) =>
@@ -97,3 +100,5 @@ theorem min_unfairness_postcond_satisfied (cookies: List Nat) (k: Nat) (h_precon
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1895_leetcode_2305

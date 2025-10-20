@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4696_codeexercises_7157
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sum_positive_numbers_precond (numbers : List Int) : Prop :=
@@ -45,3 +48,4 @@ theorem sum_positive_numbers_postcond_satisfied (numbers: List Int) (h_precond :
   sorry
   -- !benchmark @end proof
 
+end no_4696_codeexercises_7157

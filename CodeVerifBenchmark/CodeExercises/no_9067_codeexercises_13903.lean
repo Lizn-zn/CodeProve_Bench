@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9067_codeexercises_13903
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_sum_of_arrays_precond (arr1 : List Nat) (arr2 : List Nat) : Prop :=
@@ -34,3 +37,5 @@ theorem find_sum_of_arrays_postcond_satisfied (arr1: List Nat) (arr2: List Nat) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_9067_codeexercises_13903

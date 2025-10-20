@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_45888_codeexercises_145888
+
+
 -- Precondition auxiliary definitions
 inductive Predator : String → Prop
   | lion : Predator "lion"
@@ -49,3 +52,4 @@ theorem is_predator_postcond_satisfied (animal: String) (h_precond : is_predator
   sorry
   -- !benchmark @end proof
 
+end no_45888_codeexercises_145888

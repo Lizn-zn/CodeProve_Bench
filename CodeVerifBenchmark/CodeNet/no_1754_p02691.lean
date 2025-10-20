@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1754_p02691
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countSatisfyingPairs_precond (n : Nat) (heights : List Nat) : Prop :=
@@ -78,3 +81,4 @@ theorem countSatisfyingPairs_postcond_satisfied (n: Nat) (heights: List Nat) (h_
   sorry
   -- !benchmark @end proof
 
+end no_1754_p02691

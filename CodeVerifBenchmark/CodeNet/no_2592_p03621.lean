@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2592_p03621
+
+
 -- Precondition auxiliary definitions
 -- Count the number of '1's in a string
 def countOnes (s : String) : Nat :=
@@ -183,3 +186,5 @@ theorem solveStringTransformProbability_postcond_satisfied (A: String) (B: Strin
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2592_p03621

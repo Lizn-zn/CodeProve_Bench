@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_763_p00959
+
+
 -- Precondition definitions
 @[reducible, simp]
 def medicalCheckup_precond (n : Nat) (t : Nat) (healthConditions : List Nat) : Prop :=
@@ -73,3 +76,4 @@ theorem medicalCheckup_postcond_satisfied (n: Nat) (t: Nat) (healthConditions: L
   sorry
   -- !benchmark @end proof
 
+end no_763_p00959

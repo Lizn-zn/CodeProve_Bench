@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_5072_syn_1_iter_5072
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -55,3 +58,5 @@ theorem generate_sum_sequences_postcond_satisfied (n: Nat) (h_precond : generate
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_5072_syn_1_iter_5072

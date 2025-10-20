@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_82398_codeexercises_182398
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_discount_precond (age : Nat) (purchase_amount : Float) : Prop :=
@@ -43,3 +46,5 @@ theorem check_discount_postcond_satisfied (age : Nat) (purchase_amount : Float) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_82398_codeexercises_182398

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2380_leetcode_2928
+
+
 -- Precondition auxiliary definitions
 def is_valid_distribution (n : Nat) (limit : Nat) (a : Nat × Nat × Nat) : Prop :=
   let (x, y, z) := a
@@ -60,3 +63,5 @@ theorem distributeCandies_postcond_satisfied (n: Nat) (limit: Nat) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2380_leetcode_2928

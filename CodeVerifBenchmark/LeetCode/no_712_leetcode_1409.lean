@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_712_leetcode_1409
+
+
 -- Precondition auxiliary definitions
 def isValidQueryList (queries : List Nat) : Prop :=
   ∀ q ∈ queries, q > 0
@@ -64,3 +67,5 @@ theorem processQueries_postcond_satisfied (queries: List Nat) (m: Nat) (h_precon
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_712_leetcode_1409

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_51763_codeexercises_151763
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_condition_precond (lst : List Int) : Prop :=
@@ -40,3 +43,5 @@ theorem check_condition_postcond_satisfied (lst: List Int) (h_precond : check_co
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_51763_codeexercises_151763

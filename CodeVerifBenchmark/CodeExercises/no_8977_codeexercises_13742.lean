@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8977_codeexercises_13742
+
+
 -- Precondition definitions
 @[reducible, simp]
 def copy_and_operation_precond (original_list : List Bool) : Prop :=
@@ -43,3 +46,4 @@ theorem copy_and_operation_postcond_satisfied (original_list: List Bool) (h_prec
   sorry
   -- !benchmark @end proof
 
+end no_8977_codeexercises_13742

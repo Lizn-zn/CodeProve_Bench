@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_660_leetcode_812
+
+
 -- Precondition auxiliary definitions
 def triangleArea (p1 p2 p3 : Int × Int) : Float :=
   let (x1, y1) := p1
@@ -50,3 +53,5 @@ theorem largestTriangleArea_postcond_satisfied (points: List (Int × Int)) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_660_leetcode_812

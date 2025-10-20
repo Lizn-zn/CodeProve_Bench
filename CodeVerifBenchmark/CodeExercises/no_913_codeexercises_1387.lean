@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_913_codeexercises_1387
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_tuples_precond (strings : String) (delimiter : String) : Prop :=
@@ -48,3 +51,4 @@ theorem create_tuples_postcond_satisfied (strings: String) (delimiter: String) (
   sorry
   -- !benchmark @end proof
 
+end no_913_codeexercises_1387

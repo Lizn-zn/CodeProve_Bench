@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_90165_codeexercises_190165
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_salary_precond (actor_name : String) (num_movies : Nat) : Prop :=
@@ -38,3 +41,4 @@ theorem calculate_salary_postcond_satisfied (actor_name: String) (num_movies: Na
   sorry
   -- !benchmark @end proof
 
+end no_90165_codeexercises_190165

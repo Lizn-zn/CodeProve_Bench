@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_956_syn_1_iter_956
+
+
 -- Precondition definitions
 @[reducible, simp]
 def list_property_char_precond (list1 : List α) (list2 : List Float) : Prop :=
@@ -106,3 +109,5 @@ theorem list_property_char_postcond_satisfied (list1: List α) (list2: List Floa
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_956_syn_1_iter_956

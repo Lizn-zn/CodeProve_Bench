@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_26130_codeexercises_126130
+
+
 -- Precondition auxiliary definitions
 structure FurnitureItem where
   name : String
@@ -58,3 +61,4 @@ theorem find_furniture_postcond_satisfied (color: String) (material: String) (pr
   sorry
   -- !benchmark @end proof
 
+end no_26130_codeexercises_126130

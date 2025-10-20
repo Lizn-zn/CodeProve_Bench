@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1737_leetcode_3435
+
+
 -- Precondition auxiliary definitions
 def isValidWordList (words : List String) : Prop :=
   let charSet := words.foldl (fun acc word => acc ∪ word.toList.toFinset) ∅
@@ -188,3 +191,5 @@ theorem findSCSFrequencies_postcond_satisfied (words: List String) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1737_leetcode_3435

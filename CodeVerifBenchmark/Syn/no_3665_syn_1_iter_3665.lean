@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3665_syn_1_iter_3665
+
+
 -- Precondition definitions
 @[reducible, simp]
 def digit_positions_precond (n : Int) : Prop :=
@@ -86,3 +89,5 @@ theorem digit_positions_postcond_satisfied (n: Int) (h_precond : digit_positions
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3665_syn_1_iter_3665

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_19923_codeexercises_30679
+
+
 -- Precondition auxiliary definitions
 -- All spectral classes are valid (O, B, A, F, G, K, M)
 def valid_spectral_class (s : String) : Prop :=
@@ -69,3 +72,5 @@ theorem count_spectral_classes_postcond_satisfied (stars: List String) (h_precon
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_19923_codeexercises_30679

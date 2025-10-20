@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_198_p00206
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculateMonthsToSavings_precond (tripCost : Nat) (monthlySavings : List Int) : Prop :=
@@ -63,3 +66,5 @@ theorem calculateMonthsToSavings_postcond_satisfied (tripCost: Nat) (monthlySavi
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_198_p00206

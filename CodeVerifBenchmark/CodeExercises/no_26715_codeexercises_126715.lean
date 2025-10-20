@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_26715_codeexercises_126715
+
+
 -- Precondition definitions
 @[reducible, simp]
 def retrieve_indices_precond (lst : List Nat) (start : Nat) (endPos : Nat) : Prop :=
@@ -51,3 +54,5 @@ theorem retrieve_indices_postcond_satisfied (lst: List Nat) (start: Nat) (endPos
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_26715_codeexercises_126715

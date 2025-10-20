@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_492_p00553
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculateMicrowaveTime_precond (a : Int) (b : Int) (c : Int) (d : Int) (e : Int) : Prop :=
@@ -50,3 +53,4 @@ theorem calculateMicrowaveTime_postcond_satisfied (a: Int) (b: Int) (c: Int) (d:
   sorry
   -- !benchmark @end proof
 
+end no_492_p00553

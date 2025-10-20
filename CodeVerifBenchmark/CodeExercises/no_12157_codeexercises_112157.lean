@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_12157_codeexercises_112157
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_intersection_precond (a1 : Float) (a2 : Float) (b1 : Float) (b2 : Float) : Prop :=
@@ -53,3 +56,5 @@ theorem find_intersection_postcond_satisfied (a1: Float) (a2: Float) (b1: Float)
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_12157_codeexercises_112157

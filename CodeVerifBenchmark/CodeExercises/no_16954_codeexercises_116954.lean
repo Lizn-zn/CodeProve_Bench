@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_16954_codeexercises_116954
+
+
 -- Precondition definitions
 @[reducible, simp]
 def farmer_animals_precond (animals : List (List String)) : Prop :=
@@ -39,3 +42,4 @@ theorem farmer_animals_postcond_satisfied (animals: List (List String)) (h_preco
   sorry
   -- !benchmark @end proof
 
+end no_16954_codeexercises_116954

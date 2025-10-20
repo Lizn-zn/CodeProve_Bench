@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2486_p03500
+
+
 -- Precondition definitions
 @[reducible, simp]
 def solve_precond (n : Nat) (k : Nat) (a : List Nat) : Prop :=
@@ -162,3 +165,4 @@ theorem solve_postcond_satisfied (n: Nat) (k: Nat) (a: List Nat) (h_precond : so
   sorry
   -- !benchmark @end proof
 
+end no_2486_p03500

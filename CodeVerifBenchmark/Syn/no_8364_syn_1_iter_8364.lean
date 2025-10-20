@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8364_syn_1_iter_8364
+
+
 -- Precondition definitions
 @[reducible, simp]
 def generate_pairs_and_sign_precond (n : Int) : Prop :=
@@ -52,3 +55,5 @@ theorem generate_pairs_and_sign_postcond_satisfied (n: Int) (h_precond : generat
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8364_syn_1_iter_8364

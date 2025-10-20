@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_29692_codeexercises_45719
+
+
 -- Precondition definitions
 @[reducible, simp]
 def intersect_tuples_precond (athletes : List (String × Nat)) (teams : List (String × String × List (String × Nat))) : Prop :=
@@ -56,3 +59,5 @@ theorem intersect_tuples_postcond_satisfied (athletes: List (String × Nat)) (te
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_29692_codeexercises_45719

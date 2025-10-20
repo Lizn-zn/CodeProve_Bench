@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1587_p02458
+
+
 -- Precondition definitions
 @[reducible, simp]
 def processMultiSetQueries_precond (queries : List (Nat × List Nat)) : Prop :=
@@ -119,3 +122,4 @@ theorem processMultiSetQueries_postcond_satisfied (queries: List (Nat × List Na
   sorry
   -- !benchmark @end proof
 
+end no_1587_p02458

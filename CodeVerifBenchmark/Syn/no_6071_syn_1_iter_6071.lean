@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6071_syn_1_iter_6071
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sum_elements_greater_than_or_equal_precond (arr : Array Nat) (n : UInt8) : Prop :=
@@ -37,3 +40,5 @@ theorem sum_elements_greater_than_or_equal_postcond_satisfied (arr: Array Nat) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6071_syn_1_iter_6071

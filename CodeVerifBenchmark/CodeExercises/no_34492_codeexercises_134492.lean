@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_34492_codeexercises_134492
+
+
 -- Precondition definitions
 @[reducible, simp]
 def interchange_elements_precond (photo_list : List α) : Prop :=
@@ -43,3 +46,5 @@ theorem interchange_elements_postcond_satisfied (photo_list: List α) (h_precond
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_34492_codeexercises_134492

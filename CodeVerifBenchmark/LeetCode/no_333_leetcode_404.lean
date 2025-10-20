@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_333_leetcode_404
+
+
 -- Precondition auxiliary definitions
 inductive TreeNode where
   | nil : TreeNode
@@ -63,3 +66,4 @@ theorem sumOfLeftLeaves_postcond_satisfied (root: TreeNode) (h_precond : sumOfLe
   sorry
   -- !benchmark @end proof
 
+end no_333_leetcode_404

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_65077_codeexercises_165077
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_highest_grade_precond (students : List (Prod String Nat)) : Prop :=
@@ -52,3 +55,4 @@ theorem find_highest_grade_postcond_satisfied (students: List (Prod String Nat))
   sorry
   -- !benchmark @end proof
 
+end no_65077_codeexercises_165077

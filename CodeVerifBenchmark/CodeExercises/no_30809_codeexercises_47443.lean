@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_30809_codeexercises_47443
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_sales_precond (sales_per_day : List Nat) : Prop :=
@@ -61,3 +64,5 @@ theorem calculate_sales_postcond_satisfied (sales_per_day: List Nat) (h_precond 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_30809_codeexercises_47443

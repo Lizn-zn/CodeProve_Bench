@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8870_syn_1_iter_8870
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_elements_precond (arr1 : Array Int) (arr2 : Array Int) : Prop :=
@@ -42,3 +45,5 @@ theorem find_common_elements_postcond_satisfied (arr1: Array Int) (arr2: Array I
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8870_syn_1_iter_8870

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_12230_codeexercises_18723
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_absolute_values_precond (numbers : List ℂ) : Prop :=
@@ -29,3 +32,5 @@ theorem find_absolute_values_postcond_satisfied (numbers: List ℂ) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_12230_codeexercises_18723

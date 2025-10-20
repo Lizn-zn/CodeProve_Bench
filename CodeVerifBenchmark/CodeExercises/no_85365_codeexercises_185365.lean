@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_85365_codeexercises_185365
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -69,3 +72,5 @@ theorem create_merged_dictionary_postcond_satisfied (dict1: List (String × Stri
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_85365_codeexercises_185365

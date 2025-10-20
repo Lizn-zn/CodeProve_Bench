@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_74145_codeexercises_174145
+
+
 -- Precondition definitions
 @[reducible, simp]
 def access_and_operator_elements_precond (tup1 : List Nat) (tup2 : List Nat) (index : Nat) : Prop :=
@@ -43,3 +46,5 @@ theorem access_and_operator_elements_postcond_satisfied (tup1: List Nat) (tup2: 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_74145_codeexercises_174145

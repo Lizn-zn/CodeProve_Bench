@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8536_syn_1_iter_8536
+
+
 -- Precondition definitions
 @[reducible, simp]
 def nat_to_uint8_precond (n : Nat) : Prop :=
@@ -39,3 +42,4 @@ theorem nat_to_uint8_postcond_satisfied (n: Nat) (h_precond : nat_to_uint8_preco
   sorry
   -- !benchmark @end proof
 
+end no_8536_syn_1_iter_8536

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_507_p00578
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxIslands_precond (n : Nat) (heights : List Nat) : Prop :=
@@ -107,3 +110,5 @@ theorem maxIslands_postcond_satisfied (n: Nat) (heights: List Nat) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_507_p00578

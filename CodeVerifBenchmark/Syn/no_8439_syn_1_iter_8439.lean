@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8439_syn_1_iter_8439
+
+
 -- Precondition definitions
 @[reducible, simp]
 def generate_repeated_string_precond (a : Nat) (b : Nat) (n : Nat) : Prop :=
@@ -51,3 +54,4 @@ theorem generate_repeated_string_postcond_satisfied (a: Nat) (b: Nat) (n: Nat) (
   sorry
   -- !benchmark @end proof
 
+end no_8439_syn_1_iter_8439

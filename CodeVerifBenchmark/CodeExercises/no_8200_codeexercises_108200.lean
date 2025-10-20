@@ -1,5 +1,8 @@
 import Mathlib.Data.List.Basic
 
+namespace no_8200_codeexercises_108200
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -50,3 +53,5 @@ theorem update_design_postcond_satisfied (design: List (String × α)) (update: 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8200_codeexercises_108200

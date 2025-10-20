@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_387_leetcode_764
+
+
 -- Precondition auxiliary definitions
 def validMineIndex (n : Nat) (mine : Nat × Nat) : Prop :=
   mine.1 < n ∧ mine.2 < n
@@ -101,3 +104,5 @@ theorem largestPlusSign_postcond_satisfied (n: Nat) (mines: List (Nat × Nat)) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_387_leetcode_764

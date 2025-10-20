@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_42384_codeexercises_142384
+
+
 -- Precondition auxiliary definitions
 def range_contains_negative (start stop step : Int) : Prop :=
   ∃ (x : Int), x ∈ Set.range (λ (k : ℤ) => start + k * step) ∧ x < 0 ∧ x ≥ stop
@@ -63,3 +66,5 @@ theorem intersection_of_range_and_negative_integers_postcond_satisfied (start: I
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_42384_codeexercises_142384

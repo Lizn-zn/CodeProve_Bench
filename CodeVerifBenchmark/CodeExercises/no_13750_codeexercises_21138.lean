@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_13750_codeexercises_21138
+
+
 -- Precondition definitions
 @[reducible, simp]
 def intersected_string_concatenation_nested_ifs_precond (list1 : List String) (list2 : List String) : Prop :=
@@ -61,3 +64,4 @@ theorem intersected_string_concatenation_nested_ifs_postcond_satisfied (list1: L
   sorry
   -- !benchmark @end proof
 
+end no_13750_codeexercises_21138

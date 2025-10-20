@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_511_leetcode_643
+
+
 -- Precondition auxiliary definitions
 def sumSubarray (nums : List Int) (start : Nat) (len : Nat) : Int :=
   (List.drop start nums).take len |>.foldl (· + ·) 0
@@ -53,3 +56,5 @@ theorem findMaxAverage_postcond_satisfied (nums: List Int) (k: Nat) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_511_leetcode_643

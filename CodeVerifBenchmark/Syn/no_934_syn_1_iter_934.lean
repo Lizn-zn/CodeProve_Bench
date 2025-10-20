@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_934_syn_1_iter_934
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_and_sum_pairs_precond (xs : List Int) (pairs : List (Int × Int)) : Prop :=
@@ -57,3 +60,5 @@ theorem count_and_sum_pairs_postcond_satisfied (xs: List Int) (pairs: List (Int 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_934_syn_1_iter_934

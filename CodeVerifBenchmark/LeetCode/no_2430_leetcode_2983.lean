@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2430_leetcode_2983
+
+
 -- Precondition auxiliary definitions
 def halfLength (s : String) : Nat :=
   s.length / 2
@@ -167,3 +170,5 @@ def canMakePalindromeQueries_postcond (s : String) (queries : List (List Nat)) (
 theorem canMakePalindromeQueries_postcond_satisfied (s: String) (queries: List (List Nat)) (h_precond : canMakePalindromeQueries_precond s queries) :
     canMakePalindromeQueries_postcond s queries (canMakePalindromeQueries s queries h_precond) h_precond := by
   sorry
+
+end no_2430_leetcode_2983

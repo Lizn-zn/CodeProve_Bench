@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7799_syn_1_iter_7799
+
+
 -- Precondition definitions
 @[reducible, simp]
 def setToAsciiArray_precond (s : Set Int) : Prop :=
@@ -50,3 +53,5 @@ theorem setToAsciiArray_postcond_satisfied (s: Set Int) (h_precond : setToAsciiA
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_7799_syn_1_iter_7799

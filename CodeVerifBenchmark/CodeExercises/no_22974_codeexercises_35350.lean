@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_22974_codeexercises_35350
+
+
 -- Precondition definitions
 @[reducible, simp]
 def intersect_lists_precond (list1 : List α) (list2 : List α) : Prop :=
@@ -48,3 +51,5 @@ theorem intersect_lists_postcond_satisfied [DecidableEq α] (list1: List α) (li
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_22974_codeexercises_35350

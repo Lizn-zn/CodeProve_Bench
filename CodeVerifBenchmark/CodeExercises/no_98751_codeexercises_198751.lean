@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_98751_codeexercises_198751
+
+
 -- Precondition definitions
 @[reducible, simp]
 def xor_continue_precond (num_list : List Nat) : Prop :=
@@ -53,3 +56,4 @@ theorem xor_continue_postcond_satisfied (num_list: List Nat) (h_precond : xor_co
   sorry
   -- !benchmark @end proof
 
+end no_98751_codeexercises_198751

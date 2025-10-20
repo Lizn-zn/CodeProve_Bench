@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_75488_codeexercises_175488
+
+
 -- Precondition definitions
 @[reducible, simp]
 def format_designers_info_precond (designers : List (String × Nat)) : Prop :=
@@ -47,3 +50,5 @@ theorem format_designers_info_postcond_satisfied (designers: List (String × Nat
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_75488_codeexercises_175488

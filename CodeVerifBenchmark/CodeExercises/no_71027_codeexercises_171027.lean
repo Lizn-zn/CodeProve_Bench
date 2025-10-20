@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_71027_codeexercises_171027
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_numbers_precond (numbers : List Nat) : Prop :=
@@ -34,3 +37,4 @@ theorem check_numbers_postcond_satisfied (numbers: List Nat) (h_precond : check_
   sorry
   -- !benchmark @end proof
 
+end no_71027_codeexercises_171027

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_70849_codeexercises_170849
+
+
 -- Precondition auxiliary definitions
 structure Patient where
   name : String
@@ -43,3 +46,5 @@ theorem get_age_postcond_satisfied (name: String) (h_precond : get_age_precond (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_70849_codeexercises_170849

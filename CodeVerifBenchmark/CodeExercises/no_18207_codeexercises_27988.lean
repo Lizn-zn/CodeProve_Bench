@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_18207_codeexercises_27988
+
+
 -- Precondition auxiliary definitions
 def light_year_to_parsec : Float := 0.306601
 def light_year_to_au : Float := 63241.1
@@ -54,3 +57,5 @@ theorem calculate_distance_between_stars_postcond_satisfied (star1_distance: Opt
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_18207_codeexercises_27988

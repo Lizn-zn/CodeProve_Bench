@@ -1,5 +1,11 @@
 import Mathlib
 
+-- Postcondition auxiliary definitions
+def List.difference_no97297 [BEq α] (lst1 : List α) (lst2 : List α) : List α :=
+  lst1.filter (λ x => ¬ lst2.contains x)
+
+namespace no_97297_codeexercises_197297
+
 -- Precondition definitions
 @[reducible, simp]
 def get_missing_elements_precond (lst1 : List α) (lst2 : List α) : Prop :=
@@ -17,16 +23,11 @@ def get_missing_elements [BEq α] (lst1 : List α) (lst2 : List α) (h_precond :
   lst1.filter (λ x => ¬ lst2.contains x)
   -- !benchmark @end code
 
-
--- Postcondition auxiliary definitions
-def List.difference [BEq α] (lst1 : List α) (lst2 : List α) : List α :=
-  lst1.filter (λ x => ¬ lst2.contains x)
-
 -- Postcondition definitions
 @[reducible, simp]
 def get_missing_elements_postcond [BEq α] (lst1 : List α) (lst2 : List α) (result: List α) (h_precond : get_missing_elements_precond (lst1) (lst2)) : Prop :=
   -- !benchmark @start postcond
-  result = lst1.difference lst2
+  result = lst1.difference_no97297 lst2
   -- !benchmark @end postcond
 
 
@@ -36,3 +37,5 @@ theorem get_missing_elements_postcond_satisfied [BEq α] (lst1: List α) (lst2: 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_97297_codeexercises_197297

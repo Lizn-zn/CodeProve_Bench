@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_98239_codeexercises_198239
+
+
 -- Precondition definitions
 @[reducible, simp]
 def chef_dishes_precond (chef_menu : List String) (dish_to_remove : String) : Prop :=
@@ -55,3 +58,5 @@ theorem chef_dishes_postcond_satisfied (chef_menu: List String) (dish_to_remove:
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_98239_codeexercises_198239

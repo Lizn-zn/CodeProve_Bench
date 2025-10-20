@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2369_leetcode_2916
+
+
 -- Precondition auxiliary definitions
 def subarrayDistinctCount (nums : List Nat) (i j : Nat) : Nat :=
   if h : i ≤ j ∧ j < nums.length then
@@ -68,3 +71,5 @@ theorem sumOfSquaresOfDistinctCounts_postcond_satisfied (nums: List Nat) (h_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2369_leetcode_2916

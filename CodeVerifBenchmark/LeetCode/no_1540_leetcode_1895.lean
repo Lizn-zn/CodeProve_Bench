@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1540_leetcode_1895
+
+
 -- Precondition auxiliary definitions
 def isSquareMatrix (matrix : List (List Int)) : Prop :=
   match matrix with
@@ -119,3 +122,5 @@ theorem largestMagicSquare_postcond_satisfied (grid: List (List Int)) (h_precond
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1540_leetcode_1895

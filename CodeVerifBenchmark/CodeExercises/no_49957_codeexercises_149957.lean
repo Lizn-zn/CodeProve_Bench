@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_49957_codeexercises_149957
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_marathon_completers_precond (athletes : List Nat) : Prop :=
@@ -38,3 +41,4 @@ theorem count_marathon_completers_postcond_satisfied (athletes: List Nat) (h_pre
   sorry
   -- !benchmark @end proof
 
+end no_49957_codeexercises_149957

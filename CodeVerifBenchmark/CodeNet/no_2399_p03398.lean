@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2399_p03398
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -83,3 +86,5 @@ theorem countDistinctPositions_postcond_satisfied (n: Nat) (h_precond : countDis
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2399_p03398

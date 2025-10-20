@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_94269_codeexercises_194269
+
+
 -- Precondition definitions
 @[reducible, simp]
 def dancer_moves_precond (steps : List Int) : Prop :=
@@ -36,3 +39,5 @@ theorem dancer_moves_postcond_satisfied (steps: List Int) (h_precond : dancer_mo
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_94269_codeexercises_194269

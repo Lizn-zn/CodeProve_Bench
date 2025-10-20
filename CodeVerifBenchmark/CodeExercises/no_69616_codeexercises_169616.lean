@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_69616_codeexercises_169616
+
+
 -- Precondition definitions
 @[reducible, simp]
 def excavation_approval_precond (year : Nat) (num_artifacts : Nat) : Prop :=
@@ -38,3 +41,4 @@ theorem excavation_approval_postcond_satisfied (year: Nat) (num_artifacts: Nat) 
   sorry
   -- !benchmark @end proof
 
+end no_69616_codeexercises_169616

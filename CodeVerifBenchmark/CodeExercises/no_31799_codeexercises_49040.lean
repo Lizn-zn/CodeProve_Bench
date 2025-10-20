@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_31799_codeexercises_49040
+
+
 -- Precondition definitions
 @[reducible, simp]
 def delete_duplicates_precond (data : List (List α)) : Prop :=
@@ -44,3 +47,5 @@ theorem delete_duplicates_postcond_satisfied [DecidableEq α] (data: List (List 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_31799_codeexercises_49040

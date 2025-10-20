@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3746_syn_1_iter_3746
+
+
 -- Precondition definitions
 @[reducible, simp]
 def longest_string_length_precond (strings : List String) : Prop :=
@@ -49,3 +52,5 @@ theorem longest_string_length_postcond_satisfied (strings: List String) (h_preco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3746_syn_1_iter_3746

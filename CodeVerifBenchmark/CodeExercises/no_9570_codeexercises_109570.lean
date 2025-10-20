@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9570_codeexercises_109570
+
+
 -- Precondition definitions
 @[reducible, simp]
 def identify_artifact_precond (artifacts : List (String × Nat)) : Prop :=
@@ -56,3 +59,4 @@ theorem identify_artifact_postcond_satisfied (artifacts: List (String × Nat)) (
   sorry
   -- !benchmark @end proof
 
+end no_9570_codeexercises_109570

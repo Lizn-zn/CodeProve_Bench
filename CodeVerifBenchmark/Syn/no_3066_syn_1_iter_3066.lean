@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3066_syn_1_iter_3066
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -81,3 +84,5 @@ theorem char_freq_with_ascii_postcond_satisfied (chars: List Char) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3066_syn_1_iter_3066

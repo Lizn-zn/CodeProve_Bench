@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_94247_codeexercises_194247
+
+
 -- Precondition definitions
 @[reducible, simp]
 def determine_best_performance_precond (dancer1_name : String) (dancer1_score : Nat) (dancer2_name : String) (dancer2_score : Nat) : Prop :=
@@ -38,3 +41,4 @@ theorem determine_best_performance_postcond_satisfied (dancer1_name: String) (da
   sorry
   -- !benchmark @end proof
 
+end no_94247_codeexercises_194247

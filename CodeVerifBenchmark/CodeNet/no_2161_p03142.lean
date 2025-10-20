@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2161_p03142
+
+
 -- Precondition auxiliary definitions
 -- Helper definitions for graph properties
 def isValidEdge (N : Nat) (e : Nat × Nat) : Prop :=
@@ -170,3 +173,4 @@ theorem restoreRootedTree_postcond_satisfied (N: Nat) (edges: List (Nat × Nat))
   sorry
   -- !benchmark @end proof
 
+end no_2161_p03142

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2625_p03657
+
+
 -- Precondition definitions
 @[reducible, simp]
 def canDistributeCookies_precond (A : Nat) (B : Nat) : Prop :=
@@ -35,3 +38,4 @@ theorem canDistributeCookies_postcond_satisfied (A: Nat) (B: Nat) (h_precond : c
   sorry
   -- !benchmark @end proof
 
+end no_2625_p03657

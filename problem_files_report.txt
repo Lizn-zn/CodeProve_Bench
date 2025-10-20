@@ -21,9 +21,6 @@ unknown identifier: 1249 次错误
 
 四、完整失败文件列表
 ------------------------------------------------------------
-CodeVerifBenchmark.CodeExercises.no_8200_codeexercises_108200
-CodeVerifBenchmark.CodeExercises.no_90007_codeexercises_190007
-CodeVerifBenchmark.CodeNet.no_2927_p04005
 CodeVerifBenchmark.LeetCode.no_1216_leetcode_2431
 CodeVerifBenchmark.CodeExercises.no_18009_codeexercises_27681
 CodeVerifBenchmark.CodeExercises.no_22181_codeexercises_34115

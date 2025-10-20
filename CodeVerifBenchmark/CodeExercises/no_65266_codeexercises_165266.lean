@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_65266_codeexercises_165266
+
+
 -- Precondition definitions
 @[reducible, simp]
 def greater_than_basic_loop_precond (numbers : List Nat) (threshold : Nat) : Prop :=
@@ -30,3 +33,5 @@ theorem greater_than_basic_loop_postcond_satisfied (numbers: List Nat) (threshol
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_65266_codeexercises_165266

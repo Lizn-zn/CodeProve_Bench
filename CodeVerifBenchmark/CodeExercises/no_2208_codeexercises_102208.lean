@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2208_codeexercises_102208
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_numbers_precond (nums : List Int) : Prop :=
@@ -37,3 +40,5 @@ theorem find_numbers_postcond_satisfied (nums: List Int) (h_precond : find_numbe
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2208_codeexercises_102208

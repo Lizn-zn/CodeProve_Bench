@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1347_leetcode_2684
+
+
 -- Precondition auxiliary definitions
 structure MyMatrix (α : Type) where
   data : List (List α)
@@ -179,3 +182,5 @@ theorem maxMoves_postcond_satisfied (grid: List (List Nat)) (h_precond : maxMove
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1347_leetcode_2684

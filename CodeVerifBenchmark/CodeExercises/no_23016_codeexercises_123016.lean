@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_23016_codeexercises_123016
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sum_beam_forces_precond (beam_forces : List (List Float)) : Prop :=
@@ -43,3 +46,4 @@ theorem sum_beam_forces_postcond_satisfied (beam_forces: List (List Float)) (h_p
   sorry
   -- !benchmark @end proof
 
+end no_23016_codeexercises_123016

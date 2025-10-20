@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_47_leetcode_70
+
+
 -- Precondition auxiliary definitions
 def fibonacci : Nat → Nat
   | 0 => 1
@@ -47,3 +50,4 @@ theorem climbStairs_postcond_satisfied (n: Nat) (h_precond : climbStairs_precond
   sorry
   -- !benchmark @end proof
 
+end no_47_leetcode_70

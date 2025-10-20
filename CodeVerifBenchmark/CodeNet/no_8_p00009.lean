@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8_p00009
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countPrimes_precond (n : Nat) : Prop :=
@@ -73,3 +76,5 @@ theorem countPrimes_postcond_satisfied (n: Nat) (h_precond : countPrimes_precond
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8_p00009

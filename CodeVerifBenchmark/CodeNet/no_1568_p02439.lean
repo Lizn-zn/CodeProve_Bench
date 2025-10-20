@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1568_p02439
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minMax_precond (a : Int) (b : Int) (c : Int) : Prop :=
@@ -63,3 +66,4 @@ theorem minMax_postcond_satisfied (a: Int) (b: Int) (c: Int) (h_precond : minMax
   sorry
   -- !benchmark @end proof
 
+end no_1568_p02439

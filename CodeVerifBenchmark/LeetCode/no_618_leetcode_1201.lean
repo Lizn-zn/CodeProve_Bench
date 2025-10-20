@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_618_leetcode_1201
+
+
 -- Precondition auxiliary definitions
 /-- The least common multiple of two natural numbers. -/
 def lcm (x y : Nat) : Nat :=
@@ -62,3 +65,5 @@ theorem nthUglyNumber_postcond_satisfied (n: Nat) (a: Nat) (b: Nat) (c: Nat) (h_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_618_leetcode_1201

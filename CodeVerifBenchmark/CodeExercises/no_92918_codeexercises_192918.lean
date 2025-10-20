@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_92918_codeexercises_192918
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_note_index_precond (music_notes : List String) (key : String) : Prop :=
@@ -42,3 +45,4 @@ theorem find_note_index_postcond_satisfied (music_notes: List String) (key: Stri
   sorry
   -- !benchmark @end proof
 
+end no_92918_codeexercises_192918

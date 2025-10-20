@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8694_codeexercises_13322
+
+
 -- Precondition definitions
 @[reducible, simp]
 def intersection_of_nested_loops_less_than_precond (n : Nat) : Prop :=
@@ -38,3 +41,5 @@ theorem intersection_of_nested_loops_less_than_postcond_satisfied (n: Nat) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8694_codeexercises_13322

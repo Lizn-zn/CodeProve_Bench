@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1989_p02948
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxRewardWithinDeadline_precond (n : Nat) (m : Nat) (jobs : List (Nat × Nat)) : Prop :=
@@ -95,3 +98,5 @@ theorem maxRewardWithinDeadline_postcond_satisfied (n: Nat) (m: Nat) (jobs: List
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1989_p02948

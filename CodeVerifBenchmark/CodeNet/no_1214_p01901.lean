@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1214_p01901
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxSuntanProtection_precond (T : Nat) (N : Nat) (concerts : List (Nat × Nat)) : Prop :=
@@ -87,3 +90,5 @@ theorem maxSuntanProtection_postcond_satisfied (T: Nat) (N: Nat) (concerts: List
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1214_p01901

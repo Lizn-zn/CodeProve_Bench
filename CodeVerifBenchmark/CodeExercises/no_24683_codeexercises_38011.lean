@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_24683_codeexercises_38011
+
+
 -- Precondition auxiliary definitions
 def isVowel (c : Char) : Bool :=
   c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' ||
@@ -46,3 +49,5 @@ theorem find_closest_vowel_postcond_satisfied (name: String) (h_precond : find_c
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_24683_codeexercises_38011

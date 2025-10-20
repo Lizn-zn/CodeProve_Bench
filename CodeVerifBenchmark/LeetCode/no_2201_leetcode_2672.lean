@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2201_leetcode_2672
+
+
 -- Precondition auxiliary definitions
 def validIndex (n : Nat) (index : Nat) : Prop :=
   index < n
@@ -136,3 +139,5 @@ theorem colorTheArray_postcond_satisfied (n: Nat) (queries: List (Nat × Nat)) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2201_leetcode_2672

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_259_leetcode_484
+
+
 -- Precondition auxiliary definitions
 /-- Check if a character is either 'I' or 'D'. -/
 def isIDChar (c : Char) : Prop := c = 'I' ∨ c = 'D'
@@ -110,3 +113,5 @@ theorem reconstructPermutation_postcond_satisfied (s: String) (h_precond : recon
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_259_leetcode_484

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_66053_codeexercises_166053
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_distance_precond (center : ℂ) (point : ℂ) : Prop :=
@@ -37,3 +40,5 @@ theorem calculate_distance_postcond_satisfied (center: ℂ) (point: ℂ) (h_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_66053_codeexercises_166053

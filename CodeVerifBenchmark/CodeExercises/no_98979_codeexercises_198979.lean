@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_98979_codeexercises_198979
+
+
 -- Precondition definitions
 @[reducible, simp]
 def update_distance_precond (stars : List (String × Float)) (star_name : String) (new_distance : Float) : Prop :=
@@ -53,3 +56,5 @@ theorem update_distance_postcond_satisfied (stars: List (String × Float)) (star
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_98979_codeexercises_198979

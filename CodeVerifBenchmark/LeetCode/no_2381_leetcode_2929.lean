@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2381_leetcode_2929
+
+
 -- Precondition auxiliary definitions
 def countCandyDistributions_precond_aux (n : Nat) (limit : Nat) : Prop :=
   1 ≤ n ∧ 1 ≤ limit
@@ -59,3 +62,5 @@ theorem countCandyDistributions_postcond_satisfied (n: Nat) (limit: Nat) (h_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2381_leetcode_2929

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_64082_codeexercises_164082
+
+
 -- Precondition definitions
 @[reducible, simp]
 def remove_elements_at_odd_indices_precond (lst : List Int) : Prop :=
@@ -42,3 +45,4 @@ theorem remove_elements_at_odd_indices_postcond_satisfied (lst: List Int) (h_pre
   sorry
   -- !benchmark @end proof
 
+end no_64082_codeexercises_164082

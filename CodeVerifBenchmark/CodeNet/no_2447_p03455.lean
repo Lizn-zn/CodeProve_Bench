@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2447_p03455
+
+
 -- Precondition definitions
 @[reducible, simp]
 def isProductEven_precond (a : Nat) (b : Nat) : Prop :=
@@ -36,3 +39,4 @@ theorem isProductEven_postcond_satisfied (a: Nat) (b: Nat) (h_precond : isProduc
   sorry
   -- !benchmark @end proof
 
+end no_2447_p03455

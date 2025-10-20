@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1998_p02957
+
+
 -- Precondition definitions
 @[reducible, simp]
 def findEquidistantPoint_precond (A : Nat) (B : Nat) : Prop :=
@@ -42,3 +45,5 @@ theorem findEquidistantPoint_postcond_satisfied (A: Nat) (B: Nat) (h_precond : f
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1998_p02957

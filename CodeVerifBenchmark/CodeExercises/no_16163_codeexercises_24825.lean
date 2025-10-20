@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_16163_codeexercises_24825
+
+
 -- Precondition definitions
 @[reducible, simp]
 def filter_and_count_names_precond (names : List String) : Prop :=
@@ -45,3 +48,4 @@ theorem filter_and_count_names_postcond_satisfied (names: List String) (h_precon
   sorry
   -- !benchmark @end proof
 
+end no_16163_codeexercises_24825

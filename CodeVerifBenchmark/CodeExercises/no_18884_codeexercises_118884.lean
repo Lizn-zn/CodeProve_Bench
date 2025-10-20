@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_18884_codeexercises_118884
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_unique_incomes_precond (incomes : List Int) (income_threshold : Int) : Prop :=
@@ -38,3 +41,5 @@ theorem count_unique_incomes_postcond_satisfied (incomes: List Int) (income_thre
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_18884_codeexercises_118884

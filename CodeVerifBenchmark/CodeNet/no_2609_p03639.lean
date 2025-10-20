@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2609_p03639
+
+
 -- Precondition definitions
 @[reducible, simp]
 def canArrangeSequence_precond (n : Nat) (a : List Nat) : Prop :=
@@ -70,3 +73,5 @@ theorem canArrangeSequence_postcond_satisfied (n: Nat) (a: List Nat) (h_precond 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2609_p03639

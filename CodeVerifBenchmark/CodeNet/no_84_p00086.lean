@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_84_p00086
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -78,3 +81,5 @@ theorem checkPatrolRoute_postcond_satisfied (edges: List (Nat × Nat)) (h_precon
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_84_p00086

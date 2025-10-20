@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_63382_codeexercises_163382
+
+
 -- Precondition definitions
 @[reducible, simp]
 def modify_list_precond (athlete : List α) (start : Nat) (stop : Nat) (new_value : α) : Prop :=
@@ -41,3 +44,5 @@ theorem modify_list_postcond_satisfied (athlete: List α) (start: Nat) (stop: Na
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_63382_codeexercises_163382

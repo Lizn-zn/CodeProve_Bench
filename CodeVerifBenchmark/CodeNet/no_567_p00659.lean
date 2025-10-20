@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_567_p00659
+
+
 -- Postcondition auxiliary definitions
 -- Calculate how many characters appear at a given time
 def countAtTime (characters : List (String × List Nat)) (time : Nat) : Nat :=
@@ -85,3 +88,5 @@ theorem popularityEstimation_postcond_satisfied (testCases: List (Nat × List (S
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_567_p00659

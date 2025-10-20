@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3924_syn_1_iter_3924
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -68,3 +71,5 @@ theorem find_max_coordinates_postcond_satisfied (matrix: Array (Array Nat)) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3924_syn_1_iter_3924

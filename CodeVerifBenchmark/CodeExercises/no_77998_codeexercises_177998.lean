@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_77998_codeexercises_177998
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_average_temperature_precond (temperatures : List Nat) : Prop :=
@@ -59,3 +62,5 @@ theorem calculate_average_temperature_postcond_satisfied (temperatures: List Nat
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_77998_codeexercises_177998

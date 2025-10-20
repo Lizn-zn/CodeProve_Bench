@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2119_p03089
+
+
 -- Precondition definitions
 @[reducible, simp]
 def solveSequenceConstruction_precond (n : Nat) (b : List Nat) : Prop :=
@@ -95,3 +98,4 @@ theorem solveSequenceConstruction_postcond_satisfied (n: Nat) (b: List Nat) (h_p
   sorry
   -- !benchmark @end proof
 
+end no_2119_p03089

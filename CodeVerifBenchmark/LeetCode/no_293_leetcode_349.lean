@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_293_leetcode_349
+
+
 -- Precondition auxiliary definitions
 def IsSubset (l₁ l₂ : List Nat) : Prop := ∀ x ∈ l₁, x ∈ l₂
 def IsUnique (l : List Nat) : Prop := l.Nodup
@@ -48,3 +51,4 @@ theorem arrayIntersection_postcond_satisfied (nums1: List Nat) (nums2: List Nat)
   sorry
   -- !benchmark @end proof
 
+end no_293_leetcode_349

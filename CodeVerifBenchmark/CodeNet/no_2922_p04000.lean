@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2922_p04000
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countBlackCellsInSubrectangles_precond (H : Nat) (W : Nat) (blackCells : List (Nat × Nat)) : Prop :=
@@ -114,3 +117,5 @@ theorem countBlackCellsInSubrectangles_postcond_satisfied (H: Nat) (W: Nat) (bla
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2922_p04000

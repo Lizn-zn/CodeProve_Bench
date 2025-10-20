@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_15704_codeexercises_115704
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_even_numbers_precond (matrix : List (List Nat)) : Prop :=
@@ -44,3 +47,5 @@ theorem count_even_numbers_postcond_satisfied (matrix: List (List Nat)) (h_preco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_15704_codeexercises_115704

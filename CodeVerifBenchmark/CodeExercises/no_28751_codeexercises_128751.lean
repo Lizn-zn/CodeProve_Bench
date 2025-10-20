@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_28751_codeexercises_128751
+
+
 -- Precondition definitions
 @[reducible, simp]
 def remove_duplicates_from_list_precond (athlete_list : List String) : Prop :=
@@ -35,3 +38,5 @@ theorem remove_duplicates_from_list_postcond_satisfied (athlete_list: List Strin
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_28751_codeexercises_128751

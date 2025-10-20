@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_49486_codeexercises_149486
+
+
 -- Precondition definitions
 @[reducible, simp]
 def modify_elements_precond (musician : List α) (index : Nat) (new_element : α) : Prop :=
@@ -43,3 +46,4 @@ theorem modify_elements_postcond_satisfied (musician: List α) (index: Nat) (new
   sorry
   -- !benchmark @end proof
 
+end no_49486_codeexercises_149486

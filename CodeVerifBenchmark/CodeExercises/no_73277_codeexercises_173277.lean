@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_73277_codeexercises_173277
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -66,3 +69,4 @@ theorem find_and_display_pets_postcond_satisfied (pet_list: List (Prod String (P
   sorry
   -- !benchmark @end proof
 
+end no_73277_codeexercises_173277

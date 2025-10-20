@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_35046_codeexercises_135046
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_odd_numbers_precond (start : Nat) (end_val : Nat) : Prop :=
@@ -46,3 +49,5 @@ theorem find_odd_numbers_postcond_satisfied (start: Nat) (end_val: Nat) (h_preco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_35046_codeexercises_135046

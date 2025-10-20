@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_87362_codeexercises_187362
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_equal_elements_precond (lst1 : List α) (lst2 : List α) : Prop :=
@@ -50,3 +53,5 @@ theorem count_equal_elements_postcond_satisfied [DecidableEq α] (lst1: List α)
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_87362_codeexercises_187362

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_86839_codeexercises_186839
+
+
 -- Precondition definitions
 @[reducible, simp]
 def dances_in_sync_precond (dancers : List String) : Prop :=
@@ -52,3 +55,5 @@ theorem dances_in_sync_postcond_satisfied (dancers: List String) (h_precond : da
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_86839_codeexercises_186839

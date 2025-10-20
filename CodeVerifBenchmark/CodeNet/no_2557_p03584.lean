@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2557_p03584
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxUtilitySum_precond (n : Nat) (k : Nat) (items : List (Nat × Nat)) : Prop :=
@@ -90,3 +93,4 @@ theorem maxUtilitySum_postcond_satisfied (n: Nat) (k: Nat) (items: List (Nat × 
   sorry
   -- !benchmark @end proof
 
+end no_2557_p03584

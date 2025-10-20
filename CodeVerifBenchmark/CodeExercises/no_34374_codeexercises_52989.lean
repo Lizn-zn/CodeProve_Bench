@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_34374_codeexercises_52989
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -44,3 +47,5 @@ theorem intersection_elements_postcond_satisfied [DecidableEq α] (data_set1: Li
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_34374_codeexercises_52989

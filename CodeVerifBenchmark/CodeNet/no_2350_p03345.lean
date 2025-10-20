@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2350_p03345
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -63,3 +66,4 @@ theorem solve_postcond_satisfied (A: Nat) (B: Nat) (C: Nat) (K: Nat) (h_precond 
   sorry
   -- !benchmark @end proof
 
+end no_2350_p03345

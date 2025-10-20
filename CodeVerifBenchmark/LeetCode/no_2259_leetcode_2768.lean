@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2259_leetcode_2768
+
+
 -- Precondition auxiliary definitions
 def validCoordinate (m n : Nat) (coord : Nat × Nat) : Prop :=
   coord.1 < m ∧ coord.2 < n
@@ -77,3 +80,5 @@ theorem countBlackBlocks_postcond_satisfied (m: Nat) (n: Nat) (coordinates: List
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2259_leetcode_2768

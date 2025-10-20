@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_48985_codeexercises_148985
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_keys_precond (d1 : List (Prod String α)) (d2 : List (Prod String β)) : Prop :=
@@ -49,3 +52,4 @@ theorem find_common_keys_postcond_satisfied (d1: List (Prod String α)) (d2: Lis
   sorry
   -- !benchmark @end proof
 
+end no_48985_codeexercises_148985

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6033_syn_1_iter_6033
+
+
 -- Precondition definitions
 @[reducible, simp]
 def generate_ascii_pairs_and_array_precond (n : Int) (k : Nat) : Prop :=
@@ -61,3 +64,5 @@ theorem generate_ascii_pairs_and_array_postcond_satisfied (n: Int) (k: Nat) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6033_syn_1_iter_6033

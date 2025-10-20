@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_53026_codeexercises_153026
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_plate_numbers_precond (license_plates : List (String × String)) : Prop :=
@@ -32,3 +35,5 @@ theorem get_plate_numbers_postcond_satisfied (license_plates: List (String × St
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_53026_codeexercises_153026

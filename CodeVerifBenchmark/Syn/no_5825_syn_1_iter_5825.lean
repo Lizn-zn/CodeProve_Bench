@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_5825_syn_1_iter_5825
+
+
 -- Precondition auxiliary definitions
 inductive SumType where
   | char : Char → SumType
@@ -50,3 +53,5 @@ theorem flatten_heterogeneous_list_postcond_satisfied (input_list: List SumType)
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_5825_syn_1_iter_5825

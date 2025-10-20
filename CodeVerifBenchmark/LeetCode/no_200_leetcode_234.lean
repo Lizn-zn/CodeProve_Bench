@@ -1,5 +1,11 @@
 import Mathlib
 
+/-- Check if a list is a palindrome -/
+def List.isPalindrome (l : List Nat) : Bool :=
+  l = l.reverse
+
+namespace no_200_leetcode_234
+
 -- Precondition auxiliary definitions
 /-- A simple singly-linked list node structure -/
 structure ListNode where
@@ -11,10 +17,6 @@ deriving Repr
 def ListNode.values : ListNode → List Nat
   | ⟨val, none⟩ => [val]
   | ⟨val, some next⟩ => val :: next.values
-
-/-- Check if a list is a palindrome -/
-def List.isPalindrome (l : List Nat) : Bool :=
-  l = l.reverse
 
 /-- The length of a linked list -/
 def ListNode.length : ListNode → Nat
@@ -125,3 +127,5 @@ theorem isPalindrome_postcond_satisfied (head: ListNode) (h_precond : isPalindro
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_200_leetcode_234

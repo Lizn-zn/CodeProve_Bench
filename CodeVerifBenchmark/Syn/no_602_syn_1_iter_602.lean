@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_602_syn_1_iter_602
+
+
 -- Precondition definitions
 @[reducible, simp]
 def int_div_by_nat_succ_precond (a : Int) (b : Nat) : Prop :=
@@ -55,3 +58,5 @@ theorem int_div_by_nat_succ_postcond_satisfied (a: Int) (b: Nat) (h_precond : in
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_602_syn_1_iter_602

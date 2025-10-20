@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_53115_codeexercises_153115
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_positives_precond (numbers : List Int) : Prop :=
@@ -49,3 +52,4 @@ theorem count_positives_postcond_satisfied (numbers: List Int) (h_precond : coun
   sorry
   -- !benchmark @end proof
 
+end no_53115_codeexercises_153115

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1629_leetcode_2000
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -83,3 +86,5 @@ theorem reversePrefix_postcond_satisfied (word: String) (ch: Char) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1629_leetcode_2000

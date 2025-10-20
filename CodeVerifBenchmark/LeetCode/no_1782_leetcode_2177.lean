@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1782_leetcode_2177
+
+
 -- Precondition definitions
 @[reducible, simp]
 def threeConsecutiveSum_precond (num : Int) : Prop :=
@@ -52,3 +55,5 @@ theorem threeConsecutiveSum_postcond_satisfied (num: Int) (h_precond : threeCons
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1782_leetcode_2177

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_89145_codeexercises_189145
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_vet_set_precond (patients : List String) (appointment_dates : List Int) : Prop :=
@@ -41,3 +44,5 @@ theorem create_vet_set_postcond_satisfied (patients: List String) (appointment_d
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_89145_codeexercises_189145

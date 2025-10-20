@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_64169_codeexercises_164169
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sum_squares_precond (numbers : List Int) : Prop :=
@@ -38,3 +41,4 @@ theorem sum_squares_postcond_satisfied (numbers: List Int) (h_precond : sum_squa
   sorry
   -- !benchmark @end proof
 
+end no_64169_codeexercises_164169

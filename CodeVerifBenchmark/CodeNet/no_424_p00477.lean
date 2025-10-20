@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_424_p00477
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculateTotalTime_precond (time1 : Nat) (time2 : Nat) (time3 : Nat) (time4 : Nat) : Prop :=
@@ -45,3 +48,4 @@ theorem calculateTotalTime_postcond_satisfied (time1: Nat) (time2: Nat) (time3: 
   sorry
   -- !benchmark @end proof
 
+end no_424_p00477

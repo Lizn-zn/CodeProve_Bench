@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_45699_codeexercises_145699
+
+
 -- Precondition definitions
 @[reducible, simp]
 def delete_photos_precond (photos : List String) (delete_list : List Nat) : Prop :=
@@ -55,3 +58,5 @@ theorem delete_photos_postcond_satisfied (photos: List String) (delete_list: Lis
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_45699_codeexercises_145699

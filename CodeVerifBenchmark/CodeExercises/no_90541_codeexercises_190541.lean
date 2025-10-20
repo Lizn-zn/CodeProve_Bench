@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_90541_codeexercises_190541
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -39,3 +42,5 @@ theorem find_non_dancers_postcond_satisfied (dancers: List String) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_90541_codeexercises_190541

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_82793_codeexercises_182793
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_client_needs_precond (clients_dict : List (String × List String)) : Prop :=
@@ -57,3 +60,5 @@ theorem check_client_needs_postcond_satisfied (clients_dict: List (String × Lis
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_82793_codeexercises_182793

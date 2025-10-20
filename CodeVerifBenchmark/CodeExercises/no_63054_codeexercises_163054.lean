@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_63054_codeexercises_163054
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_crops_precond (farmers : List (String × List String)) : Prop :=
@@ -51,3 +54,5 @@ theorem find_common_crops_postcond_satisfied (farmers : List (String × List Str
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_63054_codeexercises_163054

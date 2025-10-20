@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_16492_codeexercises_25337
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_colors_precond (fashion_pieces : List (String × List String)) : Prop :=
@@ -56,3 +59,5 @@ theorem find_common_colors_postcond_satisfied (fashion_pieces: List (String × L
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_16492_codeexercises_25337

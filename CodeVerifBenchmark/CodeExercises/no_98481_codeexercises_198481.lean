@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_98481_codeexercises_198481
+
+
 -- Precondition definitions
 @[reducible, simp]
 def convert_complex_to_polar_precond (complex_number : ℂ) : Prop :=
@@ -38,3 +41,5 @@ theorem convert_complex_to_polar_postcond_satisfied (complex_number : ℂ) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_98481_codeexercises_198481

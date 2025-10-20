@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_16422_codeexercises_116422
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_species_precond (species_1 : List String) (species_2 : List String) : Prop :=
@@ -33,3 +36,4 @@ theorem find_common_species_postcond_satisfied (species_1: List String) (species
   sorry
   -- !benchmark @end proof
 
+end no_16422_codeexercises_116422

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_51271_codeexercises_151271
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_temperature_change_precond (temperature_data : Array (Array (Array Float))) : Prop :=
@@ -78,3 +81,5 @@ theorem calculate_temperature_change_postcond_satisfied (temperature_data: Array
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_51271_codeexercises_151271

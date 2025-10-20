@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_24198_codeexercises_37257
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -60,3 +63,5 @@ theorem find_max_polar_complex_postcond_satisfied (dictionary: List (String × L
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_24198_codeexercises_37257

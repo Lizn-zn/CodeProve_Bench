@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_69332_codeexercises_169332
+
+
 -- Precondition definitions
 @[reducible, simp]
 def append_patterns_precond (patterns : List String) : Prop :=
@@ -39,3 +42,5 @@ theorem append_patterns_postcond_satisfied (patterns: List String) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_69332_codeexercises_169332

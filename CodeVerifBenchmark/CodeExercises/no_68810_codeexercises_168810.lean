@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_68810_codeexercises_168810
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -53,3 +56,5 @@ theorem calculate_sum_of_products_postcond_satisfied (tuples: List (List Nat)) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_68810_codeexercises_168810

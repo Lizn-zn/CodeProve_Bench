@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_26090_codeexercises_126090
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_multiple_of_precond (n : Nat) (numbers : List Int) : Prop :=
@@ -37,3 +40,5 @@ theorem find_multiple_of_postcond_satisfied (n: Nat) (numbers: List Int) (h_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_26090_codeexercises_126090

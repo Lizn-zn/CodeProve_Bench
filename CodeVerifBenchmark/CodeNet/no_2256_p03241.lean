@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2256_p03241
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxGcdOfSequence_precond (N : Nat) (M : Nat) : Prop :=
@@ -68,3 +71,4 @@ theorem maxGcdOfSequence_postcond_satisfied (N: Nat) (M: Nat) (h_precond : maxGc
   sorry
   -- !benchmark @end proof
 
+end no_2256_p03241

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6781_syn_1_iter_6781
+
+
 -- Precondition definitions
 @[reducible, simp]
 def extract_positive_naturals_precond (pairs : List (Int × Nat)) (s : String) : Prop :=
@@ -36,3 +39,5 @@ theorem extract_positive_naturals_postcond_satisfied (pairs: List (Int × Nat)) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6781_syn_1_iter_6781

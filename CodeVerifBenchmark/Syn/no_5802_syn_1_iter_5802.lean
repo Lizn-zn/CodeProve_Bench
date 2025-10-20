@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_5802_syn_1_iter_5802
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -45,3 +48,5 @@ theorem natToChar_postcond_satisfied (n: Nat) (h_precond : natToChar_precond (n)
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_5802_syn_1_iter_5802

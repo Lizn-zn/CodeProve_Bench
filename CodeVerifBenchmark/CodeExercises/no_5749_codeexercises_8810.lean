@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_5749_codeexercises_8810
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_popular_colors_precond (color_list : List String) (min_count : Nat) : Prop :=
@@ -54,3 +57,5 @@ theorem get_popular_colors_postcond_satisfied (color_list: List String) (min_cou
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_5749_codeexercises_8810

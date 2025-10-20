@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2072_leetcode_2505
+
+
 -- Precondition auxiliary definitions
 def subsequenceSumOr_validInput (nums : List Nat) : Prop :=
   nums.length ≥ 1 ∧ nums.length ≤ 10^5 ∧ ∀ n ∈ nums, n ≤ 10^9
@@ -272,3 +275,4 @@ theorem subsequenceSumOr_postcond_satisfied (nums: List Nat) (h_precond : subseq
   sorry
   -- !benchmark @end proof
 
+end no_2072_leetcode_2505

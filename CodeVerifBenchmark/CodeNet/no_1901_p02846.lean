@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1901_p02846
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countMeetings_precond (T1 : Nat) (T2 : Nat) (A1 : Nat) (A2 : Nat) (B1 : Nat) (B2 : Nat) : Prop :=
@@ -91,3 +94,4 @@ theorem countMeetings_postcond_satisfied (T1: Nat) (T2: Nat) (A1: Nat) (A2: Nat)
   sorry
   -- !benchmark @end proof
 
+end no_1901_p02846

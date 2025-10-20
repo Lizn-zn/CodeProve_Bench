@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_25302_codeexercises_125302
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_elements_precond (chef_dish1 : List α) (chef_dish2 : List α) : Prop :=
@@ -37,3 +40,5 @@ theorem find_common_elements_postcond_satisfied [BEq α] (chef_dish1: List α) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_25302_codeexercises_125302

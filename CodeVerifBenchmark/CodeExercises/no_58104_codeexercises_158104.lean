@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_58104_codeexercises_158104
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -61,3 +64,5 @@ theorem compute_distance_postcond_satisfied (celestial_objects: List String) (h_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_58104_codeexercises_158104

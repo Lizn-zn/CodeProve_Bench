@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2685_p03721
+
+
 -- Precondition definitions
 @[reducible, simp]
 def findKthSmallest_precond (n : Nat) (k : Nat) (operations : List (Nat × Nat)) : Prop :=
@@ -69,3 +72,5 @@ theorem findKthSmallest_postcond_satisfied (n: Nat) (k: Nat) (operations: List (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2685_p03721

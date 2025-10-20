@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2029_syn_1_iter_2029
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_indices_above_threshold_precond (arr : Array (Array Int)) (threshold : UInt8) : Prop :=
@@ -56,3 +59,5 @@ theorem find_indices_above_threshold_postcond_satisfied (arr: Array (Array Int))
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2029_syn_1_iter_2029

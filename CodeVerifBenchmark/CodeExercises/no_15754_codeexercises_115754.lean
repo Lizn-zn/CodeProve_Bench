@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_15754_codeexercises_115754
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -60,3 +63,5 @@ theorem change_elements_postcond_satisfied (people: List (Prod String (Prod Nat 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_15754_codeexercises_115754

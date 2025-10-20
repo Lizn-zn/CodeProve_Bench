@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_61085_codeexercises_161085
+
+
 -- Precondition definitions
 @[reducible, simp]
 def index_values_precond (data : List Nat) : Prop :=
@@ -34,3 +37,5 @@ theorem index_values_postcond_satisfied (data: List Nat) (h_precond : index_valu
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_61085_codeexercises_161085

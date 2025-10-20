@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2277_p03268
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countValidTriples_precond (N : Nat) (K : Nat) : Prop :=
@@ -63,3 +66,5 @@ theorem countValidTriples_postcond_satisfied (N: Nat) (K: Nat) (h_precond : coun
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2277_p03268

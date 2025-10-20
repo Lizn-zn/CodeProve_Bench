@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1193_p01863
+
+
 -- Precondition definitions
 @[reducible, simp]
 def solveMikoMiString_precond (s : String) : Prop :=
@@ -132,3 +135,5 @@ theorem solveMikoMiString_postcond_satisfied (s: String) (h_precond : solveMikoM
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1193_p01863

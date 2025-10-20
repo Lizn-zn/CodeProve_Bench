@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2263_p03251
+
+
 -- Precondition definitions
 @[reducible, simp]
 def checkWarStatus_precond (n : Nat) (m : Nat) (x : Int) (y : Int) (xs : List Int) (ys : List Int) : Prop :=
@@ -77,3 +80,5 @@ theorem checkWarStatus_postcond_satisfied (n: Nat) (m: Nat) (x: Int) (y: Int) (x
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2263_p03251

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_761_p00957
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countChocolatePoles_precond (l : Nat) (k : Nat) : Prop :=
@@ -89,3 +92,5 @@ theorem countChocolatePoles_postcond_satisfied (l: Nat) (k: Nat) (h_precond : co
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_761_p00957

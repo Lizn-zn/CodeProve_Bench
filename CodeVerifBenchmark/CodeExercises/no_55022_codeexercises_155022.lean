@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_55022_codeexercises_155022
+
+
 -- Precondition definitions
 @[reducible, simp]
 def ternary_operator_and_short_circuiting_precond (condition1 : Bool) (condition2 : Bool) (value1 : α) (value2 : α) : Prop :=
@@ -32,3 +35,5 @@ theorem ternary_operator_and_short_circuiting_postcond_satisfied (condition1: Bo
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_55022_codeexercises_155022

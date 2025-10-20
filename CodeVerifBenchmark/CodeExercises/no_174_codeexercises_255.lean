@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_174_codeexercises_255
+
+
 -- Precondition definitions
 @[reducible, simp]
 def range_operation_intersection_precond (range_start : Int) (range_end : Int) (set_a : Set Int) (set_b : Set Int) : Prop :=
@@ -33,3 +36,4 @@ theorem range_operation_intersection_postcond_satisfied (range_start: Int) (rang
   sorry
   -- !benchmark @end proof
 
+end no_174_codeexercises_255

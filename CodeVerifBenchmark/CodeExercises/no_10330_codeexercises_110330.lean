@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_10330_codeexercises_110330
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_pictures_precond (photos : List (List Nat)) : Prop :=
@@ -29,3 +32,5 @@ theorem count_pictures_postcond_satisfied (photos: List (List Nat)) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_10330_codeexercises_110330

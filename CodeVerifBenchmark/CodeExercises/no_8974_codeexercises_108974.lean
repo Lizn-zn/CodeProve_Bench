@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8974_codeexercises_108974
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_repair_cost_precond (issue : String) : Prop :=
@@ -38,3 +41,4 @@ theorem calculate_repair_cost_postcond_satisfied (issue: String) (h_precond : ca
   sorry
   -- !benchmark @end proof
 
+end no_8974_codeexercises_108974

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_422_codeexercises_626
+
+
 -- Precondition auxiliary definitions
 inductive Medal : Type where
   | gold : Medal
@@ -60,3 +63,5 @@ theorem add_medals_postcond_satisfied (athlete: Athlete) (medals: List Medal) (h
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_422_codeexercises_626

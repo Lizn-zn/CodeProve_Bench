@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1392_p02248
+
+
 -- Precondition definitions
 @[reducible, simp]
 def kmpMatcher_precond (t : String) (p : String) : Prop :=
@@ -83,3 +86,5 @@ theorem kmpMatcher_postcond_satisfied (t: String) (p: String) (h_precond : kmpMa
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1392_p02248

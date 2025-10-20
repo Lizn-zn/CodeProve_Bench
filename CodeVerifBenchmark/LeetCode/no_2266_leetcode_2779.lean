@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2266_leetcode_2779
+
+
 -- Precondition auxiliary definitions
 /-- An interval [l, r] represented as a pair of natural numbers. -/
 structure MyInterval where
@@ -101,3 +104,5 @@ theorem maximumBeauty_postcond_satisfied (nums: List Nat) (k: Nat) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2266_leetcode_2779

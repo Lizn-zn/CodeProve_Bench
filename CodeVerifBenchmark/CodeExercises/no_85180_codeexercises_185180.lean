@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_85180_codeexercises_185180
+
+
 -- Precondition definitions
 @[reducible, simp]
 def exiting_while_loops_less_than_precond (n : Nat) (k : Nat) : Prop :=
@@ -45,3 +48,4 @@ theorem exiting_while_loops_less_than_postcond_satisfied (n: Nat) (k: Nat) (h_pr
   sorry
   -- !benchmark @end proof
 
+end no_85180_codeexercises_185180

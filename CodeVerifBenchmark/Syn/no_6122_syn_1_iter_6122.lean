@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6122_syn_1_iter_6122
+
+
 -- Precondition definitions
 @[reducible, simp]
 def compute_sum_and_count_precond (pairs : List (Nat × Nat)) (k : Nat) : Prop :=
@@ -46,3 +49,4 @@ theorem compute_sum_and_count_postcond_satisfied (pairs: List (Nat × Nat)) (k: 
   sorry
   -- !benchmark @end proof
 
+end no_6122_syn_1_iter_6122

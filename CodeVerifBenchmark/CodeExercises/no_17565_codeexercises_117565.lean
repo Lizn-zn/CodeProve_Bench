@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_17565_codeexercises_117565
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_sum_of_subrange_precond (tuple_list : List (Nat × Nat)) (start : Nat) (endIdx : Nat) : Prop :=
@@ -33,3 +36,5 @@ def calculate_sum_of_subrange_postcond (tuple_list : List (Nat × Nat)) (start :
 theorem calculate_sum_of_subrange_postcond_satisfied (tuple_list: List (Nat × Nat)) (start: Nat) (endIdx: Nat) (h_precond : calculate_sum_of_subrange_precond tuple_list start endIdx) :
     calculate_sum_of_subrange_postcond tuple_list start endIdx (calculate_sum_of_subrange tuple_list start endIdx h_precond) h_precond := by
   sorry
+
+end no_17565_codeexercises_117565

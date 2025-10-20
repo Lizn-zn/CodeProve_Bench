@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_672_p00825
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -148,3 +151,5 @@ theorem concertHallScheduling_postcond_satisfied (applications: List (Nat × Nat
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_672_p00825

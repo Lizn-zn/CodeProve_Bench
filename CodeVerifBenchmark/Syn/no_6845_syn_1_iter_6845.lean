@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6845_syn_1_iter_6845
+
+
 -- Precondition definitions
 @[reducible, simp]
 def natToChar_precond (n : Nat) : Prop :=
@@ -38,3 +41,4 @@ theorem natToChar_postcond_satisfied (n: Nat) (h_precond : natToChar_precond (n)
   sorry
   -- !benchmark @end proof
 
+end no_6845_syn_1_iter_6845

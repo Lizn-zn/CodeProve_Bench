@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_98232_codeexercises_198232
+
+
 -- Precondition definitions
 @[reducible, simp]
 def remove_duplicates_from_nested_list_precond (nested_list : List (List Nat)) : Prop :=
@@ -40,3 +43,4 @@ theorem remove_duplicates_from_nested_list_postcond_satisfied (nested_list: List
   sorry
   -- !benchmark @end proof
 
+end no_98232_codeexercises_198232

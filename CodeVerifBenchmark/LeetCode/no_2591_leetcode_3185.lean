@@ -66,10 +66,10 @@ def countCompleteDayPairs (hours : List Nat) (h_precond : countCompleteDayPairs_
 def countCompleteDayPairs_spec (hours : List Nat) : Nat :=
   let mods := hours.map (· % 24)
   let freq := mods.foldl (fun acc h => RemainderFreq.insert acc h (RemainderFreq.get acc h + 1)) RemainderFreq.empty
-  let countSame := 
+  let countSame :=
     (RemainderFreq.get freq 0 * (RemainderFreq.get freq 0 - 1)) / 2 +
     (RemainderFreq.get freq 12 * (RemainderFreq.get freq 12 - 1)) / 2
-  let countDiff := 
+  let countDiff :=
     let rec loop (k : Nat) (acc : Nat) : Nat :=
       if k ≥ 24 then
         acc

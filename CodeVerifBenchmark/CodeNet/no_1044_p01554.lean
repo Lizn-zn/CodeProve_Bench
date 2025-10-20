@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1044_p01554
+
+
 -- Precondition definitions
 @[reducible, simp]
 def processCardSystem_precond (registeredIds : List String) (cardScans : List String) : Prop :=
@@ -70,3 +73,5 @@ theorem processCardSystem_postcond_satisfied (registeredIds: List String) (cardS
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1044_p01554

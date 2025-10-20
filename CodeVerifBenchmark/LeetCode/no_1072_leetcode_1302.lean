@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1072_leetcode_1302
+
+
 -- Define the binary tree structure
 inductive BTree (α : Type) where
   | nil : BTree α
@@ -100,3 +103,5 @@ theorem deepestLeavesSum_postcond_satisfied (root: BTree Nat) (h_precond : deepe
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1072_leetcode_1302

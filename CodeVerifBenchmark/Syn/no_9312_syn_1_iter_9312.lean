@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9312_syn_1_iter_9312
+
+
 -- Precondition auxiliary definitions
 /-- Auxiliary function to compute the sum of elements in an integer array -/
 def sum_array (arr : Array Int) : Int :=
@@ -73,3 +76,5 @@ theorem compute_char_array_postcond_satisfied (int_array: Array (Array Int)) (ch
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_9312_syn_1_iter_9312

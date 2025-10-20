@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_852_leetcode_1697
+
+
 -- Precondition auxiliary definitions
 def validNode (n : Nat) (node : Nat) : Prop :=
   node < n
@@ -91,3 +94,5 @@ theorem distanceLimitedPathsExist_postcond_satisfied (n: Nat) (edgeList: List (N
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_852_leetcode_1697

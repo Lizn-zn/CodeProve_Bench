@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_943_leetcode_1133
+
+
 -- Precondition auxiliary definitions
 def countOccurrences (nums : List Nat) (n : Nat) : Nat :=
   nums.filter (· = n) |>.length
@@ -51,3 +54,5 @@ theorem largestUniqueNumber_postcond_satisfied (nums : List Nat) (h_precond : la
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_943_leetcode_1133

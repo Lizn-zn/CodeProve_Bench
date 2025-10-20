@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_14785_codeexercises_114785
+
+
 -- Precondition definitions
 @[reducible, simp]
 def remove_negative_precond (numbers : List Int) : Prop :=
@@ -38,3 +41,4 @@ theorem remove_negative_postcond_satisfied (numbers: List Int) (h_precond : remo
   sorry
   -- !benchmark @end proof
 
+end no_14785_codeexercises_114785

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_42614_codeexercises_142614
+
+
 -- Precondition definitions
 @[reducible, simp]
 def remove_duplicates_precond (names : List String) : Prop :=
@@ -37,3 +40,4 @@ theorem remove_duplicates_postcond_satisfied (names: List String) (h_precond : r
   sorry
   -- !benchmark @end proof
 
+end no_42614_codeexercises_142614

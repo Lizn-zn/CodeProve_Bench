@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_61858_codeexercises_161858
+
+
 -- Precondition definitions
 @[reducible, simp]
 def call_for_help_precond (fire_location : String) (smoke_detected : Bool) : Prop :=
@@ -34,3 +37,4 @@ theorem call_for_help_postcond_satisfied (fire_location: String) (smoke_detected
   sorry
   -- !benchmark @end proof
 
+end no_61858_codeexercises_161858

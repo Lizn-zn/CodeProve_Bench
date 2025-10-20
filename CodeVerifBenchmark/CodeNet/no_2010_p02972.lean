@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2010_p02972
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -113,3 +116,4 @@ theorem solveBoxBallProblem_postcond_satisfied (n: Nat) (a: Array Nat) (h_precon
   sorry
   -- !benchmark @end proof
 
+end no_2010_p02972

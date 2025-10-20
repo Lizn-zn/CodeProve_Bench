@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_56107_codeexercises_156107
+
+
 -- Precondition definitions
 @[reducible, simp]
 def compare_and_append_precond (list1 : List (Nat × Nat)) (list2 : List (Nat × Nat)) : Prop :=
@@ -52,3 +55,5 @@ theorem compare_and_append_postcond_satisfied (list1: List (Nat × Nat)) (list2:
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_56107_codeexercises_156107

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4565_codeexercises_104565
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -44,3 +47,5 @@ theorem check_crops_postcond_satisfied (farmer_name: String) (crops: List String
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4565_codeexercises_104565

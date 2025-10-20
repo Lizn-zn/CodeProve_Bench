@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2158_p03139
+
+
 -- Precondition definitions
 @[reducible, simp]
 def newspaperSubscription_precond (N : Nat) (A : Nat) (B : Nat) : Prop :=
@@ -50,3 +53,4 @@ theorem newspaperSubscription_postcond_satisfied (N: Nat) (A: Nat) (B: Nat) (h_p
   sorry
   -- !benchmark @end proof
 
+end no_2158_p03139

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_88600_codeexercises_188600
+
+
 -- Precondition auxiliary definitions
 inductive ClothingPreference : Type where
   | top : ClothingPreference
@@ -69,3 +72,4 @@ theorem get_outfit_postcond_satisfied (preference: String) (season: String) (h_p
   sorry
   -- !benchmark @end proof
 
+end no_88600_codeexercises_188600

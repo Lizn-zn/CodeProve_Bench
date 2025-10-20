@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_11025_codeexercises_111025
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_criminal_precond (name : String) (list_of_criminals : List String) : Prop :=
@@ -39,3 +42,5 @@ theorem find_criminal_postcond_satisfied (name: String) (list_of_criminals: List
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_11025_codeexercises_111025

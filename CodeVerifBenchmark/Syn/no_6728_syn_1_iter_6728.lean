@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6728_syn_1_iter_6728
+
+
 -- Precondition definitions
 @[reducible, simp]
 def process_combined_input_precond (char_array : Array Char) (string_list : List String) (generic_list : List α) (nat_pairs : List (Nat × Nat)) : Prop :=
@@ -50,3 +53,5 @@ theorem process_combined_input_postcond_satisfied (char_array: Array Char) (stri
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6728_syn_1_iter_6728

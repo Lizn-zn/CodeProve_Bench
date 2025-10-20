@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_33027_codeexercises_50920
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -42,3 +45,5 @@ theorem round_list_elements_postcond_satisfied (lst: List Float) (decimal_places
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_33027_codeexercises_50920

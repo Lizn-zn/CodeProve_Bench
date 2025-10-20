@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1059_leetcode_2123
+
+
 -- Precondition auxiliary definitions
 /-- A position in the grid, represented as a pair of natural numbers (row, column). -/
 structure Pos where
@@ -175,3 +178,5 @@ theorem minOperationsToWellIsolate_postcond_satisfied (grid: List (List Nat)) (h
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1059_leetcode_2123

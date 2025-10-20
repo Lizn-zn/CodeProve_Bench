@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_145_leetcode_263
+
+
 -- Precondition auxiliary definitions
 def isUglyNumber (n : Int) : Prop :=
   0 < n ∧
@@ -49,3 +52,4 @@ theorem isUgly_postcond_satisfied (n: Int) (h_precond : isUgly_precond (n)) :
   sorry
   -- !benchmark @end proof
 
+end no_145_leetcode_263

@@ -1,6 +1,8 @@
 import Mathlib.Data.Finset.Basic
 import Mathlib.Data.List.Basic
 
+namespace no_3744_syn_1_iter_3744
+
 -- Define MinHeap structure
 structure MinHeap (α : Type) [LinearOrder α] where
   val : α
@@ -47,7 +49,7 @@ def find_common_elements (heap : MinHeap Nat) (set : Finset Nat) (h_precond : fi
 def is_common_elements_in_heap_order (heap : MinHeap Nat) (set : Finset Nat) (result : List Nat) : Prop :=
   let heap_elements := heap.inOrderTraversal
   let common_elements : Finset Nat := set.filter (λ x => x ∈ heap_elements)
-  result = (heap_elements.filter (λ x => x ∈ set)) ∧ 
+  result = (heap_elements.filter (λ x => x ∈ set)) ∧
   (∀ x ∈ result, x ∈ heap_elements ∧ x ∈ set) ∧
   (∀ x, x ∈ heap_elements → x ∈ set → x ∈ result)
 
@@ -67,3 +69,4 @@ theorem find_common_elements_postcond_satisfied (heap: MinHeap Nat) (set: Finset
   -- !benchmark @end proof
 
 end MinHeap
+end no_3744_syn_1_iter_3744

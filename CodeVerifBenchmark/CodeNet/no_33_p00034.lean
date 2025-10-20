@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_33_p00034
+
+
 -- Precondition auxiliary definitions
 -- Helper function to compute cumulative distances from start
 def cumulativeDistances (sectionLengths : List Nat) : List Nat :=
@@ -112,3 +115,5 @@ theorem findMeetingSection_postcond_satisfied (sectionLengths: List Nat) (speed1
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_33_p00034

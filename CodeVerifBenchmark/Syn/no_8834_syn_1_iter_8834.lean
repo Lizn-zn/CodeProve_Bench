@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8834_syn_1_iter_8834
+
+
 -- Precondition definitions
 @[reducible, simp]
 def distinct_integers_precond (arr : Array Int) : Prop :=
@@ -41,3 +44,5 @@ theorem distinct_integers_postcond_satisfied (arr: Array Int) (h_precond : disti
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8834_syn_1_iter_8834

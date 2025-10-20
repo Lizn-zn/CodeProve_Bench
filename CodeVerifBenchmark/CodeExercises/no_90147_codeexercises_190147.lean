@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_90147_codeexercises_190147
+
+
 -- Precondition definitions
 @[reducible, simp]
 def break_while_loop_precond (num : Nat) : Prop :=
@@ -43,3 +46,5 @@ theorem break_while_loop_postcond_satisfied (num: Nat) (h_precond : break_while_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_90147_codeexercises_190147

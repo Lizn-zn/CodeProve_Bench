@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1556_leetcode_1913
+
+
 -- Precondition auxiliary definitions
 /-- A helper function to compute the product difference of two pairs of numbers -/
 def productDifference (a b c d : Nat) : Int :=
@@ -85,3 +88,5 @@ theorem maxProductDifference_postcond_satisfied (nums: List Nat) (h_precond : ma
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1556_leetcode_1913

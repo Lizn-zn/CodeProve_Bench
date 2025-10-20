@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6691_codeexercises_10263
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_keys_precond (dict1 : List (Prod α β)) (dict2 : List (Prod α γ)) : Prop :=
@@ -47,3 +50,5 @@ theorem find_common_keys_postcond_satisfied [BEq α] (dict1: List (Prod α β)) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6691_codeexercises_10263

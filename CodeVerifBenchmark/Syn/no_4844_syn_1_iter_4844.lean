@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4844_syn_1_iter_4844
+
+
 -- Precondition definitions
 @[reducible, simp]
 def repeat_chars_from_byte_precond (byte_val : UInt8) (float_list : List Float) : Prop :=
@@ -59,3 +62,4 @@ theorem repeat_chars_from_byte_postcond_satisfied (byte_val: UInt8) (float_list:
   sorry
   -- !benchmark @end proof
 
+end no_4844_syn_1_iter_4844

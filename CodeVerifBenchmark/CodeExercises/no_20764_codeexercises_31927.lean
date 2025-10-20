@@ -1,6 +1,9 @@
 import Mathlib.Data.List.Basic
 import Mathlib.Data.Prod.Basic
 
+namespace no_20764_codeexercises_31927
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_sliced_colors_by_room_precond (color_palette : List (String × List (Nat × Nat × Nat × Nat))) (room : String) : Prop :=
@@ -45,3 +48,5 @@ theorem find_sliced_colors_by_room_postcond_satisfied (color_palette: List (Stri
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_20764_codeexercises_31927

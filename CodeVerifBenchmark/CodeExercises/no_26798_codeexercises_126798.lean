@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_26798_codeexercises_126798
+
+
 -- Precondition definitions
 @[reducible, simp]
 def chop_ingredient_precond (ingredient : String) (chopping_time : Nat) : Prop :=
@@ -50,3 +53,5 @@ theorem chop_ingredient_postcond_satisfied (ingredient: String) (chopping_time: 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_26798_codeexercises_126798

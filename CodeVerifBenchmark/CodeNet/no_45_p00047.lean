@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_45_p00047
+
+
 -- Precondition definitions
 @[reducible, simp]
 def cupGame_precond (swaps : List (String × String)) : Prop :=
@@ -51,3 +54,5 @@ theorem cupGame_postcond_satisfied (swaps: List (String × String)) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_45_p00047

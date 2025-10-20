@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_831_p01101
+
+
 -- Precondition definitions
 @[reducible, simp]
 def findBestPair_precond (n : Nat) (m : Nat) (prices : List Nat) : Prop :=
@@ -92,3 +95,5 @@ theorem findBestPair_postcond_satisfied (n: Nat) (m: Nat) (prices: List Nat) (h_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_831_p01101

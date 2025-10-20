@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2708_syn_1_iter_2708
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -63,3 +66,5 @@ theorem format_floats_to_strings_postcond_satisfied (nums: List Float) (h_precon
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2708_syn_1_iter_2708

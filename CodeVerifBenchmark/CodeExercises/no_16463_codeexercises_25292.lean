@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_16463_codeexercises_25292
+
+
 -- Precondition definitions
 @[reducible, simp]
 def list_all_claims_precond (claims_list : List (List String)) : Prop :=
@@ -63,3 +66,5 @@ theorem list_all_claims_postcond_satisfied (claims_list: List (List String)) (h_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_16463_codeexercises_25292

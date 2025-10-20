@@ -1,5 +1,8 @@
 import Mathlib.Data.List.Basic
 
+namespace no_74230_codeexercises_174230
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_favorite_song_precond (musician1 : List (String × String)) (musician2 : List (String × String)) : Prop :=
@@ -41,3 +44,5 @@ theorem get_favorite_song_postcond_satisfied (musician1 : List (String × String
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_74230_codeexercises_174230

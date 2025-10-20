@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_43659_codeexercises_143659
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_even_precond (num_list : List Nat) : Prop :=
@@ -34,3 +37,5 @@ theorem count_even_postcond_satisfied (num_list: List Nat) (h_precond : count_ev
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_43659_codeexercises_143659

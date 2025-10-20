@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1091_leetcode_2188
+
+
 -- Precondition auxiliary definitions
 /-- The time for the `x`-th successive lap for tire `(f, r)` -/
 def tireTime' (f r : Nat) (x : Nat) : Nat :=
@@ -121,3 +124,5 @@ theorem min_race_time_postcond_satisfied (tires: List (Nat × Nat)) (changeTime:
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1091_leetcode_2188

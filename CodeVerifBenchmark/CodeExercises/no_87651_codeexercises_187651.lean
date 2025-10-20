@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_87651_codeexercises_187651
+
+
 -- Precondition auxiliary definitions
 structure Book where
   pages : Nat
@@ -53,3 +56,4 @@ theorem count_books_postcond_satisfied (books: List Book) (h_precond : count_boo
   sorry
   -- !benchmark @end proof
 
+end no_87651_codeexercises_187651

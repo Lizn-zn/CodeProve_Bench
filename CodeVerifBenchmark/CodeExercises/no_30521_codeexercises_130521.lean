@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_30521_codeexercises_130521
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -54,3 +57,5 @@ theorem find_smallest_multiple_postcond_satisfied (n: Nat) (h_precond : find_sma
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_30521_codeexercises_130521

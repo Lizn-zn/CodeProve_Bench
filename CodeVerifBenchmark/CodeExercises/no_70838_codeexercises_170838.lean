@@ -24,7 +24,7 @@ def intersection_equal_nested_loops (dancer1 : List String) (dancer2 : List Stri
 @[reducible, simp]
 def intersection_equal_nested_loops_postcond (dancer1 : List String) (dancer2 : List String) (result: List String) (h_precond : intersection_equal_nested_loops_precond (dancer1) (dancer2)) : Prop :=
   -- !benchmark @start postcond
-  ∀ (move : String), move ∈ result ↔ (move ∈ dancer1 ∧ move ∈ dancer2) ∧ 
+  ∀ (move : String), move ∈ result ↔ (move ∈ dancer1 ∧ move ∈ dancer2) ∧
     (∀ (move' : String), move' ∈ result → move' == move → move' = move) ∧
     (∀ (move' : String), move' ∈ dancer1 → move' ∈ dancer2 → move' ∈ result)
   -- !benchmark @end postcond

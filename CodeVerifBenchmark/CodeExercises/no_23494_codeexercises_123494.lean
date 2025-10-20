@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_23494_codeexercises_123494
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_dancers_with_even_index_precond (dancers : List String) : Prop :=
@@ -40,3 +43,4 @@ theorem get_dancers_with_even_index_postcond_satisfied (dancers: List String) (h
   sorry
   -- !benchmark @end proof
 
+end no_23494_codeexercises_123494

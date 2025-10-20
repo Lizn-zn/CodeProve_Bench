@@ -1,5 +1,7 @@
 import Mathlib
 
+namespace no_864_codeexercises_1316
+
 -- Precondition auxiliary definitions
 inductive Tuple (α : Type) : Type
   | nil : Tuple α
@@ -65,3 +67,5 @@ theorem filter_even_numbers_from_tuple_postcond_satisfied (tuple : Tuple Nat) (h
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_864_codeexercises_1316

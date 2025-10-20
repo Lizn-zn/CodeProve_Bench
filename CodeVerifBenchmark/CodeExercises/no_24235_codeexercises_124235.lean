@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_24235_codeexercises_124235
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_electrical_issues_precond (reading : List Nat) : Prop :=
@@ -34,3 +37,4 @@ theorem check_electrical_issues_postcond_satisfied (reading: List Nat) (h_precon
   sorry
   -- !benchmark @end proof
 
+end no_24235_codeexercises_124235

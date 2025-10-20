@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1574_leetcode_3160
+
+
 -- Precondition auxiliary definitions
 def validBallLabel (limit : Nat) (ball : Nat) : Prop :=
   ball ≤ limit
@@ -116,3 +119,5 @@ theorem countDistinctColors_postcond_satisfied (limit: Nat) (queries: List (Nat 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1574_leetcode_3160

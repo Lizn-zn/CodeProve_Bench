@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_91134_codeexercises_191134
+
+
 -- Precondition definitions
 @[reducible, simp]
 def set_intersection_precond (nested_sets : List (Set Nat)) : Prop :=
@@ -41,3 +44,4 @@ theorem set_intersection_postcond_satisfied (nested_sets: List (Set Nat)) (h_pre
   sorry
   -- !benchmark @end proof
 
+end no_91134_codeexercises_191134

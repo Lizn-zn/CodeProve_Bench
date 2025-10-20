@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1544_leetcode_3097
+
+
 -- Precondition auxiliary definitions
 def Array.bitwise_or (arr : Array Nat) : Nat :=
   arr.foldl (· ||| ·) 0
@@ -100,3 +103,5 @@ theorem shortestSpecialSubarray_postcond_satisfied (nums: Array Nat) (k: Nat) (h
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1544_leetcode_3097

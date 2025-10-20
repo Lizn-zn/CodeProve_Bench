@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_80300_codeexercises_180300
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_largest_perfect_square_precond (n : Nat) : Prop :=
@@ -55,3 +58,4 @@ theorem find_largest_perfect_square_postcond_satisfied (n: Nat) (h_precond : fin
   sorry
   -- !benchmark @end proof
 
+end no_80300_codeexercises_180300

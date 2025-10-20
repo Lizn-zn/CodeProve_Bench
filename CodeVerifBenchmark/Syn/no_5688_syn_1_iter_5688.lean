@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_5688_syn_1_iter_5688
+
+
 -- Precondition definitions
 @[reducible, simp]
 def transform_set_to_list_precond (input_set : Set (ℤ × String)) : Prop :=
@@ -36,3 +39,5 @@ theorem transform_set_to_list_postcond_satisfied (input_set: Set (ℤ × String)
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_5688_syn_1_iter_5688

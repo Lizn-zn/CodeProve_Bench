@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_20238_codeexercises_31140
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_artifacts_precond (artifacts_list : List String) (num_times : Nat) : Prop :=
@@ -41,3 +44,4 @@ theorem find_artifacts_postcond_satisfied (artifacts_list: List String) (num_tim
   sorry
   -- !benchmark @end proof
 
+end no_20238_codeexercises_31140

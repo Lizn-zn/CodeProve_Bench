@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2922_codeexercises_102922
+
+
 -- Precondition definitions
 @[reducible, simp]
 def updating_economic_indicators_precond (monthly_data : List (String × Nat)) (annual_data : List (String × Nat)) : Prop :=
@@ -42,3 +45,5 @@ theorem updating_economic_indicators_postcond_satisfied (monthly_data: List (Str
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2922_codeexercises_102922

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_237_p00246
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxBarabaraManju_precond (weights : List Nat) : Prop :=
@@ -103,3 +106,5 @@ theorem maxBarabaraManju_postcond_satisfied (weights: List Nat) (h_precond : max
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_237_p00246

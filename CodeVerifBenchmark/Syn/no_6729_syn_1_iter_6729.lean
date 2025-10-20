@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6729_syn_1_iter_6729
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_frequencies_precond (arr : Array Int) : Prop :=
@@ -54,3 +57,4 @@ theorem count_frequencies_postcond_satisfied (arr: Array Int) (h_precond : count
   sorry
   -- !benchmark @end proof
 
+end no_6729_syn_1_iter_6729

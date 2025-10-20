@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_630_leetcode_1224
+
+
 -- Precondition auxiliary definitions
 def countFreq (nums : Array Nat) : Array Nat :=
   let counts := nums.foldl (fun (acc : Array Nat) (num : Nat) =>
@@ -150,3 +153,5 @@ theorem maxEqualFreq_postcond_satisfied (nums: Array Nat) (h_precond : maxEqualF
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_630_leetcode_1224

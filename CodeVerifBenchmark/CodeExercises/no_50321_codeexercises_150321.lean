@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_50321_codeexercises_150321
+
+
 -- Precondition definitions
 @[reducible, simp]
 def flatten_list_precond (nested_list : List (List Nat)) : Prop :=
@@ -40,3 +43,4 @@ theorem flatten_list_postcond_satisfied (nested_list: List (List Nat)) (h_precon
   sorry
   -- !benchmark @end proof
 
+end no_50321_codeexercises_150321

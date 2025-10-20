@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_5397_syn_1_iter_5397
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_min_diff_pair_precond (nums : List Float) : Prop :=
@@ -74,3 +77,5 @@ theorem find_min_diff_pair_postcond_satisfied (nums: List Float) (h_precond : fi
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_5397_syn_1_iter_5397

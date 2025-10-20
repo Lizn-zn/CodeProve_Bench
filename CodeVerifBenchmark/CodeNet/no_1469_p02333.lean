@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1469_p02333
+
+
 -- Postcondition auxiliary definitions
 -- Define the modulo constant
 def MOD : Nat := 10^9 + 7
@@ -101,3 +104,5 @@ theorem ballsAndBoxes3_postcond_satisfied (n: Nat) (k: Nat) (h_precond : ballsAn
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1469_p02333

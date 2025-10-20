@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8479_syn_1_iter_8479
+
+
 -- Precondition definitions
 @[reducible, simp]
 def format_pairs_precond (pairs : List (Int × Int)) : Prop :=
@@ -47,3 +50,5 @@ theorem format_pairs_postcond_satisfied (pairs: List (Int × Int)) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8479_syn_1_iter_8479

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_5016_syn_1_iter_5016
+
+
 -- Precondition definitions
 @[reducible, simp]
 def array_to_indexed_pairs_precond (arr : Array Nat) : Prop :=
@@ -34,3 +37,5 @@ theorem array_to_indexed_pairs_postcond_satisfied (arr: Array Nat) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_5016_syn_1_iter_5016

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_96682_codeexercises_196682
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_medication_dosage_precond (patient_age : Nat) (symptom_list : List String) (temperature : Float) : Prop :=
@@ -62,3 +65,5 @@ theorem calculate_medication_dosage_postcond_satisfied (patient_age: Nat) (sympt
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_96682_codeexercises_196682

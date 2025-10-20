@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1276_syn_1_iter_1276
+
+
 -- Precondition definitions
 @[reducible, simp]
 def square_list_precond (nums : List Nat) : Prop :=
@@ -35,3 +38,4 @@ theorem square_list_postcond_satisfied (nums: List Nat) (h_precond : square_list
   sorry
   -- !benchmark @end proof
 
+end no_1276_syn_1_iter_1276

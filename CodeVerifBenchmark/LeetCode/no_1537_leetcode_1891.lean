@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1537_leetcode_1891
+
+
 -- Precondition auxiliary definitions
 def countRibbons (ribbons : List Nat) (length : Nat) : Nat :=
   ribbons.foldl (fun acc r => acc + r / length) 0
@@ -64,3 +67,5 @@ theorem maxRibbonLength_postcond_satisfied (ribbons: List Nat) (k: Nat) (h_preco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1537_leetcode_1891

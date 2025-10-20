@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3123_syn_1_iter_3123
+
+
 -- Precondition definitions
 @[reducible, simp]
 def extract_integers_precond (input : List (List String ⊕ List Int)) : Prop :=
@@ -41,3 +44,5 @@ theorem extract_integers_postcond_satisfied (input: List (List String ⊕ List I
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3123_syn_1_iter_3123

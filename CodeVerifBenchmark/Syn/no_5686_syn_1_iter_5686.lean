@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_5686_syn_1_iter_5686
+
+
 -- Precondition definitions
 @[reducible, simp]
 def process_pair_precond (x : Int) (n : Nat) : Prop :=
@@ -47,3 +50,5 @@ theorem process_pair_postcond_satisfied (x: Int) (n: Nat) (h_precond : process_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_5686_syn_1_iter_5686

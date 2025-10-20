@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1595_p02466
+
+
 -- Precondition auxiliary definitions
 -- Helper function to check if a list is sorted in ascending order
 def isSorted (l : List Nat) : Prop :=
@@ -80,3 +83,4 @@ theorem symmetricDifference_postcond_satisfied (setA: List Nat) (setB: List Nat)
   sorry
   -- !benchmark @end proof
 
+end no_1595_p02466

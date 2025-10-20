@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8431_syn_1_iter_8431
+
+
 -- Precondition definitions
 @[reducible, simp]
 def cumulative_sum_precond (nums : List Nat) : Prop :=
@@ -42,3 +45,5 @@ theorem cumulative_sum_postcond_satisfied (nums: List Nat) (h_precond : cumulati
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8431_syn_1_iter_8431

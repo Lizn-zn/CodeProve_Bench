@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_5530_codeexercises_8459
+
+
 -- Precondition definitions
 @[reducible, simp]
 def range_not_in_membership_precond (range_start : Int) (range_end : Int) (membership_list : List Int) : Prop :=
@@ -30,3 +33,5 @@ theorem range_not_in_membership_postcond_satisfied (range_start: Int) (range_end
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_5530_codeexercises_8459

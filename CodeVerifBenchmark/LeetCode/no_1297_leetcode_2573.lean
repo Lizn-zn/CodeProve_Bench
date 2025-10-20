@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1297_leetcode_2573
+
+
 -- Precondition auxiliary definitions
 /-- Check if a matrix is square -/
 def Matrix.isSquare (m : List (List α)) : Prop :=
@@ -179,3 +182,5 @@ theorem findTheString_postcond_satisfied (lcp: List (List Nat)) (h_precond : fin
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1297_leetcode_2573

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_63963_codeexercises_163963
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_actor_name_precond (actor : String × Option String × String) : Prop :=
@@ -42,3 +45,4 @@ theorem get_actor_name_postcond_satisfied (actor: String × Option String × Str
   sorry
   -- !benchmark @end proof
 
+end no_63963_codeexercises_163963

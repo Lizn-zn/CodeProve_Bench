@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8725_syn_1_iter_8725
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -52,3 +55,5 @@ theorem char_frequencies_postcond_satisfied (arr: Array Char) (h_precond : char_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8725_syn_1_iter_8725

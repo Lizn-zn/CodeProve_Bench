@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2626_p03658
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxSnakeToyLength_precond (n : Nat) (k : Nat) (sticks : List Nat) : Prop :=
@@ -50,3 +53,4 @@ theorem maxSnakeToyLength_postcond_satisfied (n: Nat) (k: Nat) (sticks: List Nat
   sorry
   -- !benchmark @end proof
 
+end no_2626_p03658

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1373_leetcode_2746
+
+
 -- Precondition auxiliary definitions
 def join (x y : String) : String :=
   if x.isEmpty ∨ y.isEmpty then
@@ -217,3 +220,5 @@ theorem minimizeConcatenatedLength_postcond_satisfied (words: List String) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1373_leetcode_2746

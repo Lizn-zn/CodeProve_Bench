@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_262_p00274
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minChallengesForMatchingPrize_precond (prizes : List Nat) : Prop :=
@@ -54,3 +57,5 @@ theorem minChallengesForMatchingPrize_postcond_satisfied (prizes: List Nat) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_262_p00274

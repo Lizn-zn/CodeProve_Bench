@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1053_syn_1_iter_1053
+
+
 -- Precondition definitions
 @[reducible, simp]
 def first_n_naturals_precond (n : Nat) : Prop :=
@@ -33,3 +36,5 @@ theorem first_n_naturals_postcond_satisfied (n: Nat) (h_precond : first_n_natura
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1053_syn_1_iter_1053

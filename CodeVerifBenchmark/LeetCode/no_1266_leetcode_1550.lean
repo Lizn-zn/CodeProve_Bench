@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1266_leetcode_1550
+
+
 -- Precondition auxiliary definitions
 def IsOdd (n : Int) : Prop := n % 2 == 1
 
@@ -50,3 +53,4 @@ theorem threeConsecutiveOdds_postcond_satisfied (arr: Array Int) (h_precond : th
   sorry
   -- !benchmark @end proof
 
+end no_1266_leetcode_1550

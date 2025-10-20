@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_220_p00228
+
+
 -- Precondition auxiliary definitions
 -- Mapping from digit to its 7-segment representation
 def digitToSegment : Nat → Nat
@@ -77,3 +80,5 @@ theorem sevenSegmentDisplay_postcond_satisfied (digits: List Nat) (h_precond : s
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_220_p00228

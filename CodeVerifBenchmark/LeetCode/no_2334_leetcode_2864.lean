@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2334_leetcode_2864
+
+
 -- Precondition auxiliary definitions
 def countOnes (s : String) : Nat :=
   s.data.foldl (fun acc c => if c = '1' then acc + 1 else acc) 0
@@ -70,3 +73,4 @@ theorem maximumOddBinaryNumber_postcond_satisfied (s: String) (h_precond : maxim
   sorry
   -- !benchmark @end proof
 
+end no_2334_leetcode_2864

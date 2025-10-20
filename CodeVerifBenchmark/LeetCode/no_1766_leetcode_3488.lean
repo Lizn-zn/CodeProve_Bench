@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1766_leetcode_3488
+
+
 -- Precondition auxiliary definitions
 def circularDistance (len : Nat) (i j : Nat) : Nat :=
   let d := if i >= j then i - j else j - i
@@ -77,3 +80,5 @@ theorem findClosestEqualElements_postcond_satisfied (nums: List Nat) (queries: L
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1766_leetcode_3488

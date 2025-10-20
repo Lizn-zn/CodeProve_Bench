@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_95930_codeexercises_195930
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_athlete_details_precond (athlete_id : Nat) : Prop :=
@@ -52,3 +55,5 @@ theorem get_athlete_details_postcond_satisfied (athlete_id: Nat) (h_precond : ge
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_95930_codeexercises_195930

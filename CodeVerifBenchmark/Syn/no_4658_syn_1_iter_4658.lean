@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4658_syn_1_iter_4658
+
+
 -- Precondition definitions
 @[reducible, simp]
 def process_pairs_precond (pairs : List (Nat × Nat)) : Prop :=
@@ -53,3 +56,5 @@ theorem process_pairs_postcond_satisfied (pairs: List (Nat × Nat)) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4658_syn_1_iter_4658

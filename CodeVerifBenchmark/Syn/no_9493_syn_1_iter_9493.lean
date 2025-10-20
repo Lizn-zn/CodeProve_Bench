@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9493_syn_1_iter_9493
+
+
 -- Precondition auxiliary definitions
 structure MinHeap (α : Type) where
   contains : α → Bool
@@ -41,3 +44,5 @@ theorem compute_relevant_integers_postcond_satisfied (char_nat_pairs: List (Char
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_9493_syn_1_iter_9493

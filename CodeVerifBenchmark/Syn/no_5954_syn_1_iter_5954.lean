@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_5954_syn_1_iter_5954
+
+
 -- Precondition definitions
 @[reducible, simp]
 def compare_collections_precond (lst : List Nat) (arr : Array Nat) : Prop :=
@@ -58,3 +61,5 @@ theorem compare_collections_postcond_satisfied (lst: List Nat) (arr: Array Nat) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_5954_syn_1_iter_5954

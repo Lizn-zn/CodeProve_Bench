@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_46574_codeexercises_146574
+
+
 -- Precondition definitions
 @[reducible, simp]
 def replace_elements_precond (original_list : List α) (index : Nat) (new_element : α) : Prop :=
@@ -42,3 +45,5 @@ theorem replace_elements_postcond_satisfied [Inhabited α] (original_list: List 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_46574_codeexercises_146574

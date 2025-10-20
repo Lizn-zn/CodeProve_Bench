@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2044_codeexercises_3108
+
+
 -- Precondition auxiliary definitions
 inductive Symptom : Type where
   | fever : Symptom
@@ -128,3 +131,5 @@ theorem diagnose_symptoms_postcond_satisfied (symptoms: List String) (h_precond 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2044_codeexercises_3108

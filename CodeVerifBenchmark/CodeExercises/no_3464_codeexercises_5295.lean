@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3464_codeexercises_5295
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_repeat_characters_precond (text : String) : Prop :=
@@ -39,3 +42,5 @@ theorem find_repeat_characters_postcond_satisfied (text: String) (h_precond : fi
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3464_codeexercises_5295

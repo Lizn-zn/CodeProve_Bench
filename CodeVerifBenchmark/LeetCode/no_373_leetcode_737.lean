@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_373_leetcode_737
+
+
 -- Precondition auxiliary definitions
 -- Union-Find data structure to manage word similarity groups
 structure UnionFind where
@@ -79,3 +82,5 @@ theorem areSentencesSimilar_postcond_satisfied (sentence1: List String) (sentenc
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_373_leetcode_737

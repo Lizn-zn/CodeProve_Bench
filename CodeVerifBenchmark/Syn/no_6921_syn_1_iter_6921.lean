@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6921_syn_1_iter_6921
+
+
 -- Precondition definitions
 @[reducible, simp]
 def compute_min_max_char_precond (nums : Finset ℕ) (s : String) : Prop :=
@@ -50,3 +53,5 @@ theorem compute_min_max_char_postcond_satisfied (nums: Finset ℕ) (s: String) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6921_syn_1_iter_6921

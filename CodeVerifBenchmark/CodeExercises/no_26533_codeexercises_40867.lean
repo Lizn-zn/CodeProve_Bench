@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_26533_codeexercises_40867
+
+
 -- Precondition definitions
 @[reducible, simp]
 def access_elements_and_loop_precond (athlete : List (String × Nat)) (n : Nat) : Prop :=
@@ -41,3 +44,5 @@ theorem access_elements_and_loop_postcond_satisfied (athlete: List (String × Na
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_26533_codeexercises_40867

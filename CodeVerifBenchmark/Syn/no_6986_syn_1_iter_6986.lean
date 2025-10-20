@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6986_syn_1_iter_6986
+
+
 -- Precondition definitions
 @[reducible, simp]
 def string_lengths_precond (strings : List String) : Prop :=
@@ -32,3 +35,4 @@ theorem string_lengths_postcond_satisfied (strings: List String) (h_precond : st
   sorry
   -- !benchmark @end proof
 
+end no_6986_syn_1_iter_6986

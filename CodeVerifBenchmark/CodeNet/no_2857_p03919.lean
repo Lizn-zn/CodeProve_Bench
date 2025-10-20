@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2857_p03919
+
+
 -- Precondition auxiliary definitions
 -- Helper function to check if a grid is well-formed
 def isWellFormedGrid (H : Nat) (W : Nat) (grid : List (List String)) : Prop :=
@@ -78,3 +81,5 @@ theorem findSnukePosition_postcond_satisfied (H: Nat) (W: Nat) (grid: List (List
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2857_p03919

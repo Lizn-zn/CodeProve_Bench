@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7788_syn_1_iter_7788
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -62,3 +65,5 @@ theorem process_string_and_pairs_postcond_satisfied (s: String) (k: Int) (n: Nat
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_7788_syn_1_iter_7788

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2741_p03786
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countPossibleColors_precond (n : Nat) (sizes : List Nat) : Prop :=
@@ -79,3 +82,5 @@ theorem countPossibleColors_postcond_satisfied (n: Nat) (sizes: List Nat) (h_pre
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2741_p03786

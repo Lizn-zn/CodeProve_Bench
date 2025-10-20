@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_589_leetcode_738
+
+
 -- Precondition auxiliary definitions
 def digits : Nat → List Nat
   | 0 => [0]
@@ -74,3 +77,5 @@ theorem monotoneIncreasingDigits_postcond_satisfied (n: Nat) (h_precond : monoto
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_589_leetcode_738

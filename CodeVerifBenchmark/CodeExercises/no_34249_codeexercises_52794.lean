@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_34249_codeexercises_52794
+
+
 -- Precondition definitions
 @[reducible, simp]
 def print_even_squares_precond (numbers : List Nat) : Prop :=
@@ -41,3 +44,5 @@ theorem print_even_squares_postcond_satisfied (numbers : List Nat) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_34249_codeexercises_52794

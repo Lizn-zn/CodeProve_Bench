@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2182_leetcode_2644
+
+
 -- Precondition auxiliary definitions
 def DivisibilityScore (nums : List Nat) (d : Nat) : Nat :=
   if d = 0 then 0 else
@@ -46,3 +49,5 @@ theorem maxDivScore_postcond_satisfied (nums: List Nat) (divisors: List Nat) (h_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2182_leetcode_2644

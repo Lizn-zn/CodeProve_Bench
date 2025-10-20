@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_73303_codeexercises_173303
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -43,3 +46,4 @@ theorem calculate_pace_postcond_satisfied (distance: Float) (time: Float) (pace:
   sorry
   -- !benchmark @end proof
 
+end no_73303_codeexercises_173303

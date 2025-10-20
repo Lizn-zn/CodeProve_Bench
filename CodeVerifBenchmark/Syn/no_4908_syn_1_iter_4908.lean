@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4908_syn_1_iter_4908
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -46,3 +49,5 @@ theorem expand_pairs_postcond_satisfied (pairs : List (Int × Nat)) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4908_syn_1_iter_4908

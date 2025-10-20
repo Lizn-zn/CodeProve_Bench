@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2063_p03032
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxJewelValue_precond (N : Nat) (K : Nat) (V : List Int) : Prop :=
@@ -114,3 +117,4 @@ theorem maxJewelValue_postcond_satisfied (N: Nat) (K: Nat) (V: List Int) (h_prec
   sorry
   -- !benchmark @end proof
 
+end no_2063_p03032

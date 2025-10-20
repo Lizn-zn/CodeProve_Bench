@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2083_syn_1_iter_2083
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -45,3 +48,5 @@ theorem repeat_pairs_postcond_satisfied (pairs: Array (Int × Nat)) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2083_syn_1_iter_2083

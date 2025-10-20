@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_70304_codeexercises_170304
+
+
 -- Precondition definitions
 @[reducible, simp]
 def intersect_tuples_precond (tuple1 : List α) (tuple2 : List α) : Prop :=
@@ -40,3 +43,5 @@ theorem intersect_tuples_postcond_satisfied [BEq α] (tuple1: List α) (tuple2: 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_70304_codeexercises_170304

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_56610_codeexercises_156610
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -49,3 +52,5 @@ theorem check_book_availability_postcond_satisfied (library: List (String × Boo
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_56610_codeexercises_156610

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2183_p03164
+
+
 -- Precondition definitions
 @[reducible, simp]
 def knapsackMaxValue_precond (n : Nat) (W : Nat) (items : List (Nat × Nat)) : Prop :=
@@ -99,3 +102,4 @@ theorem knapsackMaxValue_postcond_satisfied (n: Nat) (W: Nat) (items: List (Nat 
   sorry
   -- !benchmark @end proof
 
+end no_2183_p03164

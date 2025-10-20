@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4085_codeexercises_6218
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_unique_animal_set_precond (animal_list : List String) : Prop :=
@@ -30,3 +33,5 @@ theorem create_unique_animal_set_postcond_satisfied (animal_list: List String) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4085_codeexercises_6218

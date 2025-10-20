@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_90172_codeexercises_190172
+
+
 -- Precondition definitions
 @[reducible, simp]
 def append_new_elements_precond (historical_data : List α) (new_elements : List α) : Prop :=
@@ -43,3 +46,5 @@ theorem append_new_elements_postcond_satisfied [DecidableEq α] (historical_data
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_90172_codeexercises_190172

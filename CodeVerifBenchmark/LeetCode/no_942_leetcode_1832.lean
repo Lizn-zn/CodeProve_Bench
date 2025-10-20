@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_942_leetcode_1832
+
+
 -- Precondition auxiliary definitions
 def isLowerCaseEnglishLetter (c : Char) : Prop :=
   c.val ≥ 'a'.val ∧ c.val ≤ 'z'.val
@@ -49,3 +52,4 @@ theorem isPangram_postcond_satisfied (sentence: String) (h_precond : isPangram_p
   sorry
   -- !benchmark @end proof
 
+end no_942_leetcode_1832

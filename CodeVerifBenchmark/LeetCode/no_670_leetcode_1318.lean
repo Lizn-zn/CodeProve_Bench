@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_670_leetcode_1318
+
+
 -- Precondition auxiliary definitions
 /-- Count the number of bit flips needed to make `a ||| b = c` -/
 def countFlips (a b c : Nat) : Nat :=
@@ -47,3 +50,5 @@ theorem minFlips_postcond_satisfied (a: Nat) (b: Nat) (c: Nat) (h_precond : minF
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_670_leetcode_1318

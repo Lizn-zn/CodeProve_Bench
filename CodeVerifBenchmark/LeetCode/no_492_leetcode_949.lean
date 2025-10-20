@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_492_leetcode_949
+
+
 -- Precondition auxiliary definitions
 def isValidTime (digits : List Nat) : Bool :=
   match digits with
@@ -98,3 +101,5 @@ theorem latestTimeFromDigits_postcond_satisfied (arr: List Nat) (h_precond : lat
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_492_leetcode_949

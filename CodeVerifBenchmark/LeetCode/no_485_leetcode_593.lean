@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_485_leetcode_593
+
+
 -- Precondition auxiliary definitions
 def pointLengthPrecond (p : List Int) : Prop :=
   p.length = 2
@@ -67,3 +70,5 @@ theorem isSquare_postcond_satisfied (p1: List Int) (p2: List Int) (p3: List Int)
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_485_leetcode_593

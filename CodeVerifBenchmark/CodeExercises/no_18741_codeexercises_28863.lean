@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_18741_codeexercises_28863
+
+
 -- Precondition definitions
 @[reducible, simp]
 def intersection_and_mul_assignment_precond (data1 : List Int) (data2 : List Int) : Prop :=
@@ -43,3 +46,5 @@ theorem intersection_and_mul_assignment_postcond_satisfied (data1: List Int) (da
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_18741_codeexercises_28863

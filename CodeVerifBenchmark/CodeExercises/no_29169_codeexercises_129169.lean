@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_29169_codeexercises_129169
+
+
 -- Precondition definitions
 @[reducible, simp]
 def draw_square_precond (side_length : Nat) : Prop :=
@@ -59,3 +62,5 @@ theorem draw_square_postcond_satisfied (side_length: Nat) (h_precond : draw_squa
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_29169_codeexercises_129169

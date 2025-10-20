@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9373_syn_1_iter_9373
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -89,3 +92,5 @@ theorem build_min_heap_with_indices_postcond_satisfied (input_list: List Int) (h
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_9373_syn_1_iter_9373

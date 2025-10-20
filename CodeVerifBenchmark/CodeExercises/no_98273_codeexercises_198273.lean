@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_98273_codeexercises_198273
+
+
 -- Precondition definitions
 @[reducible, simp]
 def prepare_ingredients_precond (recipe : List String) : Prop :=
@@ -44,3 +47,5 @@ theorem prepare_ingredients_postcond_satisfied (recipe: List String) (h_precond 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_98273_codeexercises_198273

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2506_p03523
+
+
 -- Precondition definitions
 @[reducible, simp]
 def canFormAkihabara_precond (s : String) : Prop :=
@@ -60,3 +63,5 @@ theorem canFormAkihabara_postcond_satisfied (s: String) (h_precond : canFormAkih
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2506_p03523

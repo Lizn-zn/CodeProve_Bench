@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_43_leetcode_61
+
+
 -- Precondition auxiliary definitions
 /-- A simple linked list node structure -/
 inductive ListNode where
@@ -98,3 +101,4 @@ theorem rotateRight_postcond_satisfied (head: ListNode) (k: Nat) (h_precond : ro
   sorry
   -- !benchmark @end proof
 
+end no_43_leetcode_61

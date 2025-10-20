@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_549_p00631
+
+
 -- Precondition definitions
 @[reducible, simp]
 def splitUp_precond (powers : List Nat) : Prop :=
@@ -86,3 +89,5 @@ theorem splitUp_postcond_satisfied (powers: List Nat) (h_precond : splitUp_preco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_549_p00631

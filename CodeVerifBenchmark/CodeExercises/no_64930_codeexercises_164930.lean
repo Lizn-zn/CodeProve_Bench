@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_64930_codeexercises_164930
+
+
 -- Precondition definitions
 @[reducible, simp]
 def compare_economists_precond (economist_1 : String × Nat × Nat) (economist_2 : String × Nat × Nat) : Prop :=
@@ -88,3 +91,5 @@ theorem compare_economists_postcond_satisfied (economist_1: String × Nat × Nat
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_64930_codeexercises_164930

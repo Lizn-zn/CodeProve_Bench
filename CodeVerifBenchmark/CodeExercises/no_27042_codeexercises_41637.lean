@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_27042_codeexercises_41637
+
+
 -- Precondition auxiliary definitions
 /-- The polar representation is defined for all complex numbers, including zero -/
 
@@ -59,3 +62,5 @@ theorem polar_representation_postcond_satisfied (real_part: Float) (imaginary_pa
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_27042_codeexercises_41637

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_22038_codeexercises_33904
+
+
 -- Precondition auxiliary definitions
 -- Define the standard energy consumption rates for common appliances (in watts)
 def appliance_power_consumption : String → Float := λ
@@ -67,3 +70,5 @@ theorem calculate_daily_energy_usage_postcond_satisfied (appliances: Finset Stri
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_22038_codeexercises_33904

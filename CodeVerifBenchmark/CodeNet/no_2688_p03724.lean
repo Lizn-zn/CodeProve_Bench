@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2688_p03724
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -74,3 +77,4 @@ theorem canFormTree_postcond_satisfied (n: Nat) (m: Nat) (queries: List (Nat × 
   sorry
   -- !benchmark @end proof
 
+end no_2688_p03724

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2022_leetcode_2450
+
+
 -- Precondition auxiliary definitions
 def isValidBinaryString (s : String) : Prop :=
   ∀ (c : Char), c ∈ s.data → (c = '0' ∨ c = '1')
@@ -69,3 +72,4 @@ theorem countDistinctStrings_postcond_satisfied (s: String) (k: Nat) (h_precond 
   sorry
   -- !benchmark @end proof
 
+end no_2022_leetcode_2450

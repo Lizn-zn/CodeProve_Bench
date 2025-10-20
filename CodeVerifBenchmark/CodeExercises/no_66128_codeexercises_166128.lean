@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_66128_codeexercises_166128
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_patient_data_precond (patients : List (Nat × String × Nat × String)) : Prop :=
@@ -43,3 +46,5 @@ theorem get_patient_data_postcond_satisfied (patients: List (Nat × String × Na
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_66128_codeexercises_166128

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1419_leetcode_2843
+
+
 -- Precondition auxiliary definitions
 def IsSymmetric (n : Nat) : Bool :=
   let s := toString n
@@ -66,3 +69,5 @@ theorem countSymmetricIntegers_postcond_satisfied (low: Nat) (high: Nat) (h_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1419_leetcode_2843

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_797_p01035
+
+
 -- Precondition definitions
 @[reducible, simp]
 def solveHardBeans_precond (n : Nat) (beans : List Int) (queries : List (Nat × Nat × Nat)) : Prop :=
@@ -74,3 +77,5 @@ theorem solveHardBeans_postcond_satisfied (n: Nat) (beans: List Int) (queries: L
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_797_p01035

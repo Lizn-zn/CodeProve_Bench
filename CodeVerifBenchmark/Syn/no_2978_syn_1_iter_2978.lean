@@ -1,6 +1,9 @@
 import Mathlib.Data.List.Basic
 import Mathlib.Data.List.Sort
 
+namespace no_2978_syn_1_iter_2978
+
+
 -- Precondition auxiliary definitions
 structure ProcessedHeap where
   finalHeap : List Float
@@ -79,3 +82,5 @@ theorem get_k_smallest_indices_postcond_satisfied (heap: List Float) (float_list
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2978_syn_1_iter_2978

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2583_leetcode_3176
+
+
 -- Precondition auxiliary definitions
 def IsGoodSubsequence (seq : List Nat) (k : Nat) : Prop :=
   let changes := seq.dropLast.zipWith (fun a b => decide (a ≠ b)) seq.tail
@@ -98,3 +101,5 @@ theorem maximumLengthOfGoodSubsequence_postcond_satisfied (nums: List Nat) (k: N
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2583_leetcode_3176

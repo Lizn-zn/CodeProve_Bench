@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1171_p01832
+
+
 -- Precondition auxiliary definitions
 -- Helper to check if a character is a digit
 def isDigit (c : Char) : Bool :=
@@ -242,3 +245,5 @@ theorem shiftMatrix_postcond_satisfied (N: Nat) (S: String) (h_precond : shiftMa
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1171_p01832

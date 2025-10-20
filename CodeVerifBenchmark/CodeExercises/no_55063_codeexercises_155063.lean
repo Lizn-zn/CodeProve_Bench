@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_55063_codeexercises_155063
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_garment_price_precond (price : Float) (discount : Float) : Prop :=
@@ -33,3 +36,4 @@ theorem calculate_garment_price_postcond_satisfied (price: Float) (discount: Flo
   sorry
   -- !benchmark @end proof
 
+end no_55063_codeexercises_155063

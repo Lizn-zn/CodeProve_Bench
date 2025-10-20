@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2782_p03829
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minFatigueLevel_precond (n : Nat) (a : Nat) (b : Nat) (positions : List Nat) : Prop :=
@@ -58,3 +61,4 @@ theorem minFatigueLevel_postcond_satisfied (n: Nat) (a: Nat) (b: Nat) (positions
   sorry
   -- !benchmark @end proof
 
+end no_2782_p03829

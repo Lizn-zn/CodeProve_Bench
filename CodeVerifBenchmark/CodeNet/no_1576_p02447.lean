@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1576_p02447
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sortPairs_precond (points : List (Int × Int)) : Prop :=
@@ -53,3 +56,4 @@ theorem sortPairs_postcond_satisfied (points: List (Int × Int)) (h_precond : so
   sorry
   -- !benchmark @end proof
 
+end no_1576_p02447

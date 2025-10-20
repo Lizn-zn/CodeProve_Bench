@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3374_syn_1_iter_3374
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -54,3 +57,5 @@ theorem filter_and_repeat_chars_postcond_satisfied (char_nat_pairs: List (Char Ã
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3374_syn_1_iter_3374

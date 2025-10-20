@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2402_leetcode_2951
+
+
 -- Precondition definitions
 @[reducible, simp]
 def findPeaks_precond (mountain : List Nat) : Prop :=
@@ -55,3 +58,4 @@ theorem findPeaks_postcond_satisfied (mountain: List Nat) (h_precond : findPeaks
   sorry
   -- !benchmark @end proof
 
+end no_2402_leetcode_2951

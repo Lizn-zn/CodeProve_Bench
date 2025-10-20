@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2175_leetcode_2616
+
+
 -- Precondition auxiliary definitions
 def isValidPairing (nums : List Nat) (p : Nat) (pairs : List (Nat × Nat)) : Prop :=
   let indices := pairs.flatMap (fun (i, j) => [i, j])
@@ -89,3 +92,5 @@ theorem minimizeMax_postcond_satisfied (nums: List Nat) (p: Nat) (h_precond : mi
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2175_leetcode_2616

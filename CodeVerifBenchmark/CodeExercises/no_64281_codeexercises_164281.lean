@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_64281_codeexercises_164281
+
+
 -- Precondition auxiliary definitions
 inductive TupleComparison : Type where
   | all_greater_or_equal : TupleComparison
@@ -79,3 +82,5 @@ theorem compare_tuples_postcond_satisfied (tuples_list: List (Nat × Nat)) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_64281_codeexercises_164281

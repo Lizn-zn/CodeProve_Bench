@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_22519_codeexercises_122519
+
+
 -- Precondition definitions
 @[reducible, simp]
 def habitable_areas_precond (animals : List String) : Prop :=
@@ -51,3 +54,5 @@ theorem habitable_areas_postcond_satisfied (animals: List String) (h_precond : h
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_22519_codeexercises_122519

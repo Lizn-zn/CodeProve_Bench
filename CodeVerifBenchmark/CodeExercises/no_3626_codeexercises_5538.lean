@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3626_codeexercises_5538
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_tuple_precond (complete_list : List (List Nat)) : Prop :=
@@ -46,3 +49,4 @@ theorem create_tuple_postcond_satisfied (complete_list: List (List Nat)) (h_prec
   sorry
   -- !benchmark @end proof
 
+end no_3626_codeexercises_5538

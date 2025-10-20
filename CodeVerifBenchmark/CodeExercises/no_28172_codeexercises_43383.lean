@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_28172_codeexercises_43383
+
+
 -- Precondition definitions
 @[reducible, simp]
 def break_out_of_loop_precond (chef_ingredients : List Nat) : Prop :=
@@ -42,3 +45,5 @@ theorem break_out_of_loop_postcond_satisfied (chef_ingredients: List Nat) (h_pre
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_28172_codeexercises_43383

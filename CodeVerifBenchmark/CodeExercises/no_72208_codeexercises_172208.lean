@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_72208_codeexercises_172208
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -42,3 +45,5 @@ theorem find_common_divisors_postcond_satisfied (a: Nat) (b: Nat) (h_precond : f
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_72208_codeexercises_172208

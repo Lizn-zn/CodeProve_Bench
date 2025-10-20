@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2755_p03800
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -123,3 +126,5 @@ theorem solveZooAssignment_postcond_satisfied (n: Nat) (s: String) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2755_p03800

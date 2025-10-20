@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_15745_codeexercises_115745
+
+
 -- Precondition definitions
 @[reducible, simp]
 def round_floats_precond (num1 : Float) (num2 : Float) (num3 : Float) (precision : Int) : Prop :=
@@ -49,3 +52,5 @@ theorem round_floats_postcond_satisfied (num1: Float) (num2: Float) (num3: Float
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_15745_codeexercises_115745

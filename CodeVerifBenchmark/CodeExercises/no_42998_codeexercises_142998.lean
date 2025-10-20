@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_42998_codeexercises_142998
+
+
 -- Precondition definitions
 @[reducible, simp]
 def combine_and_append_precond (n : Nat) (a_list : List Nat) : Prop :=
@@ -47,3 +50,4 @@ theorem combine_and_append_postcond_satisfied (n: Nat) (a_list: List Nat) (h_pre
   sorry
   -- !benchmark @end proof
 
+end no_42998_codeexercises_142998

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6544_codeexercises_10030
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -121,3 +124,5 @@ theorem find_gene_postcond_satisfied (sequence: String) (h_precond : find_gene_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6544_codeexercises_10030

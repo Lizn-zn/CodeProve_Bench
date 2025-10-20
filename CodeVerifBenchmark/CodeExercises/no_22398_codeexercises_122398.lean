@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_22398_codeexercises_122398
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_positive_elements_precond (sequence : List Int) : Prop :=
@@ -42,3 +45,4 @@ theorem count_positive_elements_postcond_satisfied (sequence: List Int) (h_preco
   sorry
   -- !benchmark @end proof
 
+end no_22398_codeexercises_122398

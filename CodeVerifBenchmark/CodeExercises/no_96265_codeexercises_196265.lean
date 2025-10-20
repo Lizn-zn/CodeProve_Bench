@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_96265_codeexercises_196265
+
+
 -- Precondition definitions
 @[reducible, simp]
 def modify_elements_precond (lst : List Nat) : Prop :=
@@ -42,3 +45,5 @@ theorem modify_elements_postcond_satisfied (lst: List Nat) (h_precond : modify_e
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_96265_codeexercises_196265

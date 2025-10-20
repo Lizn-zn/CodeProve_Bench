@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1062_p01628
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -120,3 +123,5 @@ theorem compressAmidakuji_postcond_satisfied (n: Nat) (m: Nat) (bars: List Nat) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1062_p01628

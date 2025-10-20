@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_14841_codeexercises_114841
+
+
 -- Precondition definitions
 @[reducible, simp]
 def modify_set_elements_precond (set1 : Set ℤ) (set2 : Set ℤ) : Prop :=
@@ -34,3 +37,5 @@ theorem modify_set_elements_postcond_satisfied (set1: Set ℤ) (set2: Set ℤ) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_14841_codeexercises_114841

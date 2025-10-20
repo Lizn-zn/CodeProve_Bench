@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2383_p03381
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -58,3 +61,5 @@ theorem findMediansExcludingEach_postcond_satisfied (n: Nat) (xs: List Nat) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2383_p03381

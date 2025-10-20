@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1612_leetcode_1980
+
+
 -- Precondition auxiliary definitions
 def isValidBinaryString (s : String) : Bool :=
   s.data.all (fun c => c = '0' ∨ c = '1')
@@ -82,3 +85,5 @@ theorem findDifferentBinaryString_postcond_satisfied (nums: List String) (h_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1612_leetcode_1980

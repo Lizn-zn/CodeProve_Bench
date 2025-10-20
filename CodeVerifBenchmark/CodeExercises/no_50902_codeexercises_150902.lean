@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_50902_codeexercises_150902
+
+
 -- Precondition definitions
 @[reducible, simp]
 def print_numbers_excluding_multiples_precond  : Prop :=
@@ -44,3 +47,5 @@ theorem print_numbers_excluding_multiples_postcond_satisfied (h_precond : print_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_50902_codeexercises_150902

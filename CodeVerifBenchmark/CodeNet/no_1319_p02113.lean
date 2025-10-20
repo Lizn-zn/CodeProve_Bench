@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1319_p02113
+
+
 -- Precondition definitions
 @[reducible, simp]
 def findLongestPalindrome_precond (n : Nat) (l : Nat) (strings : List String) : Prop :=
@@ -132,3 +135,5 @@ theorem findLongestPalindrome_postcond_satisfied (n: Nat) (l: Nat) (strings: Lis
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1319_p02113

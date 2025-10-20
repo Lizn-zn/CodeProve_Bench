@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_75313_codeexercises_175313
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_negative_integer_list_precond (size : Nat) : Prop :=
@@ -34,3 +37,5 @@ theorem create_negative_integer_list_postcond_satisfied (size: Nat) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_75313_codeexercises_175313

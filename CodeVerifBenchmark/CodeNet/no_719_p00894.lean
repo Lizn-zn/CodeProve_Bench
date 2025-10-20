@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_719_p00894
+
+
 -- Precondition auxiliary definitions
 -- Parse a log entry into its components
 def parseLogEntry (entry : String) : Option (Nat × Nat × Nat × Bool × Nat) :=
@@ -157,3 +160,5 @@ theorem findMaxBlessedTime_postcond_satisfied (n: Nat) (logEntries: List String)
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_719_p00894

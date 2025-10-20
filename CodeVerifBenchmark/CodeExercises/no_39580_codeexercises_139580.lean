@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_39580_codeexercises_139580
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_population_precond (nested_terrain : List (List Nat)) : Prop :=
@@ -41,3 +44,5 @@ theorem get_population_postcond_satisfied (nested_terrain: List (List Nat)) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_39580_codeexercises_139580

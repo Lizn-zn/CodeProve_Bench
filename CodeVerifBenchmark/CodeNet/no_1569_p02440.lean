@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1569_p02440
+
+
 -- Precondition definitions
 @[reducible, simp]
 def processQueries_precond (nums : Array Int) (queries : Array (Nat × Nat × Nat)) : Prop :=
@@ -85,3 +88,5 @@ theorem processQueries_postcond_satisfied (nums: Array Int) (queries: Array (Nat
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1569_p02440

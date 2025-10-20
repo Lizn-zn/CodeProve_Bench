@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_294_syn_1_iter_294
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_positives_precond (nums : List Float) : Prop :=
@@ -41,3 +44,5 @@ theorem count_positives_postcond_satisfied (nums: List Float) (h_precond : count
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_294_syn_1_iter_294

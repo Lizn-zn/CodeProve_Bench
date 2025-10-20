@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2351_p03346
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minOperationsToSort_precond (n : Nat) (p : List Nat) : Prop :=
@@ -91,3 +94,5 @@ theorem minOperationsToSort_postcond_satisfied (n: Nat) (p: List Nat) (h_precond
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2351_p03346

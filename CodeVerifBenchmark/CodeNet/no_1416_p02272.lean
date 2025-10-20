@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1416_p02272
+
+
 -- Precondition definitions
 @[reducible, simp]
 def mergeSort_precond (arr : Array Nat) (left : Nat) (right : Nat) : Prop :=
@@ -103,3 +106,5 @@ theorem mergeSort_postcond_satisfied (arr: Array Nat) (left: Nat) (right: Nat) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1416_p02272

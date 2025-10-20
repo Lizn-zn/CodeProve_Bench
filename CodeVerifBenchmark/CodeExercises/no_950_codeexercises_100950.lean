@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_950_codeexercises_100950
+
+
 -- Precondition definitions
 @[reducible, simp]
 def extinguish_fire_precond (fire_intensity : Nat) : Prop :=
@@ -39,3 +42,4 @@ theorem extinguish_fire_postcond_satisfied (fire_intensity: Nat) (h_precond : ex
   sorry
   -- !benchmark @end proof
 
+end no_950_codeexercises_100950

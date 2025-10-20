@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_34868_codeexercises_134868
+
+
 -- Precondition definitions
 @[reducible, simp]
 def delete_elements_precond (collection : List α) (items : List α) : Prop :=
@@ -36,3 +39,5 @@ theorem delete_elements_postcond_satisfied [BEq α] (collection: List α) (items
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_34868_codeexercises_134868

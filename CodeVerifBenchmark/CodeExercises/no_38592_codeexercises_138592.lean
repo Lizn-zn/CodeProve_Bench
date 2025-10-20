@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_38592_codeexercises_138592
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -40,3 +43,4 @@ theorem is_suspect_caught_postcond_satisfied (suspects: List String) (h_precond 
   sorry
   -- !benchmark @end proof
 
+end no_38592_codeexercises_138592

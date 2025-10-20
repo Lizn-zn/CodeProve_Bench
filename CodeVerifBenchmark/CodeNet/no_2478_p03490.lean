@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2478_p03490
+
+
 -- Precondition definitions
 @[reducible, simp]
 def canRobotReachTarget_precond (s : String) (x : Int) (y : Int) : Prop :=
@@ -123,3 +126,5 @@ theorem canRobotReachTarget_postcond_satisfied (s: String) (x: Int) (y: Int) (h_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2478_p03490

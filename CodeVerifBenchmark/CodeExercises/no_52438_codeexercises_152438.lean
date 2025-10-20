@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_52438_codeexercises_152438
+
+
 -- Precondition definitions
 @[reducible, simp]
 def modify_tuple_precond  : Prop :=
@@ -41,3 +44,4 @@ theorem modify_tuple_postcond_satisfied (h_precond : modify_tuple_precond) :
   sorry
   -- !benchmark @end proof
 
+end no_52438_codeexercises_152438

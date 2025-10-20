@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1357_p02190
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countDistinctValues_precond (n : Nat) (a : List Nat) : Prop :=
@@ -51,3 +54,4 @@ theorem countDistinctValues_postcond_satisfied (n: Nat) (a: List Nat) (h_precond
   sorry
   -- !benchmark @end proof
 
+end no_1357_p02190

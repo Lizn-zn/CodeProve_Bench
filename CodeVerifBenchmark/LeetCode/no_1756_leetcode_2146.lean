@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1756_leetcode_2146
+
+
 -- Precondition auxiliary definitions
 def isValidGridIndex (grid : List (List Nat)) (row col : Nat) : Prop :=
   row < grid.length ∧ col < (grid.get ⟨row, by sorry⟩).length
@@ -223,3 +226,5 @@ theorem highestRankedKItems_postcond_satisfied (grid: List (List Nat)) (pricing:
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1756_leetcode_2146

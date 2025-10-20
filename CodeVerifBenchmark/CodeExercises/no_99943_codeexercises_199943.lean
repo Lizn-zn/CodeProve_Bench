@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_99943_codeexercises_199943
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -47,3 +50,5 @@ theorem update_dictionary_values_postcond_satisfied (dictionary: List (String ×
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_99943_codeexercises_199943

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_630_leetcode_782
+
+
 -- Precondition auxiliary definitions
 /-- A board is a chessboard if it has alternating 0s and 1s such that no two adjacent cells have the same value. -/
 def IsChessboard (board : List (List Int)) : Prop :=
@@ -208,3 +211,5 @@ theorem minMovesToChessboard_postcond_satisfied (board: List (List Int)) (h_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_630_leetcode_782

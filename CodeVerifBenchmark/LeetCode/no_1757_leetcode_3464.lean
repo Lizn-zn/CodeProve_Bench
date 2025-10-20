@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1757_leetcode_3464
+
+
 -- Precondition auxiliary definitions
 /-- Checks whether a point lies on the boundary of a square with given side length. -/
 def on_boundary (side : Nat) (p : Nat × Nat) : Prop :=
@@ -99,3 +102,5 @@ theorem maximize_minimum_manhattan_distance_postcond_satisfied (side: Nat) (poin
 
 instance (points : List (Nat × Nat)) (k : Nat) (mid : Nat) : Decidable (∃ selected ⊆ points, selected.length = k ∧ has_min_distance k selected mid) := by
   sorry
+
+end no_1757_leetcode_3464

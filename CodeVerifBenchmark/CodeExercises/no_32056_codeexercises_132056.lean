@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_32056_codeexercises_132056
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_sum_of_negatives_precond (lst : List Int) : Prop :=
@@ -44,3 +47,5 @@ theorem find_sum_of_negatives_postcond_satisfied (lst: List Int) (h_precond : fi
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_32056_codeexercises_132056

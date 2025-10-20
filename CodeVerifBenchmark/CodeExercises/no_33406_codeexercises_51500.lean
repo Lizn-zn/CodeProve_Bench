@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_33406_codeexercises_51500
+
+
 -- Precondition definitions
 @[reducible, simp]
 def copy_and_check_lists_precond (list1 : List α) (list2 : List α) : Prop :=
@@ -33,3 +36,5 @@ theorem copy_and_check_lists_postcond_satisfied [DecidableEq α] (list1: List α
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_33406_codeexercises_51500

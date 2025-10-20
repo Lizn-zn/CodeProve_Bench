@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_86899_codeexercises_186899
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_characters_precond (string1 : String) (string2 : String) : Prop :=
@@ -41,3 +44,5 @@ theorem find_common_characters_postcond_satisfied (string1: String) (string2: St
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_86899_codeexercises_186899

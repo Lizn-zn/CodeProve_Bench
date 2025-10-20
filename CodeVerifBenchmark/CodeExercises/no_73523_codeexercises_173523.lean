@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_73523_codeexercises_173523
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_uppercase_letters_precond (s : String) : Prop :=
@@ -37,3 +40,4 @@ theorem find_uppercase_letters_postcond_satisfied (s: String) (h_precond : find_
   sorry
   -- !benchmark @end proof
 
+end no_73523_codeexercises_173523

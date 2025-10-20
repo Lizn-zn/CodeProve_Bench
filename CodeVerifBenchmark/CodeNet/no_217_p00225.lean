@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_217_p00225
+
+
 -- Precondition auxiliary definitions
 -- Helper function to check if a string is non-empty and contains only lowercase English letters
 def isValidWord (s : String) : Prop :=
@@ -135,3 +138,5 @@ theorem canFormShiritori_postcond_satisfied (words: List String) (h_precond : ca
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_217_p00225

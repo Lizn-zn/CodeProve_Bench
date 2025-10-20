@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1321_leetcode_2614
+
+
 -- Precondition auxiliary definitions
 /-- Check if a natural number is prime -/
 def isPrime : Nat → Prop
@@ -114,3 +117,5 @@ theorem largestPrimeOnDiagonal_postcond_satisfied (nums: List (List Nat)) (h_pre
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1321_leetcode_2614

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_58191_codeexercises_158191
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -53,3 +56,5 @@ theorem find_average_radius_postcond_satisfied (animals: List (Prod ℝ ℝ)) (h
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_58191_codeexercises_158191

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_15659_codeexercises_24063
+
+
 -- Precondition auxiliary definitions
 def is_sorted (l : List Nat) : Prop :=
   ∀ i j, i < j → j < l.length → l[i]! ≤ l[j]!
@@ -65,3 +68,5 @@ theorem find_common_elements_postcond_satisfied (nums1: List Nat) (nums2: List N
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_15659_codeexercises_24063

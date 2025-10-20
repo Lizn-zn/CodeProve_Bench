@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_140_p00146
+
+
 -- Precondition definitions
 @[reducible, simp]
 def solveLupinHeist_precond (warehouses : Array (Nat × Nat × Nat)) : Prop :=
@@ -163,3 +166,5 @@ theorem solveLupinHeist_postcond_satisfied (warehouses: Array (Nat × Nat × Nat
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_140_p00146

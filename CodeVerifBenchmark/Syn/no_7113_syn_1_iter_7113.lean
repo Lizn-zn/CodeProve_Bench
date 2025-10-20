@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7113_syn_1_iter_7113
+
+
 -- Precondition definitions
 @[reducible, simp]
 def process_natural_pair_precond (a : Nat) (b : Nat) (arr : Array Nat) : Prop :=
@@ -44,3 +47,5 @@ theorem process_natural_pair_postcond_satisfied (a: Nat) (b: Nat) (arr: Array Na
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_7113_syn_1_iter_7113

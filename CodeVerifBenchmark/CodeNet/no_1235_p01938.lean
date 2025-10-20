@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1235_p01938
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countASteps_precond (s : String) : Prop :=
@@ -63,3 +66,5 @@ theorem countASteps_postcond_satisfied (s: String) (h_precond : countASteps_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1235_p01938

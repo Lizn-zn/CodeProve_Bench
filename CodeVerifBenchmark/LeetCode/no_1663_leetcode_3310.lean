@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1663_leetcode_3310
+
+
 -- Precondition auxiliary definitions
 /-- The set of all methods that are suspicious, i.e. method `k` and all methods it invokes directly or indirectly. -/
 def suspiciousMethods (n : Nat) (k : Nat) (invocations : List (Nat × Nat)) : List Nat :=
@@ -64,3 +67,5 @@ theorem remainingMethods_postcond_satisfied (n: Nat) (k: Nat) (invocations: List
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1663_leetcode_3310

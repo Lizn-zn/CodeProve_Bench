@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_30155_codeexercises_46430
+
+
 -- Precondition definitions
 @[reducible, simp]
 def veterinarian_records_precond (vet_records : List (String × ℂ)) : Prop :=
@@ -43,3 +46,5 @@ theorem veterinarian_records_postcond_satisfied (vet_records: List (String × �
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_30155_codeexercises_46430

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_50424_codeexercises_150424
+
+
 -- Precondition definitions
 @[reducible, simp]
 def concatenate_strings_precond (strings : List String) : Prop :=
@@ -41,3 +44,4 @@ theorem concatenate_strings_postcond_satisfied (strings: List String) (h_precond
   sorry
   -- !benchmark @end proof
 
+end no_50424_codeexercises_150424

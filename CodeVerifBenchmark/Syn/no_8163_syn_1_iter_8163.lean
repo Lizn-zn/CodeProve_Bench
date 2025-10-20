@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8163_syn_1_iter_8163
+
+
 -- Precondition definitions
 @[reducible, simp]
 def generate_ordered_pairs_precond (s : Finset Nat) : Prop :=
@@ -52,3 +55,5 @@ theorem generate_ordered_pairs_postcond_satisfied (s: Finset Nat) (h_precond : g
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8163_syn_1_iter_8163

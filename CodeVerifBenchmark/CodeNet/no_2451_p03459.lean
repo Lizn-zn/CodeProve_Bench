@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2451_p03459
+
+
 -- Precondition definitions
 @[reducible, simp]
 def canCarryOutPlan_precond (n : Nat) (checkpoints : List (Nat × Nat × Nat)) : Prop :=
@@ -81,3 +84,4 @@ theorem canCarryOutPlan_postcond_satisfied (n: Nat) (checkpoints: List (Nat × N
   sorry
   -- !benchmark @end proof
 
+end no_2451_p03459

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_42168_codeexercises_142168
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_biomed_tuple_precond (condition1 : Bool) (condition2 : Bool) : Prop :=
@@ -41,3 +44,4 @@ theorem create_biomed_tuple_postcond_satisfied (condition1: Bool) (condition2: B
   sorry
   -- !benchmark @end proof
 
+end no_42168_codeexercises_142168

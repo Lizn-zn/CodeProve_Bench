@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_730_leetcode_886
+
+
 -- Precondition auxiliary definitions
 /-- A graph is bipartite if its vertices can be colored with two colors such that no two adjacent vertices have the same color. -/
 def IsBipartite (n : Nat) (edges : List (Nat × Nat)) : Prop :=
@@ -91,3 +94,5 @@ theorem possibleBipartition_postcond_satisfied (n: Nat) (dislikes: List (Nat × 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_730_leetcode_886

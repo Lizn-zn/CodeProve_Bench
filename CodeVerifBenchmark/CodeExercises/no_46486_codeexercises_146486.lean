@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_46486_codeexercises_146486
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_elements_precond (arr1 : List α) (arr2 : List α) : Prop :=
@@ -39,3 +42,5 @@ theorem find_common_elements_postcond_satisfied [DecidableEq α] (arr1: List α)
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_46486_codeexercises_146486

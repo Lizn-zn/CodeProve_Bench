@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_22897_codeexercises_35238
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_modulus_precond (physician1 : String) (physician2 : String) : Prop :=
@@ -50,3 +53,5 @@ theorem find_common_modulus_postcond_satisfied (physician1: String) (physician2:
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_22897_codeexercises_35238

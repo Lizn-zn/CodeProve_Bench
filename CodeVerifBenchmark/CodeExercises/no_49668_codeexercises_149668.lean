@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_49668_codeexercises_149668
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_actors_with_high_ratings_precond (actors : List String) (ratings : List Float) (threshold : Float) : Prop :=
@@ -40,3 +43,5 @@ theorem find_actors_with_high_ratings_postcond_satisfied (actors: List String) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_49668_codeexercises_149668

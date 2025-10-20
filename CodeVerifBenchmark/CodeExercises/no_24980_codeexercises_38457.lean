@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_24980_codeexercises_38457
+
+
 -- Precondition definitions
 @[reducible, simp]
 def modify_tuple_precond (t : List α) (index : Nat) (new_value : α) : Prop :=
@@ -42,3 +45,5 @@ theorem modify_tuple_postcond_satisfied [Inhabited α] (t: List α) (index: Nat)
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_24980_codeexercises_38457

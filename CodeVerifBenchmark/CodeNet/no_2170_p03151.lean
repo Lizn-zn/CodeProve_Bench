@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2170_p03151
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minExamChanges_precond (n : Nat) (A : List Int) (B : List Int) : Prop :=
@@ -111,3 +114,5 @@ theorem minExamChanges_postcond_satisfied (n: Nat) (A: List Int) (B: List Int) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2170_p03151

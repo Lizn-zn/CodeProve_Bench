@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_25145_codeexercises_38703
+
+
 -- Precondition definitions
 @[reducible, simp]
 def tuple_iteration_precond (sequence : List (String × Nat)) : Prop :=
@@ -37,3 +40,5 @@ theorem tuple_iteration_postcond_satisfied (sequence: List (String × Nat)) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_25145_codeexercises_38703

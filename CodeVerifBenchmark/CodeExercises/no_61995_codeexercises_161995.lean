@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_61995_codeexercises_161995
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_unique_numbers_precond (nums : List Int) : Prop :=
@@ -41,3 +44,4 @@ theorem find_unique_numbers_postcond_satisfied (nums: List Int) (h_precond : fin
   sorry
   -- !benchmark @end proof
 
+end no_61995_codeexercises_161995

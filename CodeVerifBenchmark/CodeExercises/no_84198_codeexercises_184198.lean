@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_84198_codeexercises_184198
+
+
 -- Precondition definitions
 @[reducible, simp]
 def modify_list_precond (athlete : List Char) : Prop :=
@@ -45,3 +48,5 @@ theorem modify_list_postcond_satisfied (athlete: List Char) (h_precond : modify_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_84198_codeexercises_184198

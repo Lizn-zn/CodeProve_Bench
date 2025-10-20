@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_12546_codeexercises_112546
+
+
 -- Precondition auxiliary definitions
 structure Animal where
   legs : Nat
@@ -37,3 +40,4 @@ theorem count_legs_postcond_satisfied (animals: List Animal) (h_precond : count_
   sorry
   -- !benchmark @end proof
 
+end no_12546_codeexercises_112546

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7753_codeexercises_107753
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_words_precond (texts : List String) : Prop :=
@@ -43,3 +46,5 @@ theorem find_common_words_postcond_satisfied (texts: List String) (h_precond : f
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_7753_codeexercises_107753

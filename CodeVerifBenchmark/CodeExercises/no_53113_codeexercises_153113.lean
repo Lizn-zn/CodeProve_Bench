@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_53113_codeexercises_153113
+
+
 -- Precondition auxiliary definitions
 def is_voltage_string (s : String) : Prop :=
   s.endsWith "V" ∧ (s.dropRight 1).toNat?.isSome
@@ -50,3 +53,5 @@ theorem multiply_voltage_postcond_satisfied (nested_tuples: List (List String)) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_53113_codeexercises_153113

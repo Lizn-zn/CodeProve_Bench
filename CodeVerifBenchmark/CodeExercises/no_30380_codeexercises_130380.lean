@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_30380_codeexercises_130380
+
+
 -- Precondition definitions
 @[reducible, simp]
 def append_elements_using_loop_precond (elements : List α) (new_elements : List α) : Prop :=
@@ -37,3 +40,4 @@ theorem append_elements_using_loop_postcond_satisfied (elements: List α) (new_e
   sorry
   -- !benchmark @end proof
 
+end no_30380_codeexercises_130380

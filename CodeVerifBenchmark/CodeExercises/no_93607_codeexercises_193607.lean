@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_93607_codeexercises_193607
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_books_by_category_precond (category : String) (book_dict : List (String × String)) : Prop :=
@@ -42,3 +45,5 @@ theorem get_books_by_category_postcond_satisfied (category: String) (book_dict: 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_93607_codeexercises_193607

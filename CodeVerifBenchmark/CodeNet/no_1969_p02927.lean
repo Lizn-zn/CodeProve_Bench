@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1969_p02927
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countProductDays_precond (M : Nat) (D : Nat) : Prop :=
@@ -60,3 +63,5 @@ theorem countProductDays_postcond_satisfied (M: Nat) (D: Nat) (h_precond : count
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1969_p02927

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1399_p02255
+
+
 -- Precondition definitions
 @[reducible, simp]
 def insertionSort_precond (A : Array Nat) (N : Nat) : Prop :=
@@ -91,3 +94,4 @@ theorem insertionSort_postcond_satisfied (A: Array Nat) (N: Nat) (h_precond : in
   sorry
   -- !benchmark @end proof
 
+end no_1399_p02255

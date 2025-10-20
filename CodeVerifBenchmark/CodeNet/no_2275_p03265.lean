@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2275_p03265
+
+
 -- Precondition definitions
 @[reducible, simp]
 def restoreSquareVertices_precond (x1 : Int) (y1 : Int) (x2 : Int) (y2 : Int) : Prop :=
@@ -75,3 +78,4 @@ theorem restoreSquareVertices_postcond_satisfied (x1: Int) (y1: Int) (x2: Int) (
   sorry
   -- !benchmark @end proof
 
+end no_2275_p03265

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6195_syn_1_iter_6195
+
+
 -- Precondition definitions
 @[reducible, simp]
 def fizzBuzzPair_precond (a : Nat) (b : Nat) : Prop :=
@@ -51,3 +54,4 @@ theorem fizzBuzzPair_postcond_satisfied (a: Nat) (b: Nat) (h_precond : fizzBuzzP
   sorry
   -- !benchmark @end proof
 
+end no_6195_syn_1_iter_6195

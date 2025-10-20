@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_36033_codeexercises_136033
+
+
 -- Precondition definitions
 @[reducible, simp]
 def break_and_multiplier_precond (chef_list : List (String × Nat)) (ingredient : String) : Prop :=
@@ -49,3 +52,4 @@ theorem break_and_multiplier_postcond_satisfied (chef_list: List (String × Nat)
   sorry
   -- !benchmark @end proof
 
+end no_36033_codeexercises_136033

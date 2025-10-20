@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_34321_codeexercises_52899
+
+
 -- Precondition definitions
 @[reducible, simp]
 def break_loop_precond (nums : List Nat) : Prop :=
@@ -40,3 +43,5 @@ theorem break_loop_correct (nums : List Nat) (h_precond : break_loop_precond num
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_34321_codeexercises_52899

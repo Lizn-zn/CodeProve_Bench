@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1859_p02801
+
+
 -- Precondition definitions
 @[reducible, simp]
 def nextLetter_precond (c : Char) : Prop :=
@@ -30,3 +33,4 @@ theorem nextLetter_postcond_satisfied (c: Char) (h_precond : nextLetter_precond 
   sorry
   -- !benchmark @end proof
 
+end no_1859_p02801

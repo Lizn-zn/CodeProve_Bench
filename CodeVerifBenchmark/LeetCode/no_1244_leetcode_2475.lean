@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1244_leetcode_2475
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -75,3 +78,5 @@ theorem countTriplets_postcond_satisfied (nums: List Nat) (h_precond : countTrip
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1244_leetcode_2475

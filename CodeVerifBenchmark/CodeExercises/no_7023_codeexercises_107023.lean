@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7023_codeexercises_107023
+
+
 -- Precondition definitions
 @[reducible, simp]
 def print_athlete_combinations_precond (athletes : List String) : Prop :=
@@ -61,3 +64,5 @@ theorem print_athlete_combinations_postcond_satisfied (athletes: List String) (h
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_7023_codeexercises_107023

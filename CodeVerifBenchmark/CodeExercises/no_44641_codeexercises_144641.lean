@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_44641_codeexercises_144641
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_values_precond (numbers : List Int) : Prop :=
@@ -44,3 +47,4 @@ theorem check_values_postcond_satisfied (numbers: List Int) (h_precond : check_v
   sorry
   -- !benchmark @end proof
 
+end no_44641_codeexercises_144641

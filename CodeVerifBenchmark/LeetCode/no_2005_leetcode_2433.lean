@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2005_leetcode_2433
+
+
 -- Precondition auxiliary definitions
 def xorScan (arr : List Nat) : List Nat :=
   match arr with
@@ -63,3 +66,5 @@ theorem findArray_postcond_satisfied (pref: List Nat) (h_precond : findArray_pre
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2005_leetcode_2433

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_62238_codeexercises_162238
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_books_precond (librarian_inventory : List String) (patron_list : List String) : Prop :=
@@ -47,3 +50,5 @@ theorem check_books_postcond_satisfied (librarian_inventory: List String) (patro
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_62238_codeexercises_162238

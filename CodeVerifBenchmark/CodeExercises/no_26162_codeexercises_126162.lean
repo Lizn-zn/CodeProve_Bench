@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_26162_codeexercises_126162
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_range_with_break_precond (start : Nat) (stop : Nat) : Prop :=
@@ -48,3 +51,4 @@ theorem create_range_with_break_postcond_satisfied (start: Nat) (stop: Nat) (h_p
   sorry
   -- !benchmark @end proof
 
+end no_26162_codeexercises_126162

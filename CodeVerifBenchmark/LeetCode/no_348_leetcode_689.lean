@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_348_leetcode_689
+
+
 -- Precondition auxiliary definitions
 def subarraySum (nums : List Nat) (start : Nat) (len : Nat) : Nat :=
   (List.drop start nums).take len |>.sum
@@ -150,3 +153,5 @@ theorem maxSumOfThreeSubarrays_postcond_satisfied (nums: List Nat) (k: Nat) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_348_leetcode_689

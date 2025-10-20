@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1684_leetcode_3340
+
+
 -- Precondition auxiliary definitions
 def digitSum (s : String) (even : Bool) : Nat :=
   let chars := s.toList
@@ -55,3 +58,5 @@ theorem isBalanced_postcond_satisfied (num: String) (h_precond : isBalanced_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1684_leetcode_3340

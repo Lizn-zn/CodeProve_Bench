@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_31942_codeexercises_131942
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_nested_tuples_precond (n : Nat) (m : Nat) : Prop :=
@@ -46,3 +49,5 @@ theorem create_nested_tuples_postcond_satisfied (n: Nat) (m: Nat) (h_precond : c
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_31942_codeexercises_131942

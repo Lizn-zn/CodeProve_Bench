@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_173_leetcode_203
+
+
 -- Precondition auxiliary definitions
 inductive ListNode
   | nil : ListNode
@@ -73,3 +76,5 @@ theorem removeElements_postcond_satisfied (head: ListNode) (val: Int) (h_precond
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_173_leetcode_203

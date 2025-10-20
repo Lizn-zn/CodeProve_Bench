@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2299_leetcode_2826
+
+
 -- Precondition auxiliary definitions
 def is_valid_element (n : Nat) : Prop :=
   n = 1 ∨ n = 2 ∨ n = 3
@@ -88,3 +91,5 @@ theorem min_operations_to_non_decreasing_postcond_satisfied (nums: List Nat) (h_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2299_leetcode_2826

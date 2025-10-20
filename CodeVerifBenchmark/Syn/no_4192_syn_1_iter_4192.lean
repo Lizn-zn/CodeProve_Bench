@@ -11,10 +11,10 @@ def Heap.toList : Heap α → List α
 
 def Heap.isMinHeap : Heap Nat → Prop
   | .empty => True
-  | .node x l r => 
-      (∀ y ∈ l.toList, x ≤ y) ∧ 
-      (∀ y ∈ r.toList, x ≤ y) ∧ 
-      l.isMinHeap ∧ 
+  | .node x l r =>
+      (∀ y ∈ l.toList, x ≤ y) ∧
+      (∀ y ∈ r.toList, x ≤ y) ∧
+      l.isMinHeap ∧
       r.isMinHeap
 
 -- Precondition definitions
@@ -40,7 +40,7 @@ def List.insertSorted (l : List (Nat × Nat)) (pair : Nat × Nat) : List (Nat ×
 def Heap.foldM (heap : Heap α) (init : β) (f : β → α → β) : β :=
   match heap with
   | .empty => init
-  | .node x l r => 
+  | .node x l r =>
       let acc1 := f init x
       let acc2 := l.foldM acc1 f
       r.foldM acc2 f
@@ -82,18 +82,18 @@ def heap_element_frequencies_postcond (heap : Heap Nat) (result: List (Nat × Na
   let unique_elements := elements.unique
   let result_elements := result.map Prod.fst
   let result_frequencies := result.map Prod.snd
-  
+
   -- All elements in result are from the heap
   result_elements ⊆ unique_elements ∧
   unique_elements ⊆ result_elements ∧
-  
+
   -- Frequencies are correct
-  (∀ (pair : Nat × Nat) (h : pair ∈ result), 
+  (∀ (pair : Nat × Nat) (h : pair ∈ result),
     pair.snd = elements.countElem pair.fst) ∧
-  
+
   -- Result is sorted by element value
   result.sortedByKey ∧
-  
+
   -- All frequencies are positive
   (∀ (pair : Nat × Nat) (h : pair ∈ result), pair.snd > 0)
   -- !benchmark @end postcond

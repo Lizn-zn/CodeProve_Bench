@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_620_leetcode_771
+
+
 -- Precondition auxiliary definitions
 def isJewel (jewels : String) (c : Char) : Bool :=
   c ∈ jewels.data
@@ -40,3 +43,5 @@ theorem numJewelsInStones_postcond_satisfied (jewels: String) (stones: String) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_620_leetcode_771

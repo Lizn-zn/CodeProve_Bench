@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_23954_codeexercises_36881
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_set_of_advantages_precond (advantages : List String) : Prop :=
@@ -36,3 +39,5 @@ theorem create_set_of_advantages_postcond_satisfied (advantages: List String) (h
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_23954_codeexercises_36881

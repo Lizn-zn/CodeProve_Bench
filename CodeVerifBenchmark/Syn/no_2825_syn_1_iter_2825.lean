@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2825_syn_1_iter_2825
+
+
 -- Precondition definitions
 @[reducible, simp]
 def interleave_lists_precond (nums : List Nat) (chars : List Char) : Prop :=
@@ -49,3 +52,5 @@ theorem interleave_lists_postcond_satisfied (nums: List Nat) (chars: List Char) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2825_syn_1_iter_2825

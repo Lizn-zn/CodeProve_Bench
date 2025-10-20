@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1158_codeexercises_101158
+
+
 -- Precondition definitions
 @[reducible, simp]
 def lawyer_exercise_precond (lst1 : List String) (lst2 : List String) : Prop :=
@@ -37,3 +40,5 @@ theorem lawyer_exercise_postcond_satisfied (lst1: List String) (lst2: List Strin
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1158_codeexercises_101158

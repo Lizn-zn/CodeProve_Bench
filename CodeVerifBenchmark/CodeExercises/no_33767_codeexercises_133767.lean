@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_33767_codeexercises_133767
+
+
 -- Precondition definitions
 @[reducible, simp]
 def modify_list_precond (values : List Int) (modifier : Int) : Prop :=
@@ -34,3 +37,4 @@ theorem modify_list_postcond_satisfied (values: List Int) (modifier: Int) (h_pre
   sorry
   -- !benchmark @end proof
 
+end no_33767_codeexercises_133767

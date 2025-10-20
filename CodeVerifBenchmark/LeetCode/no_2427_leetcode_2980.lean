@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2427_leetcode_2980
+
+
 -- Precondition auxiliary definitions
 /-- A helper function to check if a natural number has at least one trailing zero in its binary representation. -/
 def hasTrailingZero (n : Nat) : Bool :=
@@ -47,3 +50,5 @@ theorem hasTrailingZeroOr_postcond_satisfied (nums: List Nat) (h_precond : hasTr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2427_leetcode_2980

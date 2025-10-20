@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_81947_codeexercises_181947
+
+
 -- Precondition definitions
 @[reducible, simp]
 def concatenate_strings_with_separator_precond (strings : List String) (separator : String) : Prop :=
@@ -46,3 +49,5 @@ theorem concatenate_strings_with_separator_postcond_satisfied (strings: List Str
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_81947_codeexercises_181947

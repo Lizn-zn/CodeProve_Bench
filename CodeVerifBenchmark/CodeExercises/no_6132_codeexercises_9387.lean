@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6132_codeexercises_9387
+
+
 -- Precondition definitions
 @[reducible, simp]
 def is_perfect_square_precond (number : Nat) : Prop :=
@@ -37,3 +40,4 @@ theorem is_perfect_square_postcond_satisfied (number: Nat) (h_precond : is_perfe
   sorry
   -- !benchmark @end proof
 
+end no_6132_codeexercises_9387

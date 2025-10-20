@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_78688_codeexercises_178688
+
+
 -- Precondition definitions
 @[reducible, simp]
 def intersection_of_sets_precond (sets : List (Set Nat)) : Prop :=
@@ -52,3 +55,4 @@ theorem intersection_of_sets_postcond_satisfied (sets: List (Set Nat)) (h_precon
   sorry
   -- !benchmark @end proof
 
+end no_78688_codeexercises_178688

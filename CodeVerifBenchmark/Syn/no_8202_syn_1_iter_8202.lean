@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8202_syn_1_iter_8202
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -83,3 +86,5 @@ theorem extract_chars_from_coords_postcond_satisfied (grid: Array (Array Int)) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8202_syn_1_iter_8202

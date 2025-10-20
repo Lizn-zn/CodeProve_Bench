@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2394_codeexercises_102394
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_smallest_precond (num1 : Nat) (num2 : Nat) (num3 : Nat) : Prop :=
@@ -39,3 +42,4 @@ theorem find_smallest_postcond_satisfied (num1: Nat) (num2: Nat) (num3: Nat) (h_
   sorry
   -- !benchmark @end proof
 
+end no_2394_codeexercises_102394

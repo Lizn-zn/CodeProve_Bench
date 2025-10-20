@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1708_leetcode_2094
+
+
 -- Precondition auxiliary definitions
 def countDigits (digits : List Nat) : List Nat :=
   let counts := List.replicate 10 0
@@ -77,3 +80,5 @@ theorem findEvenNumbers_postcond_satisfied (digits: List Nat) (h_precond : findE
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1708_leetcode_2094

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_49741_codeexercises_149741
+
+
 -- Precondition definitions
 @[reducible, simp]
 def remove_specific_elements_precond (numbers : List Nat) (target : Nat) : Prop :=
@@ -42,3 +45,5 @@ theorem remove_specific_elements_postcond_satisfied (numbers: List Nat) (target:
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_49741_codeexercises_149741

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_423_leetcode_507
+
+
 -- Precondition auxiliary definitions
 def divisorsSum (n : Nat) : Nat :=
   if n = 0 then 0 else
@@ -58,3 +61,5 @@ theorem isPerfectNumber_postcond_satisfied (n: Nat) (h_precond : isPerfectNumber
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_423_leetcode_507

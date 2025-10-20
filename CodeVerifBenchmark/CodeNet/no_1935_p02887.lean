@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1935_p02887
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countSlimesAfterFusion_precond (n : Nat) (s : String) : Prop :=
@@ -61,3 +64,4 @@ theorem countSlimesAfterFusion_postcond_satisfied (n: Nat) (s: String) (h_precon
   sorry
   -- !benchmark @end proof
 
+end no_1935_p02887

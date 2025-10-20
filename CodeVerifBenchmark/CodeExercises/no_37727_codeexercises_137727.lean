@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_37727_codeexercises_137727
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_intersection_precond (lst1 : List α) (lst2 : List α) : Prop :=
@@ -45,3 +48,5 @@ theorem find_intersection_postcond_satisfied [DecidableEq α] (lst1: List α) (l
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_37727_codeexercises_137727

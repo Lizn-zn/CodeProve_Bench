@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1120_p01743
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minCompleteGraphVertices_precond (n : Nat) (a : List Nat) : Prop :=
@@ -98,3 +101,5 @@ theorem minCompleteGraphVertices_postcond_satisfied (n: Nat) (a: List Nat) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1120_p01743

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1159_codeexercises_101159
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -61,3 +64,4 @@ theorem find_closest_animal_postcond_satisfied (weight: Float) (animals: List (S
   sorry
   -- !benchmark @end proof
 
+end no_1159_codeexercises_101159

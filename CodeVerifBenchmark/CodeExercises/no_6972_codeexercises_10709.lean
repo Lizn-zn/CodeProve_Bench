@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6972_codeexercises_10709
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_elements_precond (set1 : Set α) (set2 : Set α) (func : α → Bool) : Prop :=
@@ -33,3 +36,4 @@ theorem find_common_elements_postcond_satisfied (set1: Set α) (set2: Set α) (f
   sorry
   -- !benchmark @end proof
 
+end no_6972_codeexercises_10709

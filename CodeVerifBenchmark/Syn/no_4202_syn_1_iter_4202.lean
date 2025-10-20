@@ -1,5 +1,7 @@
 import Mathlib
 
+namespace no_4202_syn_1_iter_4202
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -51,3 +53,4 @@ theorem extract_integers_postcond_satisfied (elements: Set (Sum Int (Sum UInt8 (
   sorry
   -- !benchmark @end proof
 
+end no_4202_syn_1_iter_4202

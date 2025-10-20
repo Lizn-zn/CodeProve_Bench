@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_16978_codeexercises_26069
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sum_of_odds_precond (elements : List Int) : Prop :=
@@ -38,3 +41,5 @@ theorem sum_of_odds_postcond_satisfied (elements: List Int) (h_precond : sum_of_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_16978_codeexercises_26069

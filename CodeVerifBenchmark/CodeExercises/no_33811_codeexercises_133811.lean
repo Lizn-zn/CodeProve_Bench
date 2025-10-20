@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_33811_codeexercises_133811
+
+
 -- Precondition auxiliary definitions
 /-- Epsilon value for floating-point comparison -/
 def epsilon : Float := 0.0001
@@ -51,3 +54,5 @@ theorem tune_the_instrument_postcond_satisfied (initial_pitch: Float) (target_pi
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_33811_codeexercises_133811

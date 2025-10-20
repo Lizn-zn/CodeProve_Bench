@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3581_syn_1_iter_3581
+
+
 -- Precondition definitions
 @[reducible, simp]
 def generate_sum_pairs_precond (n : Int) : Prop :=
@@ -51,3 +54,5 @@ theorem generate_sum_pairs_postcond_satisfied (n: Int) (h_precond : generate_sum
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3581_syn_1_iter_3581

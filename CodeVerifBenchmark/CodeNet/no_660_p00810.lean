@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_660_p00810
+
+
 -- Precondition auxiliary definitions
 -- Helper function to compute squared distance between two 3D points
 def distSquared (p1 p2 : Float × Float × Float) : Float :=
@@ -109,3 +112,5 @@ theorem findSmallestSphereRadius_postcond_satisfied (stars: List (Float × Float
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_660_p00810

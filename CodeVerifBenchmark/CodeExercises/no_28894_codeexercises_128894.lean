@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_28894_codeexercises_128894
+
+
 -- Precondition definitions
 @[reducible, simp]
 def list_intersection_precond (arr1 : List Int) (arr2 : List Int) : Prop :=
@@ -44,3 +47,5 @@ theorem list_intersection_postcond_satisfied (arr1: List Int) (arr2: List Int) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_28894_codeexercises_128894

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6621_syn_1_iter_6621
+
+
 -- Precondition definitions
 @[reducible, simp]
 def process_nums_precond (a : Nat) (b : Nat) (chars : Array Char) (nums : Array Nat) : Prop :=
@@ -51,3 +54,5 @@ theorem process_nums_postcond_satisfied (a: Nat) (b: Nat) (chars: Array Char) (n
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6621_syn_1_iter_6621

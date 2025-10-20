@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_11107_codeexercises_111107
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_profit_loss_precond (transactions : List Float) : Prop :=
@@ -37,3 +40,5 @@ theorem calculate_profit_loss_postcond_satisfied (transactions: List Float) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_11107_codeexercises_111107

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_92062_codeexercises_192062
+
+
 -- Precondition definitions
 @[reducible, simp]
 def remove_unavailable_books_precond (books : List String) (unavailable_books : List String) : Prop :=
@@ -43,3 +46,5 @@ theorem remove_unavailable_books_postcond_satisfied (books: List String) (unavai
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_92062_codeexercises_192062

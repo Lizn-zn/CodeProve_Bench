@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_61245_codeexercises_161245
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_patient_tuples_precond (patient_names : List String) (patient_ages : List Nat) : Prop :=
@@ -31,3 +34,4 @@ theorem create_patient_tuples_postcond_satisfied (patient_names: List String) (p
   sorry
   -- !benchmark @end proof
 
+end no_61245_codeexercises_161245

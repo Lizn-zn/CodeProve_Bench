@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_99357_codeexercises_199357
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_matching_colors_precond (colors_list : List String) (target_color : String) : Prop :=
@@ -40,3 +43,4 @@ theorem find_matching_colors_postcond_satisfied (colors_list: List String) (targ
   sorry
   -- !benchmark @end proof
 
+end no_99357_codeexercises_199357

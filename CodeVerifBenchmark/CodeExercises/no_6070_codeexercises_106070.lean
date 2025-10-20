@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6070_codeexercises_106070
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_colors_precond (rooms : List (String × List String)) (clients : List String) : Prop :=
@@ -47,3 +50,5 @@ theorem find_common_colors_postcond_satisfied (rooms: List (String × List Strin
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6070_codeexercises_106070

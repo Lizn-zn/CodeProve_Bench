@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_25934_codeexercises_39931
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_social_worker_list_precond (names : List String) (ages : List Nat) (genders : List String) : Prop :=
@@ -35,3 +38,5 @@ theorem create_social_worker_list_postcond_satisfied (names: List String) (ages:
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_25934_codeexercises_39931

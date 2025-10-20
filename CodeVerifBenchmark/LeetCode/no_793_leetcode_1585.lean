@@ -23,7 +23,7 @@ def canMoveLeft (s : String) (pos : Nat) (targetChar : Char) : Prop :=
   let targetVal := targetChar.toNat
   -- For all positions before pos, if they contain a digit greater than targetChar,
   -- there must be a way to bring a smaller or equal digit to that position
-  ∀ i, i < pos → 
+  ∀ i, i < pos →
     let charAtI := chars.get! i
     charAtI.toNat > targetVal →
       ∃ j, j ≥ pos ∧ Char.toNat (chars.get! j) ≤ Char.toNat charAtI
@@ -49,7 +49,7 @@ def canMoveLeftCheck (chars : List Char) (targetPos : Nat) (targetChar : Char) :
   let suffixList := chars.drop targetPos
   -- For every character in the prefix that is larger than targetChar,
   -- there must exist a character in the suffix that is ≤ that character
-  prefixList.all (fun c => 
+  prefixList.all (fun c =>
     if c.toNat > targetVal then
       suffixList.any (· ≤ c)
     else

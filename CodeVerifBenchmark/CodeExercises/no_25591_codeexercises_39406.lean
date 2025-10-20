@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_25591_codeexercises_39406
+
+
 -- Precondition definitions
 @[reducible, simp]
 def remove_odd_elements_precond (lst : List Int) (start : Nat) (end_pos : Nat) : Prop :=
@@ -74,3 +77,5 @@ theorem remove_odd_elements_postcond_satisfied (lst: List Int) (start: Nat) (end
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_25591_codeexercises_39406

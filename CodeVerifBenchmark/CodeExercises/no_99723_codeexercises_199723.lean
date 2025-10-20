@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_99723_codeexercises_199723
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_vowels_consonants_precond (s : String) : Prop :=
@@ -45,3 +48,5 @@ theorem count_vowels_consonants_postcond_satisfied (s: String) (h_precond : coun
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_99723_codeexercises_199723

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_52633_codeexercises_152633
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_total_sales_precond (sales_data : List (List Nat)) : Prop :=
@@ -39,3 +42,5 @@ theorem calculate_total_sales_postcond_satisfied (sales_data: List (List Nat)) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_52633_codeexercises_152633

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_19262_codeexercises_119262
+
+
 -- Precondition definitions
 @[reducible, simp]
 def compare_roi_precond (roi1 : Float) (roi2 : Float) : Prop :=
@@ -37,3 +40,4 @@ theorem compare_roi_postcond_satisfied (roi1: Float) (roi2: Float) (h_precond : 
   sorry
   -- !benchmark @end proof
 
+end no_19262_codeexercises_119262

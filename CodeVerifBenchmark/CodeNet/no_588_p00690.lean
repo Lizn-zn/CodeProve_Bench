@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_588_p00690
+
+
 -- Precondition auxiliary definitions
 -- Helper to check if a route is valid
 def validRoute (numStations : Nat) (route : Nat × Nat × Nat) : Prop :=
@@ -151,3 +154,5 @@ theorem findLongestRailwayPath_postcond_satisfied (numStations: Nat) (routes: Li
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_588_p00690

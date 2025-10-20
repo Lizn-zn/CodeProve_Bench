@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7564_codeexercises_11629
+
+
 -- Precondition definitions
 @[reducible, simp]
 def remove_duplicates_precond (farm_products : List String) : Prop :=
@@ -36,3 +39,5 @@ theorem remove_duplicates_postcond_satisfied (farm_products: List String) (h_pre
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_7564_codeexercises_11629

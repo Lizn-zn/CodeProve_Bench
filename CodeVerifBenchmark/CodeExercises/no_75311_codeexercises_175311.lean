@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_75311_codeexercises_175311
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_common_letters_precond (vet_name : String) (animal_names : List String) : Prop :=
@@ -45,3 +48,4 @@ theorem get_common_letters_postcond_satisfied (vet_name: String) (animal_names: 
   sorry
   -- !benchmark @end proof
 
+end no_75311_codeexercises_175311

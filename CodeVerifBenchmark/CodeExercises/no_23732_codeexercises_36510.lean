@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_23732_codeexercises_36510
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_book_status_precond (book_id : Nat) (library : List (Nat × String)) : Prop :=
@@ -50,3 +53,4 @@ theorem check_book_status_postcond_satisfied (book_id: Nat) (library: List (Nat 
   sorry
   -- !benchmark @end proof
 
+end no_23732_codeexercises_36510

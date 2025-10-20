@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1837_leetcode_2237
+
+
 -- Precondition auxiliary definitions
 def validLights (n : Nat) (lights : List (Nat × Nat)) : Prop :=
   lights.all (fun light => light.1 < n ∧ light.2 ≥ 0)
@@ -77,3 +80,5 @@ theorem meetRequirement_postcond_satisfied (n: Nat) (lights: List (Nat × Nat)) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1837_leetcode_2237

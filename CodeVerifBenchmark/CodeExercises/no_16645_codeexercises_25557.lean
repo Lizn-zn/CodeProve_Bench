@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_16645_codeexercises_25557
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -61,3 +64,5 @@ theorem find_shortest_travel_time_postcond_satisfied (planets: Array (Float × F
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_16645_codeexercises_25557

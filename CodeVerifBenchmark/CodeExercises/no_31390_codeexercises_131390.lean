@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_31390_codeexercises_131390
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_absolute_average_precond (numbers : List Int) : Prop :=
@@ -35,3 +38,5 @@ theorem find_absolute_average_postcond_satisfied (numbers: List Int) (h_precond 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_31390_codeexercises_131390

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_18509_codeexercises_28476
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -42,3 +45,5 @@ theorem complex_or_operator_postcond_satisfied (a: ℂ) (b: ℂ) (h_precond : co
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_18509_codeexercises_28476

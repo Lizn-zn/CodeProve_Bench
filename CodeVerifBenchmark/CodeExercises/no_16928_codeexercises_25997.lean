@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_16928_codeexercises_25997
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_magnitude_and_argument_precond (complex_number : â„‚) : Prop :=
@@ -38,3 +41,5 @@ theorem calculate_magnitude_and_argument_postcond_satisfied (complex_number : â„
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_16928_codeexercises_25997

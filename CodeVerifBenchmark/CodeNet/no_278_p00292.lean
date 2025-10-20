@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_278_p00292
+
+
 -- Precondition definitions
 @[reducible, simp]
 def findWinner_precond (k : Nat) (p : Nat) : Prop :=
@@ -37,3 +40,4 @@ theorem findWinner_postcond_satisfied (k: Nat) (p: Nat) (h_precond : findWinner_
   sorry
   -- !benchmark @end proof
 
+end no_278_p00292

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8875_syn_1_iter_8875
+
+
 -- Precondition auxiliary definitions
 def get_chars (char_nat_pairs : List (Char × Nat)) : List Char :=
   char_nat_pairs.map Prod.fst
@@ -99,3 +102,5 @@ theorem construct_sum_array_postcond_satisfied (char_nat_pairs: List (Char × Na
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8875_syn_1_iter_8875

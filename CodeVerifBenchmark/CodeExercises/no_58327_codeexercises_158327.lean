@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_58327_codeexercises_158327
+
+
 -- Precondition definitions
 @[reducible, simp]
 def complex_division_precond (a : ℂ) (b : ℂ) : Prop :=
@@ -32,3 +35,5 @@ theorem complex_division_postcond_satisfied (a: ℂ) (b: ℂ) (h_precond : compl
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_58327_codeexercises_158327

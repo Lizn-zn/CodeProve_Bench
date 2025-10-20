@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2045_leetcode_2473
+
+
 -- Precondition auxiliary definitions
 def isConnected (n : Nat) (roads : List (Nat × Nat × Nat)) : Prop :=
   -- Check if all cities from 1 to n are connected via roads
@@ -133,3 +136,5 @@ theorem minCostToBuyApple_postcond_satisfied (n: Nat) (roads: List (Nat × Nat �
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2045_leetcode_2473

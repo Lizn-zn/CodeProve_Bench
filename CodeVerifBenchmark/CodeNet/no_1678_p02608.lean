@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1678_p02608
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countTriples_precond (N : Nat) : Prop :=
@@ -73,3 +76,5 @@ theorem countTriples_postcond_satisfied (N: Nat) (h_precond : countTriples_preco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1678_p02608

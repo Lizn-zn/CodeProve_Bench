@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_512_leetcode_977
+
+
 -- Precondition auxiliary definitions
 /-- Checks if an array is sorted in non-decreasing order -/
 def IsSorted (arr : Array Int) : Prop :=
@@ -94,3 +97,5 @@ theorem sortedSquares_postcond_satisfied (nums: Array Int) (h_precond : sortedSq
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_512_leetcode_977

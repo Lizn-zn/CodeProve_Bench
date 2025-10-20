@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_395_leetcode_476
+
+
 -- Precondition definitions
 @[reducible, simp]
 def complement_precond (num : Nat) : Prop :=
@@ -64,3 +67,4 @@ theorem complement_postcond_satisfied (num: Nat) (h_precond : complement_precond
   sorry
   -- !benchmark @end proof
 
+end no_395_leetcode_476

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4688_syn_1_iter_4688
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_constant_array_precond (x : Int) (n : Nat) : Prop :=
@@ -33,3 +36,5 @@ theorem create_constant_array_postcond_satisfied (x: Int) (n: Nat) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4688_syn_1_iter_4688

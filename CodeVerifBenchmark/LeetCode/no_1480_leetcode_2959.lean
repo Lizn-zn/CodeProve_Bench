@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1480_leetcode_2959
+
+
 -- Precondition auxiliary definitions
 def reachable (n : Nat) (roads : List (Nat × Nat × Nat)) : Prop :=
   -- Create adjacency list representation
@@ -124,3 +127,5 @@ theorem countValidBranchClosingSets_postcond_satisfied (n: Nat) (maxDistance: Na
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1480_leetcode_2959

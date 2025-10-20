@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_749_p00938
+
+
 -- Precondition auxiliary definitions
 -- Helper function to check if a direction character is valid
 def isValidDirection (f : Char) : Prop :=
@@ -172,3 +175,4 @@ theorem minClocks_postcond_satisfied (n: Nat) (w: Nat) (d: Nat) (members: List (
   sorry
   -- !benchmark @end proof
 
+end no_749_p00938

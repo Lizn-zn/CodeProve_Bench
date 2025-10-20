@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3795_syn_1_iter_3795
+
+
 -- Precondition definitions
 @[reducible, simp]
 def f_precond (n : UInt8) : Prop :=
@@ -47,3 +50,4 @@ theorem f_postcond_satisfied (n: UInt8) (h_precond : f_precond (n)) :
   sorry
   -- !benchmark @end proof
 
+end no_3795_syn_1_iter_3795

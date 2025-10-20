@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_88189_codeexercises_188189
+
+
 -- Precondition definitions
 @[reducible, simp]
 def concatenate_or_operator_precond (strings : List String) (condition : Bool) : Prop :=
@@ -44,3 +47,5 @@ theorem concatenate_or_operator_postcond_satisfied (strings: List String) (condi
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_88189_codeexercises_188189

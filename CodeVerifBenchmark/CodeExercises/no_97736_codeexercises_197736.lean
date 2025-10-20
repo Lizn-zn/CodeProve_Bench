@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_97736_codeexercises_197736
+
+
 -- Precondition definitions
 @[reducible, simp]
 def multiply_tuple_elements_precond (tuple_list : List (Nat × Nat × Nat)) : Prop :=
@@ -32,3 +35,4 @@ theorem multiply_tuple_elements_postcond_satisfied (tuple_list: List (Nat × Nat
   sorry
   -- !benchmark @end proof
 
+end no_97736_codeexercises_197736

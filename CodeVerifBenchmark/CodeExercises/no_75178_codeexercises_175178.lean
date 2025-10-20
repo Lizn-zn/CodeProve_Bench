@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_75178_codeexercises_175178
+
+
 -- Precondition definitions
 @[reducible, simp]
 def tuple_concatenation_and_repeating_precond (n : Nat) (tuples : List (List α)) : Prop :=
@@ -44,3 +47,5 @@ theorem tuple_concatenation_and_repeating_postcond_satisfied (n: Nat) (tuples: L
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_75178_codeexercises_175178

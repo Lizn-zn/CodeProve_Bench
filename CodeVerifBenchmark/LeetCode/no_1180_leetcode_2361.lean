@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1180_leetcode_2361
+
+
 -- Precondition auxiliary definitions
 def List.length_eq : List Nat → List Nat → Prop
   | [], [] => True
@@ -99,3 +102,5 @@ theorem minimumCosts_postcond_satisfied (regular: List Nat) (express: List Nat) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1180_leetcode_2361

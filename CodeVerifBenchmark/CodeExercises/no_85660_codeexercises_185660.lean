@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_85660_codeexercises_185660
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_not_in_not_equal_precond (lst1 : List α) (lst2 : List α) : Prop :=
@@ -35,3 +38,5 @@ theorem find_not_in_not_equal_postcond_satisfied [DecidableEq α] (lst1: List α
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_85660_codeexercises_185660

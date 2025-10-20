@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1394_leetcode_2786
+
+
 -- Precondition auxiliary definitions
 def Parity : Nat → Bool := λ n ↦ n % 2 = 0
 
@@ -93,3 +96,5 @@ theorem maxScore_postcond_satisfied (nums: List Nat) (x: Nat) (h_precond : maxSc
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1394_leetcode_2786

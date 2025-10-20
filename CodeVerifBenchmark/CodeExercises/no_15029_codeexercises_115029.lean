@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_15029_codeexercises_115029
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sum_of_nested_lists_precond (lists : List (List Nat)) : Prop :=
@@ -37,3 +40,5 @@ theorem sum_of_nested_lists_postcond_satisfied (lists: List (List Nat)) (h_preco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_15029_codeexercises_115029

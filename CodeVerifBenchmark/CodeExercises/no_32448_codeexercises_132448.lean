@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_32448_codeexercises_132448
+
+
 -- Precondition definitions
 @[reducible, simp]
 def main_precond  : Prop :=
@@ -60,3 +63,5 @@ theorem main_postcond_satisfied (h_precond : main_precond) :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_32448_codeexercises_132448

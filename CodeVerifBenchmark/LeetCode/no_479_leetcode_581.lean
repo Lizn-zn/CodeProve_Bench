@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_479_leetcode_581
+
+
 -- Precondition auxiliary definitions
 def IsSorted (a : Array Int) : Prop :=
   ∀ i j, 0 ≤ i → i ≤ j → j < a.size → a[i]! ≤ a[j]!
@@ -100,3 +103,5 @@ theorem findUnsortedSubarray_postcond_satisfied (nums: Array Int) (h_precond : f
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_479_leetcode_581

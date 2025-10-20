@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_59580_codeexercises_159580
+
+
 -- Precondition definitions
 @[reducible, simp]
 def pattern_precond (n : Nat) : Prop :=
@@ -41,3 +44,4 @@ theorem pattern_postcond_satisfied (n: Nat) (h_precond : pattern_precond (n)) :
   sorry
   -- !benchmark @end proof
 
+end no_59580_codeexercises_159580

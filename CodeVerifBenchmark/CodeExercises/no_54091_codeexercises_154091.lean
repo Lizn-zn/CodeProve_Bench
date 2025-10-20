@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_54091_codeexercises_154091
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_average_score_precond (athlete_scores : List Float) : Prop :=
@@ -41,3 +44,5 @@ theorem calculate_average_score_postcond_satisfied (athlete_scores: List Float) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_54091_codeexercises_154091

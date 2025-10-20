@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_755_leetcode_916
+
+
 -- Precondition auxiliary definitions
 def charCount (s : String) : Char → Nat :=
   fun c => (s.data.filter (· = c)).length
@@ -39,3 +42,5 @@ def findUniversalStrings_postcond (words1 : List String) (words2 : List String) 
 theorem findUniversalStrings_postcond_satisfied (words1 : List String) (words2 : List String) (h_precond : findUniversalStrings_precond words1 words2) :
     findUniversalStrings_postcond words1 words2 (findUniversalStrings words1 words2 h_precond) h_precond := by
   sorry
+
+end no_755_leetcode_916

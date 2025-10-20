@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_67350_codeexercises_167350
+
+
 -- Precondition definitions
 @[reducible, simp]
 def modify_photographer_details_precond (photographer : List (String × String)) (name : String) (new_city : String) : Prop :=
@@ -46,3 +49,4 @@ theorem modify_photographer_details_postcond_satisfied (photographer: List (Stri
   sorry
   -- !benchmark @end proof
 
+end no_67350_codeexercises_167350

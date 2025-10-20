@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_52680_codeexercises_152680
+
+
 -- Precondition definitions
 @[reducible, simp]
 def intersection_of_arrays_precond (arr1 : List Nat) (arr2 : List Nat) : Prop :=
@@ -51,3 +54,4 @@ theorem intersection_of_arrays_postcond_satisfied (arr1: List Nat) (arr2: List N
   sorry
   -- !benchmark @end proof
 
+end no_52680_codeexercises_152680

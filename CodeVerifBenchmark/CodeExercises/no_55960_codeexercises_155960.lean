@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_55960_codeexercises_155960
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_elements_precond (set1 : Set Nat) (set2 : Set Nat) (start : Nat) (end_val : Nat) : Prop :=
@@ -25,3 +28,5 @@ def find_common_elements_postcond (set1 : Set Nat) (set2 : Set Nat) (start : Nat
 theorem find_common_elements_postcond_satisfied (set1: Set Nat) (set2: Set Nat) (start: Nat) (end_val: Nat) (h_precond : find_common_elements_precond set1 set2 start end_val) :
     find_common_elements_postcond set1 set2 start end_val (find_common_elements set1 set2 start end_val h_precond) h_precond := by
   sorry
+
+end no_55960_codeexercises_155960

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_62539_codeexercises_162539
+
+
 -- Precondition definitions
 @[reducible, simp]
 def common_schedule_precond (nurse_schedule : List String) (available_shift : List String) : Prop :=
@@ -39,3 +42,5 @@ theorem common_schedule_postcond_satisfied (nurse_schedule: List String) (availa
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_62539_codeexercises_162539

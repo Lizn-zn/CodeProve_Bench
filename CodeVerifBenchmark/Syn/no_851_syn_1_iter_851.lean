@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_851_syn_1_iter_851
+
+
 -- Precondition definitions
 @[reducible, simp]
 def compute_parity_precond (s : Finset Nat) (arr : Array Nat) (p : Nat × Nat) : Prop :=
@@ -51,3 +54,4 @@ theorem compute_parity_postcond_satisfied (s: Finset Nat) (arr: Array Nat) (p: N
   sorry
   -- !benchmark @end proof
 
+end no_851_syn_1_iter_851

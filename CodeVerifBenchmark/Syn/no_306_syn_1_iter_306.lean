@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_306_syn_1_iter_306
+
+
 -- Precondition definitions
 @[reducible, simp]
 def max_char_value_precond (pairs : List (Char × Nat)) : Prop :=
@@ -48,3 +51,5 @@ theorem max_char_value_postcond_satisfied (pairs: List (Char × Nat)) (h_precond
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_306_syn_1_iter_306

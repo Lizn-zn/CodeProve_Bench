@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9936_syn_1_iter_9936
+
+
 -- Precondition definitions
 @[reducible, simp]
 def filter_pairs_by_array_precond (pairs : List (Int × Int)) (arr : Array Int) : Prop :=
@@ -49,3 +52,5 @@ theorem filter_pairs_by_array_postcond_satisfied (pairs: List (Int × Int)) (arr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_9936_syn_1_iter_9936

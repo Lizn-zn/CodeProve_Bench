@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2509_p03526
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxParticipantsAddingZabuton_precond (n : Nat) (participants : List (Nat × Nat)) : Prop :=
@@ -89,3 +92,5 @@ theorem maxParticipantsAddingZabuton_postcond_satisfied (n: Nat) (participants: 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2509_p03526

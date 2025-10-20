@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_294_leetcode_350
+
+
 -- Precondition auxiliary definitions
 def count_occurrences (lst : List Nat) (x : Nat) : Nat :=
   lst.filter (fun y => y = x) |>.length
@@ -72,3 +75,5 @@ theorem intersection_postcond_satisfied (nums1: List Nat) (nums2: List Nat) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_294_leetcode_350

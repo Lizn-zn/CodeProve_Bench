@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_99153_codeexercises_199153
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_prime_numbers_precond (start : Nat) (end_bound : Nat) : Prop :=
@@ -60,3 +63,5 @@ theorem find_prime_numbers_postcond_satisfied (start: Nat) (end_bound: Nat) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end_bound proof
+
+end no_99153_codeexercises_199153

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_107_leetcode_202
+
+
 -- Precondition auxiliary definitions
 /-- The sum of the squares of the digits of a natural number. -/
 def sumOfSquares : Nat → Nat
@@ -70,3 +73,5 @@ theorem isHappy_postcond_satisfied (n: Nat) (h_precond : isHappy_precond (n)) :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_107_leetcode_202

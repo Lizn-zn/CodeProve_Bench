@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_79084_codeexercises_179084
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_real_and_imaginary_parts_precond (complex_num : ℂ) : Prop :=
@@ -47,3 +50,5 @@ theorem check_real_and_imaginary_parts_postcond_satisfied (complex_num: ℂ) (h_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_79084_codeexercises_179084

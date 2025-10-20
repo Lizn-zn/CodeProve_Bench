@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2461_codeexercises_102461
+
+
 -- Precondition auxiliary definitions
 structure Animal where
   isSick : Bool
@@ -49,3 +52,4 @@ theorem find_sick_animals_postcond_satisfied (animal_list: List Animal) (h_preco
   sorry
   -- !benchmark @end proof
 
+end no_2461_codeexercises_102461

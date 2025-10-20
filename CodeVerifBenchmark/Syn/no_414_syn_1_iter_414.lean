@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_414_syn_1_iter_414
+
+
 -- Precondition definitions
 @[reducible, simp]
 def nat_to_string_precond (n : Nat) : Prop :=
@@ -85,3 +88,5 @@ theorem nat_to_string_postcond_satisfied (n: Nat) (h_precond : nat_to_string_pre
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_414_syn_1_iter_414

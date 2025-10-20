@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_65149_codeexercises_165149
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_modulus_of_numbers_precond (numbers : List Nat) (divisor : Nat) : Prop :=
@@ -33,3 +36,4 @@ theorem find_modulus_of_numbers_postcond_satisfied (numbers: List Nat) (divisor:
   sorry
   -- !benchmark @end proof
 
+end no_65149_codeexercises_165149

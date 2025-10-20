@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_99309_codeexercises_199309
+
+
 -- Precondition definitions
 @[reducible, simp]
 def intersection_looping_strings_precond (string1 : String) (string2 : String) : Prop :=
@@ -62,3 +65,5 @@ theorem intersection_looping_strings_postcond_satisfied (string1: String) (strin
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_99309_codeexercises_199309

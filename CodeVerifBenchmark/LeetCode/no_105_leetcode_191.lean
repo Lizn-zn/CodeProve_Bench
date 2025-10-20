@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_105_leetcode_191
+
+
 -- Precondition definitions
 @[reducible, simp]
 def hammingWeight_precond (n : Nat) : Prop :=
@@ -43,3 +46,4 @@ theorem hammingWeight_postcond_satisfied (n: Nat) (h_precond : hammingWeight_pre
   sorry
   -- !benchmark @end proof
 
+end no_105_leetcode_191

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_75973_codeexercises_175973
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_value_precond (dictionary_list : List (String × α)) (key_to_find : String) : Prop :=
@@ -38,3 +41,5 @@ theorem find_value_postcond_satisfied (dictionary_list: List (String × α)) (ke
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_75973_codeexercises_175973

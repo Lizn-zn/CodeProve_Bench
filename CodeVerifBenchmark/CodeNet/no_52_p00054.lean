@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_52_p00054
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sumDecimalDigits_precond (a : Nat) (b : Nat) (n : Nat) : Prop :=
@@ -52,3 +55,5 @@ theorem sumDecimalDigits_postcond_satisfied (a: Nat) (b: Nat) (n: Nat) (h_precon
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_52_p00054

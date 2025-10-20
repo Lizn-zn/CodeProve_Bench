@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6133_syn_1_iter_6133
+
+
 -- Precondition auxiliary definitions
 inductive UnionType (α : Type u) (β : Type v) where
   | left : α → UnionType α β
@@ -48,3 +51,5 @@ theorem chars_to_unicode_postcond_satisfied (chars: UnionType (Array Char) (List
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6133_syn_1_iter_6133

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7237_codeexercises_107237
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -64,3 +67,5 @@ theorem check_exponential_growth_postcond_satisfied (numbers: List Nat) (h_preco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_7237_codeexercises_107237

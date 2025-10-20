@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_78516_codeexercises_178516
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sum_odd_numbers_greater_than_ten_precond (nums : List Nat) : Prop :=
@@ -50,3 +53,5 @@ theorem sum_odd_numbers_greater_than_ten_postcond_satisfied (nums: List Nat) (h_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_78516_codeexercises_178516

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_294_p00312
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minJumpsToHome_precond (D : Nat) (L : Nat) : Prop :=
@@ -49,3 +52,4 @@ theorem minJumpsToHome_postcond_satisfied (D: Nat) (L: Nat) (h_precond : minJump
   sorry
   -- !benchmark @end proof
 
+end no_294_p00312

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6712_syn_1_iter_6712
+
+
 -- Precondition definitions
 @[reducible, simp]
 def palindrome_substrings_precond (s : String) : Prop :=
@@ -99,3 +102,5 @@ theorem palindrome_substrings_postcond_satisfied (s: String) (h_precond : palind
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6712_syn_1_iter_6712

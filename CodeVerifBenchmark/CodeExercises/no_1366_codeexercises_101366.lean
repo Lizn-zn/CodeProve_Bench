@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1366_codeexercises_101366
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -46,3 +49,5 @@ theorem sum_of_triangular_numbers_postcond_satisfied (n: Nat) (h_precond : sum_o
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1366_codeexercises_101366

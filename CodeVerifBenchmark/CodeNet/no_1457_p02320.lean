@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1457_p02320
+
+
 -- Precondition definitions
 @[reducible, simp]
 def knapsackWithLimitations_precond (n : Nat) (W : Nat) (items : List (Nat × Nat × Nat)) : Prop :=
@@ -112,3 +115,5 @@ theorem knapsackWithLimitations_postcond_satisfied (n: Nat) (W: Nat) (items: Lis
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1457_p02320

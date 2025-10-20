@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_99364_codeexercises_199364
+
+
 -- Precondition definitions
 @[reducible, simp]
 def reverse_balance_precond (accounts : List Nat) : Prop :=
@@ -42,3 +45,5 @@ theorem reverse_balance_postcond_satisfied (accounts: List Nat) (h_precond : rev
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_99364_codeexercises_199364

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_81578_codeexercises_181578
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_artifact_precond (archaeologist : String) (map : List (List Char)) : Prop :=
@@ -45,3 +48,5 @@ theorem find_artifact_postcond_satisfied (archaeologist: String) (map: List (Lis
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_81578_codeexercises_181578

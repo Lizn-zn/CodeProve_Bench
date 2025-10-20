@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1569_leetcode_3149
+
+
 -- Precondition auxiliary definitions
 def IsPermutationOfRange (l : List Nat) : Prop :=
   let n := l.length
@@ -93,3 +96,5 @@ theorem findMinScorePermutation_postcond_satisfied (nums: List Nat) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1569_leetcode_3149

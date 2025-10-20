@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_58865_codeexercises_158865
+
+
 -- Precondition definitions
 @[reducible, simp]
 def polar_coordinates_to_euclidean_coordinates_precond (polar_coordinates : List (Prod ℝ ℝ)) : Prop :=
@@ -36,3 +39,5 @@ theorem polar_coordinates_to_euclidean_coordinates_postcond_satisfied (polar_coo
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_58865_codeexercises_158865

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3590_syn_1_iter_3590
+
+
 -- Precondition definitions
 @[reducible, simp]
 def stringToCharCodes_precond (start : UInt8) (s : String) : Prop :=
@@ -43,3 +46,5 @@ theorem stringToCharCodes_postcond_satisfied (start: UInt8) (s: String) (h_preco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3590_syn_1_iter_3590

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8836_syn_1_iter_8836
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_valid_integers_precond (c : Char) (n : Int) (lst : List (Nat × Nat)) (arr : Array (Array Int)) : Prop :=
@@ -73,3 +76,5 @@ theorem find_valid_integers_postcond_satisfied (c: Char) (n: Int) (lst: List (Na
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8836_syn_1_iter_8836

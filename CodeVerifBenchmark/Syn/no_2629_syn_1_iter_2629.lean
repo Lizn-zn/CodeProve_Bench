@@ -2,6 +2,9 @@ import Mathlib.Data.List.Basic
 import Mathlib.Data.Int.Basic
 import Mathlib.Data.Nat.Basic
 
+namespace no_2629_syn_1_iter_2629
+
+
 -- Precondition definitions
 @[reducible, simp]
 def process_char_array_and_pairs_precond (arr : Array Char) (lst : List (Int × Nat)) : Prop :=
@@ -56,3 +59,5 @@ theorem process_char_array_and_pairs_postcond_satisfied (arr: Array Char) (lst: 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2629_syn_1_iter_2629

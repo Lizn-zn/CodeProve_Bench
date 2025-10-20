@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_94955_codeexercises_194955
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -61,3 +64,5 @@ theorem common_movies_postcond_satisfied (actor1: String) (actor2: String) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_94955_codeexercises_194955

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1770_p02708
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countPossibleSums_precond (n : Nat) (k : Nat) : Prop :=
@@ -57,3 +60,5 @@ theorem countPossibleSums_postcond_satisfied (n: Nat) (k: Nat) (h_precond : coun
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1770_p02708

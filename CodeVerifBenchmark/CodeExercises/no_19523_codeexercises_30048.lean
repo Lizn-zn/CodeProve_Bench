@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_19523_codeexercises_30048
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -59,3 +62,5 @@ theorem find_present_students_postcond_satisfied (students: List (String × List
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_19523_codeexercises_30048

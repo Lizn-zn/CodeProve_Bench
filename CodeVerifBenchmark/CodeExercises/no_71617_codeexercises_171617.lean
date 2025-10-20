@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_71617_codeexercises_171617
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -54,3 +57,4 @@ theorem calculate_range_postcond_satisfied (arr: List Int) (h_precond : calculat
   sorry
   -- !benchmark @end proof
 
+end no_71617_codeexercises_171617

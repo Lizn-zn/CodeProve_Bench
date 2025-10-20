@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_350_p00388
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countFloorHeightOptions_precond (H : Nat) (A : Nat) (B : Nat) : Prop :=
@@ -47,3 +50,5 @@ theorem countFloorHeightOptions_postcond_satisfied (H: Nat) (A: Nat) (B: Nat) (h
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_350_p00388

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_35512_codeexercises_135512
+
+
 -- Precondition definitions
 @[reducible, simp]
 def modify_list_elements_precond (my_list : List α) (index : Nat) (value : α) : Prop :=
@@ -35,3 +38,5 @@ theorem modify_list_elements_postcond_satisfied (my_list: List α) (index: Nat) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_35512_codeexercises_135512

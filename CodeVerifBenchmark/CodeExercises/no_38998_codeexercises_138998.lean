@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_38998_codeexercises_138998
+
+
 -- Precondition definitions
 @[reducible, simp]
 def replace_odd_with_negative_precond (range_ : Nat × Nat × Nat) : Prop :=
@@ -57,3 +60,5 @@ theorem replace_odd_with_negative_postcond_satisfied (range_: Nat × Nat × Nat)
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_38998_codeexercises_138998

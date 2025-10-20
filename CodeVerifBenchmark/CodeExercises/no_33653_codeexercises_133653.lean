@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_33653_codeexercises_133653
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_tour_precond (location : String) (schedule : List (String × String)) : Prop :=
@@ -34,3 +37,4 @@ theorem check_tour_postcond_satisfied (location: String) (schedule: List (String
   sorry
   -- !benchmark @end proof
 
+end no_33653_codeexercises_133653

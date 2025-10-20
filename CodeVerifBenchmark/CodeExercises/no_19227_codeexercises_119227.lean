@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_19227_codeexercises_119227
+
+
 -- Precondition definitions
 @[reducible, simp]
 def compare_tuples_precond (dancer_1 : List Nat) (dancer_2 : List Nat) : Prop :=
@@ -41,3 +44,5 @@ theorem compare_tuples_postcond_satisfied (dancer_1: List Nat) (dancer_2: List N
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_19227_codeexercises_119227

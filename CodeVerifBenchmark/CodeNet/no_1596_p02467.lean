@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1596_p02467
+
+
 -- Precondition definitions
 @[reducible, simp]
 def primeFactorization_precond (n : Nat) : Prop :=
@@ -66,3 +69,4 @@ theorem primeFactorization_postcond_satisfied (n: Nat) (h_precond : primeFactori
   sorry
   -- !benchmark @end proof
 
+end no_1596_p02467

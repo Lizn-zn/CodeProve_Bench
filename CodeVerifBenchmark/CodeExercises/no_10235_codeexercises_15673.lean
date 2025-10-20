@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_10235_codeexercises_15673
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_average_score_precond (students_data : List (List String)) : Prop :=
@@ -56,3 +59,5 @@ theorem calculate_average_score_postcond_satisfied (students_data: List (List St
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_10235_codeexercises_15673

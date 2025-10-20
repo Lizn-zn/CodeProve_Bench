@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_65580_codeexercises_165580
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_matching_chars_precond (string : String) (target_char : Char) : Prop :=
@@ -45,3 +48,4 @@ theorem find_matching_chars_postcond_satisfied (string: String) (target_char: Ch
   sorry
   -- !benchmark @end proof
 
+end no_65580_codeexercises_165580

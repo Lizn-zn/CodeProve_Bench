@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_462_leetcode_554
+
+
 -- Precondition auxiliary definitions
 def wallWidth (wall : List (List Nat)) : Option Nat :=
   match wall with
@@ -118,3 +121,5 @@ theorem leastBricks_postcond_satisfied (wall: List (List Nat)) (h_precond : leas
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_462_leetcode_554

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2224_syn_1_iter_2224
+
+
 -- Precondition definitions
 @[reducible, simp]
 def dedup_and_sort_precond (nums : List Nat) : Prop :=
@@ -41,3 +44,5 @@ theorem dedup_and_sort_postcond_satisfied (nums : List Nat) (h_precond : dedup_a
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2224_syn_1_iter_2224

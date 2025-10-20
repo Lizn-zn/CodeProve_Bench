@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2294_leetcode_2816
+
+
 -- Precondition auxiliary definitions
 /-- A linked list node. -/
 structure ListNode where
@@ -80,3 +83,5 @@ theorem doubleIt_postcond_satisfied (head : ListNode) (h_precond : doubleIt_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2294_leetcode_2816

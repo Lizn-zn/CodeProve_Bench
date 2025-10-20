@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1861_syn_1_iter_1861
+
+
 -- Precondition definitions
 @[reducible, simp]
 def combine_lists_precond (xs : List Int) (ys : List (Nat × Nat)) (zs : List (Int × Nat)) : Prop :=
@@ -59,3 +62,5 @@ theorem combine_lists_postcond_satisfied (xs: List Int) (ys: List (Nat × Nat)) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1861_syn_1_iter_1861

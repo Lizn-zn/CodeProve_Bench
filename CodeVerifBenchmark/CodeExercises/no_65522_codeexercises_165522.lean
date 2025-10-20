@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_65522_codeexercises_165522
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_balance_precond (account_balance : Float) (deductions : List Float) : Prop :=
@@ -41,3 +44,5 @@ theorem calculate_balance_postcond_satisfied (account_balance: Float) (deduction
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_65522_codeexercises_165522

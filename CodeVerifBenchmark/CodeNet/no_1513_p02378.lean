@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1513_p02378
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -158,3 +161,5 @@ theorem bipartiteMatching_postcond_satisfied (numX: Nat) (numY: Nat) (edges: Lis
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1513_p02378

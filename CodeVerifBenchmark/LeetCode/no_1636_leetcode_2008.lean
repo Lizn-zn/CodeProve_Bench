@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1636_leetcode_2008
+
+
 -- Precondition auxiliary definitions
 /-- A ride is valid if start < end and all components are positive. -/
 def valid_ride : Nat × Nat × Nat → Prop
@@ -117,3 +120,5 @@ theorem maxTaxiEarnings_postcond_satisfied (n: Nat) (rides: List (Nat × Nat × 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1636_leetcode_2008

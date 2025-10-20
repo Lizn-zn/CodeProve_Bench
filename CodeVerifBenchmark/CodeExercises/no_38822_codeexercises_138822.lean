@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_38822_codeexercises_138822
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_occupied_area_precond (max_area : Nat) (occupied_areas : List (Nat × Nat)) : Prop :=
@@ -40,3 +43,5 @@ theorem calculate_occupied_area_postcond_satisfied (max_area : Nat) (occupied_ar
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_38822_codeexercises_138822

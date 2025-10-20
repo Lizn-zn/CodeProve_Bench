@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_47705_codeexercises_147705
+
+
 -- Precondition definitions
 @[reducible, simp]
 def add_photo_to_album_precond (album : List String) (photo : String) : Prop :=
@@ -60,3 +63,5 @@ theorem add_photo_to_album_postcond_satisfied (album: List String) (photo: Strin
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_47705_codeexercises_147705

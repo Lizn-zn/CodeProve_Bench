@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_19279_codeexercises_119279
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_tuple_equality_precond (tuple1 : Prod α β) (tuple2 : Prod α β) : Prop :=
@@ -33,3 +36,5 @@ theorem check_tuple_equality_postcond_satisfied [BEq α] [BEq β] (tuple1: Prod 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_19279_codeexercises_119279

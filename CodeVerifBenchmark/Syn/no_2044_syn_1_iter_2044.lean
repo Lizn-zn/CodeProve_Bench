@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2044_syn_1_iter_2044
+
+
 -- Precondition definitions
 @[reducible, simp]
 def generate_even_sum_pairs_precond (n : UInt8) : Prop :=
@@ -45,3 +48,5 @@ theorem generate_even_sum_pairs_postcond_satisfied (n: UInt8) (h_precond : gener
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2044_syn_1_iter_2044

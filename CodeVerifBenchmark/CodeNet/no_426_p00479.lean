@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_426_p00479
+
+
 -- Precondition definitions
 @[reducible, simp]
 def getTileColor_precond (n : Nat) (a : Nat) (b : Nat) : Prop :=
@@ -56,3 +59,4 @@ theorem getTileColor_postcond_satisfied (n: Nat) (a: Nat) (b: Nat) (h_precond : 
   sorry
   -- !benchmark @end proof
 
+end no_426_p00479

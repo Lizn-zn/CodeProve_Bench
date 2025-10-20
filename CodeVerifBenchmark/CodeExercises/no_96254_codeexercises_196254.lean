@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_96254_codeexercises_196254
+
+
 -- Precondition definitions
 @[reducible, simp]
 def dancer_performance_precond (dance_moves : List Nat) : Prop :=
@@ -48,3 +51,5 @@ theorem dancer_performance_postcond_satisfied (dance_moves: List Nat) (h_precond
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_96254_codeexercises_196254

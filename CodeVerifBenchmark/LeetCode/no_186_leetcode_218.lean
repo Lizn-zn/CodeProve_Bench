@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_186_leetcode_218
+
+
 -- Precondition auxiliary definitions
 /-- Represents a single building with left, right, and height coordinates. -/
 structure Building where
@@ -183,3 +186,5 @@ theorem get_skyline_postcond_satisfied (buildings: List (List Int)) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_186_leetcode_218

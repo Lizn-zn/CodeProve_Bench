@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1944_p02899
+
+
 -- Precondition definitions
 @[reducible, simp]
 def reconstructOrder_precond (n : Nat) (counts : Array Nat) : Prop :=
@@ -55,3 +58,4 @@ theorem reconstructOrder_postcond_satisfied (n: Nat) (counts: Array Nat) (h_prec
   sorry
   -- !benchmark @end proof
 
+end no_1944_p02899

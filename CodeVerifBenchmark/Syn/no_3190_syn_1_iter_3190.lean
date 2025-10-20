@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3190_syn_1_iter_3190
+
+
 -- Precondition definitions
 @[reducible, simp]
 def generate_lex_pairs_precond (a : Nat) (b : Nat) : Prop :=
@@ -40,3 +43,5 @@ theorem generate_lex_pairs_correct (a b : Nat) (h_precond : generate_lex_pairs_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3190_syn_1_iter_3190

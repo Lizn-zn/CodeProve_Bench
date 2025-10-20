@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1708_p02640
+
+
 -- Precondition definitions
 @[reducible, simp]
 def canMakeCranesTurtles_precond (X : Nat) (Y : Nat) : Prop :=
@@ -34,3 +37,4 @@ theorem canMakeCranesTurtles_postcond_satisfied (X: Nat) (Y: Nat) (h_precond : c
   sorry
   -- !benchmark @end proof
 
+end no_1708_p02640

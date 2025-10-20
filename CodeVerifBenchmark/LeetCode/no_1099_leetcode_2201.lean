@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1099_leetcode_2201
+
+
 -- Precondition auxiliary definitions
 def countExtractableArtifacts_precond_aux (n : Nat) (artifacts : List (Nat × Nat × Nat × Nat)) (dig : List (Nat × Nat)) : Prop :=
   -- Check that n is positive
@@ -77,3 +80,5 @@ theorem countExtractableArtifacts_postcond_satisfied (n: Nat) (artifacts: List (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1099_leetcode_2201

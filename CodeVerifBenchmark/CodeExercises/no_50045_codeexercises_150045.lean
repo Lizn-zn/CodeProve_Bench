@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_50045_codeexercises_150045
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_even_indices_precond (numbers_tuple : List Nat) : Prop :=
@@ -42,3 +45,5 @@ theorem get_even_indices_postcond_satisfied (numbers_tuple: List Nat) (h_precond
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_50045_codeexercises_150045

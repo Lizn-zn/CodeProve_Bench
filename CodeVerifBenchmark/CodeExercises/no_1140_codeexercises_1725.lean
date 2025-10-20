@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1140_codeexercises_1725
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_negative_integer_tuple_precond (num1 : Int) (num2 : Int) : Prop :=
@@ -61,3 +64,5 @@ theorem create_negative_integer_tuple_postcond_satisfied (num1: Int) (num2: Int)
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1140_codeexercises_1725

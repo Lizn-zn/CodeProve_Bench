@@ -1,5 +1,7 @@
 import Mathlib
 
+namespace no_2060_syn_1_iter_2060
+
 -- Precondition auxiliary definitions
 structure MinHeap (α : Type) [Inhabited α] [LE α] where
   elems : List α
@@ -61,3 +63,5 @@ theorem get_frequent_values_postcond_satisfied (heap : MinHeap Nat) (k : Nat) (h
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2060_syn_1_iter_2060

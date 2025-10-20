@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_25072_codeexercises_38595
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_polar_distance_precond (coordinates : Prod ℝ ℝ) : Prop :=
@@ -37,3 +40,5 @@ theorem calculate_polar_distance_postcond_satisfied (coordinates: Prod ℝ ℝ) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_25072_codeexercises_38595

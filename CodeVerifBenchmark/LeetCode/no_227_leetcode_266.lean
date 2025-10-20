@@ -1,13 +1,15 @@
 import Mathlib
 
--- Precondition auxiliary definitions
-def Char.count (c : Char) (s : String) : Nat :=
-  s.data.filter (· = c) |>.length
-
 def String.hasPalindromicPermutation (s : String) : Prop :=
   ∃ perm : List Char,
     perm.Perm s.data ∧
     perm = perm.reverse
+
+namespace no_227_leetcode_266
+
+-- Precondition auxiliary definitions
+def Char.count (c : Char) (s : String) : Nat :=
+  s.data.filter (· = c) |>.length
 
 -- Precondition definitions
 @[reducible, simp]
@@ -63,3 +65,5 @@ theorem canPermutePalindrome_postcond_satisfied (s: String) (h_precond : canPerm
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_227_leetcode_266

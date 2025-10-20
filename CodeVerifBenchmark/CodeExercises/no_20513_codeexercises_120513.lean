@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_20513_codeexercises_120513
+
+
 -- Precondition definitions
 @[reducible, simp]
 def add_elements_to_set_precond (s : Set α) (elements : List α) : Prop :=
@@ -36,3 +39,5 @@ theorem add_elements_to_set_postcond_satisfied (s: Set α) (elements: List α) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_20513_codeexercises_120513

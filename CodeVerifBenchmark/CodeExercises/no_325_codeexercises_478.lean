@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_325_codeexercises_478
+
+
 -- Precondition definitions
 @[reducible, simp]
 def return_color_data_precond (color : String) : Prop :=
@@ -41,3 +44,5 @@ theorem return_color_data_postcond_satisfied (color: String) (h_precond : return
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_325_codeexercises_478

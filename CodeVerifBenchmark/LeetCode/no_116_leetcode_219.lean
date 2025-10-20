@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_116_leetcode_219
+
+
 -- Precondition auxiliary definitions
 def withinBounds (nums : List Int) (k : Nat) : Prop :=
   1 ≤ nums.length ∧ nums.length ≤ 10^5 ∧
@@ -62,3 +65,4 @@ theorem containsNearbyDuplicate_postcond_satisfied (nums: List Int) (k: Nat) (h_
   sorry
   -- !benchmark @end proof
 
+end no_116_leetcode_219

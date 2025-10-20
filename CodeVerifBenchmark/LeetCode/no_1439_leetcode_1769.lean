@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1439_leetcode_1769
+
+
 -- Precondition auxiliary definitions
 def boxesValid (boxes : String) : Prop :=
   boxes.length > 0 ∧ boxes.length ≤ 2000 ∧
@@ -45,3 +48,5 @@ theorem minOperations_postcond_satisfied (boxes: String) (h_precond : minOperati
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1439_leetcode_1769

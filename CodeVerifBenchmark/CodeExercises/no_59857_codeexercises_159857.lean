@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_59857_codeexercises_159857
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -53,3 +56,4 @@ theorem update_events_postcond_satisfied (events_list: List String) (new_events:
   sorry
   -- !benchmark @end proof
 
+end no_59857_codeexercises_159857

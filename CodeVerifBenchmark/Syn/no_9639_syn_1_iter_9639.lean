@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9639_syn_1_iter_9639
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_palindromic_substrings_precond (s : String) : Prop :=
@@ -86,3 +89,5 @@ theorem find_palindromic_substrings_postcond_satisfied (s: String) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_9639_syn_1_iter_9639

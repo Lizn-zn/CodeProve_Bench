@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1013_leetcode_1228
+
+
 -- Precondition auxiliary definitions
 /-- An arithmetic progression is a list where the difference between consecutive elements is constant -/
 def IsArithmeticProgression (l : List Nat) : Prop :=
@@ -116,3 +119,5 @@ theorem findMissing_postcond_satisfied (arr: List Nat) (h_precond : findMissing_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1013_leetcode_1228

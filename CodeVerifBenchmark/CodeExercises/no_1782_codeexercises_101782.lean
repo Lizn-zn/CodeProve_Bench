@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1782_codeexercises_101782
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_total_precond (current : List Int) : Prop :=
@@ -35,3 +38,4 @@ theorem calculate_total_postcond_satisfied (current: List Int) (h_precond : calc
   sorry
   -- !benchmark @end proof
 
+end no_1782_codeexercises_101782

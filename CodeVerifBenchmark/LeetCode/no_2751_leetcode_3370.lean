@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2751_leetcode_3370
+
+
 -- Precondition auxiliary definitions
 def IsAllSetBits : Nat → Prop
   | 0 => False
@@ -44,3 +47,5 @@ theorem nextAllSetBits_postcond_satisfied (n : Nat) (h_precond : nextAllSetBits_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2751_leetcode_3370

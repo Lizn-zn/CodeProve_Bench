@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6676_codeexercises_106676
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sort_list_of_strings_precond (lst : List String) : Prop :=
@@ -41,3 +44,4 @@ theorem sort_list_of_strings_postcond_satisfied (lst: List String) (h_precond : 
   sorry
   -- !benchmark @end proof
 
+end no_6676_codeexercises_106676

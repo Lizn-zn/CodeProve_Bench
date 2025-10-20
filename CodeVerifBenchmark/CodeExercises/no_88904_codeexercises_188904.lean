@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_88904_codeexercises_188904
+
+
 -- Precondition auxiliary definitions
 structure Athlete where
   name : String
@@ -62,3 +65,4 @@ theorem find_fastest_runner_postcond_satisfied (athletes: List Athlete) (h_preco
   sorry
   -- !benchmark @end proof
 
+end no_88904_codeexercises_188904

@@ -57,7 +57,7 @@ def maxDoughnuts_postcond (n : Nat) (x : Nat) (costs : List Nat) (result: Nat) (
     (∀ total : Nat, total > result → ¬canMakeDoughnuts costs x total) ∧
     -- The result follows the formula: n + (x - sum(costs)) / min(costs)
     -- This is the greedy strategy: make one of each, then use remaining material for cheapest
-    (∃ minCost ∈ costs, (∀ m ∈ costs, minCost ≤ m) ∧ 
+    (∃ minCost ∈ costs, (∀ m ∈ costs, minCost ≤ m) ∧
       result = n + (x - costs.sum) / minCost)
   -- !benchmark @end postcond
 

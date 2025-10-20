@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_27400_codeexercises_127400
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_tuple_precond (index : Nat) (value : String) : Prop :=
@@ -46,3 +49,5 @@ theorem create_tuple_postcond_satisfied (index: Nat) (value: String) (h_precond 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_27400_codeexercises_127400

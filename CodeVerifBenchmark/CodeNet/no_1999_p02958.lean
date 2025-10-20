@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1999_p02958
+
+
 -- Precondition auxiliary definitions
 -- Helper function to check if a list is a permutation of {1, 2, ..., n}
 def isPermutation (n : Nat) (p : List Nat) : Prop :=
@@ -65,3 +68,4 @@ theorem canSortWithOneSwap_postcond_satisfied (n: Nat) (p: List Nat) (h_precond 
   sorry
   -- !benchmark @end proof
 
+end no_1999_p02958

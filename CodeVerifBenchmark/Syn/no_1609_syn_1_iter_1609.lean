@@ -1,5 +1,7 @@
 import Mathlib
 
+namespace no_1609_syn_1_iter_1609
+
 -- Define the MinHeap structure properly
 structure MinHeap where
   data : Array Int
@@ -52,13 +54,13 @@ def performKPops (h : MinHeap) (k : Nat) : Nat :=
 def process_heap_updates_and_pops (h : MinHeap) (updates : List (Int × Nat)) (k : Nat) (h_precond : process_heap_updates_and_pops_precond h updates k) : UInt8 :=
   -- !benchmark @start code
   -- First, apply all the updates to the heap
-  let updatedHeap := updates.foldl (λ heap (update : Int × Nat) => 
+  let updatedHeap := updates.foldl (λ heap (update : Int × Nat) =>
     let (value, index) := update
     updateHeapElement heap index value) h
-  
+
   -- Then perform k pop operations and count successful ones
   let successfulPops := performKPops updatedHeap k
-  
+
   -- Return the count as UInt8
   UInt8.ofNat successfulPops
   -- !benchmark @end code
@@ -76,7 +78,7 @@ def apply_update (h : MinHeap) (value : Int) (index : Nat) : MinHeap :=
 
 -- Function to simulate multiple updates
 def apply_updates (h : MinHeap) (updates : List (Int × Nat)) : MinHeap :=
-  updates.foldl (λ h' (val_idx : Int × Nat) => 
+  updates.foldl (λ h' (val_idx : Int × Nat) =>
     let (value, index) := val_idx
     apply_update h' value index) h
 
@@ -85,7 +87,7 @@ def simulate_pops (h : MinHeap) (k : Nat) : HeapState :=
   let rec pop_n_times (current_heap : MinHeap) (remaining : Nat) (count : Nat) : HeapState :=
     match remaining with
     | 0 => ⟨current_heap, count⟩
-    | n+1 => 
+    | n+1 =>
       if MinHeap.isEmpty current_heap then
         ⟨current_heap, count⟩
       else
@@ -108,3 +110,5 @@ theorem process_heap_updates_and_pops_postcond_satisfied (h: MinHeap) (updates: 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1609_syn_1_iter_1609

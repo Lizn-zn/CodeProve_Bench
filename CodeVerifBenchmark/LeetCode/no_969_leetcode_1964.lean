@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_969_leetcode_1964
+
+
 -- Precondition auxiliary definitions
 def longestObstacleCourseAt_i (obstacles : List Nat) (i : Nat) : Nat :=
   match i with
@@ -108,3 +111,5 @@ theorem longestObstacleCourseAtEachPosition_postcond_satisfied (obstacles: List 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_969_leetcode_1964

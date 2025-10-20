@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2344_p03337
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxOperation_precond (A : Int) (B : Int) : Prop :=
@@ -44,3 +47,4 @@ theorem maxOperation_postcond_satisfied (A: Int) (B: Int) (h_precond : maxOperat
   sorry
   -- !benchmark @end proof
 
+end no_2344_p03337

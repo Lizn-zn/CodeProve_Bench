@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_43440_codeexercises_143440
+
+
 -- Precondition definitions
 @[reducible, simp]
 def index_and_loop_precond (numbers : List Int) : Prop :=
@@ -46,3 +49,5 @@ theorem index_and_loop_postcond_satisfied (numbers: List Int) (h_precond : index
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_43440_codeexercises_143440

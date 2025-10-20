@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1526_leetcode_1879
+
+
 -- Precondition auxiliary definitions
 def IsPermutation (l1 l2 : List Nat) : Prop :=
   l1.length = l2.length ∧
@@ -58,3 +61,5 @@ theorem minimizeXorSum_postcond_satisfied (nums1: List Nat) (nums2: List Nat) (h
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1526_leetcode_1879

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_25841_codeexercises_125841
+
+
 -- Precondition definitions
 @[reducible, simp]
 def break_inside_loop_precond (iterable : List Nat) : Prop :=
@@ -37,3 +40,4 @@ theorem break_inside_loop_postcond_satisfied (iterable: List Nat) (h_precond : b
   sorry
   -- !benchmark @end proof
 
+end no_25841_codeexercises_125841

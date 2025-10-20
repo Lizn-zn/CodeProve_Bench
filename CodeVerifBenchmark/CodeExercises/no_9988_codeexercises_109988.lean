@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9988_codeexercises_109988
+
+
 -- Precondition definitions
 @[reducible, simp]
 def remove_duplicates_precond (nurse : String) (patients : List String) : Prop :=
@@ -34,3 +37,4 @@ theorem remove_duplicates_postcond_satisfied (nurse: String) (patients: List Str
   sorry
   -- !benchmark @end proof
 
+end no_9988_codeexercises_109988

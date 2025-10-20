@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_547_p00629
+
+
 -- Precondition definitions
 @[reducible, simp]
 def selectTeamsAdvancedToRegional_precond (teams : List (Nat × Nat × Nat × Nat)) : Prop :=
@@ -120,3 +123,5 @@ theorem selectTeamsAdvancedToRegional_postcond_satisfied (teams: List (Nat × Na
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_547_p00629

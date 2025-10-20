@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1879_p02823
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minRoundsToMeet_precond (N : Nat) (A : Nat) (B : Nat) : Prop :=
@@ -66,3 +69,4 @@ theorem minRoundsToMeet_postcond_satisfied (N: Nat) (A: Nat) (B: Nat) (h_precond
   sorry
   -- !benchmark @end proof
 
+end no_1879_p02823

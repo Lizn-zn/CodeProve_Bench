@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_29_p00030
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countCombinations_precond (n : Nat) (s : Nat) : Prop :=
@@ -68,3 +71,5 @@ theorem countCombinations_postcond_satisfied (n: Nat) (s: Nat) (h_precond : coun
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_29_p00030

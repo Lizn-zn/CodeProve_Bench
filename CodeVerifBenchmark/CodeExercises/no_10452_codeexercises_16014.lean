@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_10452_codeexercises_16014
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_book_status_precond (books_list : List (String × Bool)) (book_name : String) : Prop :=
@@ -37,3 +40,4 @@ theorem find_book_status_postcond_satisfied (books_list: List (String × Bool)) 
   sorry
   -- !benchmark @end proof
 
+end no_10452_codeexercises_16014

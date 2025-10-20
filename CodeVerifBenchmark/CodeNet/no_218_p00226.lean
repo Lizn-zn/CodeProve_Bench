@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_218_p00226
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countHitsAndBlows_precond (correct : String) (answer : String) : Prop :=
@@ -83,3 +86,5 @@ theorem countHitsAndBlows_postcond_satisfied (correct: String) (answer: String) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_218_p00226

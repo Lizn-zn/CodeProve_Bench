@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9696_codeexercises_14845
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_elements_precond (list1 : List String) (list2 : List String) : Prop :=
@@ -66,3 +69,4 @@ theorem find_common_elements_postcond_satisfied (list1: List String) (list2: Lis
   sorry
   -- !benchmark @end proof
 
+end no_9696_codeexercises_14845

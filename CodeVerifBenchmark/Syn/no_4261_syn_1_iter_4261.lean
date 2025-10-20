@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4261_syn_1_iter_4261
+
+
 -- Precondition definitions
 @[reducible, simp]
 def filter_list_by_array_precond (input_list : List Int) (array : Array Int) : Prop :=
@@ -42,3 +45,5 @@ theorem filter_list_by_array_postcond_satisfied (input_list: List Int) (array: A
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4261_syn_1_iter_4261

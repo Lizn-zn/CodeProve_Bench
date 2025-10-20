@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4850_syn_1_iter_4850
+
+
 -- Precondition definitions
 @[reducible, simp]
 def listToString_precond (l : List α) (toStringFn : α → String) : Prop :=
@@ -43,3 +46,4 @@ theorem listToString_postcond_satisfied (l: List α) (toStringFn: α → String)
   sorry
   -- !benchmark @end proof
 
+end no_4850_syn_1_iter_4850

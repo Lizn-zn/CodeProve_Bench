@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7012_syn_1_iter_7012
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -46,3 +49,5 @@ theorem repeat_chars_postcond_satisfied (pairs: List (Char × Nat)) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_7012_syn_1_iter_7012

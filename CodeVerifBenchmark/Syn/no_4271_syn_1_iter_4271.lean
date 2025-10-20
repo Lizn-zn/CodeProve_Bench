@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4271_syn_1_iter_4271
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_pairs_sum_k_precond (pairs : List (Int × Int)) (k : Int) : Prop :=
@@ -34,3 +37,5 @@ theorem find_pairs_sum_k_postcond_satisfied (pairs: List (Int × Int)) (k: Int) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4271_syn_1_iter_4271

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_29035_codeexercises_129035
+
+
 -- Precondition definitions
 @[reducible, simp]
 def combine_math_tuples_precond (math_tuples : List (Nat × Nat)) (repeats : Nat) : Prop :=
@@ -43,3 +46,5 @@ theorem combine_math_tuples_postcond_satisfied (math_tuples: List (Nat × Nat)) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_29035_codeexercises_129035

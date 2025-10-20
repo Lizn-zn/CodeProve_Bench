@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7471_syn_1_iter_7471
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_char_occurrences_precond (n : Nat) (chars : List Char) (arr : Array Char) : Prop :=
@@ -67,3 +70,5 @@ theorem find_char_occurrences_postcond_satisfied (n: Nat) (chars: List Char) (ar
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_7471_syn_1_iter_7471

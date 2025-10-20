@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_801_p01048
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minNumberWithNDivisors_precond (n : Nat) : Prop :=
@@ -53,3 +56,4 @@ theorem minNumberWithNDivisors_postcond_satisfied (n: Nat) (h_precond : minNumbe
   sorry
   -- !benchmark @end proof
 
+end no_801_p01048

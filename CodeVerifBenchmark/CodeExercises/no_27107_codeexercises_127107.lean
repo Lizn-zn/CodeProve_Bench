@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_27107_codeexercises_127107
+
+
 -- Precondition definitions
 @[reducible, simp]
 def exiting_while_loops_and_appending_elements_to_a_list_precond (n : Nat) : Prop :=
@@ -45,3 +48,5 @@ theorem exiting_while_loops_and_appending_elements_to_a_list_postcond_satisfied 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_27107_codeexercises_127107

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1704_leetcode_2090
+
+
 -- Precondition auxiliary definitions
 def validIndex (nums : List Nat) (k : Nat) (i : Nat) : Prop :=
   k ≤ i ∧ i + k < nums.length
@@ -61,3 +64,5 @@ theorem getAverages_postcond_satisfied (nums: List Nat) (k: Nat) (h_precond : ge
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1704_leetcode_2090

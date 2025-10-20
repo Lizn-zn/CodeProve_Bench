@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2375_p03373
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minPizzaCost_precond (A : Nat) (B : Nat) (C : Nat) (X : Nat) (Y : Nat) : Prop :=
@@ -73,3 +76,4 @@ theorem minPizzaCost_postcond_satisfied (A: Nat) (B: Nat) (C: Nat) (X: Nat) (Y: 
   sorry
   -- !benchmark @end proof
 
+end no_2375_p03373

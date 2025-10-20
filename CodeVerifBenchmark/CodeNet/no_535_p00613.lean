@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_535_p00613
+
+
 -- Postcondition auxiliary definitions
 -- Helper function to compute the sum of all elements in a list
 def sumList (lst : List Nat) : Nat :=
@@ -42,3 +45,5 @@ theorem pieceOfCake_postcond_satisfied (K: Nat) (sums: List Nat) (h_precond : pi
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_535_p00613

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9335_syn_1_iter_9335
+
+
 -- Precondition definitions
 @[reducible, simp]
 def process_list_precond (lst : List Int) : Prop :=
@@ -56,3 +59,5 @@ theorem process_list_postcond_satisfied (lst: List Int) (h_precond : process_lis
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_9335_syn_1_iter_9335

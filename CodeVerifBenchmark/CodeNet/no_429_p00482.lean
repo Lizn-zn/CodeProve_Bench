@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_429_p00482
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countGoodFlags_precond (M : Nat) (N : Nat) (grid : List (List Char)) : Prop :=
@@ -113,3 +116,5 @@ theorem countGoodFlags_postcond_satisfied (M: Nat) (N: Nat) (grid: List (List Ch
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_429_p00482

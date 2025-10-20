@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2218_p03200
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxReversiOperations_precond (s : String) : Prop :=
@@ -52,3 +55,5 @@ theorem maxReversiOperations_postcond_satisfied (s: String) (h_precond : maxReve
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2218_p03200

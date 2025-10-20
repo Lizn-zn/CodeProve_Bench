@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_38057_codeexercises_138057
+
+
 -- Precondition definitions
 @[reducible, simp]
 def harvest_crops_precond (crops : List (Prod String (Prod Nat Nat))) : Prop :=
@@ -41,3 +44,4 @@ theorem harvest_crops_postcond_satisfied (crops: List (Prod String (Prod Nat Nat
   sorry
   -- !benchmark @end proof
 
+end no_38057_codeexercises_138057

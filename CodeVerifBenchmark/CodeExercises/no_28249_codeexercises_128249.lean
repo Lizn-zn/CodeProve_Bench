@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_28249_codeexercises_128249
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -51,3 +54,5 @@ theorem calculate_weight_gain_postcond_satisfied (vet_visits: List Nat) (h_preco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_28249_codeexercises_128249

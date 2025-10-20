@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_44625_codeexercises_144625
+
+
 -- Precondition auxiliary definitions
 inductive Tuple : Type
   | nil : Tuple
@@ -61,3 +64,4 @@ theorem flatten_tuple_postcond_satisfied (nested_tuple: Tuple) (h_precond : flat
   sorry
   -- !benchmark @end proof
 
+end no_44625_codeexercises_144625

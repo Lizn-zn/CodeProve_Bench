@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1011_p01489
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -125,3 +128,4 @@ theorem ikaNumber_postcond_satisfied (k: Nat) (h_precond : ikaNumber_precond (k)
   sorry
   -- !benchmark @end proof
 
+end no_1011_p01489

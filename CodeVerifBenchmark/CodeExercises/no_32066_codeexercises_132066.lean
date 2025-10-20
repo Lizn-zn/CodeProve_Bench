@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_32066_codeexercises_132066
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_mineral_density_precond (samples : List Float) : Prop :=
@@ -51,3 +54,5 @@ theorem find_mineral_density_postcond_satisfied (samples: List Float) (h_precond
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_32066_codeexercises_132066

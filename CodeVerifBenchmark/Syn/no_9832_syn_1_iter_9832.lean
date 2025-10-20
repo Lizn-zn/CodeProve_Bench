@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9832_syn_1_iter_9832
+
+
 -- Precondition definitions
 @[reducible, simp]
 def generate_char_array_precond (char_code : UInt8) (count : Int) : Prop :=
@@ -37,3 +40,4 @@ theorem generate_char_array_postcond_satisfied (char_code: UInt8) (count: Int) (
   sorry
   -- !benchmark @end proof
 
+end no_9832_syn_1_iter_9832

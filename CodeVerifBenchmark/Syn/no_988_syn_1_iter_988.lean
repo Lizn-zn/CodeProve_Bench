@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_988_syn_1_iter_988
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sum_and_square_precond (nums : List Int) : Prop :=
@@ -46,3 +49,4 @@ theorem sum_and_square_postcond_satisfied (nums: List Int) (h_precond : sum_and_
   sorry
   -- !benchmark @end proof
 
+end no_988_syn_1_iter_988

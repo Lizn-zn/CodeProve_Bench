@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_60474_codeexercises_160474
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_lowest_temperature_precond (temperatures : List Int) : Prop :=
@@ -51,3 +54,5 @@ theorem find_lowest_temperature_postcond_satisfied (temperatures: List Int) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_60474_codeexercises_160474

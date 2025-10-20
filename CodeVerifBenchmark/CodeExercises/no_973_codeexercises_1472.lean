@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_973_codeexercises_1472
+
+
 -- Precondition definitions
 @[reducible, simp]
 def intersection_of_set_and_list_precond (set1 : Set Nat) (list1 : List Nat) : Prop :=
@@ -35,3 +38,5 @@ theorem intersection_of_set_and_list_postcond_satisfied (set1: Set Nat) (list1: 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_973_codeexercises_1472

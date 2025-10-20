@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1769_p02707
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countImmediateSubordinates_precond (n : Nat) (bosses : List Nat) : Prop :=
@@ -51,3 +54,5 @@ theorem countImmediateSubordinates_postcond_satisfied (n: Nat) (bosses: List Nat
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1769_p02707

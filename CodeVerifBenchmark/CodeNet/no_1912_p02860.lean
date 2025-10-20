@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1912_p02860
+
+
 -- Precondition definitions
 @[reducible, simp]
 def isDoubleConcatenation_precond (n : Nat) (s : String) : Prop :=
@@ -52,3 +55,4 @@ theorem isDoubleConcatenation_postcond_satisfied (n: Nat) (s: String) (h_precond
   sorry
   -- !benchmark @end proof
 
+end no_1912_p02860

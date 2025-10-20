@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_90119_codeexercises_190119
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_gene_length_precond (gene_sequence : String) : Prop :=
@@ -32,3 +35,5 @@ theorem find_gene_length_postcond_satisfied (gene_sequence: String) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_90119_codeexercises_190119

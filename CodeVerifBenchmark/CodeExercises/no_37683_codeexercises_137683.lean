@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_37683_codeexercises_137683
+
+
 -- Precondition definitions
 @[reducible, simp]
 def filter_data_precond (data_list : List Nat) : Prop :=
@@ -40,3 +43,5 @@ theorem filter_data_postcond_satisfied (data_list : List Nat) (h_precond : filte
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_37683_codeexercises_137683

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_20366_codeexercises_31331
+
+
 -- Precondition definitions
 @[reducible, simp]
 def polar_to_cartesian_precond (polar_coordinates : Prod ℝ ℝ) : Prop :=
@@ -36,3 +39,5 @@ theorem polar_to_cartesian_postcond_satisfied (polar_coordinates: Prod ℝ ℝ) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_20366_codeexercises_31331

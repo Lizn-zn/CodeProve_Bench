@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1131_leetcode_2267
+
+
 -- Precondition auxiliary definitions
 def isValidCharAux (c : String) : Bool :=
   c = "(" ∨ c = ")"
@@ -216,3 +219,5 @@ theorem hasValidParenthesesPath_postcond_satisfied (grid: List (List String)) (h
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1131_leetcode_2267

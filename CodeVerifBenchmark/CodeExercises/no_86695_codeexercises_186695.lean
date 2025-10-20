@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_86695_codeexercises_186695
+
+
 -- Precondition definitions
 @[reducible, simp]
 def concatenate_strings_reverse_precond (strings_list : List String) : Prop :=
@@ -45,3 +48,4 @@ theorem concatenate_strings_reverse_postcond_satisfied (strings_list: List Strin
   sorry
   -- !benchmark @end proof
 
+end no_86695_codeexercises_186695

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1604_p02475
+
+
 -- Precondition definitions
 @[reducible, simp]
 def divBigIntegers_precond (a : Int) (b : Int) : Prop :=
@@ -39,3 +42,4 @@ theorem divBigIntegers_postcond_satisfied (a: Int) (b: Int) (h_precond : divBigI
   sorry
   -- !benchmark @end proof
 
+end no_1604_p02475

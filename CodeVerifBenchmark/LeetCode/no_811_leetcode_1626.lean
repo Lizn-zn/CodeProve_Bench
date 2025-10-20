@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_811_leetcode_1626
+
+
 -- Precondition auxiliary definitions
 def sortedPlayersWithScoreAndAge (scores : List Nat) (ages : List Nat) : List (Nat × Nat) :=
   List.zip scores ages |>.mergeSort (fun a b => a.2 < b.2 ∨ (a.2 = b.2 ∧ a.1 ≤ b.1))
@@ -69,3 +72,5 @@ theorem bestTeamScore_postcond_satisfied (scores: List Nat) (ages: List Nat) (h_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_811_leetcode_1626

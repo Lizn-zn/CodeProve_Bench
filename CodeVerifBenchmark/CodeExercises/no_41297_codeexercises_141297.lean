@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_41297_codeexercises_141297
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_species_found_precond (species : String) (data : List (List String)) : Prop :=
@@ -35,3 +38,5 @@ theorem check_species_found_postcond_satisfied (species: String) (data: List (Li
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_41297_codeexercises_141297

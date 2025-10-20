@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_46919_codeexercises_146919
+
+
 -- Precondition definitions
 @[reducible, simp]
 def nested_ternary_short_circuiting_precond (a : Bool) (b : Bool) (c : Bool) : Prop :=
@@ -36,3 +39,5 @@ theorem nested_ternary_short_circuiting_postcond_satisfied (a: Bool) (b: Bool) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_46919_codeexercises_146919

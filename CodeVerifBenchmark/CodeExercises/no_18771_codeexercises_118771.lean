@@ -1,6 +1,9 @@
 import Mathlib.Data.List.Basic
 import Mathlib.Data.String.Basic
 
+namespace no_18771_codeexercises_118771
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_photos_by_tag_precond (photos : List (String × List String)) (tag : String) : Prop :=
@@ -39,3 +42,5 @@ theorem get_photos_by_tag_postcond_satisfied (photos: List (String × List Strin
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_18771_codeexercises_118771

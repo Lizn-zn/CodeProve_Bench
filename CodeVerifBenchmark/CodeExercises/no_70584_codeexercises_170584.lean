@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_70584_codeexercises_170584
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_workout_intensity_precond (age : Nat) (injury : Bool) (experience : String) : Prop :=
@@ -54,3 +57,4 @@ theorem calculate_workout_intensity_postcond_satisfied (age: Nat) (injury: Bool)
   sorry
   -- !benchmark @end proof
 
+end no_70584_codeexercises_170584

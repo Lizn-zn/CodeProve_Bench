@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_50_p00052
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countTrailingZeros_precond (n : Nat) : Prop :=
@@ -56,3 +59,5 @@ theorem countTrailingZeros_postcond_satisfied (n: Nat) (h_precond : countTrailin
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_50_p00052

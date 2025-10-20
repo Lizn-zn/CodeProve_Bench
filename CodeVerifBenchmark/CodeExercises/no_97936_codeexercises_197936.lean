@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_97936_codeexercises_197936
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_lcm_precond (a : Nat) (b : Nat) : Prop :=
@@ -37,3 +40,5 @@ theorem find_lcm_postcond_satisfied (a: Nat) (b: Nat) (h_precond : find_lcm_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_97936_codeexercises_197936

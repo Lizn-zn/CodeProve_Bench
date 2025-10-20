@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_66547_codeexercises_166547
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_greatest_precond (a : Nat) (b : Nat) (c : Nat) : Prop :=
@@ -39,3 +42,4 @@ theorem find_greatest_postcond_satisfied (a: Nat) (b: Nat) (c: Nat) (h_precond :
   sorry
   -- !benchmark @end proof
 
+end no_66547_codeexercises_166547

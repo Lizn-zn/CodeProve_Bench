@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9515_syn_1_iter_9515
+
+
 -- Precondition definitions
 @[reducible, simp]
 def set_to_array_precond (s : Set Int) : Prop :=
@@ -39,3 +42,5 @@ theorem set_to_array_postcond_satisfied (s: Set Int) (h_precond : set_to_array_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_9515_syn_1_iter_9515

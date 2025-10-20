@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_35452_codeexercises_135452
+
+
 -- Precondition definitions
 @[reducible, simp]
 def print_artists_with_long_names_precond (artists : List String) (min_length : Nat) : Prop :=
@@ -34,3 +37,5 @@ theorem print_artists_with_long_names_postcond_satisfied (artists: List String) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_35452_codeexercises_135452

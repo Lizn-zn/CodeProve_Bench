@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_20448_codeexercises_120448
+
+
 -- Precondition definitions
 @[reducible, simp]
 def police_officer_precond (speed_limit : Nat) (speed_checkpoints : List Nat) : Prop :=
@@ -45,3 +48,4 @@ theorem police_officer_postcond_satisfied (speed_limit: Nat) (speed_checkpoints:
   sorry
   -- !benchmark @end proof
 
+end no_20448_codeexercises_120448

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4181_syn_1_iter_4181
+
+
 -- Precondition definitions
 @[reducible, simp]
 def process_characters_precond (chars : Array Char) : Prop :=
@@ -97,3 +100,5 @@ theorem process_characters_postcond_satisfied (chars: Array Char) (h_precond : p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4181_syn_1_iter_4181

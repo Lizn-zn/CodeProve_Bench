@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_37468_codeexercises_137468
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -82,3 +85,5 @@ theorem append_numbers_postcond_satisfied (lst: List String) (h_precond : append
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_37468_codeexercises_137468

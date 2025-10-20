@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_747_p00936
+
+
 -- Precondition definitions
 @[reducible, simp]
 def squeezeCylinders_precond (radii : List Nat) : Prop :=
@@ -104,3 +107,5 @@ theorem squeezeCylinders_postcond_satisfied (radii: List Nat) (h_precond : squee
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_747_p00936

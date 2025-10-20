@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_81870_codeexercises_181870
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_age_precond (age : Option Nat) : Prop :=
@@ -43,3 +46,4 @@ theorem check_age_postcond_satisfied (age: Option Nat) (h_precond : check_age_pr
   sorry
   -- !benchmark @end proof
 
+end no_81870_codeexercises_181870

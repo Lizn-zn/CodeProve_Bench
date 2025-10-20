@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_18_p00019
+
+
 -- Precondition definitions
 @[reducible, simp]
 def factorial_precond (n : Nat) : Prop :=
@@ -39,3 +42,5 @@ theorem factorial_postcond_satisfied (n: Nat) (h_precond : factorial_precond (n)
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_18_p00019

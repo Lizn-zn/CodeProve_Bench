@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4976_syn_1_iter_4976
+
+
 -- Precondition definitions
 @[reducible, simp]
 def extract_integers_precond (input : Array Char ⊕ List Char ⊕ (Int × Nat) ⊕ Array Nat) : Prop :=
@@ -52,3 +55,5 @@ theorem extract_integers_postcond_satisfied (input: Array Char ⊕ List Char ⊕
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4976_syn_1_iter_4976

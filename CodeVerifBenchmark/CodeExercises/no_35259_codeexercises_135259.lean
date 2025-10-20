@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_35259_codeexercises_135259
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_runner_name_precond (runners : List (Nat × String)) (position : Nat) : Prop :=
@@ -43,3 +46,4 @@ theorem get_runner_name_postcond_satisfied (runners: List (Nat × String)) (posi
   sorry
   -- !benchmark @end proof
 
+end no_35259_codeexercises_135259

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_14811_codeexercises_22797
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_vowels_precond (text : String) : Prop :=
@@ -40,3 +43,4 @@ theorem count_vowels_postcond_satisfied (text: String) (h_precond : count_vowels
   sorry
   -- !benchmark @end proof
 
+end no_14811_codeexercises_22797

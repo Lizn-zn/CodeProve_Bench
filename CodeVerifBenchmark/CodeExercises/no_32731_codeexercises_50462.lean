@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_32731_codeexercises_50462
+
+
 -- Precondition definitions
 @[reducible, simp]
 def modify_names_precond (names : List String) : Prop :=
@@ -43,3 +46,5 @@ theorem modify_names_postcond_satisfied (names: List String) (h_precond : modify
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_32731_codeexercises_50462

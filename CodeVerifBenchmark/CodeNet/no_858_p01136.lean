@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_858_p01136
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minDaysToGatherMaps_precond (schedules : List (List Nat)) : Prop :=
@@ -106,3 +109,5 @@ theorem minDaysToGatherMaps_postcond_satisfied (schedules: List (List Nat)) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_858_p01136

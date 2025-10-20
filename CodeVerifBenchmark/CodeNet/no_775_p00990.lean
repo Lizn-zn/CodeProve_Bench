@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_775_p00990
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countValidIDs_precond (n : Nat) (idString : String) (m : Nat) (candidates : List Nat) : Prop :=
@@ -109,3 +112,5 @@ theorem countValidIDs_postcond_satisfied (n: Nat) (idString: String) (m: Nat) (c
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_775_p00990

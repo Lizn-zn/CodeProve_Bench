@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_17675_codeexercises_117675
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_first_mismatch_precond (nums : List Nat) : Prop :=
@@ -42,3 +45,5 @@ theorem find_first_mismatch_postcond_satisfied (nums: List Nat) (h_precond : fin
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_17675_codeexercises_117675

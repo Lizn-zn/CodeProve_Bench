@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_70_leetcode_71
+
+
 -- Precondition auxiliary definitions
 def is_valid_path_char (c : Char) : Prop :=
   c = '/' ∨ c = '.' ∨ c = '_' ∨ Char.isAlpha c ∨ Char.isDigit c
@@ -87,3 +90,5 @@ theorem simplifyPath_postcond_satisfied (path: String) (h_precond : simplifyPath
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_70_leetcode_71

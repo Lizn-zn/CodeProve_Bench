@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_17065_codeexercises_26197
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_characters_precond (s : String) (c : Char) : Prop :=
@@ -44,3 +47,5 @@ theorem find_characters_postcond_satisfied (s: String) (c: Char) (h_precond : fi
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_17065_codeexercises_26197

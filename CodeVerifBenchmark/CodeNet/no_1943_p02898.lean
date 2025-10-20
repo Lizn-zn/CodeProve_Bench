@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1943_p02898
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countEligibleFriends_precond (n : Nat) (k : Nat) (heights : List Nat) : Prop :=
@@ -30,3 +33,4 @@ theorem countEligibleFriends_postcond_satisfied (n: Nat) (k: Nat) (heights: List
   sorry
   -- !benchmark @end proof
 
+end no_1943_p02898

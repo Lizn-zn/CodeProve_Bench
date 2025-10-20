@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2165_p03146
+
+
 -- Precondition definitions
 @[reducible, simp]
 def findCyclePosition_precond (s : Nat) : Prop :=
@@ -67,3 +70,4 @@ theorem findCyclePosition_postcond_satisfied (s: Nat) (h_precond : findCyclePosi
   sorry
   -- !benchmark @end proof
 
+end no_2165_p03146

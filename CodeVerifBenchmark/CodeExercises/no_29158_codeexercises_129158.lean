@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_29158_codeexercises_129158
+
+
 -- Precondition auxiliary definitions
 inductive ConnectionStatus : Type where
   | faulty : ConnectionStatus
@@ -40,3 +43,4 @@ theorem check_connection_postcond_satisfied (connection: Connection) (h_precond 
   sorry
   -- !benchmark @end proof
 
+end no_29158_codeexercises_129158

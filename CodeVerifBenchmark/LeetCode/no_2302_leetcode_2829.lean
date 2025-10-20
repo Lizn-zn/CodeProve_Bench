@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2302_leetcode_2829
+
+
 -- Precondition auxiliary definitions
 /-- A predicate stating that a list of natural numbers is k-avoiding, i.e.,
   there do not exist two distinct elements in the list that sum to k. -/
@@ -57,3 +60,5 @@ theorem minKAvoidingArraySum_postcond_satisfied (n: Nat) (k: Nat) (h_precond : m
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2302_leetcode_2829

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9903_codeexercises_15156
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_even_elements_precond (numbers : List Int) : Prop :=
@@ -58,3 +61,4 @@ theorem count_even_elements_postcond_satisfied (numbers: List Int) (h_precond : 
   sorry
   -- !benchmark @end proof
 
+end no_9903_codeexercises_15156

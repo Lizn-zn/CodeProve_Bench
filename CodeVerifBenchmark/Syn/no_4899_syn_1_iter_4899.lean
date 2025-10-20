@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4899_syn_1_iter_4899
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sum_array_precond (arr : Array Nat) : Prop :=
@@ -34,3 +37,5 @@ theorem sum_array_postcond_satisfied (arr: Array Nat) (h_precond : sum_array_pre
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4899_syn_1_iter_4899

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_41806_codeexercises_141806
+
+
 -- Precondition definitions
 @[reducible, simp]
 def carpenter_inventory_precond (inventory : List α) (tools : List α) : Prop :=
@@ -29,3 +32,5 @@ theorem carpenter_inventory_postcond_satisfied [BEq α] (inventory: List α) (to
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_41806_codeexercises_141806

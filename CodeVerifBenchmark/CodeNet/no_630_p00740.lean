@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_630_p00740
+
+
 -- Precondition definitions
 @[reducible, simp]
 def nextMayor_precond (n : Nat) (p : Nat) : Prop :=
@@ -78,3 +81,5 @@ theorem nextMayor_postcond_satisfied (n: Nat) (p: Nat) (h_precond : nextMayor_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_630_p00740

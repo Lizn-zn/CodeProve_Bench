@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1764_leetcode_2155
+
+
 -- Precondition auxiliary definitions
 def IsBinaryList (l : List Nat) : Prop :=
   ∀ x ∈ l, x = 0 ∨ x = 1
@@ -82,3 +85,5 @@ theorem maxScoreIndices_postcond_satisfied (nums: List Nat) (h_precond : maxScor
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1764_leetcode_2155

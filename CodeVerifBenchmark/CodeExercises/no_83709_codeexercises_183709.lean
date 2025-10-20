@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_83709_codeexercises_183709
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_books_availability_precond (books_checked_out : List String) (books_returned : List String) : Prop :=
@@ -31,3 +34,5 @@ theorem check_books_availability_postcond_satisfied (books_checked_out: List Str
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_83709_codeexercises_183709

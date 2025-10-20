@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_77806_codeexercises_177806
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_unique_words_precond (text : String) : Prop :=
@@ -43,3 +46,5 @@ theorem get_unique_words_postcond_satisfied (text : String) (h_precond : get_uni
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_77806_codeexercises_177806

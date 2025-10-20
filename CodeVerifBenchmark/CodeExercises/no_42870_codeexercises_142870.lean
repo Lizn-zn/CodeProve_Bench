@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_42870_codeexercises_142870
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_distance_precond (age : Nat) (endurance : Nat) (speed : Nat) : Prop :=
@@ -59,3 +62,4 @@ theorem check_distance_postcond_satisfied (age: Nat) (endurance: Nat) (speed: Na
   sorry
   -- !benchmark @end proof
 
+end no_42870_codeexercises_142870

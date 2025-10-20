@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_54274_codeexercises_154274
+
+
 -- Precondition definitions
 @[reducible, simp]
 def remove_elements_precond (nested_list : List (List ℤ)) : Prop :=
@@ -50,3 +53,5 @@ theorem remove_elements_postcond_satisfied (nested_list: List (List ℤ)) (h_pre
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_54274_codeexercises_154274

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_76616_codeexercises_176616
+
+
 -- Precondition definitions
 @[reducible, simp]
 def append_even_numbers_precond (num_list : List Nat) : Prop :=
@@ -37,3 +40,5 @@ theorem append_even_numbers_postcond_satisfied (num_list: List Nat) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_76616_codeexercises_176616

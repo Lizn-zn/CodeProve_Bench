@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_17223_codeexercises_117223
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_intersection_dictionary_precond (dict1 : List (Prod String Nat)) (dict2 : List (Prod String Nat)) : Prop :=
@@ -51,3 +54,5 @@ theorem create_intersection_dictionary_postcond_satisfied (dict1: List (Prod Str
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_17223_codeexercises_117223

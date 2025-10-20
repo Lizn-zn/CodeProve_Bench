@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3407_syn_1_iter_3407
+
+
 -- Precondition definitions
 @[reducible, simp]
 def vowel_indices_precond (chars : List Char) : Prop :=
@@ -36,3 +39,5 @@ theorem vowel_indices_postcond_satisfied (chars: List Char) (h_precond : vowel_i
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3407_syn_1_iter_3407

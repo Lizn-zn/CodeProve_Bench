@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3413_syn_1_iter_3413
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sum_mod_256_precond (lst : List UInt8) : Prop :=
@@ -40,3 +43,4 @@ theorem sum_mod_256_postcond_satisfied (lst: List UInt8) (h_precond : sum_mod_25
   sorry
   -- !benchmark @end proof
 
+end no_3413_syn_1_iter_3413

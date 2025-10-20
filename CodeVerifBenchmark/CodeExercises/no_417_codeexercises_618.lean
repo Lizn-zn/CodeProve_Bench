@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_417_codeexercises_618
+
+
 -- Precondition definitions
 @[reducible, simp]
 def convert_to_binary_precond (number : Nat) : Prop :=
@@ -59,3 +62,4 @@ theorem convert_to_binary_postcond_satisfied (number: Nat) (h_precond : convert_
   sorry
   -- !benchmark @end proof
 
+end no_417_codeexercises_618

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2998_syn_1_iter_2998
+
+
 -- Precondition definitions
 @[reducible, simp]
 def compute_normalized_distances_precond (coordinates : List (Nat × Nat)) (label : String) (frequencies : List (Char × Nat)) : Prop :=
@@ -49,3 +52,5 @@ theorem compute_normalized_distances_postcond_satisfied (coordinates: List (Nat 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2998_syn_1_iter_2998

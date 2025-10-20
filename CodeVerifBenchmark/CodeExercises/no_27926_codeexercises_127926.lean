@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_27926_codeexercises_127926
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -82,3 +85,5 @@ theorem print_negative_indexed_square_postcond_satisfied (size: Nat) (h_precond 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_27926_codeexercises_127926

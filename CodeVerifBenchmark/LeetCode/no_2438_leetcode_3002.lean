@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2438_leetcode_3002
+
+
 -- Precondition auxiliary definitions
 def countUniqueElements_precond (l : List Nat) : Nat :=
   (l.toFinset).card
@@ -92,3 +95,5 @@ theorem maximumSetSize_postcond_satisfied (nums1: List Nat) (nums2: List Nat) (h
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2438_leetcode_3002

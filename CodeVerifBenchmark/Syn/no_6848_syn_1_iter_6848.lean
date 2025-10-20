@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6848_syn_1_iter_6848
+
+
 -- Precondition auxiliary definitions
 inductive MixedElement : Type where
   | singleChar : Char → MixedElement
@@ -69,3 +72,5 @@ theorem process_mixed_list_postcond_satisfied (input_list: List (Sum (Sum Char (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6848_syn_1_iter_6848

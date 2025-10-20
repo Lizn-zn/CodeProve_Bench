@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_22336_codeexercises_34342
+
+
 -- Precondition definitions
 @[reducible, simp]
 def complex_conjugate_abs_precond (z : ℂ) : Prop :=
@@ -32,3 +35,5 @@ theorem complex_conjugate_abs_postcond_satisfied (z: ℂ) (h_precond : complex_c
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_22336_codeexercises_34342

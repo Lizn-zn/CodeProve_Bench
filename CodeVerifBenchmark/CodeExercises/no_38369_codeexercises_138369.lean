@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_38369_codeexercises_138369
+
+
 -- Precondition definitions
 @[reducible, simp]
 def compare_round_floats_precond (a : Float) (b : Float) (precision : Nat) : Prop :=
@@ -37,3 +40,5 @@ theorem compare_round_floats_postcond_satisfied (a: Float) (b: Float) (precision
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_38369_codeexercises_138369

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_15195_codeexercises_23348
+
+
 -- Precondition definitions
 @[reducible, simp]
 def modify_carpenter_inventory_precond (inventory : List String) (remove_items : List String) : Prop :=
@@ -36,3 +39,5 @@ theorem modify_carpenter_inventory_postcond_satisfied (inventory: List String) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_15195_codeexercises_23348

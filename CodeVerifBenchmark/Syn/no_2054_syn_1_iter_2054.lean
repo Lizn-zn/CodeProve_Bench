@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2054_syn_1_iter_2054
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -72,3 +75,5 @@ theorem build_char_array_postcond_satisfied (s: String) (chars: List Char) (indi
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2054_syn_1_iter_2054

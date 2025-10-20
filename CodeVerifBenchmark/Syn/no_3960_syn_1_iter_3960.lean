@@ -1,5 +1,7 @@
 import Mathlib
 
+namespace no_3960_syn_1_iter_3960
+
 -- Precondition definitions
 @[reducible, simp]
 def construct_array_precond (a : Int) (b : Nat) (S : Finset Nat) (n : Nat) : Prop :=
@@ -36,3 +38,5 @@ theorem construct_array_postcond_satisfied (a: Int) (b: Nat) (S: Finset Nat) (n:
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3960_syn_1_iter_3960

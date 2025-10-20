@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7275_codeexercises_11177
+
+
 -- Precondition definitions
 @[reducible, simp]
 def multiply_odd_index_precond (numbers : List Nat) : Prop :=
@@ -45,3 +48,4 @@ theorem multiply_odd_index_postcond_satisfied (numbers: List Nat) (h_precond : m
   sorry
   -- !benchmark @end proof
 
+end no_7275_codeexercises_11177

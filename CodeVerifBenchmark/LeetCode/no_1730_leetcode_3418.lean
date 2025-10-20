@@ -25,7 +25,7 @@ def List.getMatrixElemD {α : Type} (default : α) (matrix : List (List α)) (i 
 
 /-- Check if indices are within matrix bounds -/
 def List.inBounds {α : Type} (matrix : List (List α)) (i j : Nat) : Prop :=
-  i < matrix.length ∧ 
+  i < matrix.length ∧
   (match matrix.get? i with
    | some row => j < row.length
    | none => False)
@@ -55,7 +55,7 @@ def List.groupBy' {α : Type} (r : α → α → Bool) : List α → List (List 
 where
   go : List α → List (List α)
   | [] => []
-  | h :: t => 
+  | h :: t =>
     let (eq, neq) := t.partition (r h)
     (h :: eq) :: go neq
 decreasing_by sorry
@@ -63,7 +63,7 @@ decreasing_by sorry
 /-- Merge lists of DP states, keeping only the best state for each neutralization count -/
 def mergeStates (states : List DPState) : List DPState :=
   let grouped := states.groupBy' (fun s1 s2 => s1.neutralized = s2.neutralized)
-  grouped.map (fun group => 
+  grouped.map (fun group =>
     match group with
     | [] => panic! "Empty group"
     | h :: t => t.foldl betterState h)
@@ -110,7 +110,7 @@ def updateDPTable (table : List (List (List DPState))) (i j : Nat) (newStates : 
 /-- Get states from DP table at position (i,j) -/
 def getDPStates (table : List (List (List DPState))) (i j : Nat) : List DPState :=
   match table.get? i with
-  | some row => 
+  | some row =>
     match row.get? j with
     | some states => states
     | none => []
@@ -128,7 +128,7 @@ def computeMaxProfit (coins : List (List Int)) : Int :=
   let dp := initDPTable rows cols
   -- Initialize starting position
   let dp := updateDPTable dp 0 0 [⟨coins.getMatrixElemD 0 0 0, 0⟩]
-  
+
   -- Fill DP table
   let dp := Id.run do
     let mut dp := dp
@@ -138,21 +138,21 @@ def computeMaxProfit (coins : List (List Int)) : Int :=
         if currentStates.nonEmpty then
           let cellValue := coins.getMatrixElemD 0 i j
           let processedStates := processCell cellValue currentStates
-          
+
           -- Move right
           if j + 1 < cols then
             dp := updateDPTable dp i (j+1) processedStates
-          
+
           -- Move down
           if i + 1 < rows then
             dp := updateDPTable dp (i+1) j processedStates
     pure dp
-  
+
   -- Find maximum profit among all states at destination
   let finalStates := getDPStates dp (rows-1) (cols-1)
   match finalStates with
   | [] => 0
-  | _ => 
+  | _ =>
     let profits := finalStates.map (·.profit)
     match profits with
     | [] => 0
@@ -162,11 +162,11 @@ def computeMaxProfit (coins : List (List Int)) : Int :=
 def maxProfitPath (coins : List (List Int)) (h_precond : maxProfitPath_precond (coins)) : Int :=
   let (rows, cols) := coins.MatrixDim
   let dp := initDPTable rows cols
-  
+
   -- Initialize starting position
   let startValue := coins.getMatrixElemD 0 0 0
   let dp := updateDPTable dp 0 0 [⟨startValue, 0⟩]
-  
+
   -- Fill DP table
   let dp := Id.run do
     let mut dp := dp
@@ -176,21 +176,21 @@ def maxProfitPath (coins : List (List Int)) (h_precond : maxProfitPath_precond (
         if currentStates.nonEmpty then
           let cellValue := coins.getMatrixElemD 0 i j
           let processedStates := processCell cellValue currentStates
-          
+
           -- Move right
           if j + 1 < cols then
             dp := updateDPTable dp i (j+1) processedStates
-          
+
           -- Move down
           if i + 1 < rows then
             dp := updateDPTable dp (i+1) j processedStates
     pure dp
-  
+
   -- Find maximum profit among all states at destination
   let finalStates := getDPStates dp (rows-1) (cols-1)
   match finalStates with
   | [] => 0
-  | _ => 
+  | _ =>
     let profits := finalStates.map (·.profit)
     match profits with
     | [] => 0

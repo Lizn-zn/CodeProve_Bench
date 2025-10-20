@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_96914_codeexercises_196914
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_intersection_precond (police_officers : List String) (suspects : List String) : Prop :=
@@ -38,3 +41,4 @@ theorem check_intersection_postcond_satisfied (police_officers: List String) (su
   sorry
   -- !benchmark @end proof
 
+end no_96914_codeexercises_196914

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_83831_codeexercises_183831
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_total_salary_precond (salaries_list : List Nat) : Prop :=
@@ -32,3 +35,4 @@ theorem calculate_total_salary_postcond_satisfied (salaries_list: List Nat) (h_p
   sorry
   -- !benchmark @end proof
 
+end no_83831_codeexercises_183831

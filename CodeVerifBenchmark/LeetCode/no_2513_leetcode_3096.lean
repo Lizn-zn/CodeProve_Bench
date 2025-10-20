@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2513_leetcode_3096
+
+
 -- Precondition auxiliary definitions
 def scoreOfSegment (possible : List Int) (start : Nat) (len : Nat) : Int :=
   (List.take len (List.drop start possible)).foldl (fun acc x => if x = 1 then acc + 1 else acc - 1) 0
@@ -78,3 +81,5 @@ theorem minLevelsForAliceToWin_postcond_satisfied (possible: List Int) (h_precon
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2513_leetcode_3096

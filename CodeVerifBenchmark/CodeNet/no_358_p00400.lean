@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_358_p00400
+
+
 -- Precondition definitions
 @[reducible, simp]
 def classifyAsciiCode_precond (n : Nat) : Prop :=
@@ -42,3 +45,4 @@ theorem classifyAsciiCode_postcond_satisfied (n: Nat) (h_precond : classifyAscii
   sorry
   -- !benchmark @end proof
 
+end no_358_p00400

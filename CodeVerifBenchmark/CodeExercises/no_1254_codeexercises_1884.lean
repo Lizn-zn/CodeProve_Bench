@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1254_codeexercises_1884
+
+
 -- Precondition definitions
 @[reducible, simp]
 def modify_even_indices_precond (lst : List Int) : Prop :=
@@ -42,3 +45,5 @@ theorem modify_even_indices_postcond_satisfied (lst: List Int) (h_precond : modi
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1254_codeexercises_1884

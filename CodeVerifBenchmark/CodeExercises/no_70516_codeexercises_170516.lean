@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_70516_codeexercises_170516
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_unexplored_planets_precond (planets : List (String × Bool)) : Prop :=
@@ -41,3 +44,4 @@ theorem find_unexplored_planets_postcond_satisfied (planets: List (String × Boo
   sorry
   -- !benchmark @end proof
 
+end no_70516_codeexercises_170516

@@ -26,7 +26,7 @@ def repeatChar (c : Char) (n : Nat) : String :=
 -- Main function definitions
 def generateOddCharacterString (n : Nat) (h_precond : generateOddCharacterString_precond (n)) : String :=
   -- !benchmark @start code
-  
+
     if n % 2 = 1 then
       repeatChar 'a' n
     else

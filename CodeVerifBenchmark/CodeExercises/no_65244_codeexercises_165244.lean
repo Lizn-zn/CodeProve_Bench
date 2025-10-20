@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_65244_codeexercises_165244
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_specific_element_precond (tuples : List (List α)) (element : α) : Prop :=
@@ -46,3 +49,5 @@ theorem find_specific_element_postcond_satisfied [DecidableEq α] (tuples: List 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_65244_codeexercises_165244

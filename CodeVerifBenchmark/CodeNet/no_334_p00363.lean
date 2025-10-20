@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_334_p00363
+
+
 -- Precondition definitions
 @[reducible, simp]
 def makeFlag_precond (w : Nat) (h : Nat) (c : Char) : Prop :=
@@ -69,3 +72,4 @@ theorem makeFlag_postcond_satisfied (w: Nat) (h: Nat) (c: Char) (h_precond : mak
   sorry
   -- !benchmark @end proof
 
+end no_334_p00363

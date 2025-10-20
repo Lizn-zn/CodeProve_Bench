@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1160_leetcode_1413
+
+
 -- Precondition auxiliary definitions
 /-- The cumulative sum at index i is the sum of elements from the beginning up to index i -/
 def cumSum (nums : List Int) (i : Nat) : Int :=
@@ -65,3 +68,5 @@ theorem minStartValue_postcond_satisfied (nums: List Int) (h_precond : minStartV
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1160_leetcode_1413

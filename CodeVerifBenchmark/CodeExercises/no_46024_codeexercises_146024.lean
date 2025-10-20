@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_46024_codeexercises_146024
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -63,3 +66,4 @@ theorem find_abnormal_values_postcond_satisfied (data: List (List Nat)) (h_preco
   sorry
   -- !benchmark @end proof
 
+end no_46024_codeexercises_146024

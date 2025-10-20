@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2032_leetcode_2460
+
+
 -- Precondition auxiliary definitions
 def List.countZeros (l : List Nat) : Nat :=
   l.filter (· = 0) |>.length
@@ -64,3 +67,4 @@ theorem applyOperationsAndShiftZeros_postcond_satisfied (nums: List Nat) (h_prec
   sorry
   -- !benchmark @end proof
 
+end no_2032_leetcode_2460

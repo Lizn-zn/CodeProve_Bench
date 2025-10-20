@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9939_codeexercises_109939
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_total_distance_precond (stars : List Float) : Prop :=
@@ -32,3 +35,4 @@ theorem calculate_total_distance_postcond_satisfied (stars: List Float) (h_preco
   sorry
   -- !benchmark @end proof
 
+end no_9939_codeexercises_109939

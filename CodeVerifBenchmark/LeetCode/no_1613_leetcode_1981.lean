@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1613_leetcode_1981
+
+
 -- Precondition auxiliary definitions
 /-- The set of all possible sums obtained by choosing one element from each row of the matrix. -/
 def possibleSums (mat : List (List Int)) : List Int :=
@@ -51,3 +54,5 @@ theorem minimize_absolute_difference_postcond_satisfied (mat: List (List Int)) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1613_leetcode_1981

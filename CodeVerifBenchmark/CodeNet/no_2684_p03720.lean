@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2684_p03720
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countRoadsPerCity_precond (n : Nat) (m : Nat) (roads : List (Nat × Nat)) : Prop :=
@@ -72,3 +75,4 @@ theorem countRoadsPerCity_postcond_satisfied (n: Nat) (m: Nat) (roads: List (Nat
   sorry
   -- !benchmark @end proof
 
+end no_2684_p03720

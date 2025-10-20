@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1965_p02922
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minPowerStrips_precond (A : Nat) (B : Nat) : Prop :=
@@ -58,3 +61,4 @@ theorem minPowerStrips_postcond_satisfied (A: Nat) (B: Nat) (h_precond : minPowe
   sorry
   -- !benchmark @end proof
 
+end no_1965_p02922

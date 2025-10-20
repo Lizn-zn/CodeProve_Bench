@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2860_p03922
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxCardPairs_precond (n : Nat) (m : Nat) (cards : List Nat) : Prop :=
@@ -95,3 +98,5 @@ theorem maxCardPairs_postcond_satisfied (n: Nat) (m: Nat) (cards: List Nat) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2860_p03922

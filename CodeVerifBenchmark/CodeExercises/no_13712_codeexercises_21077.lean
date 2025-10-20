@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_13712_codeexercises_21077
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_igneous_rocks_precond (rocks : List (List String)) : Prop :=
@@ -42,3 +45,5 @@ theorem count_igneous_rocks_postcond_satisfied (rocks: List (List String)) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_13712_codeexercises_21077

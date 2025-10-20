@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_39234_codeexercises_139234
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_divisors_precond (min_num : Nat) (max_num : Nat) : Prop :=
@@ -51,3 +54,4 @@ theorem find_common_divisors_postcond_satisfied (min_num: Nat) (max_num: Nat) (h
   sorry
   -- !benchmark @end proof
 
+end no_39234_codeexercises_139234

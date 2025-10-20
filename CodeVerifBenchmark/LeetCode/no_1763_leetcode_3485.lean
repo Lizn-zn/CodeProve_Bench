@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1763_leetcode_3485
+
+
 -- Precondition auxiliary definitions
 /-- A helper function to compute the longest common prefix of two strings. -/
 def longestCommonPrefixOfTwo (s₁ s₂ : String) : Nat :=
@@ -126,3 +129,5 @@ theorem longestCommonPrefixAfterRemoval_postcond_satisfied (words: List String) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1763_leetcode_3485

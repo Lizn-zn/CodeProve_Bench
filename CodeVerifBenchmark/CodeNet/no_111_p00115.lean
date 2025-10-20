@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_111_p00115
+
+
 -- Postcondition auxiliary definitions
 -- Vector subtraction for 3D points
 def vec_sub (p1 p2 : Int × Int × Int) : Int × Int × Int :=
@@ -126,3 +129,5 @@ theorem beamHitCheck_postcond_satisfied (ship: (Int × Int × Int)) (enemy: (Int
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_111_p00115

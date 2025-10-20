@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2825_codeexercises_102825
+
+
 -- Precondition definitions
 @[reducible, simp]
 def append_elements_to_list_precond (list1 : List α) (list2 : List α) : Prop :=
@@ -36,3 +39,5 @@ theorem append_elements_to_list_postcond_satisfied [DecidableEq α] (list1: List
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2825_codeexercises_102825

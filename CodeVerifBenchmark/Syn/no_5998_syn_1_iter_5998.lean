@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_5998_syn_1_iter_5998
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_rows_with_sum_in_list_precond (arr : Array (Array Int)) (sums_list : List Int) : Prop :=
@@ -44,3 +47,5 @@ theorem count_rows_with_sum_in_list_postcond_satisfied (arr: Array (Array Int)) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_5998_syn_1_iter_5998

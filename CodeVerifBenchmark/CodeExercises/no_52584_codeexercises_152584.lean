@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_52584_codeexercises_152584
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_subjects_precond (photos1 : List String) (photos2 : List String) : Prop :=
@@ -41,3 +44,4 @@ theorem find_common_subjects_postcond_satisfied (photos1: List String) (photos2:
   sorry
   -- !benchmark @end proof
 
+end no_52584_codeexercises_152584

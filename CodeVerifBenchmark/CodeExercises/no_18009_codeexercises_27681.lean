@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_18009_codeexercises_27681
+
+
 -- Precondition definitions
 @[reducible, simp]
 def is_element_present_precond (element : α) (lst : List α) : Prop :=
@@ -34,3 +37,5 @@ theorem is_element_present_postcond_satisfied [BEq α] (element: α) (lst: List 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_18009_codeexercises_27681

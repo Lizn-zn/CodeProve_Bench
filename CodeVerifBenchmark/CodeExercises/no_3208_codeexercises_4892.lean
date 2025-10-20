@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3208_codeexercises_4892
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_president_precond (term : Nat) (presidents : List (Nat × String)) : Prop :=
@@ -43,3 +46,4 @@ theorem find_president_postcond_satisfied (term: Nat) (presidents: List (Nat × 
   sorry
   -- !benchmark @end proof
 
+end no_3208_codeexercises_4892

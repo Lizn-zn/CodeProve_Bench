@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7013_syn_1_iter_7013
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -61,3 +64,4 @@ theorem process_floats_and_char_postcond_satisfied (floats: List Float) (char: C
   sorry
   -- !benchmark @end proof
 
+end no_7013_syn_1_iter_7013

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_21189_codeexercises_32597
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -49,3 +52,5 @@ theorem calculate_volume_of_concrete_section_postcond_satisfied (dimension_dict:
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_21189_codeexercises_32597

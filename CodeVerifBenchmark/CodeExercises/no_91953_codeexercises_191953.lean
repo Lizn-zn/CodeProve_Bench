@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_91953_codeexercises_191953
+
+
 -- Precondition definitions
 @[reducible, simp]
 def remove_common_chars_precond (string : String) (chars_to_remove : List Char) : Prop :=
@@ -44,3 +47,5 @@ theorem remove_common_chars_postcond_satisfied (string: String) (chars_to_remove
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_91953_codeexercises_191953

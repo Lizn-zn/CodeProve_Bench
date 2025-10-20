@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2389_p03387
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minOperationsToEqualize_precond (A : Nat) (B : Nat) (C : Nat) : Prop :=
@@ -59,3 +62,4 @@ theorem minOperationsToEqualize_postcond_satisfied (A: Nat) (B: Nat) (C: Nat) (h
   sorry
   -- !benchmark @end proof
 
+end no_2389_p03387

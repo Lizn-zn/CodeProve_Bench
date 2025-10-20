@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2413_syn_1_iter_2413
+
+
 -- Precondition definitions
 @[reducible, simp]
 def nat_to_list_precond (n : Nat) : Prop :=
@@ -40,3 +43,5 @@ theorem nat_to_list_postcond_satisfied (n: Nat) (h_precond : nat_to_list_precond
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2413_syn_1_iter_2413

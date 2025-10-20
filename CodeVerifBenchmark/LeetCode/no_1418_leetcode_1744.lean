@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1418_leetcode_1744
+
+
 -- Precondition auxiliary definitions
 /-- The prefix sum of candiesCount up to index `n`. -/
 def candiesPrefixSum (candiesCount : List Nat) (n : Nat) : Nat :=
@@ -180,3 +183,4 @@ theorem canEat_postcond_satisfied (candiesCount: List Nat) (queries: List (Nat Ã
   sorry
   -- !benchmark @end proof
 
+end no_1418_leetcode_1744

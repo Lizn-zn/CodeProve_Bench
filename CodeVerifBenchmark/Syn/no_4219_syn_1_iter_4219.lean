@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4219_syn_1_iter_4219
+
+
 -- Precondition definitions
 @[reducible, simp]
 def generate_arrays_precond (x : Int) (n : Nat) (chars : Array Char) (b : UInt8) : Prop :=
@@ -31,3 +34,5 @@ theorem generate_arrays_postcond_satisfied (x : Int) (n : Nat) (chars : Array Ch
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4219_syn_1_iter_4219

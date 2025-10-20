@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_84742_codeexercises_184742
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_intersection_precond (not_operator : Set α) (set_list : List (Set α)) : Prop :=
@@ -33,3 +36,5 @@ theorem check_intersection_postcond_satisfied (not_operator: Set α) (set_list: 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_84742_codeexercises_184742

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3855_codeexercises_5872
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_total_crops_precond (farmer_list : List (List Nat)) : Prop :=
@@ -53,3 +56,5 @@ theorem calculate_total_crops_postcond_satisfied (farmer_list: List (List Nat)) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3855_codeexercises_5872

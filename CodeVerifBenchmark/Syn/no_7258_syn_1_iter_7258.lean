@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7258_syn_1_iter_7258
+
+
 -- Precondition definitions
 @[reducible, simp]
 def convert_pairs_precond (input_list : List (Int × Int)) : Prop :=
@@ -40,3 +43,5 @@ theorem convert_pairs_postcond_satisfied (input_list: List (Int × Int)) (h_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_7258_syn_1_iter_7258

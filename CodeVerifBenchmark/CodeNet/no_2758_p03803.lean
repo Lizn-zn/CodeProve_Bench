@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2758_p03803
+
+
 -- Precondition definitions
 @[reducible, simp]
 def oneCardPoker_precond (A : Nat) (B : Nat) : Prop :=
@@ -47,3 +50,5 @@ theorem oneCardPoker_postcond_satisfied (A: Nat) (B: Nat) (h_precond : oneCardPo
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2758_p03803

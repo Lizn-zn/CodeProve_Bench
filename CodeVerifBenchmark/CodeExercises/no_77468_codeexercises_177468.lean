@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_77468_codeexercises_177468
+
+
 -- Precondition definitions
 @[reducible, simp]
 def extract_odd_squares_precond (nums : List Nat) : Prop :=
@@ -36,3 +39,5 @@ theorem extract_odd_squares_postcond_satisfied (nums: List Nat) (h_precond : ext
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_77468_codeexercises_177468

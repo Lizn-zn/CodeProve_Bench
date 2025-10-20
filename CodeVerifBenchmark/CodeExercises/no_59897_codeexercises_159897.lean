@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_59897_codeexercises_159897
+
+
 -- Precondition definitions
 @[reducible, simp]
 def athlete_stats_precond (salary : Float) (points_per_game : Float) (minutes_played : Float) : Prop :=
@@ -46,3 +49,4 @@ theorem athlete_stats_postcond_satisfied (salary: Float) (points_per_game: Float
   sorry
   -- !benchmark @end proof
 
+end no_59897_codeexercises_159897

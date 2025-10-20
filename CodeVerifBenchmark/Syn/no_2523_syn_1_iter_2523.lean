@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2523_syn_1_iter_2523
+
+
 -- Precondition definitions
 @[reducible, simp]
 def analyze_chars_precond (chars : Array Char) : Prop :=
@@ -39,3 +42,5 @@ theorem analyze_chars_postcond_satisfied (chars: Array Char) (h_precond : analyz
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2523_syn_1_iter_2523

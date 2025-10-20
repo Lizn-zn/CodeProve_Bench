@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7037_syn_1_iter_7037
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -55,3 +58,5 @@ theorem compute_natural_numbers_postcond_satisfied (pairs: List (Char × Nat)) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_7037_syn_1_iter_7037

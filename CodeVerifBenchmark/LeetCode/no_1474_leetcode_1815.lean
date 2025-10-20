@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1474_leetcode_1815
+
+
 -- Precondition auxiliary definitions
 def sumModBatch (batchSize : Nat) (groups : List Nat) : Nat :=
   (groups.foldl (fun acc group => acc + group % batchSize) 0) % batchSize
@@ -85,3 +88,5 @@ theorem maxHappyGroups_postcond_satisfied (batchSize: Nat) (groups: List Nat) (h
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1474_leetcode_1815

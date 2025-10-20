@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2720_syn_1_iter_2720
+
+
 -- Precondition definitions
 @[reducible, simp]
 def square_array_precond (arr : Array Nat) : Prop :=
@@ -34,3 +37,5 @@ theorem square_array_postcond_satisfied (arr: Array Nat) (h_precond : square_arr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2720_syn_1_iter_2720

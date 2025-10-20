@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_5860_syn_1_iter_5860
+
+
 -- Precondition auxiliary definitions
 inductive ValidLineFormat : String → Prop where
   | empty : ValidLineFormat ""
@@ -80,3 +83,5 @@ theorem parse_string_data_postcond_satisfied (input_str: String) (h_precond : pa
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_5860_syn_1_iter_5860

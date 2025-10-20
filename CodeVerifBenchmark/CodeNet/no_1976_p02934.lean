@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1976_p02934
+
+
 -- Precondition definitions
 @[reducible, simp]
 def harmonicMean_precond (n : Nat) (a : List Nat) : Prop :=
@@ -46,3 +49,5 @@ theorem harmonicMean_postcond_satisfied (n: Nat) (a: List Nat) (h_precond : harm
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1976_p02934

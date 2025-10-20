@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1180_p01845
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minRouxToAdd_precond (R0 : Nat) (W0 : Nat) (C : Nat) (R : Nat) : Prop :=
@@ -54,3 +57,4 @@ theorem minRouxToAdd_postcond_satisfied (R0: Nat) (W0: Nat) (C: Nat) (R: Nat) (h
   sorry
   -- !benchmark @end proof
 
+end no_1180_p01845

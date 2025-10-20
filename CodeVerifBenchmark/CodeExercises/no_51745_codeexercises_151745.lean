@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_51745_codeexercises_151745
+
+
 -- Precondition auxiliary definitions
 structure Dancer where
   name : String
@@ -50,3 +53,5 @@ theorem find_common_dance_styles_postcond_satisfied (dancers: List Dancer) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_51745_codeexercises_151745

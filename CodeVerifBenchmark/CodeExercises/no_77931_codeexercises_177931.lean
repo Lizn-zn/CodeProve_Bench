@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_77931_codeexercises_177931
+
+
 -- Precondition definitions
 @[reducible, simp]
 def infinite_loop_sum_precond (n : Nat) : Prop :=
@@ -47,3 +50,4 @@ theorem infinite_loop_sum_postcond_satisfied (n: Nat) (h_precond : infinite_loop
   sorry
   -- !benchmark @end proof
 
+end no_77931_codeexercises_177931

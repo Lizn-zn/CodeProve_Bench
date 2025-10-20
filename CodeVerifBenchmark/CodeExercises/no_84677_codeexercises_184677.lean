@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_84677_codeexercises_184677
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_total_distance_precond (therapy_sessions : List Float) : Prop :=
@@ -41,3 +44,4 @@ theorem calculate_total_distance_postcond_satisfied (therapy_sessions: List Floa
   sorry
   -- !benchmark @end proof
 
+end no_84677_codeexercises_184677

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6928_syn_1_iter_6928
+
+
 -- Precondition definitions
 @[reducible, simp]
 def char_code_sums_to_floats_precond (c : Char) (s : Set Int) : Prop :=
@@ -43,3 +46,5 @@ theorem char_code_sums_to_floats_postcond_satisfied (c: Char) (s: Set Int) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6928_syn_1_iter_6928

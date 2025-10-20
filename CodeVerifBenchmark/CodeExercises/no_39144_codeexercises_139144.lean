@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_39144_codeexercises_139144
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_unique_colors_precond (clothing : List String) : Prop :=
@@ -45,3 +48,5 @@ theorem find_unique_colors_postcond_satisfied (clothing: List String) (h_precond
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_39144_codeexercises_139144

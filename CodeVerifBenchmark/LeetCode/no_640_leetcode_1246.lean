@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_640_leetcode_1246
+
+
 -- Precondition auxiliary definitions
 def IsPalindromicSubarray (arr : List Nat) (i j : Nat) : Prop :=
   i ≤ j ∧ j < arr.length ∧
@@ -72,3 +75,5 @@ theorem min_moves_to_remove_palindromes_postcond_satisfied (arr: List Nat) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_640_leetcode_1246

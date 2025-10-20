@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1207_p01886
+
+
 -- Precondition definitions
 @[reducible, simp]
 def shareRuinsPreservation_precond (n : Nat) (ruins : List (Int × Int)) : Prop :=
@@ -162,3 +165,5 @@ theorem shareRuinsPreservation_postcond_satisfied (n: Nat) (ruins: List (Int × 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1207_p01886

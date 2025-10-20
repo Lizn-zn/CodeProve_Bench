@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1447_syn_1_iter_1447
+
+
 -- Precondition definitions
 @[reducible, simp]
 def compute_filtered_sum_precond (n : UInt8) (arr : Array Nat) (pairs : List (Char × Nat)) : Prop :=
@@ -60,3 +63,5 @@ theorem compute_filtered_sum_postcond_satisfied (n: UInt8) (arr: Array Nat) (pai
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1447_syn_1_iter_1447

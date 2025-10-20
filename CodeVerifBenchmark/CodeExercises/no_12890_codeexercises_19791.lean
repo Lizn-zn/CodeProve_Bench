@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_12890_codeexercises_19791
+
+
 -- Precondition definitions
 @[reducible, simp]
 def feed_precond (animal : String) : Prop :=
@@ -47,3 +50,4 @@ theorem feed_postcond_satisfied (animal: String) (h_precond : feed_precond (anim
   sorry
   -- !benchmark @end proof
 
+end no_12890_codeexercises_19791

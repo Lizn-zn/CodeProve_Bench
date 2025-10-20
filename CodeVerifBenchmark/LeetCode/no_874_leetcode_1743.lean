@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_874_leetcode_1743
+
+
 -- Precondition auxiliary definitions
 def adjacencyMap (adjacentPairs : List (Int × Int)) : Std.HashMap Int (List Int) :=
   let addPair (map : Std.HashMap Int (List Int)) (u v : Int) : Std.HashMap Int (List Int) :=
@@ -83,3 +86,5 @@ theorem restoreArray_postcond_satisfied (adjacentPairs: List (Int × Int)) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_874_leetcode_1743

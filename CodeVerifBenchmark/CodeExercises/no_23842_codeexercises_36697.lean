@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_23842_codeexercises_36697
+
+
 -- Precondition auxiliary definitions
 -- The precondition is simple and doesn't require auxiliary definitions
 
@@ -50,3 +53,5 @@ theorem calculate_average_postcond_satisfied (students_grades: Std.HashMap Strin
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_23842_codeexercises_36697

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_81463_codeexercises_181463
+
+
 -- Precondition auxiliary definitions
 /-- Define what constitutes a vowel character -/
 def isVowel (c : Char) : Bool :=
@@ -63,3 +66,5 @@ theorem capitalize_vowels_postcond_satisfied (text: String) (h_precond : capital
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_81463_codeexercises_181463

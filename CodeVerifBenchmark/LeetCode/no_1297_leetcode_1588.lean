@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1297_leetcode_1588
+
+
 -- Precondition auxiliary definitions
 /-- Auxiliary definition for sum of subarray from index i to j (inclusive) -/
 def subarraySum (arr : Array Nat) (i j : Nat) : Nat :=
@@ -65,3 +68,5 @@ theorem sumOddLengthSubarrays_postcond_satisfied (arr : Array Nat) (h_precond : 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1297_leetcode_1588

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1077_p01676
+
+
 -- Precondition auxiliary definitions
 -- Helper function to build adjacency list from edges
 def buildGraph (n : Nat) (edges : List (Nat × Nat)) : Array (Array Nat) :=
@@ -148,3 +151,5 @@ theorem treeReconstruction_postcond_satisfied (n: Nat) (edges: List (Nat × Nat)
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1077_p01676

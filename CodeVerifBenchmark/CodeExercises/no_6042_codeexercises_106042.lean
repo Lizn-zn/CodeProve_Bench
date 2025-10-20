@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6042_codeexercises_106042
+
+
 -- Precondition definitions
 @[reducible, simp]
 def rock_strata_age_precond (rock_strata : List Nat) : Prop :=
@@ -47,3 +50,4 @@ theorem rock_strata_age_postcond_satisfied (rock_strata: List Nat) (h_precond : 
   sorry
   -- !benchmark @end proof
 
+end no_6042_codeexercises_106042

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_79694_codeexercises_179694
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_total_expenses_precond (expenses : List Float) : Prop :=
@@ -32,3 +35,4 @@ theorem calculate_total_expenses_postcond_satisfied (expenses: List Float) (h_pr
   sorry
   -- !benchmark @end proof
 
+end no_79694_codeexercises_179694

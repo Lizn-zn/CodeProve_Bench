@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_61111_codeexercises_161111
+
+
 -- Precondition auxiliary definitions
 structure Photo where
   isSelected : Bool
@@ -42,3 +45,4 @@ theorem get_selected_photos_postcond_satisfied (photos: List Photo) (h_precond :
   sorry
   -- !benchmark @end proof
 
+end no_61111_codeexercises_161111

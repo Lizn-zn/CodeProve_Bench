@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2368_p03364
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countGoodBoards_precond (n : Nat) (grid : List (List Char)) : Prop :=
@@ -79,3 +82,4 @@ theorem countGoodBoards_postcond_satisfied (n: Nat) (grid: List (List Char)) (h_
   sorry
   -- !benchmark @end proof
 
+end no_2368_p03364

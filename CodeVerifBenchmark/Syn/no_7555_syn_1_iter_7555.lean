@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7555_syn_1_iter_7555
+
+
 -- Precondition definitions
 @[reducible, simp]
 def list_to_array_precond (lst : List Int) : Prop :=
@@ -33,3 +36,5 @@ theorem list_to_array_postcond_satisfied (lst: List Int) (h_precond : list_to_ar
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_7555_syn_1_iter_7555

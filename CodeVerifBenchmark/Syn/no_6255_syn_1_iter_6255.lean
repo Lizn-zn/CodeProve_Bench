@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6255_syn_1_iter_6255
+
+
 -- Precondition auxiliary definitions
 structure MinHeap (α : Type) [LE α] [Inhabited α] where
   elems : List α
@@ -91,3 +94,5 @@ theorem insertIntoMinHeap_postcond_satisfied (input_list : List Int) (value : In
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6255_syn_1_iter_6255

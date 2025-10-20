@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_19532_codeexercises_30062
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_actors_precond (actors_string : String) : Prop :=
@@ -40,3 +43,5 @@ theorem get_actors_postcond_satisfied (actors_string: String) (h_precond : get_a
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_19532_codeexercises_30062

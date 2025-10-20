@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1705_syn_1_iter_1705
+
+
 -- Precondition definitions
 @[reducible, simp]
 def repeat_strings_from_indices_precond (strs : List String) (indices : List (Int × Nat)) : Prop :=
@@ -79,3 +82,5 @@ theorem repeat_strings_from_indices_postcond_satisfied (strs: List String) (indi
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1705_syn_1_iter_1705

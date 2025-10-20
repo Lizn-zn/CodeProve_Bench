@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_695_leetcode_1375
+
+
 -- Precondition auxiliary definitions
 def IsPermutationOfRange (flips : List Nat) (n : Nat) : Prop :=
   flips.Perm (List.range (n + 1)).tail
@@ -58,3 +61,4 @@ theorem numTimesAllBlue_postcond_satisfied (flips: List Nat) (h_precond : numTim
   sorry
   -- !benchmark @end proof
 
+end no_695_leetcode_1375

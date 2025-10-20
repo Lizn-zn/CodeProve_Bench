@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_42745_codeexercises_142745
+
+
 -- Precondition definitions
 @[reducible, simp]
 def capitalize_nurse_names_precond (names : List String) : Prop :=
@@ -45,3 +48,5 @@ theorem capitalize_nurse_names_postcond_satisfied (names: List String) (h_precon
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_42745_codeexercises_142745

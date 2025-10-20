@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_12699_codeexercises_19476
+
+
 -- Precondition definitions
 @[reducible, simp]
 def absolute_difference_precond (numbers : List Int) : Prop :=
@@ -47,3 +50,4 @@ theorem absolute_difference_postcond_satisfied (numbers: List Int) (h_precond : 
   sorry
   -- !benchmark @end proof
 
+end no_12699_codeexercises_19476

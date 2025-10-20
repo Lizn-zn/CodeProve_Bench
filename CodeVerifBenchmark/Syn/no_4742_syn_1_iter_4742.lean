@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4742_syn_1_iter_4742
+
+
 -- Precondition definitions
 @[reducible, simp]
 def split_chars_to_words_precond (chars : Array Char) : Prop :=
@@ -63,3 +66,5 @@ theorem split_chars_to_words_postcond_satisfied (chars: Array Char) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4742_syn_1_iter_4742

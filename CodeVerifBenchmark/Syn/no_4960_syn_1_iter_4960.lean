@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4960_syn_1_iter_4960
+
+
 -- Precondition definitions
 @[reducible, simp]
 def list_with_unique_set_precond (nums : List Int) : Prop :=
@@ -37,3 +40,5 @@ theorem list_with_unique_set_postcond_satisfied (nums: List Int) (h_precond : li
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4960_syn_1_iter_4960

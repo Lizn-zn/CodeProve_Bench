@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_19891_codeexercises_30625
+
+
 -- Precondition definitions
 @[reducible, simp]
 def break_loop_string_concatenation_precond (strings : List String) : Prop :=
@@ -41,3 +44,5 @@ theorem break_loop_string_concatenation_postcond_satisfied (strings: List String
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_19891_codeexercises_30625

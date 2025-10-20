@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_665_p00816
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -170,3 +173,5 @@ theorem shredding_company_postcond_satisfied (target: Nat) (paper_number: String
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_665_p00816

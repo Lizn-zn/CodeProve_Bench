@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1335_leetcode_2659
+
+
 -- Precondition auxiliary definitions
 def sortedWithIndex (nums : List Int) : List (Int × Nat) :=
   let indexed := List.zip nums (List.range nums.length)
@@ -69,3 +72,5 @@ theorem countOperationsToEmptyArray_postcond_satisfied (nums: List Int) (h_preco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1335_leetcode_2659

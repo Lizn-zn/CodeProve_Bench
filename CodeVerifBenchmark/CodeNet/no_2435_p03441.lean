@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2435_p03441
+
+
 -- Precondition auxiliary definitions
 -- Helper to check if a list of edges forms a valid tree
 def isValidTree (n : Nat) (edges : List (Nat × Nat)) : Prop :=
@@ -97,3 +100,5 @@ theorem minAntennas_postcond_satisfied (n: Nat) (edges: List (Nat × Nat)) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2435_p03441

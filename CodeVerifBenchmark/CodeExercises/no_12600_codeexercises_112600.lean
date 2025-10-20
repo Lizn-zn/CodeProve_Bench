@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_12600_codeexercises_112600
+
+
 -- Precondition definitions
 @[reducible, simp]
 def reverse_words_precond (sentence : String) : Prop :=
@@ -41,3 +44,5 @@ theorem reverse_words_postcond_satisfied (sentence: String) (h_precond : reverse
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_12600_codeexercises_112600

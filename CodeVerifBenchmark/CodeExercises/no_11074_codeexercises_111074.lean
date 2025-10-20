@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_11074_codeexercises_111074
+
+
 -- Precondition definitions
 @[reducible, simp]
 def remove_duplicates_from_dictionary_precond (dictionary : List (String × Nat)) : Prop :=
@@ -50,3 +53,5 @@ theorem remove_duplicates_from_dictionary_postcond_satisfied (dictionary: List (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_11074_codeexercises_111074

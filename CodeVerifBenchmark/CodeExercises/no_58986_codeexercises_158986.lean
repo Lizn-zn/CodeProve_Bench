@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_58986_codeexercises_158986
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -46,3 +49,5 @@ theorem check_temperature_postcond_satisfied (temperature_list: List Float) (thr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_58986_codeexercises_158986

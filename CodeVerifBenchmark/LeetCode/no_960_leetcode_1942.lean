@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_960_leetcode_1942
+
+
 -- Precondition auxiliary definitions
 def valid_times_list : List (List Nat) → Prop
   | [] => True
@@ -169,3 +172,5 @@ theorem find_chair_for_friend_postcond_satisfied (times: List (List Nat)) (targe
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_960_leetcode_1942

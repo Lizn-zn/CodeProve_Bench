@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1282_p02021
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxWorkPerDay_precond (n : Nat) (tasks : List Nat) : Prop :=
@@ -73,3 +76,5 @@ theorem maxWorkPerDay_postcond_satisfied (n: Nat) (tasks: List Nat) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1282_p02021

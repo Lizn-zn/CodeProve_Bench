@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6849_codeexercises_106849
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sum_first_n_numbers_precond (n : Nat) : Prop :=
@@ -31,3 +34,5 @@ theorem sum_first_n_numbers_correct (n : Nat) (h_precond : sum_first_n_numbers_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6849_codeexercises_106849

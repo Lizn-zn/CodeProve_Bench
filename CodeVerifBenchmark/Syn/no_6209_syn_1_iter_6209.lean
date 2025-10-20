@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6209_syn_1_iter_6209
+
+
 -- Precondition definitions
 @[reducible, simp]
 def compute_pair_analysis_precond (pairs : List (Int × Int)) : Prop :=
@@ -58,3 +61,5 @@ theorem compute_pair_analysis_postcond_satisfied (pairs: List (Int × Int)) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6209_syn_1_iter_6209

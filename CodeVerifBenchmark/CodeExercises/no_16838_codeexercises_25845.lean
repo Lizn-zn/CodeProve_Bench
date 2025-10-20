@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_16838_codeexercises_25845
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_appointments_precond (vet_schedule : List (String × String × String)) (day : String) : Prop :=
@@ -45,3 +48,5 @@ theorem check_appointments_postcond_satisfied (vet_schedule: List (String × Str
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_16838_codeexercises_25845

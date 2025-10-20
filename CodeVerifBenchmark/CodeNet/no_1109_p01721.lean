@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1109_p01721
+
+
 -- Precondition definitions
 @[reducible, simp]
 def waveAttack_precond (w : Nat) (h : Nat) (v : Nat) (t : Nat) (x : Nat) (y : Nat) (p : Nat) (q : Nat) : Prop :=
@@ -131,3 +134,5 @@ theorem waveAttack_postcond_satisfied (w: Nat) (h: Nat) (v: Nat) (t: Nat) (x: Na
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1109_p01721

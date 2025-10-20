@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9794_syn_1_iter_9794
+
+
 -- Precondition definitions
 @[reducible, simp]
 def repeat_chars_precond (pairs : List (Char × Nat)) : Prop :=
@@ -42,3 +45,5 @@ theorem repeat_chars_postcond_satisfied (pairs: List (Char × Nat)) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_9794_syn_1_iter_9794

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9469_codeexercises_14504
+
+
 -- Precondition definitions
 @[reducible, simp]
 def access_elements_modulus_precond (athlete_list : List Int) : Prop :=
@@ -46,3 +49,5 @@ theorem access_elements_modulus_postcond_satisfied (athlete_list: List Int) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_9469_codeexercises_14504

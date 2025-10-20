@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3624_syn_1_iter_3624
+
+
 -- Precondition definitions
 @[reducible, simp]
 def replace_chars_at_indices_precond (arr : Array Char) (c : Char) (indices : List Int) : Prop :=
@@ -62,3 +65,5 @@ theorem replace_chars_at_indices_postcond_satisfied (arr: Array Char) (c: Char) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_3624_syn_1_iter_3624

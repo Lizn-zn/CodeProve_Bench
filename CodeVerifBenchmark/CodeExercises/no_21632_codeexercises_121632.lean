@@ -1,6 +1,9 @@
 import Mathlib.Data.List.Basic
 import Mathlib.Data.String.Basic
 
+namespace no_21632_codeexercises_121632
+
+
 -- Precondition definitions
 @[reducible, simp]
 def article_word_frequency_precond (article : String) (threshold : Nat) : Prop :=
@@ -53,3 +56,5 @@ theorem article_word_frequency_postcond_satisfied (article: String) (threshold: 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_21632_codeexercises_121632

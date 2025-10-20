@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_499_leetcode_625
+
+
 -- Precondition auxiliary definitions
 def digitsMul : Nat → Nat
   | 0 => 0
@@ -101,3 +104,5 @@ theorem smallestFactorization_postcond_satisfied (num: Nat) (h_precond : smalles
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_499_leetcode_625

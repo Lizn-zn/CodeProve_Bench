@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8520_syn_1_iter_8520
+
+
 -- Precondition definitions
 @[reducible, simp]
 def extract_and_concat_subarrays_precond (arr : Array Char) (indices : List (Nat × Nat)) : Prop :=
@@ -78,3 +81,4 @@ theorem extract_and_concat_subarrays_postcond_satisfied (arr: Array Char) (indic
   sorry
   -- !benchmark @end proof
 
+end no_8520_syn_1_iter_8520

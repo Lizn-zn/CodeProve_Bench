@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_544_leetcode_1003
+
+
 -- Precondition auxiliary definitions
 /-- A stack-based characterization of valid strings.
     A string is valid iff it reduces to empty string by repeatedly removing "abc".
@@ -99,3 +102,4 @@ theorem isValid_postcond_satisfied (s: String) (h_precond : isValid_precond (s))
   sorry
   -- !benchmark @end proof
 
+end no_544_leetcode_1003

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_3861_syn_1_iter_3861
+
+
 -- Precondition definitions
 @[reducible, simp]
 def finset_to_sorted_list_precond (s : Finset Nat) : Prop :=
@@ -37,3 +40,4 @@ theorem finset_to_sorted_list_postcond_satisfied (s: Finset Nat) (h_precond : fi
   sorry
   -- !benchmark @end proof
 
+end no_3861_syn_1_iter_3861

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1414_p02270
+
+
 -- Precondition definitions
 @[reducible, simp]
 def canLoadWithCapacity_precond (capacity : Nat) (weights : List Nat) (numTrucks : Nat) : Prop :=
@@ -75,3 +78,5 @@ theorem canLoadWithCapacity_postcond_satisfied (capacity: Nat) (weights: List Na
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1414_p02270

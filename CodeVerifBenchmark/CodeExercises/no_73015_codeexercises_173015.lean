@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_73015_codeexercises_173015
+
+
 -- Precondition auxiliary definitions
 structure PatientData where
   sessions : List Nat
@@ -58,3 +61,5 @@ theorem evaluate_patient_progress_postcond_satisfied (patient_name: String) (dur
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_73015_codeexercises_173015

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_71913_codeexercises_171913
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_duplicate_genes_precond (gene_list : List String) : Prop :=
@@ -44,3 +47,5 @@ theorem find_duplicate_genes_postcond_satisfied (gene_list: List String) (h_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_71913_codeexercises_171913

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1216_leetcode_2431
+
+
 -- Precondition auxiliary definitions
 /-- A helper inductive predicate to define valid selections of fruits with associated prices,
 tastiness, coupons used, and total cost. -/
@@ -108,3 +111,5 @@ theorem maxTastiness_postcond_satisfied (price: List Nat) (tastiness: List Nat) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1216_leetcode_2431

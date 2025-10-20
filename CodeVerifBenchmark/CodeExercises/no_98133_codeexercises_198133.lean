@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_98133_codeexercises_198133
+
+
 -- Precondition definitions
 @[reducible, simp]
 def check_if_empty_list_precond (list_1 : List α) (list_2 : List β) (list_3 : List γ) : Prop :=
@@ -33,3 +36,4 @@ theorem check_if_empty_list_postcond_satisfied (list_1: List α) (list_2: List �
   sorry
   -- !benchmark @end proof
 
+end no_98133_codeexercises_198133

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_63832_codeexercises_163832
+
+
 -- Precondition definitions
 @[reducible, simp]
 def nested_loop_triangle_precond (num_rows : Nat) : Prop :=
@@ -58,3 +61,5 @@ theorem nested_loop_triangle_postcond_satisfied (num_rows: Nat) (h_precond : nes
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_63832_codeexercises_163832

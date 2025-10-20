@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7676_syn_1_iter_7676
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_chars_in_range_precond (strings : List String) (n : Nat) (m : Nat) : Prop :=
@@ -46,3 +49,5 @@ theorem count_chars_in_range_postcond_satisfied (strings: List String) (n: Nat) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_7676_syn_1_iter_7676

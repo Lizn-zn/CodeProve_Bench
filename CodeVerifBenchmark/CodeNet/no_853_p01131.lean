@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_853_p01131
+
+
 -- Postcondition auxiliary definitions
 -- Define the button mappings for the keitai phone
 def buttonMap : Fin 10 → List Char
@@ -136,3 +139,5 @@ theorem decodeKeitaiMessage_postcond_satisfied (input: String) (h_precond : deco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_853_p01131

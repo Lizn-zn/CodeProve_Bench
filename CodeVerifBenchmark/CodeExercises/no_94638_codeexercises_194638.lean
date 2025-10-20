@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_94638_codeexercises_194638
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -59,3 +62,5 @@ theorem calculate_polar_coordinate_postcond_satisfied (complex_number: ℂ) (h_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_94638_codeexercises_194638

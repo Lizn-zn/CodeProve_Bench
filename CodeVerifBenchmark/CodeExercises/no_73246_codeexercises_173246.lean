@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_73246_codeexercises_173246
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_not_equal_index_precond (elements : List (Nat ⊕ String)) : Prop :=
@@ -60,3 +63,4 @@ theorem find_not_equal_index_postcond_satisfied (elements: List (Nat ⊕ String)
   sorry
   -- !benchmark @end proof
 
+end no_73246_codeexercises_173246

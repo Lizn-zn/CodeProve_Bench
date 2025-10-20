@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_85402_codeexercises_185402
+
+
 -- Precondition definitions
 @[reducible, simp]
 def add_positive_integers_precond (total : Nat) (numbers : List Nat) : Prop :=
@@ -37,3 +40,4 @@ theorem add_positive_integers_postcond_satisfied (total: Nat) (numbers: List Nat
   sorry
   -- !benchmark @end proof
 
+end no_85402_codeexercises_185402

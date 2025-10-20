@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2107_p03077
+
+
 -- Precondition definitions
 @[reducible, simp]
 def minTimeToReachCity6_precond (n : Nat) (a : Nat) (b : Nat) (c : Nat) (d : Nat) (e : Nat) : Prop :=
@@ -66,3 +69,5 @@ theorem minTimeToReachCity6_postcond_satisfied (n: Nat) (a: Nat) (b: Nat) (c: Na
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2107_p03077

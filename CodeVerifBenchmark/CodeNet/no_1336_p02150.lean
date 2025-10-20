@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1336_p02150
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculateMaxMilk_precond (a : Nat) (b : Nat) (x : Nat) : Prop :=
@@ -52,3 +55,4 @@ theorem calculateMaxMilk_postcond_satisfied (a: Nat) (b: Nat) (x: Nat) (h_precon
   sorry
   -- !benchmark @end proof
 
+end no_1336_p02150

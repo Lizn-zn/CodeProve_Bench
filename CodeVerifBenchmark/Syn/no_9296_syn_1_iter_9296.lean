@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_9296_syn_1_iter_9296
+
+
 -- Precondition definitions
 @[reducible, simp]
 def convert_strings_to_codepoints_precond (strings : List String) : Prop :=
@@ -37,3 +40,5 @@ theorem convert_strings_to_codepoints_postcond_satisfied (strings: List String) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_9296_syn_1_iter_9296

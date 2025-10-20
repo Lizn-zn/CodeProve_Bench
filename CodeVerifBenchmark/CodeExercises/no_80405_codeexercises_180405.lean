@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_80405_codeexercises_180405
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_sales_report_precond (sales_data : List (String × List Nat)) : Prop :=
@@ -52,3 +55,5 @@ theorem get_sales_report_postcond_satisfied (sales_data: List (String × List Na
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_80405_codeexercises_180405

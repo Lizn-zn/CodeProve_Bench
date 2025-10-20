@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_687_leetcode_1361
+
+
 -- Precondition auxiliary definitions
 def childrenLengthEq (n : Nat) (leftChild : List Int) (rightChild : List Int) : Prop :=
   leftChild.length = n ∧ rightChild.length = n
@@ -108,3 +111,5 @@ theorem validateBinaryTreeNodes_postcond_satisfied (n: Nat) (leftChild: List Int
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_687_leetcode_1361

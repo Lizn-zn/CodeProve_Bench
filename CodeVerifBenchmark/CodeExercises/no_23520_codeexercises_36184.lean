@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_23520_codeexercises_36184
+
+
 -- Precondition definitions
 @[reducible, simp]
 def intersect_intervals_precond (interval1 : Int × Int) (interval2 : Int × Int) : Prop :=
@@ -52,3 +55,4 @@ theorem intersect_intervals_postcond_satisfied (interval1: Int × Int) (interval
   sorry
   -- !benchmark @end proof
 
+end no_23520_codeexercises_36184

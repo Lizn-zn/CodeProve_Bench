@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_59834_codeexercises_159834
+
+
 -- Precondition definitions
 @[reducible, simp]
 def intersection_not_equal_while_loop_precond (list1 : List Nat) (list2 : List Nat) : Prop :=
@@ -67,3 +70,5 @@ theorem intersection_not_equal_while_loop_postcond_satisfied (list1: List Nat) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_59834_codeexercises_159834

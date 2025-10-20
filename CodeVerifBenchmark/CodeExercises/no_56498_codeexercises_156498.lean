@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_56498_codeexercises_156498
+
+
 -- Precondition definitions
 @[reducible, simp]
 def flatten_matrix_precond (matrix : List (List Nat)) : Prop :=
@@ -40,3 +43,5 @@ theorem flatten_matrix_postcond_satisfied (matrix: List (List Nat)) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_56498_codeexercises_156498

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4730_syn_1_iter_4730
+
+
 -- Precondition definitions
 @[reducible, simp]
 def filter_string_lengths_precond (n : UInt8) (strs : List String) : Prop :=
@@ -34,3 +37,5 @@ theorem filter_string_lengths_postcond_satisfied (n: UInt8) (strs: List String) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4730_syn_1_iter_4730

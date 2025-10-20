@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_193_leetcode_226
+
+
 -- Precondition auxiliary definitions
 inductive TreeNode where
   | nil : TreeNode
@@ -57,3 +60,4 @@ theorem invertTree_postcond_satisfied (root: TreeNode) (h_precond : invertTree_p
   sorry
   -- !benchmark @end proof
 
+end no_193_leetcode_226

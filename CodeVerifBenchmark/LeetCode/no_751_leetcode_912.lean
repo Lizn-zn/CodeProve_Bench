@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_751_leetcode_912
+
+
 -- Precondition auxiliary definitions
 /-- Checks if an array is sorted in ascending order -/
 def IsSorted (arr : Array Int) : Prop :=
@@ -79,3 +82,4 @@ theorem sortArray_postcond_satisfied (nums: Array Int) (h_precond : sortArray_pr
   sorry
   -- !benchmark @end proof
 
+end no_751_leetcode_912

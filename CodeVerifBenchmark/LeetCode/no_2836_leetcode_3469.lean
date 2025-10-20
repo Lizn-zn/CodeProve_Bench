@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2836_leetcode_3469
+
+
 -- Precondition auxiliary definitions
 def minCostToRemoveAll_precond_aux1 (nums : List Nat) : Prop :=
   nums ≠ [] ∧ ∀ x ∈ nums, x > 0
@@ -110,3 +113,5 @@ theorem minCostToRemoveAll_postcond_satisfied (nums: List Nat) (h_precond : minC
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2836_leetcode_3469

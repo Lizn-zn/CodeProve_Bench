@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_86881_codeexercises_186881
+
+
 -- Precondition definitions
 @[reducible, simp]
 def compute_average_age_precond (patients : List (String × Nat)) : Prop :=
@@ -50,3 +53,5 @@ theorem compute_average_age_postcond_satisfied (patients: List (String × Nat)) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_86881_codeexercises_186881

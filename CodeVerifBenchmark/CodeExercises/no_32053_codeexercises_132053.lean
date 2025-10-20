@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_32053_codeexercises_132053
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_unique_chars_precond (word : String) : Prop :=
@@ -37,3 +40,5 @@ theorem count_unique_chars_postcond_satisfied (word: String) (h_precond : count_
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_32053_codeexercises_132053

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1235_syn_1_iter_1235
+
+
 -- Precondition definitions
 @[reducible, simp]
 def zip_strings_with_ints_precond (strings : List String) (pairs : List (Int × Nat)) : Prop :=
@@ -37,3 +40,4 @@ theorem zip_strings_with_ints_postcond_satisfied (strings: List String) (pairs: 
   sorry
   -- !benchmark @end proof
 
+end no_1235_syn_1_iter_1235

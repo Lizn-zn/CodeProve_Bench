@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_747_syn_1_iter_747
+
+
 -- Precondition definitions
 @[reducible, simp]
 def process_mixed_array_precond (arr : Array (Sum Int (Sum UInt8 Nat))) : Prop :=
@@ -75,3 +78,5 @@ theorem process_mixed_array_postcond_satisfied (arr: Array (Sum Int (Sum UInt8 N
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_747_syn_1_iter_747

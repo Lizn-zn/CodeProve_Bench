@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1195_p01866
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxHammingDistance_precond (n : Nat) (x : String) (d : Nat) : Prop :=
@@ -115,3 +118,4 @@ theorem maxHammingDistance_postcond_satisfied (n: Nat) (x: String) (d: Nat) (h_p
   sorry
   -- !benchmark @end proof
 
+end no_1195_p01866

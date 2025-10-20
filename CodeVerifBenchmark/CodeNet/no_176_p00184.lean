@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_176_p00184
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countVisitorsByAgeGroup_precond (ages : List Nat) : Prop :=
@@ -63,3 +66,5 @@ theorem countVisitorsByAgeGroup_postcond_satisfied (ages: List Nat) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_176_p00184

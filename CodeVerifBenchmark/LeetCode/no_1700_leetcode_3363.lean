@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1700_leetcode_3363
+
+
 -- Precondition auxiliary definitions
 def isValidFruitsGrid (fruits : List (List Nat)) : Prop :=
   let n := fruits.length
@@ -165,3 +168,5 @@ theorem maxFruitsInDungeon_postcond_satisfied (fruits: List (List Nat)) (h_preco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1700_leetcode_3363

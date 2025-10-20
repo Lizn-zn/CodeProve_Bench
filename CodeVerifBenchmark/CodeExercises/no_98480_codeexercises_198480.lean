@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_98480_codeexercises_198480
+
+
 -- Precondition auxiliary definitions
 inductive ValidFuelType : Type where
   | wood : ValidFuelType
@@ -63,3 +66,4 @@ theorem extinguish_fire_postcond_satisfied (fuel_type: String) (fire_size: Float
   sorry
   -- !benchmark @end proof
 
+end no_98480_codeexercises_198480

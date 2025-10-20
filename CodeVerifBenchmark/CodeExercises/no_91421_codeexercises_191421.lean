@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_91421_codeexercises_191421
+
+
 -- Precondition definitions
 @[reducible, simp]
 def create_empty_lists_and_complex_conjugate_precond (pixels : List (List ℂ)) : Prop :=
@@ -39,3 +42,5 @@ theorem create_empty_lists_and_complex_conjugate_postcond_satisfied (pixels: Lis
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_91421_codeexercises_191421

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_76685_codeexercises_176685
+
+
 -- Precondition definitions
 @[reducible, simp]
 def count_negative_elements_precond (matrix : List (List (Option Int))) : Prop :=
@@ -52,3 +55,5 @@ theorem count_negative_elements_postcond_satisfied (matrix: List (List (Option I
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_76685_codeexercises_176685

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2270_p03258
+
+
 -- Precondition definitions
 @[reducible, simp]
 def countReachableStrings_precond (s : String) : Prop :=
@@ -82,3 +85,5 @@ theorem countReachableStrings_postcond_satisfied (s: String) (h_precond : countR
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2270_p03258

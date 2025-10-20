@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_18049_codeexercises_27739
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -52,3 +55,5 @@ theorem chef_specialty_order_postcond_satisfied (ingredients: List String) (h_pr
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_18049_codeexercises_27739

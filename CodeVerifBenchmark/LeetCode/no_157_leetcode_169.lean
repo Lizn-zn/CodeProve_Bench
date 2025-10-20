@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_157_leetcode_169
+
+
 -- Precondition auxiliary definitions
 def count_occurrences (nums : Array Int) (x : Int) : Nat :=
   nums.foldl (fun acc elem => if elem = x then acc + 1 else acc) 0
@@ -54,3 +57,4 @@ theorem majorityElement_postcond_satisfied (nums: Array Int) (h_precond : majori
   sorry
   -- !benchmark @end proof
 
+end no_157_leetcode_169

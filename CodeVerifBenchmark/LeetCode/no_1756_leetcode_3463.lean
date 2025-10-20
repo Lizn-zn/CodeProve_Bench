@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1756_leetcode_3463
+
+
 -- Precondition auxiliary definitions
 def digitsConverge_step (s : String) : String :=
   if s.length < 2 then s else
@@ -56,3 +59,5 @@ def digitsConverge_postcond (s : String) (result : Bool) (h_precond : digitsConv
 theorem digitsConverge_postcond_satisfied (s : String) (h_precond : digitsConverge_precond s) :
     digitsConverge_postcond s (digitsConverge s h_precond) h_precond := by
   sorry
+
+end no_1756_leetcode_3463

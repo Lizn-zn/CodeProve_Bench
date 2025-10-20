@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_31725_codeexercises_131725
+
+
 -- Precondition definitions
 @[reducible, simp]
 def tuple_list_intersection_precond (t : List α) (lst : List α) : Prop :=
@@ -37,3 +40,5 @@ theorem tuple_list_intersection_postcond_satisfied [DecidableEq α] (t: List α)
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_31725_codeexercises_131725

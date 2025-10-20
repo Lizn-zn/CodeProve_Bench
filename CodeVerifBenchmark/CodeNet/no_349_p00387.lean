@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_349_p00387
+
+
 -- Precondition definitions
 @[reducible, simp]
 def partyDress_precond (numDresses : Nat) (numParties : Nat) : Prop :=
@@ -49,3 +52,4 @@ theorem partyDress_postcond_satisfied (numDresses: Nat) (numParties: Nat) (h_pre
   sorry
   -- !benchmark @end proof
 
+end no_349_p00387

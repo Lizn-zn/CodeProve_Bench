@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_828_leetcode_1657
+
+
 -- Precondition auxiliary definitions
 def charCount (s : String) : List Nat :=
   let counts := s.data.foldl (fun (acc : Array Nat) (c : Char) =>
@@ -74,3 +77,4 @@ theorem closeStrings_postcond_satisfied (word1: String) (word2: String) (h_preco
   sorry
   -- !benchmark @end proof
 
+end no_828_leetcode_1657

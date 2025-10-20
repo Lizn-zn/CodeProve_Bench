@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_31460_codeexercises_48469
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -67,3 +70,5 @@ theorem find_actor_postcond_satisfied (actresses: List String) (actor: Option St
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_31460_codeexercises_48469

@@ -106,4 +106,3 @@ theorem hireWorkers_postcond_satisfied (costs: List Nat) (k: Nat) (candidates: N
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
-

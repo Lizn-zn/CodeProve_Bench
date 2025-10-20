@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_8361_codeexercises_12806
+
+
 -- Precondition definitions
 @[reducible, simp]
 def compare_tuples_precond (economics_data : List (Nat × Nat × Nat)) (value : Nat) : Prop :=
@@ -47,3 +50,5 @@ theorem compare_tuples_postcond_satisfied (economics_data: List (Nat × Nat × N
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_8361_codeexercises_12806

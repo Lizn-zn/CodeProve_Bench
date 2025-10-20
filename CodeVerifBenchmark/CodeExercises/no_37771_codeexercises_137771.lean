@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_37771_codeexercises_137771
+
+
 -- Precondition definitions
 @[reducible, simp]
 def delete_odd_numbers_precond (numbers : List Nat) : Prop :=
@@ -35,3 +38,5 @@ theorem delete_odd_numbers_postcond_satisfied (numbers: List Nat) (h_precond : d
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_37771_codeexercises_137771

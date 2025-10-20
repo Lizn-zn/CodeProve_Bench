@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7578_syn_1_iter_7578
+
+
 -- Precondition definitions
 @[reducible, simp]
 def pair_with_indices_precond (nums : List Nat) : Prop :=
@@ -45,3 +48,4 @@ theorem pair_with_indices_postcond_satisfied (nums: List Nat) (h_precond : pair_
   sorry
   -- !benchmark @end proof
 
+end no_7578_syn_1_iter_7578

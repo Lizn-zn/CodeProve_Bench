@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2637_leetcode_3238
+
+
 -- Precondition auxiliary definitions
 def playerBounds (n : Nat) (pick : List (Nat × Nat)) : Prop :=
   ∀ p : Nat × Nat, p ∈ pick → p.1 < n
@@ -47,3 +50,5 @@ theorem countWinningPlayers_postcond_satisfied (n: Nat) (pick: List (Nat × Nat)
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2637_leetcode_3238

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1650_leetcode_3296
+
+
 -- Precondition auxiliary definitions
 /-- The cost for a worker with base time `w` to reduce the mountain height by `x` units. -/
 def workCost (w : Nat) (x : Nat) : Nat :=
@@ -83,3 +86,5 @@ theorem minTimeToReduceMountain_postcond_satisfied (mountainHeight: Nat) (worker
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1650_leetcode_3296

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2468_p03480
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxOperationLength_precond (s : String) : Prop :=
@@ -91,3 +94,5 @@ theorem maxOperationLength_postcond_satisfied (s: String) (h_precond : maxOperat
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2468_p03480

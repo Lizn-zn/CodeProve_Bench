@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_4387_syn_1_iter_4387
+
+
 -- Precondition definitions
 @[reducible, simp]
 def process_strings_precond (lengths : Array Nat) (char_pairs : List (Char × Nat)) (strings : List String) : Prop :=
@@ -77,3 +80,5 @@ theorem process_strings_postcond_satisfied (lengths: Array Nat) (char_pairs: Lis
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_4387_syn_1_iter_4387

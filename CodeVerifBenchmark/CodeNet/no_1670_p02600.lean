@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1670_p02600
+
+
 -- Precondition definitions
 @[reducible, simp]
 def getRatingKyu_precond (rating : Nat) : Prop :=
@@ -46,3 +49,4 @@ theorem getRatingKyu_postcond_satisfied (rating: Nat) (h_precond : getRatingKyu_
   sorry
   -- !benchmark @end proof
 
+end no_1670_p02600

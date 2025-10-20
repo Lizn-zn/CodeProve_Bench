@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_365_p00412
+
+
 -- Precondition auxiliary definitions
 -- Helper function to check if an operation is valid
 def isValidOperation (lanes : List (List Nat)) (op : Nat × Nat) : Prop :=
@@ -130,3 +133,5 @@ theorem gasStationSimulation_postcond_satisfied (n: Nat) (operations: List (Nat 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_365_p00412

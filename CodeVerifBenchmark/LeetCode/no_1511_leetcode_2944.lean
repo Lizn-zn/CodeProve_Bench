@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1511_leetcode_2944
+
+
 -- Precondition auxiliary definitions
 /-- A helper function to compute the minimum coins required using dynamic programming -/
 def minCoinsToAcquireFruits.dp (prices : List Nat) : List Nat → Nat
@@ -82,3 +85,4 @@ theorem minCoinsToAcquireFruits_postcond_satisfied (prices: List Nat) (h_precond
   sorry
   -- !benchmark @end proof
 
+end no_1511_leetcode_2944

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_39768_codeexercises_139768
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_negative_intersection_precond (range1 : List Int) (range2 : List Int) : Prop :=
@@ -48,3 +51,5 @@ theorem find_negative_intersection_postcond_satisfied (range1: List Int) (range2
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_39768_codeexercises_139768

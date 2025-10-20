@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_6136_syn_1_iter_6136
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_elements_precond (nat_set : Finset ℕ) (int_set : Finset ℤ) : Prop :=
@@ -43,3 +46,5 @@ theorem find_common_elements_postcond_satisfied (nat_set: Finset ℕ) (int_set: 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_6136_syn_1_iter_6136

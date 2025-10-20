@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2585_syn_1_iter_2585
+
+
 -- Precondition definitions
 @[reducible, simp]
 def convert_nat_set_to_float_list_precond (s : Finset ℕ) : Prop :=
@@ -34,3 +37,5 @@ theorem convert_nat_set_to_float_list_postcond_satisfied (s: Finset ℕ) (h_prec
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2585_syn_1_iter_2585

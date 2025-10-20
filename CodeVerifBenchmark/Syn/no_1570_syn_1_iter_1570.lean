@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1570_syn_1_iter_1570
+
+
 -- Precondition definitions
 @[reducible, simp]
 def filter_natural_numbers_precond (n : Nat) (arr : Array Nat) (x : Int) (k : Nat) : Prop :=
@@ -44,3 +47,5 @@ theorem filter_natural_numbers_postcond_satisfied (n: Nat) (arr: Array Nat) (x: 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1570_syn_1_iter_1570

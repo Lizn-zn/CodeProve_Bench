@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_5128_syn_1_iter_5128
+
+
 -- Precondition definitions
 @[reducible, simp]
 def process_char_nat_pairs_precond (input_list : List (Char × Nat)) : Prop :=
@@ -35,3 +38,5 @@ theorem process_char_nat_pairs_postcond_satisfied (input_list : List (Char × Na
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_5128_syn_1_iter_5128

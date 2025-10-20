@@ -16,14 +16,14 @@ def remove_duplicates (names : List String) (h_precond : remove_duplicates_preco
   -- !benchmark @start code
   match names with
   | [] => []
-  | x :: xs => 
+  | x :: xs =>
     let filtered := remove_duplicates xs h_precond
     if x ∈ filtered then filtered else x :: filtered
   -- !benchmark @end code
 
 
 -- Postcondition auxiliary definitions
-def List.NoDuplicates {α : Type} [DecidableEq α] (l : List α) : Prop := 
+def List.NoDuplicates {α : Type} [DecidableEq α] (l : List α) : Prop :=
   ∀ (i j : Nat) (hi : i < l.length) (hj : j < l.length), i < j → l.get ⟨i, hi⟩ ≠ l.get ⟨j, hj⟩
 
 def List.toSet (l : List String) : Set String := {x | x ∈ l}

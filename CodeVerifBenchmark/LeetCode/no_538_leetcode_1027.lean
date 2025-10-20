@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_538_leetcode_1027
+
+
 -- Precondition auxiliary definitions
 def IsArithmeticSequence (lst : List Nat) : Prop :=
   match lst with
@@ -97,3 +100,5 @@ theorem longestArithSeqLength_postcond_satisfied (nums: List Nat) (h_precond : l
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_538_leetcode_1027

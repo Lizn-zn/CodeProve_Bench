@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_605_p00710
+
+
 -- Precondition definitions
 @[reducible, simp]
 def hanafudaShuffle_precond (n : Nat) (r : Nat) (operations : List (Nat × Nat)) : Prop :=
@@ -73,3 +76,5 @@ theorem hanafudaShuffle_postcond_satisfied (n: Nat) (r: Nat) (operations: List (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_605_p00710

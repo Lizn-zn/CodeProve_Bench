@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1524_p02390
+
+
 -- Precondition definitions
 @[reducible, simp]
 def convertSecondsToTime_precond (s : Nat) : Prop :=
@@ -46,3 +49,4 @@ theorem convertSecondsToTime_postcond_satisfied (s: Nat) (h_precond : convertSec
   sorry
   -- !benchmark @end proof
 
+end no_1524_p02390

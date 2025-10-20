@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_60412_codeexercises_160412
+
+
 -- Precondition definitions
 @[reducible, simp]
 def calculate_budgets_precond (budgets : List Nat) (expenses : List Nat) : Prop :=
@@ -41,3 +44,4 @@ theorem calculate_budgets_postcond_satisfied (budgets: List Nat) (expenses: List
   sorry
   -- !benchmark @end proof
 
+end no_60412_codeexercises_160412

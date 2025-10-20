@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2275_leetcode_2789
+
+
 -- Precondition auxiliary definitions
 def maxArrayValue_process (nums : List Nat) : Nat :=
   match nums with
@@ -66,3 +69,4 @@ theorem maxArrayValue_postcond_satisfied (nums: List Nat) (h_precond : maxArrayV
   sorry
   -- !benchmark @end proof
 
+end no_2275_leetcode_2789

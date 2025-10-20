@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_13550_codeexercises_20832
+
+
 -- Precondition definitions
 @[reducible, simp]
 def concatenate_repeat_tuples_precond (tuples : List (α × β)) (n : Nat) : Prop :=
@@ -40,3 +43,5 @@ theorem concatenate_repeat_tuples_postcond_satisfied (tuples: List (α × β)) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_13550_codeexercises_20832

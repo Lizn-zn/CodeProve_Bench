@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_46618_codeexercises_146618
+
+
 -- Precondition auxiliary definitions
 structure Customer where
   hasMadePurchase : Bool
@@ -61,3 +64,5 @@ theorem remove_unwanted_customers_postcond_satisfied (customer_list: List Custom
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_46618_codeexercises_146618

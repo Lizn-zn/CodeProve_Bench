@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_80625_codeexercises_180625
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_rainy_cities_precond (cities : List String) (weather_data : List (String × String)) : Prop :=
@@ -49,3 +52,5 @@ theorem find_rainy_cities_postcond_satisfied (cities: List String) (weather_data
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_80625_codeexercises_180625

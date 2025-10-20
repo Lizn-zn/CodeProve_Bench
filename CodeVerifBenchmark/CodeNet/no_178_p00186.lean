@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_178_p00186
+
+
 -- Precondition definitions
 @[reducible, simp]
 def chickenPurchase_precond (q1 : Nat) (b : Nat) (c1 : Nat) (c2 : Nat) (q2 : Nat) : Prop :=
@@ -101,3 +104,4 @@ theorem chickenPurchase_postcond_satisfied (q1: Nat) (b: Nat) (c1: Nat) (c2: Nat
   sorry
   -- !benchmark @end proof
 
+end no_178_p00186

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_22958_codeexercises_122958
+
+
 -- Precondition definitions
 @[reducible, simp]
 def capitalize_words_precond (set_of_words : Set String) : Prop :=
@@ -39,3 +42,5 @@ theorem capitalize_words_postcond_satisfied (set_of_words: Set String) (h_precon
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_22958_codeexercises_122958

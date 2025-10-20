@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_7594_syn_1_iter_7594
+
+
 -- Precondition definitions
 @[reducible, simp]
 def sum_divisible_by_3_or_5_precond (n : Int) : Prop :=
@@ -70,3 +73,5 @@ theorem sum_divisible_by_3_or_5_postcond_satisfied (n: Int) (h_precond : sum_div
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_7594_syn_1_iter_7594

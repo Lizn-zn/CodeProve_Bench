@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_99365_codeexercises_199365
+
+
 -- Precondition definitions
 @[reducible, simp]
 def update_balance_precond (accounts : List Nat) (index : Nat) (amount : Int) : Prop :=
@@ -54,3 +57,5 @@ theorem update_balance_postcond_satisfied (accounts: List Nat) (index: Nat) (amo
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_99365_codeexercises_199365

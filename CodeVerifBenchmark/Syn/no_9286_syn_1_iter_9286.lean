@@ -1,6 +1,9 @@
 import Mathlib.Data.List.Basic
 import Mathlib.Data.List.Sort
 
+namespace no_9286_syn_1_iter_9286
+
+
 -- Precondition auxiliary definitions
 structure MinHeap (α : Type) [LE α] [DecidableRel ((· : α) ≤ ·)] where
   data : List α
@@ -104,3 +107,5 @@ theorem process_heap_operations_postcond_satisfied (operations: List (Prod Char 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_9286_syn_1_iter_9286

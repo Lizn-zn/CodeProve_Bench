@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_608_p00713
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -132,3 +135,4 @@ theorem maxPointsInCircle_postcond_satisfied (points: List (Float × Float)) (h_
   sorry
   -- !benchmark @end proof
 
+end no_608_p00713

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1515_leetcode_1864
+
+
 -- Precondition auxiliary definitions
 def countChar (s : String) (c : Char) : Nat :=
   s.data.foldl (fun acc ch => if ch = c then acc + 1 else acc) 0
@@ -109,3 +112,5 @@ theorem minSwaps_postcond_satisfied (s: String) (h_precond : minSwaps_precond (s
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1515_leetcode_1864

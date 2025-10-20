@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_97744_codeexercises_197744
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_elements_precond (tuple1 : List Nat) (tuple2 : List Nat) : Prop :=
@@ -53,3 +56,4 @@ theorem find_common_elements_postcond_satisfied (tuple1: List Nat) (tuple2: List
   sorry
   -- !benchmark @end proof
 
+end no_97744_codeexercises_197744

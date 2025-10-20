@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2482_p03494
+
+
 -- Precondition definitions
 @[reducible, simp]
 def maxDivisionOperations_precond (n : Nat) (numbers : List Nat) : Prop :=
@@ -60,3 +63,4 @@ theorem maxDivisionOperations_postcond_satisfied (n: Nat) (numbers: List Nat) (h
   sorry
   -- !benchmark @end proof
 
+end no_2482_p03494

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2073_codeexercises_3146
+
+
 -- Precondition definitions
 @[reducible, simp]
 def break_out_loop_xor_precond (lst1 : List Int) (lst2 : List Int) : Prop :=
@@ -69,3 +72,5 @@ theorem break_out_loop_xor_postcond_satisfied (lst1: List Int) (lst2: List Int) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2073_codeexercises_3146

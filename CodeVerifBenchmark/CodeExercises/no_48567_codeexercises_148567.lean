@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_48567_codeexercises_148567
+
+
 -- Precondition auxiliary definitions
 -- No auxiliary definitions needed for precondition
 
@@ -47,3 +50,5 @@ theorem calculate_max_weight_postcond_satisfied (load_capacity: Float) (loads_as
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_48567_codeexercises_148567

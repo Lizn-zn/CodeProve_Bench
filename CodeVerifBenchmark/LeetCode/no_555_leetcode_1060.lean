@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_555_leetcode_1060
+
+
 -- Precondition auxiliary definitions
 def isSortedUnique (nums : Array Int) : Prop :=
   ∀ i j : Nat, i < j → j < nums.size → nums[i]! < nums[j]!
@@ -74,3 +77,4 @@ theorem findKthMissing_postcond_satisfied (nums: Array Int) (k: Nat) (h_precond 
   sorry
   -- !benchmark @end proof
 
+end no_555_leetcode_1060

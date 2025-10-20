@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_17_syn_1_iter_17
+
+
 -- Precondition definitions
 @[reducible, simp]
 def construct_array_precond (int_arr : Array Int) (nat_arr : Array Nat) (nat_pair : Nat × Nat) (int_pairs : List (Int × Int)) : Prop :=
@@ -47,3 +50,4 @@ theorem construct_array_postcond_satisfied (int_arr: Array Int) (nat_arr: Array 
   sorry
   -- !benchmark @end proof
 
+end no_17_syn_1_iter_17

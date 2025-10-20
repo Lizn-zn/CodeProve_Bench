@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_81806_codeexercises_181806
+
+
 -- Precondition definitions
 @[reducible, simp]
 def remove_duplicate_expenses_precond (expenses : List String) : Prop :=
@@ -36,3 +39,4 @@ theorem remove_duplicate_expenses_postcond_satisfied (expenses: List String) (h_
   sorry
   -- !benchmark @end proof
 
+end no_81806_codeexercises_181806

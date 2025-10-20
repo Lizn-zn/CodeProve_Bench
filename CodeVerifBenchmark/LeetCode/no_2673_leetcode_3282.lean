@@ -1,4 +1,7 @@
 import Mathlib
+
+namespace no_2673_leetcode_3282
+
 open Array
 
 -- Precondition auxiliary definitions
@@ -72,3 +75,5 @@ theorem maxJumpScore_postcond_satisfied (nums: List Nat) (h_precond : maxJumpSco
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2673_leetcode_3282

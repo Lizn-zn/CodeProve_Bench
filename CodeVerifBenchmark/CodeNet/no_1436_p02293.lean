@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1436_p02293
+
+
 -- Precondition definitions
 @[reducible, simp]
 def parallelOrthogonal_precond (xp0 : Int) (yp0 : Int) (xp1 : Int) (yp1 : Int) (xp2 : Int) (yp2 : Int) (xp3 : Int) (yp3 : Int) : Prop :=
@@ -64,3 +67,5 @@ theorem parallelOrthogonal_postcond_satisfied (xp0: Int) (yp0: Int) (xp1: Int) (
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1436_p02293

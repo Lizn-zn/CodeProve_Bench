@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1760_leetcode_2150
+
+
 -- Precondition auxiliary definitions
 def count (nums : List Nat) (x : Nat) : Nat :=
   nums.filter (· = x) |>.length
@@ -42,3 +45,5 @@ theorem findLonely_postcond_satisfied (nums: List Nat) (h_precond : findLonely_p
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1760_leetcode_2150

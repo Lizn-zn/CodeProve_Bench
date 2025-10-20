@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2204_codeexercises_3338
+
+
 -- Precondition definitions
 @[reducible, simp]
 def find_common_factors_precond (num1 : Nat) (num2 : Nat) : Prop :=
@@ -47,3 +50,4 @@ theorem find_common_factors_postcond_satisfied (num1: Nat) (num2: Nat) (h_precon
   sorry
   -- !benchmark @end proof
 
+end no_2204_codeexercises_3338

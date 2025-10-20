@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1418_leetcode_2840
+
+
 -- Precondition auxiliary definitions
 -- Characters at even indices can be freely swapped among themselves.
 -- Characters at odd indices can be freely swapped among themselves.
@@ -60,3 +63,5 @@ theorem canMakeEqual_postcond_satisfied (s1 : String) (s2 : String) (h_precond :
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1418_leetcode_2840

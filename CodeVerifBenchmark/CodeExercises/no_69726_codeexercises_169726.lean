@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_69726_codeexercises_169726
+
+
 -- Precondition definitions
 @[reducible, simp]
 def tuple_subtraction_precond (tuple1 : List α) (tuple2 : List α) : Prop :=
@@ -36,3 +39,5 @@ theorem tuple_subtraction_postcond_satisfied [DecidableEq α] (tuple1: List α) 
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_69726_codeexercises_169726

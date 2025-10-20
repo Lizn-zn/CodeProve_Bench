@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1878_leetcode_2284
+
+
 -- Precondition auxiliary definitions
 def countWords (message : String) : Nat :=
   message.split (· = ' ') |>.length
@@ -62,3 +65,4 @@ theorem largestWordCountSender_postcond_satisfied (messages: List String) (sende
   sorry
   -- !benchmark @end proof
 
+end no_1878_leetcode_2284

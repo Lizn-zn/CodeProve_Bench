@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_2937_p04016
+
+
 -- Precondition definitions
 @[reducible, simp]
 def findSmallestBase_precond (n : Nat) (s : Nat) : Prop :=
@@ -119,3 +122,5 @@ theorem findSmallestBase_postcond_satisfied (n: Nat) (s: Nat) (h_precond : findS
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_2937_p04016

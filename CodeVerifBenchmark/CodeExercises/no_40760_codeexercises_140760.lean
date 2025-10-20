@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_40760_codeexercises_140760
+
+
 -- Precondition definitions
 @[reducible, simp]
 def unique_animals_precond (students : List (Prod String (List String))) : Prop :=
@@ -42,3 +45,5 @@ theorem unique_animals_postcond_satisfied (students: List (Prod String (List Str
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_40760_codeexercises_140760

@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_1205_leetcode_2410
+
+
 -- Precondition auxiliary definitions
 def IsMatching (players : List Nat) (trainers : List Nat) (matching : List (Nat × Nat)) : Prop :=
   -- Each pair (i, j) in matching satisfies players[i] ≤ trainers[j]
@@ -77,3 +80,5 @@ theorem max_matchings_postcond_satisfied (players: List Nat) (trainers: List Nat
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_1205_leetcode_2410

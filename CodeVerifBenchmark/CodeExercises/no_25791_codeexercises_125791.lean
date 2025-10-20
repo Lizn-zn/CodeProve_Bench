@@ -1,5 +1,8 @@
 import Mathlib
 
+namespace no_25791_codeexercises_125791
+
+
 -- Precondition definitions
 @[reducible, simp]
 def get_common_items_precond (dict1 : List (Prod String Nat)) (dict2 : List (Prod String Nat)) : Prop :=
@@ -48,3 +51,5 @@ theorem get_common_items_postcond_satisfied (dict1: List (Prod String Nat)) (dic
   -- !benchmark @start proof
   sorry
   -- !benchmark @end proof
+
+end no_25791_codeexercises_125791
