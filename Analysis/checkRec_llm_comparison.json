@@ -1,0 +1,104 @@
+[
+  {
+    "file": "no_1072_leetcode_1302.lean",
+    "path": "/local/home/zenali/CodeVerif-Lean4/CodeVerifBenchmark/LeetCode/no_1072_leetcode_1302.lean",
+    "checkRec": true,
+    "checkRec_indicators": [
+      "direct_recursion"
+    ],
+    "llm": true,
+    "llm_response": "Yes",
+    "match": true
+  },
+  {
+    "file": "no_1394_leetcode_2786.lean",
+    "path": "/local/home/zenali/CodeVerif-Lean4/CodeVerifBenchmark/LeetCode/no_1394_leetcode_2786.lean",
+    "checkRec": true,
+    "checkRec_indicators": [
+      "direct_recursion"
+    ],
+    "llm": true,
+    "llm_response": "Yes",
+    "match": true
+  },
+  {
+    "file": "no_2029_syn_1_iter_2029.lean",
+    "path": "/local/home/zenali/CodeVerif-Lean4/CodeVerifBenchmark/Syn/no_2029_syn_1_iter_2029.lean",
+    "checkRec": false,
+    "checkRec_indicators": [],
+    "llm": false,
+    "llm_response": "No",
+    "match": true
+  },
+  {
+    "file": "no_950_codeexercises_100950.lean",
+    "path": "/local/home/zenali/CodeVerif-Lean4/CodeVerifBenchmark/CodeExercises/no_950_codeexercises_100950.lean",
+    "checkRec": false,
+    "checkRec_indicators": [],
+    "llm": false,
+    "llm_response": "No",
+    "match": true
+  },
+  {
+    "file": "no_1195_p01866.lean",
+    "path": "/local/home/zenali/CodeVerif-Lean4/CodeVerifBenchmark/CodeNet/no_1195_p01866.lean",
+    "checkRec": true,
+    "checkRec_indicators": [
+      "direct_recursion"
+    ],
+    "llm": true,
+    "llm_response": "Yes",
+    "match": true
+  },
+  {
+    "file": "no_44625_codeexercises_144625.lean",
+    "path": "/local/home/zenali/CodeVerif-Lean4/CodeVerifBenchmark/CodeExercises/no_44625_codeexercises_144625.lean",
+    "checkRec": true,
+    "checkRec_indicators": [
+      "direct_recursion"
+    ],
+    "llm": true,
+    "llm_response": "Yes",
+    "match": true
+  },
+  {
+    "file": "no_1173_leetcode_1427.lean",
+    "path": "/local/home/zenali/CodeVerif-Lean4/CodeVerifBenchmark/LeetCode/no_1173_leetcode_1427.lean",
+    "checkRec": true,
+    "checkRec_indicators": [
+      "direct_recursion"
+    ],
+    "llm": true,
+    "llm_response": "Yes",
+    "match": true
+  },
+  {
+    "file": "no_4850_syn_1_iter_4850.lean",
+    "path": "/local/home/zenali/CodeVerif-Lean4/CodeVerifBenchmark/Syn/no_4850_syn_1_iter_4850.lean",
+    "checkRec": false,
+    "checkRec_indicators": [],
+    "llm": false,
+    "llm_response": "No",
+    "match": true
+  },
+  {
+    "file": "no_90119_codeexercises_190119.lean",
+    "path": "/local/home/zenali/CodeVerif-Lean4/CodeVerifBenchmark/CodeExercises/no_90119_codeexercises_190119.lean",
+    "checkRec": false,
+    "checkRec_indicators": [],
+    "llm": false,
+    "llm_response": "No",
+    "match": true
+  },
+  {
+    "file": "no_1396_leetcode_2790.lean",
+    "path": "/local/home/zenali/CodeVerif-Lean4/CodeVerifBenchmark/LeetCode/no_1396_leetcode_2790.lean",
+    "checkRec": true,
+    "checkRec_indicators": [
+      "direct_recursion"
+    ],
+    "llm": true,
+    "llm_response": "Yes",
+    "match": true
+  }
+]

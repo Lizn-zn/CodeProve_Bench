@@ -4,25 +4,90 @@ open Lean Meta Elab Command
 
 namespace RecursionChecker
 
-/-- Check if a constant is a recursive definition -/
+/-- Check if a name is a match helper for the given const name -/
+def isMatchHelper (name : Name) (constName : Name) : Bool :=
+  let nameStr := name.toString
+  let constStr := constName.toString
+  nameStr.startsWith (constStr ++ ".match_")
+
+/-- Recursively check if an expression contains a direct reference to a specific constant (not via match helpers) -/
+partial def exprContainsDirectConst (e : Expr) (constName : Name) : Bool :=
+  match e with
+  | Expr.const name _ => name == constName
+  | Expr.app fn arg => exprContainsDirectConst fn constName || exprContainsDirectConst arg constName
+  | Expr.lam _ _ body _ => exprContainsDirectConst body constName
+  | Expr.forallE _ _ body _ => exprContainsDirectConst body constName
+  | Expr.letE _ _ val body _ => exprContainsDirectConst val constName || exprContainsDirectConst body constName
+  | Expr.mdata _ e => exprContainsDirectConst e constName
+  | Expr.proj _ _ e => exprContainsDirectConst e constName
+  | _ => false
+
+/-- Recursively check if an expression contains a reference to a specific constant or its helpers -/
+partial def exprContainsConst (e : Expr) (constName : Name) : Bool :=
+  exprContainsDirectConst e constName
+
+/-- Check if match helper function contains recursion and return debug info -/
+def matchHelperHasRecursion (env : Environment) (constName : Name) (usedConsts : List Name) : Bool × (List Name) × (List Name) :=
+  -- Find all match_N helpers for this function from used constants
+  let constStr := constName.toString
+  let matchHelpers := usedConsts.filter fun name =>
+    let nameStr := name.toString
+    let hasDotMatch := (nameStr.splitOn ".match_").length > 1
+    let startsWithFunc := constStr.isPrefixOf nameStr
+    hasDotMatch && startsWithFunc
+
+  let recursiveHelpers := matchHelpers.filter fun name =>
+    match env.find? name with
+    | some (ConstantInfo.defnInfo val) =>
+      exprContainsDirectConst val.value constName
+    | _ => false
+
+  (!recursiveHelpers.isEmpty, matchHelpers, recursiveHelpers)
+
+/-- Check if a constant is a recursive definition by examining its value expression -/
 def isRecursive (env : Environment) (constName : Name) : Bool :=
   match env.find? constName with
   | none => false
   | some info =>
-    let usedConsts := info.getUsedConstantsAsSet
-    -- Check if the function uses itself (direct recursion)
-    -- or if it has helper functions like .rec or ._unary
-    let hasDirectRecursion := usedConsts.contains constName
+    -- First, check the expression value directly
+    let valueContainsSelf := match info with
+      | ConstantInfo.defnInfo val => exprContainsConst val.value constName
+      | _ => false
 
-    -- Check for unfolding helpers (_sunfold, _unary)
-    let constNameStr := constName.toString
-    let hasUnfoldHelper := usedConsts.toList.any fun dep =>
-      let depStr := dep.toString
-      depStr.startsWith constNameStr &&
-      (("._sunfold".isPrefixOf (depStr.drop constNameStr.length)) ||
-       ("._unary".isPrefixOf (depStr.drop constNameStr.length)))
+    let usedConsts := info.getUsedConstantsAsSet.toList
 
-    hasDirectRecursion || hasUnfoldHelper
+    if valueContainsSelf then
+      true
+    else if (matchHelperHasRecursion env constName usedConsts).1 then
+      true
+    else
+      -- Check if function uses recursors (brecOn, recOn, etc) which indicates structural recursion
+      let hasRecursor := usedConsts.any fun dep =>
+        let depStr := dep.toString
+        depStr.endsWith ".brecOn" || depStr.endsWith ".recOn" ||
+        depStr.endsWith ".rec" || depStr.endsWith "._rec"
+
+      if hasRecursor then
+        -- If it uses a recursor AND has a match helper, likely recursive
+        let constStr := constName.toString
+        let hasMatchHelper := usedConsts.any fun dep =>
+          let depStr := dep.toString
+          (depStr.splitOn ".match_").length > 1 && constStr.isPrefixOf depStr
+        hasMatchHelper
+      else
+        -- Fallback: check used constants (for already compiled definitions)
+        let usedConstsSet := info.getUsedConstantsAsSet
+        let hasDirectRecursion := usedConstsSet.contains constName
+
+        -- Check for unfolding helpers (_sunfold, _unary)
+        let constNameStr := constName.toString
+        let hasUnfoldHelper := usedConsts.any fun dep =>
+          let depStr := dep.toString
+          depStr.startsWith constNameStr &&
+          (("._sunfold".isPrefixOf (depStr.drop constNameStr.length)) ||
+           ("._unary".isPrefixOf (depStr.drop constNameStr.length)))
+
+        hasDirectRecursion || hasUnfoldHelper
 
 /-- Check if a constant uses the partial keyword -/
 def isPartial (env : Environment) (constName : Name) : Bool :=
@@ -32,17 +97,54 @@ def isPartial (env : Environment) (constName : Name) : Bool :=
   | some (ConstantInfo.opaqueInfo info) => info.isUnsafe  -- partial functions are marked as unsafe opaque
   | _ => false
 
+/-- Check if a constant uses opaque nested functions (partial def pattern) -/
+def usesOpaqueNested (env : Environment) (constName : Name) : Bool :=
+  match env.find? constName with
+  | none => false
+  | some info =>
+    let usedConsts := info.getUsedConstantsAsSet.toList
+    let constNameStr := constName.toString
+    usedConsts.any fun dep =>
+      let depStr := dep.toString
+      depStr.startsWith constNameStr &&
+      match env.find? dep with
+      | some (ConstantInfo.opaqueInfo _) => true
+      | _ => false
+
+/-- Get all constants referenced in an expression -/
+partial def getExprConsts (e : Expr) : List Name :=
+  match e with
+  | Expr.const name _ => [name]
+  | Expr.app fn arg => getExprConsts fn ++ getExprConsts arg
+  | Expr.lam _ _ body _ => getExprConsts body
+  | Expr.forallE _ _ body _ => getExprConsts body
+  | Expr.letE _ _ val body _ => getExprConsts val ++ getExprConsts body
+  | Expr.mdata _ e => getExprConsts e
+  | Expr.proj _ _ e => getExprConsts e
+  | _ => []
+
 /-- Find mutually recursive function groups -/
 def findMutualRecursion (env : Environment) (constName : Name) : List Name :=
   match env.find? constName with
   | none => []
   | some info =>
+    -- Get constants from both expression value and used constants
+    let valueConsts := match info with
+      | ConstantInfo.defnInfo val => getExprConsts val.value
+      | _ => []
     let usedConsts := info.getUsedConstantsAsSet.toList
+    let allUsedConsts := (valueConsts ++ usedConsts).eraseDups
+
     -- Find all other functions that use the current function (possible mutual recursion)
-    usedConsts.filter fun dep =>
+    allUsedConsts.filter fun dep =>
       dep != constName &&
       match env.find? dep with
-      | some depInfo => depInfo.getUsedConstantsAsSet.contains constName
+      | some depInfo =>
+        let depValueConsts := match depInfo with
+          | ConstantInfo.defnInfo val => getExprConsts val.value
+          | _ => []
+        let depUsedConsts := depInfo.getUsedConstantsAsSet.toList
+        (depValueConsts ++ depUsedConsts).any (· == constName)
       | none => false
 
 /-- Recursion type -/
@@ -58,9 +160,9 @@ def analyzeRecursion (constName : Name) : MetaM Unit := do
 
   match env.find? constName with
   | none =>
-    IO.println s!"❌ Definition not found: {constName}\n"
+    IO.println s!"ERROR: Definition not found: {constName}\n"
   | some info =>
-    IO.println s!"🔍 Analyzing function: {constName}"
+    IO.println s!"Analyzing function: {constName}"
     IO.println (String.mk (List.replicate 70 '='))
 
     -- Get function type
@@ -74,56 +176,101 @@ def analyzeRecursion (constName : Name) : MetaM Unit := do
       | ConstantInfo.ctorInfo _ => "constructor"
       | ConstantInfo.recInfo _ => "recursor"
 
-    IO.println s!"📝 Type: {typeStr}"
+    IO.println s!"Type: {typeStr}"
 
     -- Get used constants
     let usedConsts := info.getUsedConstantsAsSet.toList
 
-    -- Check if partial
+    -- Check if opaque/partial
     let isPartialDef := isPartial env constName
+    let isOpaque := match info with
+      | ConstantInfo.opaqueInfo _ => true
+      | _ => false
+
     if isPartialDef then
-      IO.println "⚠️  Uses partial keyword (termination not proven)"
+      IO.println "WARNING: Uses partial keyword (termination not proven)"
+
+    if isOpaque && !isPartialDef then
+      IO.println "WARNING: Opaque definition (function body not accessible for analysis)"
+      -- Check if this looks like a nested function from a partial def
+      let nameStr := constName.toString
+      let hasLoop := (nameStr.splitOn ".loop").length > 1
+      let hasTryEdges := (nameStr.splitOn ".tryEdges").length > 1
+      let hasInnerLoop := (nameStr.splitOn ".innerLoop").length > 1
+      let hasProcessEdges := (nameStr.splitOn ".processEdges").length > 1
+      if hasLoop || hasTryEdges || hasInnerLoop || hasProcessEdges then
+        IO.println "   Note: Appears to be a nested function, likely from a partial def"
 
     -- Check direct recursion
     let isDirect := isRecursive env constName
+
     if isDirect then
-      IO.println "🔄 Direct recursion: Yes"
-      -- Show which recursors are used
-      let recursors := usedConsts.filter fun dep =>
-        dep.toString.endsWith ".rec" || dep.toString.endsWith "._rec" || dep == constName
-      if !recursors.isEmpty then
-        IO.println "   Recursors/self-references used:"
-        for rec in recursors do
-          IO.println s!"   • {rec}"
+      IO.println "Direct recursion: Yes"
+
+      -- Check how recursion was detected
+      let valueContainsSelf := match info with
+        | ConstantInfo.defnInfo val => exprContainsConst val.value constName
+        | _ => false
+
+      let hasRecursor := usedConsts.any fun dep =>
+        let depStr := dep.toString
+        depStr.endsWith ".brecOn" || depStr.endsWith ".recOn" ||
+        depStr.endsWith ".rec" || depStr.endsWith "._rec"
+
+      if valueContainsSelf then
+        IO.println "   Detected: Direct self-reference in function body"
+      else if hasRecursor then
+        IO.println "   Detected: Structural recursion (via pattern matching)"
+      else
+        -- Show which methods were used (fallback detection)
+        let recursors := usedConsts.filter fun dep =>
+          dep.toString.endsWith ".rec" || dep.toString.endsWith "._rec" || dep == constName
+        if !recursors.isEmpty then
+          IO.println "   Detection method:"
+          for rec in recursors do
+            IO.println s!"   - {rec}"
     else
-      IO.println "🔄 Direct recursion: No"
+      IO.println "Direct recursion: No"
+      if isOpaque || isPartialDef then
+        IO.println "   Note: Cannot analyze recursion in opaque/partial definitions"
+      else
+        -- Check if this function uses opaque nested functions (partial def pattern)
+        let constNameStr := constName.toString
+        let hasOpaqueNested := usedConsts.any fun dep =>
+          let depStr := dep.toString
+          depStr.startsWith constNameStr &&
+          match env.find? dep with
+          | some (ConstantInfo.opaqueInfo _) => true
+          | _ => false
+        if hasOpaqueNested then
+          IO.println "   Note: Uses opaque nested functions (likely contains recursion)"
 
     -- Check mutual recursion
     let mutualRecs := findMutualRecursion env constName
     if !mutualRecs.isEmpty then
-      IO.println "🔀 Mutual recursion: Yes"
+      IO.println "Mutual recursion: Yes"
       IO.println "   Mutually recursive functions:"
       for partner in mutualRecs do
-        IO.println s!"   • {partner}"
+        IO.println s!"   - {partner}"
     else
-      IO.println "🔀 Mutual recursion: No"
+      IO.println "Mutual recursion: No"
 
     -- Show all used functions (for debugging)
     if usedConsts.length < 20 then
-      IO.println s!"\n📋 Constants used (total {usedConsts.length}):"
+      IO.println s!"\nConstants used (total {usedConsts.length}):"
       for dep in usedConsts do
-        IO.println s!"   • {dep}"
+        IO.println s!"   - {dep}"
 
     -- Summary
     IO.println ""
     if isPartialDef then
-      IO.println "✓ Conclusion: partial function (may have recursion/loops)"
+      IO.println "OK: Conclusion: partial function (may have recursion/loops)"
     else if isDirect then
-      IO.println "✓ Conclusion: Recursive function (termination verified)"
+      IO.println "OK: Conclusion: Recursive function (termination verified)"
     else if !mutualRecs.isEmpty then
-      IO.println "✓ Conclusion: Mutually recursive function"
+      IO.println "OK: Conclusion: Mutually recursive function"
     else
-      IO.println "✓ Conclusion: Non-recursive function"
+      IO.println "OK: Conclusion: Non-recursive function"
 
     IO.println ""
 
@@ -134,7 +281,7 @@ def analyzeNamespaceRecursion (ns : Name) : MetaM Unit := do
 
   IO.println "\n"
   IO.println (String.mk (List.replicate 70 '='))
-  IO.println s!"🔍 Recursion Analysis Report for {ns}"
+  IO.println s!"Recursion Analysis Report for {ns}"
   IO.println (String.mk (List.replicate 70 '='))
   IO.println "\n"
 
@@ -142,7 +289,7 @@ def analyzeNamespaceRecursion (ns : Name) : MetaM Unit := do
     name.toString.startsWith (ns.toString ++ ".")
 
   if nsConsts.isEmpty then
-    IO.println s!"⚠️  No definitions found in namespace {ns}"
+    IO.println s!"WARNING: No definitions found in namespace {ns}"
     return
 
   -- Only analyze non-internal definitions and non-constructor/recursor definitions
@@ -150,27 +297,38 @@ def analyzeNamespaceRecursion (ns : Name) : MetaM Unit := do
     !name.isInternal &&
     match info with
     | ConstantInfo.defnInfo _ => true
+    | ConstantInfo.opaqueInfo _ => true  -- include opaque (partial defs are compiled to opaque)
     | ConstantInfo.thmInfo _ => false  -- theorems are usually not recursive
     | _ => false
 
   if publicConsts.isEmpty then
-    IO.println s!"⚠️  No public definitions found in namespace {ns}"
+    IO.println s!"WARNING: No public definitions found in namespace {ns}"
     return
 
   -- Statistics
   let mut recursiveCount := 0
   let mut partialCount := 0
+  let mut opaqueCount := 0
   let mut mutualRecCount := 0
+  let mut usesOpaqueNestedCount := 0
 
-  for (name, _) in publicConsts do
+  for (name, info) in publicConsts do
     let isDirect := isRecursive env name
     let isPartialDef := isPartial env name
+    let isOpaqueDef := match info with
+      | ConstantInfo.opaqueInfo _ => true
+      | _ => false
+    let hasOpaqueNested := usesOpaqueNested env name
     let mutualRecs := findMutualRecursion env name
 
-    if isDirect || isPartialDef || !mutualRecs.isEmpty then
+    if isDirect || isPartialDef || isOpaqueDef || hasOpaqueNested || !mutualRecs.isEmpty then
       recursiveCount := recursiveCount + 1
       if isPartialDef then
         partialCount := partialCount + 1
+      if isOpaqueDef then
+        opaqueCount := opaqueCount + 1
+      if hasOpaqueNested then
+        usesOpaqueNestedCount := usesOpaqueNestedCount + 1
       if !mutualRecs.isEmpty then
         mutualRecCount := mutualRecCount + 1
 
@@ -178,12 +336,14 @@ def analyzeNamespaceRecursion (ns : Name) : MetaM Unit := do
 
   -- Summary
   IO.println (String.mk (List.replicate 70 '='))
-  IO.println "📊 Summary Statistics"
+  IO.println "Summary Statistics"
   IO.println (String.mk (List.replicate 70 '='))
   IO.println s!"Total definitions: {publicConsts.length}"
-  IO.println s!"Recursive functions: {recursiveCount}"
-  IO.println s!"Partial functions: {partialCount}"
-  IO.println s!"Mutually recursive functions: {mutualRecCount}"
+  IO.println s!"Recursive/Opaque functions: {recursiveCount}"
+  IO.println s!"  - Partial functions: {partialCount}"
+  IO.println s!"  - Opaque functions: {opaqueCount}"
+  IO.println s!"  - Functions using opaque nested helpers: {usesOpaqueNestedCount}"
+  IO.println s!"  - Mutually recursive functions: {mutualRecCount}"
   IO.println ""
 
 /-- Command: Check if specified definitions are recursive -/
@@ -201,8 +361,8 @@ elab "#check_namespace_rec " id:ident : command => do
 
 /-- Read and analyze recursive functions from a file path -/
 def analyzeFile (filePath : String) : IO Unit := do
-  IO.println s!"📂 Analyzing file: {filePath}"
-  IO.println "⚠️  Note: This feature requires importing the target file first"
+  IO.println s!"Analyzing file: {filePath}"
+  IO.println "WARNING: Note: This feature requires importing the target file first"
   IO.println "   Please use #check_namespace_rec or #check_rec commands in Lean files"
   IO.println ""
 
@@ -226,9 +386,9 @@ def extractNamespace (filePath : String) : Option String := do
 def main (args : List String) : IO UInt32 := do
   -- If no arguments, show help
   if args.isEmpty then
-    IO.println "╔════════════════════════════════════════════════════════════════════╗"
-    IO.println "║              Lean4 Recursion Checker                               ║"
-    IO.println "╚════════════════════════════════════════════════════════════════════╝"
+    IO.println "======================================================================"
+    IO.println "              Lean4 Recursion Checker                               "
+    IO.println "======================================================================"
     IO.println ""
     IO.println "Usage:"
     IO.println "  lake exe check-rec <file-path>          - Analyze specific Lean file"
@@ -261,12 +421,14 @@ def main (args : List String) : IO UInt32 := do
   let firstArg := args.head!
 
   -- Generate analysis script
-  IO.println "╔════════════════════════════════════════════════════════════════════╗"
-  IO.println "║              Lean4 Recursion Checker - Script Generator            ║"
-  IO.println "╚════════════════════════════════════════════════════════════════════╝"
+  IO.println "======================================================================"
+  IO.println "              Lean4 Recursion Checker - Script Generator            "
+  IO.println "======================================================================"
   IO.println ""
 
-  let scriptPath := "/tmp/check_rec_analyze.lean"
+  -- Generate unique temporary file using timestamp
+  let now ← IO.monoMsNow
+  let scriptPath := s!"/tmp/check_rec_analyze_{now}.lean"
   let mut scriptContent := "import Tools.CheckRec\n"
 
   -- Check if first argument is a file path
@@ -287,7 +449,7 @@ def main (args : List String) : IO UInt32 := do
       IO.println s!"Module import: {moduleImport}"
       IO.println s!"Namespace: {namespaceName}"
     else
-      IO.println s!"⚠️  Cannot extract namespace from path: {firstArg}"
+      IO.println s!"WARNING: Cannot extract namespace from path: {firstArg}"
       return 1
   else
     -- Namespace or definition name mode
@@ -318,7 +480,7 @@ def main (args : List String) : IO UInt32 := do
   IO.FS.writeFile scriptPath scriptContent
 
   IO.println ""
-  IO.println "✓ Analysis script generated: /tmp/check_rec_analyze.lean"
+  IO.println s!"OK: Analysis script generated: {scriptPath}"
   IO.println ""
   IO.println "Running analysis..."
   IO.println (String.mk (List.replicate 70 '='))
@@ -333,9 +495,15 @@ def main (args : List String) : IO UInt32 := do
 
   IO.print output.stdout
 
+  -- Clean up temporary file
+  try
+    IO.FS.removeFile scriptPath
+  catch _ =>
+    pure ()
+
   if output.exitCode != 0 then
     IO.println ""
-    IO.println "❌ Analysis failed:"
+    IO.println "ERROR: Analysis failed:"
     IO.println output.stderr
     return 1
 

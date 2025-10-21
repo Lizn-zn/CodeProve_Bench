@@ -4,23 +4,23 @@ open Lean Meta Elab Command
 
 namespace DependencyChecker
 
-/-- 检查一个常量的依赖并打印信息 -/
+/-- Analyze the dependencies of a constant and print information -/
 def analyzeConstant (constName : Name) : MetaM Unit := do
   let env ← getEnv
   match env.find? constName with
   | none =>
-    IO.println s!"❌ 未找到定义: {constName}\n"
+    IO.println s!"ERROR: Definition not found: {constName}\n"
   | some info =>
-    IO.println s!"📋 分析定义: {constName}"
+    IO.println s!"Analyzing definition: {constName}"
     IO.println (String.mk (List.replicate 70 '='))
 
     let deps := info.getUsedConstantsAsSet.toList
-    IO.println s!"📊 总共使用了 {deps.length} 个外部常量\n"
+    IO.println s!"Stats: Total {deps.length} external constants used\n"
 
     if deps.isEmpty then
-      IO.println "✓ 没有外部依赖"
+      IO.println "OK: No external dependencies"
     else
-      -- 按来源分类
+      -- Categorize by source
       let mut mathlibDeps : Array (Name × Name) := #[]
       let mut stdDeps : Array (Name × Name) := #[]
       let mut initDeps : Array Name := #[]
@@ -43,41 +43,41 @@ def analyzeConstant (constName : Name) : MetaM Unit := do
             localDeps := localDeps.push dep
 
       if !mathlibDeps.isEmpty then
-        IO.println "📚 来自 Mathlib 的依赖:"
+        IO.println "[Mathlib] Dependencies from Mathlib:"
         for (dep, mod) in mathlibDeps do
-          IO.println s!"   • {dep}"
-          IO.println s!"     └─ 模块: {mod}"
+          IO.println s!"   - {dep}"
+          IO.println s!"     Module: {mod}"
         IO.println ""
 
       if !stdDeps.isEmpty then
-        IO.println "📦 来自标准库 (Std) 的依赖:"
+        IO.println "[Std] Dependencies from Standard Library:"
         for (dep, mod) in stdDeps do
-          IO.println s!"   • {dep}"
-          IO.println s!"     └─ 模块: {mod}"
+          IO.println s!"   - {dep}"
+          IO.println s!"     Module: {mod}"
         IO.println ""
 
       if !initDeps.isEmpty then
-        IO.println "⚙️  来自核心库 (Init) 的依赖:"
+        IO.println "[Init] Dependencies from Core Library:"
         for dep in initDeps do
-          IO.println s!"   • {dep}"
+          IO.println s!"   - {dep}"
         IO.println ""
 
       if !localDeps.isEmpty then
-        IO.println "🏠 本地/其他依赖:"
+        IO.println "[Local] Local/Other Dependencies:"
         for dep in localDeps do
-          IO.println s!"   • {dep}"
+          IO.println s!"   - {dep}"
         IO.println ""
 
     IO.println ""
 
-/-- 分析命名空间中的所有定义 -/
+/-- Analyze all definitions in a namespace -/
 def analyzeNamespace (ns : Name) : MetaM Unit := do
   let env ← getEnv
   let allConsts := env.constants.map₁.toList
 
   IO.println "\n"
   IO.println (String.mk (List.replicate 70 '='))
-  IO.println s!"🔍 {ns} 依赖分析报告"
+  IO.println s!"Dependency Analysis Report for {ns}"
   IO.println (String.mk (List.replicate 70 '='))
   IO.println "\n"
 
@@ -85,49 +85,49 @@ def analyzeNamespace (ns : Name) : MetaM Unit := do
     name.toString.startsWith (ns.toString ++ ".")
 
   if nsConsts.isEmpty then
-    IO.println s!"⚠️  未找到命名空间 {ns} 中的定义"
+    IO.println s!"WARNING: No definitions found in namespace {ns}"
     return
 
-  -- 只分析非内部定义
+  -- Only analyze non-internal definitions
   let publicConsts := nsConsts.filter fun (name, _) => !name.isInternal
 
   for (name, _) in publicConsts do
     analyzeConstant name
 
-/-- 命令：分析指定定义的依赖 -/
+/-- Command: Analyze dependencies of specified definitions -/
 elab "#check_deps " ids:ident* : command => do
   liftTermElabM do
     for id in ids do
       let constName := id.getId
       analyzeConstant constName
 
-/-- 命令：分析命名空间 -/
+/-- Command: Analyze namespace -/
 elab "#check_namespace " id:ident : command => do
   liftTermElabM do
     let ns := id.getId
     analyzeNamespace ns
 
-/-- 命令：列出常量所在的模块 -/
+/-- Command: List the module where constants are located -/
 elab "#module_of " ids:ident* : command => do
   liftTermElabM do
     let env ← getEnv
-    IO.println "\n📌 常量模块来源："
+    IO.println "\nConstant Module Sources:"
     IO.println (String.mk (List.replicate 70 '='))
 
     for id in ids do
       let constName := id.getId
       match env.find? constName with
       | none =>
-        IO.println s!"❓ {constName}: 未找到定义"
+        IO.println s!"UNKNOWN: {constName}: Definition not found"
       | some _ =>
         let modIdx? := env.getModuleIdxFor? constName
         match modIdx? with
         | none =>
-          IO.println s!"🔷 {constName}: 核心定义 (无模块信息)"
+          IO.println s!"CORE: {constName}: Core definition (no module info)"
         | some idx =>
           let modName := env.allImportedModuleNames[idx.toNat]!
-          IO.println s!"📍 {constName}"
-          IO.println s!"   └─ 来自模块: {modName}"
+          IO.println s!"Location: {constName}"
+          IO.println s!"   From module: {modName}"
     IO.println ""
 
 end DependencyChecker
@@ -150,9 +150,9 @@ def extractNamespace (filePath : String) : Option String := do
 def main (args : List String) : IO UInt32 := do
   -- If no arguments, show help
   if args.isEmpty then
-    IO.println "╔════════════════════════════════════════════════════════════════════╗"
-    IO.println "║              Lean4 Dependency Checker                              ║"
-    IO.println "╚════════════════════════════════════════════════════════════════════╝"
+    IO.println "======================================================================"
+    IO.println "              Lean4 Dependency Checker                              "
+    IO.println "======================================================================"
     IO.println ""
     IO.println "Usage:"
     IO.println "  lake exe check-deps <file-path>          - Analyze specific Lean file"
@@ -186,12 +186,14 @@ def main (args : List String) : IO UInt32 := do
   let firstArg := args.head!
 
   -- Generate analysis script
-  IO.println "╔════════════════════════════════════════════════════════════════════╗"
-  IO.println "║              Lean4 Dependency Checker - Script Generator           ║"
-  IO.println "╚════════════════════════════════════════════════════════════════════╝"
+  IO.println "======================================================================"
+  IO.println "              Lean4 Dependency Checker - Script Generator           "
+  IO.println "======================================================================"
   IO.println ""
 
-  let scriptPath := "/tmp/check_deps_analyze.lean"
+  -- Generate unique temporary file using timestamp
+  let now ← IO.monoMsNow
+  let scriptPath := s!"/tmp/check_deps_analyze_{now}.lean"
   let mut scriptContent := "import Tools.CheckDeps\n"
 
   -- Check if first argument is a file path
@@ -212,7 +214,7 @@ def main (args : List String) : IO UInt32 := do
       IO.println s!"Module import: {moduleImport}"
       IO.println s!"Namespace: {namespaceName}"
     else
-      IO.println s!"⚠️  Cannot extract namespace from path: {firstArg}"
+      IO.println s!"WARNING: Cannot extract namespace from path: {firstArg}"
       return 1
   else
     -- Namespace or definition name mode
@@ -243,7 +245,7 @@ def main (args : List String) : IO UInt32 := do
   IO.FS.writeFile scriptPath scriptContent
 
   IO.println ""
-  IO.println "✓ Analysis script generated: /tmp/check_deps_analyze.lean"
+  IO.println s!"OK: Analysis script generated: {scriptPath}"
   IO.println ""
   IO.println "Running analysis..."
   IO.println (String.mk (List.replicate 70 '='))
@@ -258,9 +260,15 @@ def main (args : List String) : IO UInt32 := do
 
   IO.print output.stdout
 
+  -- Clean up temporary file
+  try
+    IO.FS.removeFile scriptPath
+  catch _ =>
+    pure ()
+
   if output.exitCode != 0 then
     IO.println ""
-    IO.println "❌ Analysis failed:"
+    IO.println "ERROR: Analysis failed:"
     IO.println output.stderr
     return 1
 
