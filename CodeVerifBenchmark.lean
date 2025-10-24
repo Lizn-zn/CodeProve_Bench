@@ -4,3 +4,4 @@ import CodeVerifBenchmark.CodeNet
 import CodeVerifBenchmark.LeetCode
 import CodeVerifBenchmark.CodeExercises
 import CodeVerifBenchmark.Syn
+import CodeVerifBenchmark.verina

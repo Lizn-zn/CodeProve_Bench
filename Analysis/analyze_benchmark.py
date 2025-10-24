@@ -27,7 +27,7 @@ BENCHMARK_DIR = os.path.join(PROJECT_ROOT, "CodeVerifBenchmark")
 ANALYSIS_DIR = os.path.join(PROJECT_ROOT, "Analysis")
 
 # Sampling size
-SAMPLE_SIZE = 30  # Number of samples per category, use -1 for all files
+SAMPLE_SIZE = -1  # Number of samples per category, use -1 for all files
 MAX_WORKERS = 64  # Number of concurrent workers
 
 os.makedirs(ANALYSIS_DIR, exist_ok=True)
@@ -39,7 +39,8 @@ def find_lean_files_by_category():
         'LeetCode': [],
         'CodeExercises': [],
         'Syn': [],
-        'CodeNet': []
+        'CodeNet': [],
+        'verina': []
     }
     
     for category in categories.keys():
