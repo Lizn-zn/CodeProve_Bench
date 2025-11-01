@@ -5,11 +5,15 @@ Quick sampling analysis script - Analyze a small subset of files to get quick in
 Classifies files into two categories:
 1. Non-recursive: Functions without any recursion
 2. Potentially recursive: Functions with any form of recursion/loops including:
-   - Direct recursion
-   - Mutual recursion
+   - Direct recursion (function calls itself)
+   - Mutual recursion (functions call each other)
+   - Structural recursion (via pattern matching)
+   - Uses known recursive functions (from standard library)
    - Partial definitions (unproven termination)
    - Opaque functions (body not accessible)
    - Functions using opaque nested helpers (partial def pattern)
+
+Uses strict matching for CheckRec output to ensure accuracy.
 
 coded by cursor
 """
@@ -79,7 +83,7 @@ def analyze_file(file_path, category=None):
         rec_output = rec_result.stdout + rec_result.stderr
         
         # Check for any form of recursion or opaque functions
-        # These all indicate potential recursion
+        # These all indicate potential recursion (using strict matching)
         if 'Direct recursion: Yes' in rec_output:
             result['is_recursive'] = True
             result['recursion_indicators'].append('direct_recursion')
@@ -95,6 +99,14 @@ def analyze_file(file_path, category=None):
         if 'Uses opaque nested functions (likely contains recursion)' in rec_output:
             result['is_recursive'] = True
             result['recursion_indicators'].append('opaque_nested_helpers')
+        # Check if uses known recursive functions from library
+        if 'Detected: Uses known recursive functions' in rec_output:
+            result['is_recursive'] = True
+            result['recursion_indicators'].append('uses_known_recursive')
+        # Check for structural recursion via pattern matching
+        if 'Detected: Structural recursion (via pattern matching)' in rec_output:
+            result['is_recursive'] = True
+            result['recursion_indicators'].append('structural_recursion')
         # Check summary line for recursive/opaque functions count
         if 'Recursive/Opaque functions:' in rec_output:
             for line in rec_output.split('\n'):

@@ -1,0 +1,821 @@
+[
+  {
+    "def": "def test_Array_all_Nat := @Array.all Nat",
+    "content": "Returns `true` if `p` returns `true` for every element of `as`.\n\nShort-circuits upon encountering the first `false`.\n\nThe optional parameters `start` and `stop` control the region of the array to be checked. Only the\nelements with indices from `start` (inclusive) to `stop` (exclusive) are checked. By default, the\nentire array is checked.\n\nExamples:\n* `#[a, b, c].all p = (p a && (p b && p c))`\n* `#[2, 4, 6].all (· % 2 = 0) = true`\n* `#[2, 4, 5, 6].all (· % 2 = 0) = false`",
+    "origin_def": "Array.all",
+    "Inst": "Nat",
+    "signature": "test_Array_all_Nat (as : Array Nat) (p : Nat → Bool) (start : Nat := 0) (stop : Nat := as.size) : Bool"
+  },
+  {
+    "def": "def test_Array_any_Nat := @Array.any Nat",
+    "content": "Returns `true` if `p` returns `true` for any element of `as`.\n\nShort-circuits upon encountering the first `true`.\n\nThe optional parameters `start` and `stop` control the region of the array to be checked. Only the\nelements with indices from `start` (inclusive) to `stop` (exclusive) are checked. By default, the\nentire array is checked.\n\nExamples:\n* `#[2, 4, 6].any (· % 2 = 0) = true`\n* `#[2, 4, 6].any (· % 2 = 1) = false`\n* `#[2, 4, 5, 6].any (· % 2 = 0) = true`\n* `#[2, 4, 5, 6].any (· % 2 = 1) = true`",
+    "origin_def": "Array.any",
+    "Inst": "Nat",
+    "signature": "test_Array_any_Nat (as : Array Nat) (p : Nat → Bool) (start : Nat := 0) (stop : Nat := as.size) : Bool"
+  },
+  {
+    "def": "def test_Array_append_Nat := @Array.append Nat",
+    "content": "Appends two arrays. Normally used via the `++` operator.\n\nAppending arrays takes time proportional to the length of the second array.\n\nExamples:\n* `#[1, 2, 3] ++ #[4, 5] = #[1, 2, 3, 4, 5]`.\n* `#[] ++ #[4, 5] = #[4, 5]`.\n* `#[1, 2, 3] ++ #[] = #[1, 2, 3]`.",
+    "origin_def": "Array.append",
+    "Inst": "Nat",
+    "signature": "test_Array_append_Nat (as bs : Array Nat) : Array Nat"
+  },
+  {
+    "def": "def test_Array_back__Nat := @Array.back! Nat",
+    "content": "Returns the last element of an array, or panics if the array is empty.\n\nSafer alternatives include `Array.back`, which requires a proof the array is non-empty, and\n`Array.back?`, which returns an `Option`.",
+    "origin_def": "Array.back!",
+    "Inst": "Nat",
+    "signature": "test_Array_back__Nat [Inhabited Nat] (xs : Array Nat) : Nat"
+  },
+  {
+    "def": "def test_Array_contains_Nat := @Array.contains Nat",
+    "content": "Checks whether `a` is an element of `as`, using `==` to compare elements.\n\n`Array.elem` is a synonym that takes the element before the array.\n\nExamples:\n* `#[1, 4, 2, 3, 3, 7].contains 3 = true`\n* `Array.contains #[1, 4, 2, 3, 3, 7] 5 = false`",
+    "origin_def": "Array.contains",
+    "Inst": "Nat",
+    "signature": "test_Array_contains_Nat [BEq Nat] (as : Array Nat) (a : Nat) : Bool"
+  },
+  {
+    "def": "def test_Array_count_Nat := @Array.count Nat",
+    "content": "Counts the number of times an element occurs in an array.\n\nExamples:\n* `#[1, 1, 2, 3, 5].count 1 = 2`\n* `#[1, 1, 2, 3, 5].count 5 = 1`\n* `#[1, 1, 2, 3, 5].count 4 = 0`",
+    "origin_def": "Array.count",
+    "Inst": "Nat",
+    "signature": "test_Array_count_Nat [BEq Nat] (a : Nat) (as : Array Nat) : Nat"
+  },
+  {
+    "def": "def test_Array_drop_Nat := @Array.drop Nat",
+    "content": "Removes the first `i` elements of `xs`. If `xs` has fewer than `i` elements, the new array is empty.\n\nThe returned array is always a new array, even if it contains the same elements as the input array.\n\nExamples:\n* `#[\"red\", \"green\", \"blue\"].drop 1 = #[\"green\", \"blue\"]`\n* `#[\"red\", \"green\", \"blue\"].drop 2 = #[\"blue\"]`\n* `#[\"red\", \"green\", \"blue\"].drop 5 = #[]`",
+    "origin_def": "Array.drop",
+    "Inst": "Nat",
+    "signature": "test_Array_drop_Nat (xs : Array Nat) (i : Nat) : Array Nat"
+  },
+  {
+    "def": "def test_Array_empty_Nat := @Array.empty Nat",
+    "content": "Constructs a new empty array with initial capacity `0`.\n\nUse `Array.emptyWithCapacity` to create an array with a greater initial capacity.",
+    "origin_def": "Array.empty",
+    "Inst": "Nat",
+    "signature": "test_Array_empty_Nat : Array Nat"
+  },
+  {
+    "def": "def test_Array_eraseIdx_Nat := @Array.eraseIdx Nat",
+    "content": "Removes the element at a given index from an array without a run-time bounds check.\n\nThis function takes worst-case `O(n)` time because it back-shifts all elements at positions\ngreater than `i`.\n\nExamples:\n* `#[\"apple\", \"pear\", \"orange\"].eraseIdx 0 = #[\"pear\", \"orange\"]`\n* `#[\"apple\", \"pear\", \"orange\"].eraseIdx 1 = #[\"apple\", \"orange\"]`\n* `#[\"apple\", \"pear\", \"orange\"].eraseIdx 2 = #[\"apple\", \"pear\"]`",
+    "origin_def": "Array.eraseIdx",
+    "Inst": "Nat",
+    "signature": "test_Array_eraseIdx_Nat (xs : Array Nat) (i : Nat) (h : i < xs.size := by get_elem_tactic) : Array Nat"
+  },
+  {
+    "def": "def test_Array_eraseIdx__Nat := @Array.eraseIdx! Nat",
+    "content": "Removes the element at a given index from an array. Panics if the index is out of bounds.\n\nThis function takes worst-case `O(n)` time because it back-shifts all elements at positions\ngreater than `i`.",
+    "origin_def": "Array.eraseIdx!",
+    "Inst": "Nat",
+    "signature": "test_Array_eraseIdx__Nat (xs : Array Nat) (i : Nat) : Array Nat"
+  },
+  {
+    "def": "def test_Array_extract_Nat := @Array.extract Nat",
+    "content": "Returns the slice of `as` from indices `start` to `stop` (exclusive). The resulting array has size\n`(min stop as.size) - start`.\n\nIf `start` is greater or equal to `stop`, the result is empty. If `stop` is greater than the size of\n`as`, the size is used instead.\n\nExamples:\n * `#[0, 1, 2, 3, 4].extract 1 3 = #[1, 2]`\n * `#[0, 1, 2, 3, 4].extract 1 30 = #[1, 2, 3, 4]`\n * `#[0, 1, 2, 3, 4].extract 0 0 = #[]`\n * `#[0, 1, 2, 3, 4].extract 2 1 = #[]`\n * `#[0, 1, 2, 3, 4].extract 2 2 = #[]`\n * `#[0, 1, 2, 3, 4].extract 2 3 = #[2]`\n * `#[0, 1, 2, 3, 4].extract 2 4 = #[2, 3]`",
+    "origin_def": "Array.extract",
+    "Inst": "Nat",
+    "signature": "test_Array_extract_Nat (as : Array Nat) (start : Nat := 0) (stop : Nat := as.size) : Array Nat"
+  },
+  {
+    "def": "def test_Array_filter_Nat := @Array.filter Nat",
+    "content": "Returns the array of elements in `as` for which `p` returns `true`.\n\nOnly elements from `start` (inclusive) to `stop` (exclusive) are considered. Elements outside that\nrange are discarded. By default, the entire array is considered.\n\nExamples:\n* `#[1, 2, 5, 2, 7, 7].filter (· > 2) = #[5, 7, 7]`\n* `#[1, 2, 5, 2, 7, 7].filter (fun _ => false) = #[]`\n* `#[1, 2, 5, 2, 7, 7].filter (fun _ => true) = #[1, 2, 5, 2, 7, 7]`\n* `#[1, 2, 5, 2, 7, 7].filter (· > 2) (start := 3) = #[7, 7]`\n* `#[1, 2, 5, 2, 7, 7].filter (fun _ => true) (start := 3) = #[2, 7, 7]`\n* `#[1, 2, 5, 2, 7, 7].filter (fun _ => true) (stop := 3) = #[1, 2, 5]`",
+    "origin_def": "Array.filter",
+    "Inst": "Nat",
+    "signature": "test_Array_filter_Nat (p : Nat → Bool) (as : Array Nat) (start : Nat := 0) (stop : Nat := as.size) : Array Nat"
+  },
+  {
+    "def": "def test_Array_filterMap_Nat := @Array.filterMap Nat",
+    "content": "Applies a function that returns an `Option` to each element of an array, collecting the non-`none`\nvalues.\n\nExample:\n```lean example\n#eval #[1, 2, 5, 2, 7, 7].filterMap fun x =>\n  if x > 2 then some (2 * x) else none\n```\n```output\n#[10, 14, 14]\n```",
+    "origin_def": "Array.filterMap",
+    "Inst": "Nat",
+    "signature": "test_Array_filterMap_Nat.{u_1} {β : Type u_1} (f : Nat → Option β) (as : Array Nat) (start : Nat := 0)"
+  },
+  {
+    "def": "def test_Array_find__Nat := @Array.find? Nat",
+    "content": "Returns the first element of the array for which the predicate `p` returns `true`, or `none` if no\nsuch element is found.\n\nExamples:\n* `#[7, 6, 5, 8, 1, 2, 6].find? (· < 5) = some 1`\n* `#[7, 6, 5, 8, 1, 2, 6].find? (· < 1) = none`",
+    "origin_def": "Array.find?",
+    "Inst": "Nat",
+    "signature": "test_Array_find__Nat (p : Nat → Bool) (as : Array Nat) : Option Nat"
+  },
+  {
+    "def": "def test_Array_findIdx__Nat := @Array.findIdx? Nat",
+    "content": "Returns the index of the first element for which `p` returns `true`, or `none` if there is no such\nelement.\n\nExamples:\n* `#[7, 6, 5, 8, 1, 2, 6].findIdx (· < 5) = some 4`\n* `#[7, 6, 5, 8, 1, 2, 6].findIdx (· < 1) = none`",
+    "origin_def": "Array.findIdx?",
+    "Inst": "Nat",
+    "signature": "test_Array_findIdx__Nat (p : Nat → Bool) (as : Array Nat) : Option Nat"
+  },
+  {
+    "def": "def test_Array_foldl_Nat := @Array.foldl Nat",
+    "content": "Folds a function over an array from the left, accumulating a value starting with `init`. The\naccumulated value is combined with the each element of the array in order, using `f`.\n\nThe optional parameters `start` and `stop` control the region of the array to be folded. Folding\nproceeds from `start` (inclusive) to `stop` (exclusive), so no folding occurs unless `start < stop`.\nBy default, the entire array is used.\n\nExamples:\n * `#[a, b, c].foldl f z  = f (f (f z a) b) c`\n * `#[1, 2, 3].foldl (· ++ toString ·) \"\" = \"123\"`\n * `#[1, 2, 3].foldl (s!\"({·} {·})\") \"\" = \"((( 1) 2) 3)\"`",
+    "origin_def": "Array.foldl",
+    "Inst": "Nat",
+    "signature": "test_Array_foldl_Nat.{u_1} {β : Type u_1} (f : β → Nat → β) (init : β) (as : Array Nat) (start : Nat := 0)"
+  },
+  {
+    "def": "def test_Array_get__Nat := @Array.get! Nat",
+    "content": "Use the indexing notation `a[i]!` instead.\n\nAccess an element from an array, or panic if the index is out of bounds.",
+    "origin_def": "Array.get!",
+    "Inst": "Nat",
+    "signature": "test_Array_get__Nat [Inhabited Nat] (a : Array Nat) (i : Nat) : Nat"
+  },
+  {
+    "def": "def test_Array_getD_Nat := @Array.getD Nat",
+    "content": "Returns the element at the provided index, counting from `0`. Returns the fallback value `v₀` if the\nindex is out of bounds.\n\nTo return an `Option` depending on whether the index is in bounds, use `a[i]?`. To panic if the\nindex is out of bounds, use `a[i]!`.\n\nExamples:\n * `#[\"spring\", \"summer\", \"fall\", \"winter\"].getD 2 \"never\" = \"fall\"`\n * `#[\"spring\", \"summer\", \"fall\", \"winter\"].getD 0 \"never\" = \"spring\"`\n * `#[\"spring\", \"summer\", \"fall\", \"winter\"].getD 4 \"never\" = \"never\"`",
+    "origin_def": "Array.getD",
+    "Inst": "Nat",
+    "signature": "test_Array_getD_Nat (a : Array Nat) (i v₀ : Nat) : Nat"
+  },
+  {
+    "def": "def test_Array_getInternal_Nat := @Array.getInternal Nat",
+    "content": "Use the indexing notation `a[i]` instead.\n\nAccess an element from an array without needing a runtime bounds checks,\nusing a `Nat` index and a proof that it is in bounds.\n\nThis function does not use `get_elem_tactic` to automatically find the proof that\nthe index is in bounds. This is because the tactic itself needs to look up values in\narrays.",
+    "origin_def": "Array.getInternal",
+    "Inst": "Nat",
+    "signature": "test_Array_getInternal_Nat (a : Array Nat) (i : Nat) (h : i < a.size) : Nat"
+  },
+  {
+    "def": "def test_Array_idxOf_Nat := @Array.idxOf Nat",
+    "content": "Returns the index of the first element equal to `a`, or the size of the array if no element is equal\nto `a`.\n\nExamples:\n * `#[\"carrot\", \"potato\", \"broccoli\"].idxOf \"carrot\" = 0`\n * `#[\"carrot\", \"potato\", \"broccoli\"].idxOf \"broccoli\" = 2`\n * `#[\"carrot\", \"potato\", \"broccoli\"].idxOf \"tomato\" = 3`\n * `#[\"carrot\", \"potato\", \"broccoli\"].idxOf \"anything else\" = 3`",
+    "origin_def": "Array.idxOf",
+    "Inst": "Nat",
+    "signature": "test_Array_idxOf_Nat [BEq Nat] (a : Nat) : Array Nat → Nat"
+  },
+  {
+    "def": "def test_Array_insertionSort_Nat := @Array.insertionSort Nat",
+    "content": "Sorts an array using insertion sort.\n\nThe optional parameter `lt` specifies an ordering predicate. It defaults to `LT.lt`, which must be\ndecidable to be used for sorting.",
+    "origin_def": "Array.insertionSort",
+    "Inst": "Nat",
+    "signature": "test_Array_insertionSort_Nat (xs : Array Nat) (lt : Nat → Nat → Bool := by exact (· < ·)) : Array Nat"
+  },
+  {
+    "def": "def test_Array_isEmpty_Nat := @Array.isEmpty Nat",
+    "content": "Checks whether an array is empty.\n\nAn array is empty if its size is `0`.\n\nExamples:\n* `(#[] : Array String).isEmpty = true`\n* `#[1, 2].isEmpty = false`\n* `#[()].isEmpty = false`",
+    "origin_def": "Array.isEmpty",
+    "Inst": "Nat",
+    "signature": "test_Array_isEmpty_Nat (xs : Array Nat) : Bool"
+  },
+  {
+    "def": "def test_Array_map_Nat := @Array.map Nat",
+    "content": "Applies a function to each element of the array, returning the resulting array of values.\n\nExamples:\n* `#[a, b, c].map f = #[f a, f b, f c]`\n* `#[].map Nat.succ = #[]`\n* `#[\"one\", \"two\", \"three\"].map (·.length) = #[3, 3, 5]`\n* `#[\"one\", \"two\", \"three\"].map (·.reverse) = #[\"eno\", \"owt\", \"eerht\"]`",
+    "origin_def": "Array.map",
+    "Inst": "Nat",
+    "signature": "test_Array_map_Nat.{u_1} {β : Type u_1} (f : Nat → β) (as : Array Nat) : Array β"
+  },
+  {
+    "def": "def test_Array_mapIdx_Nat := @Array.mapIdx Nat",
+    "content": "Applies a function to each element of the array along with the index at which that element is found,\nreturning the array of results.\n\n`Array.mapFinIdx` is a variant that additionally provides the function with a proof that the index\nis valid.",
+    "origin_def": "Array.mapIdx",
+    "Inst": "Nat",
+    "signature": "test_Array_mapIdx_Nat.{u_1} {β : Type u_1} (f : Nat → Nat → β) (as : Array Nat) : Array β"
+  },
+  {
+    "def": "def test_Array_mkArray_Nat := @Array.mkArray Nat",
+    "content": "Creates an array that contains `n` repetitions of `v`.\n\nThe corresponding `List` function is `List.replicate`.\n\nExamples:\n* `Array.mkArray 2 true = #[true, true]`\n* `Array.mkArray 3 () = #[(), (), ()]`\n* `Array.mkArray 0 \"anything\" = #[]`",
+    "origin_def": "Array.mkArray",
+    "Inst": "Nat",
+    "signature": "test_Array_mkArray_Nat (n v : Nat) : Array Nat"
+  },
+  {
+    "def": "def test_Array_mkEmpty_Nat := @Array.mkEmpty Nat",
+    "content": "Constructs a new empty array with initial capacity `c`.\n\nThis will be deprecated in favor of `Array.emptyWithCapacity` in the future.",
+    "origin_def": "Array.mkEmpty",
+    "Inst": "Nat",
+    "signature": "test_Array_mkEmpty_Nat (c : Nat) : Array Nat"
+  },
+  {
+    "def": "def test_Array_modify_Nat := @Array.modify Nat",
+    "content": "Replaces the element at the given index, if it exists, with the result of applying `f` to it. If the\nindex is invalid, the array is returned unmodified.\n\nExamples:\n * `#[1, 2, 3].modify 0 (· * 10) = #[10, 2, 3]`\n * `#[1, 2, 3].modify 2 (· * 10) = #[1, 2, 30]`\n * `#[1, 2, 3].modify 3 (· * 10) = #[1, 2, 3]`",
+    "origin_def": "Array.modify",
+    "Inst": "Nat",
+    "signature": "test_Array_modify_Nat (xs : Array Nat) (i : Nat) (f : Nat → Nat) : Array Nat"
+  },
+  {
+    "def": "def test_Array_ofFn_Nat := @Array.ofFn Nat",
+    "content": "Creates an array by applying `f` to each potential index in order, starting at `0`.\n\nExamples:\n* `Array.ofFn (n := 3) toString = #[\"0\", \"1\", \"2\"]`\n* `Array.ofFn (fun i => #[\"red\", \"green\", \"blue\"].get i.val i.isLt) = #[\"red\", \"green\", \"blue\"]`",
+    "origin_def": "Array.ofFn",
+    "Inst": "Nat",
+    "signature": "test_Array_ofFn_Nat {n : Nat} (f : Fin n → Nat) : Array Nat"
+  },
+  {
+    "def": "def test_Array_ofSubarray_Nat := @Array.ofSubarray Nat",
+    "content": "Allocates a new array that contains the contents of the subarray.",
+    "origin_def": "Array.ofSubarray",
+    "Inst": "Nat",
+    "signature": "test_Array_ofSubarray_Nat (s : Subarray Nat) : Array Nat"
+  },
+  {
+    "def": "def test_Array_push_Nat := @Array.push Nat",
+    "content": "Adds an element to the end of an array. The resulting array's size is one greater than the input\narray. If there are no other references to the array, then it is modified in-place.\n\nThis takes amortized `O(1)` time because `Array α` is represented by a dynamic array.\n\nExamples:\n* `#[].push \"apple\" = #[\"apple\"]`\n* `#[\"apple\"].push \"orange\" = #[\"apple\", \"orange\"]`",
+    "origin_def": "Array.push",
+    "Inst": "Nat",
+    "signature": "test_Array_push_Nat (a : Array Nat) (v : Nat) : Array Nat"
+  },
+  {
+    "def": "def test_Array_qsort_Nat := @Array.qsort Nat",
+    "content": "In-place quicksort.\n\n`qsort as lt lo hi` sorts the subarray `as[lo...=hi]` in-place using `lt` to compare elements.",
+    "origin_def": "Array.qsort",
+    "Inst": "Nat",
+    "signature": "test_Array_qsort_Nat (as : Array Nat) (lt : Nat → Nat → Bool := by exact (· < ·)) (lo : Nat := 0)"
+  },
+  {
+    "def": "def test_Array_replicate_Nat := @Array.replicate Nat",
+    "content": "Creates an array that contains `n` repetitions of `v`.\n\nThe corresponding `List` function is `List.replicate`.\n\nExamples:\n* `Array.replicate 2 true = #[true, true]`\n* `Array.replicate 3 () = #[(), (), ()]`\n* `Array.replicate 0 \"anything\" = #[]`",
+    "origin_def": "Array.replicate",
+    "Inst": "Nat",
+    "signature": "test_Array_replicate_Nat (n v : Nat) : Array Nat"
+  },
+  {
+    "def": "def test_Array_reverse_Nat := @Array.reverse Nat",
+    "content": "Reverses an array by repeatedly swapping elements.\n\nThe original array is modified in place if there are no other references to it.\n\nExamples:\n* `(#[] : Array Nat).reverse = #[]`\n* `#[0, 1].reverse = #[1, 0]`\n* `#[0, 1, 2].reverse = #[2, 1, 0]`",
+    "origin_def": "Array.reverse",
+    "Inst": "Nat",
+    "signature": "test_Array_reverse_Nat (as : Array Nat) : Array Nat"
+  },
+  {
+    "def": "def test_Array_set_Nat := @Array.set Nat",
+    "content": "Replaces the element at a given index in an array.\n\nNo bounds check is performed, but the function requires a proof that the index is in bounds. This\nproof can usually be omitted, and will be synthesized automatically.\n\nThe array is modified in-place if there are no other references to it.\n\nExamples:\n* `#[0, 1, 2].set 1 5 = #[0, 5, 2]`\n* `#[\"orange\", \"apple\"].set 1 \"grape\" = #[\"orange\", \"grape\"]`",
+    "origin_def": "Array.set",
+    "Inst": "Nat",
+    "signature": "test_Array_set_Nat (xs : Array Nat) (i : Nat) (v : Nat) (h : i < xs.size := by get_elem_tactic) : Array Nat"
+  },
+  {
+    "def": "def test_Array_set__Nat := @Array.set! Nat",
+    "content": "Set an element in an array, or panic if the index is out of bounds.\n\nThis will perform the update destructively provided that `a` has a reference\ncount of 1 when called.",
+    "origin_def": "Array.set!",
+    "Inst": "Nat",
+    "signature": "test_Array_set__Nat (xs : Array Nat) (i : Nat) (v : Nat) : Array Nat"
+  },
+  {
+    "def": "def test_Array_setIfInBounds_Nat := @Array.setIfInBounds Nat",
+    "content": "Replaces the element at the provided index in an array. The array is returned unmodified if the\nindex is out of bounds.\n\nThe array is modified in-place if there are no other references to it.\n\nExamples:\n* `#[0, 1, 2].setIfInBounds 1 5 = #[0, 5, 2]`\n* `#[\"orange\", \"apple\"].setIfInBounds 1 \"grape\" = #[\"orange\", \"grape\"]`\n* `#[\"orange\", \"apple\"].setIfInBounds 5 \"grape\" = #[\"orange\", \"apple\"]`",
+    "origin_def": "Array.setIfInBounds",
+    "Inst": "Nat",
+    "signature": "test_Array_setIfInBounds_Nat (xs : Array Nat) (i v : Nat) : Array Nat"
+  },
+  {
+    "def": "def test_Array_size_Nat := @Array.size Nat",
+    "content": "Gets the number of elements stored in an array.\n\nThis is a cached value, so it is `O(1)` to access. The space allocated for an array, referred to as\nits _capacity_, is at least as large as its size, but may be larger. The capacity of an array is an\ninternal detail that's not observable by Lean code.",
+    "origin_def": "Array.size",
+    "Inst": "Nat",
+    "signature": "test_Array_size_Nat (a : Array Nat) : Nat"
+  },
+  {
+    "def": "def test_Array_sum_Nat := @Array.sum Nat",
+    "content": "Computes the sum of the elements of an array.\n\nExamples:\n* `#[a, b, c].sum = a + (b + (c + 0))`\n* `#[1, 2, 5].sum = 8`",
+    "origin_def": "Array.sum",
+    "Inst": "Nat",
+    "signature": "test_Array_sum_Nat [Add Nat] [Zero Nat] : Array Nat → Nat"
+  },
+  {
+    "def": "def test_Array_take_Nat := @Array.take Nat",
+    "content": "Returns a new array that contains the first `i` elements of `xs`. If `xs` has fewer than `i`\nelements, the new array contains all the elements of `xs`.\n\nThe returned array is always a new array, even if it contains the same elements as the input array.\n\nExamples:\n* `#[\"red\", \"green\", \"blue\"].take 1 = #[\"red\"]`\n* `#[\"red\", \"green\", \"blue\"].take 2 = #[\"red\", \"green\"]`\n* `#[\"red\", \"green\", \"blue\"].take 5 = #[\"red\", \"green\", \"blue\"]`",
+    "origin_def": "Array.take",
+    "Inst": "Nat",
+    "signature": "test_Array_take_Nat (xs : Array Nat) (i : Nat) : Array Nat"
+  },
+  {
+    "def": "def test_Array_toList_Nat := @Array.toList Nat",
+    "content": "Converts an `Array α` into a `List α` that contains the same elements in the same order.\n\nAt runtime, this is implemented by `Array.toListImpl` and is `O(n)` in the length of the\narray.",
+    "origin_def": "Array.toList",
+    "Inst": "Nat",
+    "signature": "test_Array_toList_Nat (self : Array Nat) : List Nat"
+  },
+  {
+    "def": "def test_Array_toSubarray_Nat := @Array.toSubarray Nat",
+    "content": "Returns a subarray of an array, with the given bounds.\n\nIf `start` or `stop` are not valid bounds for a subarray, then they are clamped to array's size.\nAdditionally, the starting index is clamped to the ending index.",
+    "origin_def": "Array.toSubarray",
+    "Inst": "Nat",
+    "signature": "test_Array_toSubarray_Nat (as : Array Nat) (start : Nat := 0) (stop : Nat := as.size) : Subarray Nat"
+  },
+  {
+    "def": "def test_Int_cast_Nat := @Int.cast Nat",
+    "content": "The canonical homomorphism `Int → R`. In most use cases, the target type will have a ring structure,\nand this homomorphism should be a ring homomorphism.\n\n`IntCast` and `NatCast` exist to allow different libraries with their own types that can be notated\nas natural numbers to have consistent `simp` normal forms without needing to create coercion\nsimplification sets that are aware of all combinations. Libraries should make it easy to work with\n`IntCast` where possible. For instance, in Mathlib there will be such a homomorphism (and thus an\n`IntCast R` instance) whenever `R` is an additive group with a `1`.",
+    "origin_def": "Int.cast",
+    "Inst": "Nat",
+    "signature": "test_Int_cast_Nat [IntCast Nat] : Int → Nat"
+  },
+  {
+    "def": "def test_List_Nodup_Nat := @List.Nodup Nat",
+    "content": "The list has no duplicates: it contains every element at most once.\n\nIt is defined as `Pairwise (· ≠ ·)`: each element is unequal to all other elements.",
+    "origin_def": "List.Nodup",
+    "Inst": "Nat",
+    "signature": "test_List_Nodup_Nat : List Nat → Prop"
+  },
+  {
+    "def": "def test_List_all_Nat := @List.all Nat",
+    "content": "Returns `true` if `p` returns `true` for every element of `l`.\n\n`O(|l|)`. Short-circuits upon encountering the first `false`.\n\nExamples:\n* `[a, b, c].all p = (p a && (p b && p c))`\n* `[2, 4, 6].all (· % 2 = 0) = true`\n* `[2, 4, 5, 6].all (· % 2 = 0) = false`",
+    "origin_def": "List.all",
+    "Inst": "Nat",
+    "signature": "test_List_all_Nat : List Nat → (Nat → Bool) → Bool"
+  },
+  {
+    "def": "def test_List_any_Nat := @List.any Nat",
+    "content": "Returns `true` if `p` returns `true` for any element of `l`.\n\n`O(|l|)`. Short-circuits upon encountering the first `true`.\n\nExamples:\n* `[2, 4, 6].any (· % 2 = 0) = true`\n* `[2, 4, 6].any (· % 2 = 1) = false`\n* `[2, 4, 5, 6].any (· % 2 = 0) = true`\n* `[2, 4, 5, 6].any (· % 2 = 1) = true`",
+    "origin_def": "List.any",
+    "Inst": "Nat",
+    "signature": "test_List_any_Nat (l : List Nat) (p : Nat → Bool) : Bool"
+  },
+  {
+    "def": "def test_List_append_Nat := @List.append Nat",
+    "content": "Appends two lists. Normally used via the `++` operator.\n\nAppending lists takes time proportional to the length of the first list: `O(|xs|)`.\n\nExamples:\n* `[1, 2, 3] ++ [4, 5] = [1, 2, 3, 4, 5]`.\n* `[] ++ [4, 5] = [4, 5]`.\n* `[1, 2, 3] ++ [] = [1, 2, 3]`.",
+    "origin_def": "List.append",
+    "Inst": "Nat",
+    "signature": "test_List_append_Nat (xs ys : List Nat) : List Nat"
+  },
+  {
+    "def": "def test_List_attach_Nat := @List.attach Nat",
+    "content": "“Attaches” the proof that the elements of `l` are in fact elements of `l`, producing a new list with\nthe same elements but in the subtype `{ x // x ∈ l }`.\n\n`O(1)`.\n\nThis function is primarily used to allow definitions by [well-founded\nrecursion](https://lean-lang.org/doc/reference/4.22.0/find/?domain=Verso.Genre.Manual.section&name=well-founded-recursion) that use higher-order functions (such as\n`List.map`) to prove that an value taken from a list is smaller than the list. This allows the\nwell-founded recursion mechanism to prove that the function terminates.",
+    "origin_def": "List.attach",
+    "Inst": "Nat",
+    "signature": "test_List_attach_Nat (l : List Nat) : List { x // x ∈ l }"
+  },
+  {
+    "def": "def test_List_beq_Nat := @List.beq Nat",
+    "content": "Checks whether two lists have the same length and their elements are pairwise `BEq`. Normally used\nvia the `==` operator.",
+    "origin_def": "List.beq",
+    "Inst": "Nat",
+    "signature": "test_List_beq_Nat [BEq Nat] : List Nat → List Nat → Bool"
+  },
+  {
+    "def": "def test_List_concat_Nat := @List.concat Nat",
+    "content": "Adds an element to the *end* of a list.\n\nThe added element is the last element of the resulting list.\n\nExamples:\n* `List.concat [\"red\", \"yellow\"] \"green\" = [\"red\", \"yellow\", \"green\"]`\n* `List.concat [1, 2, 3] 4 = [1, 2, 3, 4]`\n* `List.concat [] () = [()]`",
+    "origin_def": "List.concat",
+    "Inst": "Nat",
+    "signature": "test_List_concat_Nat : List Nat → Nat → List Nat"
+  },
+  {
+    "def": "def test_List_contains_Nat := @List.contains Nat",
+    "content": "Checks whether `a` is an element of `as`, using `==` to compare elements.\n\n`O(|as|)`. `List.elem` is a synonym that takes the element before the list.\n\nThe preferred simp normal form is `l.contains a`, and when `LawfulBEq α` is available,\n`l.contains a = true ↔ a ∈ l` and `l.contains a = false ↔ a ∉ l`.\n\nExamples:\n* `[1, 4, 2, 3, 3, 7].contains 3 = true`\n* `List.contains [1, 4, 2, 3, 3, 7] 5 = false`",
+    "origin_def": "List.contains",
+    "Inst": "Nat",
+    "signature": "test_List_contains_Nat [BEq Nat] (as : List Nat) (a : Nat) : Bool"
+  },
+  {
+    "def": "def test_List_count_Nat := @List.count Nat",
+    "content": "Counts the number of times an element occurs in a list.\n\nExamples:\n* `[1, 1, 2, 3, 5].count 1 = 2`\n* `[1, 1, 2, 3, 5].count 5 = 1`\n* `[1, 1, 2, 3, 5].count 4 = 0`",
+    "origin_def": "List.count",
+    "Inst": "Nat",
+    "signature": "test_List_count_Nat [BEq Nat] (a : Nat) : List Nat → Nat"
+  },
+  {
+    "def": "def test_List_countP_Nat := @List.countP Nat",
+    "content": "Counts the number of elements in the list `l` that satisfy the Boolean predicate `p`.\n\nExamples:\n* `[1, 2, 3, 4, 5].countP (· % 2 == 0) = 2`\n* `[1, 2, 3, 4, 5].countP (· < 5) = 4`\n* `[1, 2, 3, 4, 5].countP (· > 5) = 0`",
+    "origin_def": "List.countP",
+    "Inst": "Nat",
+    "signature": "test_List_countP_Nat (p : Nat → Bool) (l : List Nat) : Nat"
+  },
+  {
+    "def": "def test_List_drop_Nat := @List.drop Nat",
+    "content": "Removes the first `n` elements of the list `xs`. Returns the empty list if `n` is greater than the\nlength of the list.\n\n`O(min n |xs|)`.\n\nExamples:\n* `[0, 1, 2, 3, 4].drop 0 = [0, 1, 2, 3, 4]`\n* `[0, 1, 2, 3, 4].drop 3 = [3, 4]`\n* `[0, 1, 2, 3, 4].drop 6 = []`",
+    "origin_def": "List.drop",
+    "Inst": "Nat",
+    "signature": "test_List_drop_Nat (n : Nat) (xs : List Nat) : List Nat"
+  },
+  {
+    "def": "def test_List_dropLast_Nat := @List.dropLast Nat",
+    "content": "Removes the last element of the list, if one exists.\n\nExamples:\n* `[].dropLast = []`\n* `[\"tea\"].dropLast = []`\n* `[\"tea\", \"coffee\", \"juice\"].dropLast = [\"tea\", \"coffee\"]`",
+    "origin_def": "List.dropLast",
+    "Inst": "Nat",
+    "signature": "test_List_dropLast_Nat : List Nat → List Nat"
+  },
+  {
+    "def": "def test_List_dropWhile_Nat := @List.dropWhile Nat",
+    "content": "Removes the longest prefix of a list for which `p` returns `true`.\n\nElements are removed from the list until one is encountered for which `p` returns `false`. This\nelement and the remainder of the list are returned.\n\n`O(|l|)`.\n\nExamples:\n * `[1, 3, 2, 4, 2, 7, 4].dropWhile (· < 4) = [4, 2, 7, 4]`\n * `[8, 3, 2, 4, 2, 7, 4].dropWhile (· < 4) = [8, 3, 2, 4, 2, 7, 4]`\n * `[8, 3, 2, 4, 2, 7, 4].dropWhile (· < 100) = []`",
+    "origin_def": "List.dropWhile",
+    "Inst": "Nat",
+    "signature": "test_List_dropWhile_Nat (p : Nat → Bool) : List Nat → List Nat"
+  },
+  {
+    "def": "def test_List_elem_Nat := @List.elem Nat",
+    "content": "Checks whether `a` is an element of `l`, using `==` to compare elements.\n\n`O(|l|)`. `List.contains` is a synonym that takes the list before the element.\n\nThe preferred simp normal form is `l.contains a`. When `LawfulBEq α` is available,\n`l.contains a = true ↔ a ∈ l` and `l.contains a = false ↔ a ∉ l`.\n\nExample:\n* `List.elem 3 [1, 4, 2, 3, 3, 7] = true`\n* `List.elem 5 [1, 4, 2, 3, 3, 7] = false`",
+    "origin_def": "List.elem",
+    "Inst": "Nat",
+    "signature": "test_List_elem_Nat [BEq Nat] (a : Nat) (l : List Nat) : Bool"
+  },
+  {
+    "def": "def test_List_enum_Nat := @List.enum Nat",
+    "content": "`O(|l|)`. `enum l` pairs up each element with its index in the list.\n* `enum [a, b, c] = [(0, a), (1, b), (2, c)]`",
+    "origin_def": "List.enum",
+    "Inst": "Nat",
+    "signature": "test_List_enum_Nat : List Nat → List (Nat × Nat)"
+  },
+  {
+    "def": "def test_List_erase_Nat := @List.erase Nat",
+    "content": "Removes the first occurrence of `a` from `l`. If `a` does not occur in `l`, the list is returned\nunmodified.\n\n`O(|l|)`.\n\nExamples:\n* `[1, 5, 3, 2, 5].erase 5 = [1, 3, 2, 5]`\n* `[1, 5, 3, 2, 5].erase 6 = [1, 5, 3, 2, 5]`",
+    "origin_def": "List.erase",
+    "Inst": "Nat",
+    "signature": "test_List_erase_Nat [BEq Nat] : List Nat → Nat → List Nat"
+  },
+  {
+    "def": "def test_List_eraseDups_Nat := @List.eraseDups Nat",
+    "content": "Erases duplicated elements in the list, keeping the first occurrence of duplicated elements.\n\n`O(|l|^2)`.\n\nExamples:\n* `[1, 3, 2, 2, 3, 5].eraseDups = [1, 3, 2, 5]`\n* `[\"red\", \"green\", \"green\", \"blue\"].eraseDups = [\"red\", \"green\", \"blue\"]`",
+    "origin_def": "List.eraseDups",
+    "Inst": "Nat",
+    "signature": "test_List_eraseDups_Nat [BEq Nat] (as : List Nat) : List Nat"
+  },
+  {
+    "def": "def test_List_eraseIdx_Nat := @List.eraseIdx Nat",
+    "content": "Removes the element at the specified index. If the index is out of bounds, the list is returned\nunmodified.\n\n`O(i)`.\n\nExamples:\n* `[0, 1, 2, 3, 4].eraseIdx 0 = [1, 2, 3, 4]`\n* `[0, 1, 2, 3, 4].eraseIdx 1 = [0, 2, 3, 4]`\n* `[0, 1, 2, 3, 4].eraseIdx 5 = [0, 1, 2, 3, 4]`",
+    "origin_def": "List.eraseIdx",
+    "Inst": "Nat",
+    "signature": "test_List_eraseIdx_Nat (l : List Nat) (i : Nat) : List Nat"
+  },
+  {
+    "def": "def test_List_eraseP_Nat := @List.eraseP Nat",
+    "content": "Removes the first element of a list for which `p` returns `true`. If no element satisfies `p`, then\nthe list is returned unchanged.\n\nExamples:\n  * `[2, 1, 2, 1, 3, 4].eraseP (· < 2) = [2, 2, 1, 3, 4]`\n  * `[2, 1, 2, 1, 3, 4].eraseP (· > 2) = [2, 1, 2, 1, 4]`\n  * `[2, 1, 2, 1, 3, 4].eraseP (· > 8) = [2, 1, 2, 1, 3, 4]`",
+    "origin_def": "List.eraseP",
+    "Inst": "Nat",
+    "signature": "test_List_eraseP_Nat (p : Nat → Bool) : List Nat → List Nat"
+  },
+  {
+    "def": "def test_List_extract_Nat := @List.extract Nat",
+    "content": "Returns the slice of `l` from indices `start` (inclusive) to `stop` (exclusive).\n\nExamples:\n* [0, 1, 2, 3, 4, 5].extract 1 2 = [1]\n* [0, 1, 2, 3, 4, 5].extract 2 2 = []\n* [0, 1, 2, 3, 4, 5].extract 2 4 = [2, 3]\n* [0, 1, 2, 3, 4, 5].extract 2 = [2, 3, 4, 5]\n* [0, 1, 2, 3, 4, 5].extract (stop := 2) = [0, 1]",
+    "origin_def": "List.extract",
+    "Inst": "Nat",
+    "signature": "test_List_extract_Nat (l : List Nat) (start : Nat := 0) (stop : Nat := l.length) : List Nat"
+  },
+  {
+    "def": "def test_List_filter_Nat := @List.filter Nat",
+    "content": "Returns the list of elements in `l` for which `p` returns `true`.\n\n`O(|l|)`.\n\nExamples:\n* `[1, 2, 5, 2, 7, 7].filter (· > 2) = [5, 7, 7]`\n* `[1, 2, 5, 2, 7, 7].filter (fun _ => false) = []`\n* `[1, 2, 5, 2, 7, 7].filter (fun _ => true) = [1, 2, 5, 2, 7, 7]`",
+    "origin_def": "List.filter",
+    "Inst": "Nat",
+    "signature": "test_List_filter_Nat (p : Nat → Bool) (l : List Nat) : List Nat"
+  },
+  {
+    "def": "def test_List_filterMap_Nat := @List.filterMap Nat",
+    "content": "Applies a function that returns an `Option` to each element of a list, collecting the non-`none`\nvalues.\n\n`O(|l|)`.\n\nExample:\n```lean example\n#eval [1, 2, 5, 2, 7, 7].filterMap fun x =>\n  if x > 2 then some (2 * x) else none\n```\n```output\n[10, 14, 14]\n```",
+    "origin_def": "List.filterMap",
+    "Inst": "Nat",
+    "signature": "test_List_filterMap_Nat.{u_1} {β : Type u_1} (f : Nat → Option β) : List Nat → List β"
+  },
+  {
+    "def": "def test_List_find__Nat := @List.find? Nat",
+    "content": "Returns the first element of the list for which the predicate `p` returns `true`, or `none` if no\nsuch element is found.\n\n`O(|l|)`.\n\nExamples:\n* `[7, 6, 5, 8, 1, 2, 6].find? (· < 5) = some 1`\n* `[7, 6, 5, 8, 1, 2, 6].find? (· < 1) = none`",
+    "origin_def": "List.find?",
+    "Inst": "Nat",
+    "signature": "test_List_find__Nat (p : Nat → Bool) : List Nat → Option Nat"
+  },
+  {
+    "def": "def test_List_findIdx__Nat := @List.findIdx? Nat",
+    "content": "Returns the index of the first element for which `p` returns `true`, or `none` if there is no such\nelement.\n\nExamples:\n* `[7, 6, 5, 8, 1, 2, 6].findIdx (· < 5) = some 4`\n* `[7, 6, 5, 8, 1, 2, 6].findIdx (· < 1) = none`",
+    "origin_def": "List.findIdx?",
+    "Inst": "Nat",
+    "signature": "test_List_findIdx__Nat (p : Nat → Bool) (l : List Nat) : Option Nat"
+  },
+  {
+    "def": "def test_List_flatMap_Nat := @List.flatMap Nat",
+    "content": "Applies a function that returns a list to each element of a list, and concatenates the resulting\nlists.\n\nExamples:\n* `[2, 3, 2].flatMap List.range = [0, 1, 0, 1, 2, 0, 1]`\n* `[\"red\", \"blue\"].flatMap String.toList = ['r', 'e', 'd', 'b', 'l', 'u', 'e']`",
+    "origin_def": "List.flatMap",
+    "Inst": "Nat",
+    "signature": "test_List_flatMap_Nat.{u_1} {β : Type u_1} (b : Nat → List β) (as : List Nat) : List β"
+  },
+  {
+    "def": "def test_List_flatten_Nat := @List.flatten Nat",
+    "content": "Concatenates a list of lists into a single list, preserving the order of the elements.\n\n`O(|flatten L|)`.\n\nExamples:\n* `[[\"a\"], [\"b\", \"c\"]].flatten = [\"a\", \"b\", \"c\"]`\n* `[[\"a\"], [], [\"b\", \"c\"], [\"d\", \"e\", \"f\"]].flatten = [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]`",
+    "origin_def": "List.flatten",
+    "Inst": "Nat",
+    "signature": "test_List_flatten_Nat : List (List Nat) → List Nat"
+  },
+  {
+    "def": "def test_List_foldl_Nat := @List.foldl Nat",
+    "content": "Folds a function over a list from the left, accumulating a value starting with `init`. The\naccumulated value is combined with the each element of the list in order, using `f`.\n\nExamples:\n * `[a, b, c].foldl f z  = f (f (f z a) b) c`\n * `[1, 2, 3].foldl (· ++ toString ·) \"\" = \"123\"`\n * `[1, 2, 3].foldl (s!\"({·} {·})\") \"\" = \"((( 1) 2) 3)\"`",
+    "origin_def": "List.foldl",
+    "Inst": "Nat",
+    "signature": "test_List_foldl_Nat.{u_1} {β : Type u_1} (f : Nat → β → Nat) (init : Nat) : List β → Nat"
+  },
+  {
+    "def": "def test_List_foldr_Nat := @List.foldr Nat",
+    "content": "Folds a function over a list from the right, accumulating a value starting with `init`. The\naccumulated value is combined with the each element of the list in reverse order, using `f`.\n\n`O(|l|)`. Replaced at runtime with `List.foldrTR`.\n\nExamples:\n * `[a, b, c].foldr f init  = f a (f b (f c init))`\n * `[1, 2, 3].foldr (toString · ++ ·) \"\" = \"123\"`\n * `[1, 2, 3].foldr (s!\"({·} {·})\") \"!\" = \"(1 (2 (3 !)))\"`",
+    "origin_def": "List.foldr",
+    "Inst": "Nat",
+    "signature": "test_List_foldr_Nat.{u_1} {β : Type u_1} (f : Nat → β → β) (init : β) (l : List Nat) : β"
+  },
+  {
+    "def": "def test_List_forM_Array := @List.forM Array",
+    "content": "Applies the monadic action `f` to every element in the list, in order.\n\n`List.mapM` is a variant that collects results. `List.forA` is a variant that works on any\n`Applicative`.",
+    "origin_def": "List.forM",
+    "Inst": "Array",
+    "signature": "test_List_forM_Array.{u_1, u_2} [Monad Array] {α : Type u_2} (as : List α) (f : α → Array PUnit) : Array PUnit"
+  },
+  {
+    "def": "def test_List_get_Nat := @List.get Nat",
+    "content": "Returns the element at the provided index, counting from `0`.\n\nIn other words, for `i : Fin as.length`, `as.get i` returns the `i`'th element of the list `as`.\nBecause the index is a `Fin` bounded by the list's length, the index will never be out of bounds.\n\nExamples:\n * `[\"spring\", \"summer\", \"fall\", \"winter\"].get (2 : Fin 4) = \"fall\"`\n * `[\"spring\", \"summer\", \"fall\", \"winter\"].get (0 : Fin 4) = \"spring\"`",
+    "origin_def": "List.get",
+    "Inst": "Nat",
+    "signature": "test_List_get_Nat (as : List Nat) : Fin as.length → Nat"
+  },
+  {
+    "def": "def test_List_get__Nat := @List.get! Nat",
+    "content": "Returns the `i`-th element in the list (zero-based).\n\nIf the index is out of bounds (`i ≥ as.length`), this function panics when executed, and returns\n`default`. See `get?` and `getD` for safer alternatives.",
+    "origin_def": "List.get!",
+    "Inst": "Nat",
+    "signature": "test_List_get__Nat [Inhabited Nat] (as : List Nat) (i : Nat) : Nat"
+  },
+  {
+    "def": "def test_List_get__Nat := @List.get? Nat",
+    "content": "Returns the `i`-th element in the list (zero-based).\n\nIf the index is out of bounds (`i ≥ as.length`), this function returns `none`.\nAlso see `get`, `getD` and `get!`.",
+    "origin_def": "List.get?",
+    "Inst": "Nat",
+    "signature": "test_List_get__Nat (as : List Nat) (i : Nat) : Option Nat"
+  },
+  {
+    "def": "def test_List_getD_Nat := @List.getD Nat",
+    "content": "Returns the element at the provided index, counting from `0`. Returns `fallback` if the index is out\nof bounds.\n\nTo return an `Option` depending on whether the index is in bounds, use `as[i]?`. To panic if the\nindex is out of bounds, use `as[i]!`.\n\nExamples:\n * `[\"spring\", \"summer\", \"fall\", \"winter\"].getD 2 \"never\" = \"fall\"`\n * `[\"spring\", \"summer\", \"fall\", \"winter\"].getD 0 \"never\" = \"spring\"`\n * `[\"spring\", \"summer\", \"fall\", \"winter\"].getD 4 \"never\" = \"never\"`",
+    "origin_def": "List.getD",
+    "Inst": "Nat",
+    "signature": "test_List_getD_Nat (as : List Nat) (i fallback : Nat) : Nat"
+  },
+  {
+    "def": "def test_List_getLast__Nat := @List.getLast! Nat",
+    "content": "Returns the last element in the list. Panics and returns `default` if the list is empty.\n\nSafer alternatives include:\n* `getLast?`, which returns an `Option`,\n* `getLastD`, which takes a fallback value for empty lists, and\n* `getLast`, which requires a proof that the list is non-empty.\n\nExamples:\n* `[\"circle\", \"rectangle\"].getLast! = \"rectangle\"`\n* `[\"circle\"].getLast! = \"circle\"`",
+    "origin_def": "List.getLast!",
+    "Inst": "Nat",
+    "signature": "test_List_getLast__Nat [Inhabited Nat] : List Nat → Nat"
+  },
+  {
+    "def": "def test_List_getLast__Nat := @List.getLast? Nat",
+    "content": "Returns the last element in the list, or `none` if the list is empty.\n\nAlternatives include `List.getLastD`, which takes a fallback value for empty lists, and\n`List.getLast!`, which panics on empty lists.\n\nExamples:\n * `[\"circle\", \"rectangle\"].getLast? = some \"rectangle\"`\n * `[\"circle\"].getLast? = some \"circle\"`\n * `([] : List String).getLast? = none`",
+    "origin_def": "List.getLast?",
+    "Inst": "Nat",
+    "signature": "test_List_getLast__Nat : List Nat → Option Nat"
+  },
+  {
+    "def": "def test_List_getLastD_Nat := @List.getLastD Nat",
+    "content": "Returns the last element in the list, or `fallback` if the list is empty.\n\nAlternatives include `List.getLast?`, which returns an `Option`, and `List.getLast!`, which panics\non empty lists.\n\nExamples:\n * `[\"circle\", \"rectangle\"].getLastD \"oval\" = \"rectangle\"`\n * `[\"circle\"].getLastD \"oval\" = \"circle\"`\n * `([] : List String).getLastD \"oval\" = \"oval\"`",
+    "origin_def": "List.getLastD",
+    "Inst": "Nat",
+    "signature": "test_List_getLastD_Nat (as : List Nat) (fallback : Nat) : Nat"
+  },
+  {
+    "def": "def test_List_head__Nat := @List.head! Nat",
+    "content": "Returns the first element in the list. If the list is empty, panics and returns `default`.\n\nSafer alternatives include:\n* `List.head`, which requires a proof that the list is non-empty,\n* `List.head?`, which returns an `Option`, and\n* `List.headD`, which returns an explicitly-provided fallback value on empty lists.",
+    "origin_def": "List.head!",
+    "Inst": "Nat",
+    "signature": "test_List_head__Nat [Inhabited Nat] : List Nat → Nat"
+  },
+  {
+    "def": "def test_List_head__Nat := @List.head? Nat",
+    "content": "Returns the first element in the list, if there is one. Returns `none` if the list is empty.\n\nUse `List.headD` to provide a fallback value for empty lists, or `List.head!` to panic on empty\nlists.\n\nExamples:\n * `([] : List Nat).head? = none`\n * `[3, 2, 1].head? = some 3`",
+    "origin_def": "List.head?",
+    "Inst": "Nat",
+    "signature": "test_List_head__Nat : List Nat → Option Nat"
+  },
+  {
+    "def": "def test_List_headD_Nat := @List.headD Nat",
+    "content": "Returns the first element in the list if there is one, or `fallback` if the list is empty.\n\nUse `List.head?` to return an `Option`, and `List.head!` to panic on empty lists.\n\nExamples:\n* `[].headD \"empty\" = \"empty\"`\n* `[].headD 2 = 2`\n* `[\"head\", \"shoulders\", \"knees\"].headD \"toes\" = \"head\"`",
+    "origin_def": "List.headD",
+    "Inst": "Nat",
+    "signature": "test_List_headD_Nat (as : List Nat) (fallback : Nat) : Nat"
+  },
+  {
+    "def": "def test_List_idxOf_Nat := @List.idxOf Nat",
+    "content": "Returns the index of the first element equal to `a`, or the length of the list if no element is\nequal to `a`.\n\nExamples:\n * `[\"carrot\", \"potato\", \"broccoli\"].idxOf \"carrot\" = 0`\n * `[\"carrot\", \"potato\", \"broccoli\"].idxOf \"broccoli\" = 2`\n * `[\"carrot\", \"potato\", \"broccoli\"].idxOf \"tomato\" = 3`\n * `[\"carrot\", \"potato\", \"broccoli\"].idxOf \"anything else\" = 3`",
+    "origin_def": "List.idxOf",
+    "Inst": "Nat",
+    "signature": "test_List_idxOf_Nat [BEq Nat] (a : Nat) : List Nat → Nat"
+  },
+  {
+    "def": "def test_List_indexOf_Nat := @List.indexOf Nat",
+    "content": "Returns the index of the first element equal to `a`, or the length of the list otherwise.",
+    "origin_def": "List.indexOf",
+    "Inst": "Nat",
+    "signature": "test_List_indexOf_Nat [BEq Nat] (a : Nat) : List Nat → Nat"
+  },
+  {
+    "def": "def test_List_indexOf__Nat := @List.indexOf? Nat",
+    "content": "Return the index of the first occurrence of `a` in the list.",
+    "origin_def": "List.indexOf?",
+    "Inst": "Nat",
+    "signature": "test_List_indexOf__Nat [BEq Nat] (a : Nat) : List Nat → Option Nat"
+  },
+  {
+    "def": "def test_List_instGetElem_NatLtLength_Nat := @List.instGetElem?NatLtLength Nat",
+    "content": "This instance overrides the default implementation of `a[i]?` via `decidableGetElem?`,\ngiving better definitional equalities.",
+    "origin_def": "List.instGetElem?NatLtLength",
+    "Inst": "Nat",
+    "signature": "test_List_instGetElem_NatLtLength_Nat : GetElem? (List Nat) Nat Nat fun as i => i < as.length"
+  },
+  {
+    "def": "def test_List_intersperse_Nat := @List.intersperse Nat",
+    "content": "Alternates the elements of `l` with `sep`.\n\n`O(|l|)`.\n\n`List.intercalate` is a similar function that alternates a separator list with elements of a list of\nlists.\n\nExamples:\n* `List.intersperse \"then\" [] = []`\n* `List.intersperse \"then\" [\"walk\"] = [\"walk\"]`\n* `List.intersperse \"then\" [\"walk\", \"run\"] = [\"walk\", \"then\", \"run\"]`\n* `List.intersperse \"then\" [\"walk\", \"run\", \"rest\"] = [\"walk\", \"then\", \"run\", \"then\", \"rest\"]`",
+    "origin_def": "List.intersperse",
+    "Inst": "Nat",
+    "signature": "test_List_intersperse_Nat (sep : Nat) (l : List Nat) : List Nat"
+  },
+  {
+    "def": "def test_List_isEmpty_Nat := @List.isEmpty Nat",
+    "content": "Checks whether a list is empty.\n\n`O(1)`.\n\nExamples:\n* `[].isEmpty = true`\n* `[\"grape\"].isEmpty = false`\n* `[\"apple\", \"banana\"].isEmpty = false`",
+    "origin_def": "List.isEmpty",
+    "Inst": "Nat",
+    "signature": "test_List_isEmpty_Nat : List Nat → Bool"
+  },
+  {
+    "def": "def test_List_isPerm_Nat := @List.isPerm Nat",
+    "content": "Returns `true` if `l₁` and `l₂` are permutations of each other. `O(|l₁| * |l₂|)`.\n\nThe relation `List.Perm` is a logical characterization of permutations. When the `BEq α` instance\ncorresponds to `DecidableEq α`, `isPerm l₁ l₂ ↔ l₁ ~ l₂` (use the theorem `isPerm_iff`).",
+    "origin_def": "List.isPerm",
+    "Inst": "Nat",
+    "signature": "test_List_isPerm_Nat [BEq Nat] : List Nat → List Nat → Bool"
+  },
+  {
+    "def": "def test_List_length_Nat := @List.length Nat",
+    "content": "The length of a list.\n\nThis function is overridden in the compiler to `lengthTR`, which uses constant stack space.\n\nExamples:\n* `([] : List String).length = 0`\n* `[\"green\", \"brown\"].length = 2`",
+    "origin_def": "List.length",
+    "Inst": "Nat",
+    "signature": "test_List_length_Nat : List Nat → Nat"
+  },
+  {
+    "def": "def test_List_lookup_Nat := @List.lookup Nat",
+    "content": "Treats the list as an association list that maps keys to values, returning the first value whose key\nis equal to the specified key.\n\n`O(|l|)`.\n\nExamples:\n* `[(1, \"one\"), (3, \"three\"), (3, \"other\")].lookup 3 = some \"three\"`\n* `[(1, \"one\"), (3, \"three\"), (3, \"other\")].lookup 2 = none`",
+    "origin_def": "List.lookup",
+    "Inst": "Nat",
+    "signature": "test_List_lookup_Nat.{u_1} {β : Type u_1} [BEq Nat] : Nat → List (Nat × β) → Option β"
+  },
+  {
+    "def": "def test_List_map_Nat := @List.map Nat",
+    "content": "Applies a function to each element of the list, returning the resulting list of values.\n\n`O(|l|)`.\n\nExamples:\n* `[a, b, c].map f = [f a, f b, f c]`\n* `[].map Nat.succ = []`\n* `[\"one\", \"two\", \"three\"].map (·.length) = [3, 3, 5]`\n* `[\"one\", \"two\", \"three\"].map (·.reverse) = [\"eno\", \"owt\", \"eerht\"]`",
+    "origin_def": "List.map",
+    "Inst": "Nat",
+    "signature": "test_List_map_Nat.{u_1} {β : Type u_1} (f : Nat → β) (l : List Nat) : List β"
+  },
+  {
+    "def": "def test_List_mapIdx_Nat := @List.mapIdx Nat",
+    "content": "Applies a function to each element of the list along with the index at which that element is found,\nreturning the list of results.\n\n`List.mapFinIdx` is a variant that additionally provides the function with a proof that the index\nis valid.",
+    "origin_def": "List.mapIdx",
+    "Inst": "Nat",
+    "signature": "test_List_mapIdx_Nat.{u_1} {β : Type u_1} (f : Nat → Nat → β) (as : List Nat) : List β"
+  },
+  {
+    "def": "def test_List_mapM_Array := @List.mapM Array",
+    "content": "Applies the monadic action `f` to every element in the list, left-to-right, and returns the list of\nresults.\n\nThis implementation is tail recursive. `List.mapM'` is a a non-tail-recursive variant that may be\nmore convenient to reason about. `List.forM` is the variant that discards the results and\n`List.mapA` is the variant that works with `Applicative`.",
+    "origin_def": "List.mapM",
+    "Inst": "Array",
+    "signature": "test_List_mapM_Array.{u_1, u_2} [Monad Array] {α : Type u_2} {β : Type u_1} (f : α → Array β) (as : List α) :"
+  },
+  {
+    "def": "def test_List_max__Nat := @List.max? Nat",
+    "content": "Returns the largest element of the list if it is not empty, or `none` if it is empty.\n\nExamples:\n* `[].max? = none`\n* `[4].max? = some 4`\n* `[1, 4, 2, 10, 6].max? = some 10`",
+    "origin_def": "List.max?",
+    "Inst": "Nat",
+    "signature": "test_List_max__Nat [Max Nat] : List Nat → Option Nat"
+  },
+  {
+    "def": "def test_List_mergeSort_Nat := @List.mergeSort Nat",
+    "content": "A stable merge sort.\n\nThis function is a simplified implementation that's designed to be easy to reason about, rather than\nfor efficiency. In particular, it uses the non-tail-recursive `List.merge` function and traverses\nlists unnecessarily.\n\nIt is replaced at runtime by an efficient implementation that has been proven to be equivalent.",
+    "origin_def": "List.mergeSort",
+    "Inst": "Nat",
+    "signature": "test_List_mergeSort_Nat (xs : List Nat) (le : Nat → Nat → Bool := by exact fun a b => a ≤ b) : List Nat"
+  },
+  {
+    "def": "def test_List_min__Nat := @List.min? Nat",
+    "content": "Returns the smallest element of the list if it is not empty, or `none` if it is empty.\n\nExamples:\n* `[].min? = none`\n* `[4].min? = some 4`\n* `[1, 4, 2, 10, 6].min? = some 1`",
+    "origin_def": "List.min?",
+    "Inst": "Nat",
+    "signature": "test_List_min__Nat [Min Nat] : List Nat → Option Nat"
+  },
+  {
+    "def": "def test_List_ofFn_Nat := @List.ofFn Nat",
+    "content": "Creates a list by applying `f` to each potential index in order, starting at `0`.\n\nExamples:\n* `List.ofFn (n := 3) toString = [\"0\", \"1\", \"2\"]`\n* `List.ofFn (fun i => #[\"red\", \"green\", \"blue\"].get i.val i.isLt) = [\"red\", \"green\", \"blue\"]`",
+    "origin_def": "List.ofFn",
+    "Inst": "Nat",
+    "signature": "test_List_ofFn_Nat {n : Nat} (f : Fin n → Nat) : List Nat"
+  },
+  {
+    "def": "def test_List_partition_Nat := @List.partition Nat",
+    "content": "Returns a pair of lists that together contain all the elements of `as`. The first list contains\nthose elements for which `p` returns `true`, and the second contains those for which `p` returns\n`false`.\n\n`O(|l|)`. `as.partition p` is equivalent to `(as.filter p, as.filter (not ∘ p))`, but it is slightly\nmore efficient since it only has to do one pass over the list.\n\nExamples:\n * `[1, 2, 5, 2, 7, 7].partition (· > 2) = ([5, 7, 7], [1, 2, 2])`\n * `[1, 2, 5, 2, 7, 7].partition (fun _ => false) = ([], [1, 2, 5, 2, 7, 7])`\n * `[1, 2, 5, 2, 7, 7].partition (fun _ => true) = ([1, 2, 5, 2, 7, 7], [])`",
+    "origin_def": "List.partition",
+    "Inst": "Nat",
+    "signature": "test_List_partition_Nat (p : Nat → Bool) (as : List Nat) : List Nat × List Nat"
+  },
+  {
+    "def": "def test_List_replicate_Nat := @List.replicate Nat",
+    "content": "Creates a list that contains `n` copies of `a`.\n\n* `List.replicate 5 \"five\" = [\"five\", \"five\", \"five\", \"five\", \"five\"]`\n* `List.replicate 0 \"zero\" = []`\n* `List.replicate 2 ' ' = [' ', ' ']`",
+    "origin_def": "List.replicate",
+    "Inst": "Nat",
+    "signature": "test_List_replicate_Nat (n a : Nat) : List Nat"
+  },
+  {
+    "def": "def test_List_reverse_Nat := @List.reverse Nat",
+    "content": "Reverses a list.\n\n`O(|as|)`.\n\nBecause of the “functional but in place” optimization implemented by Lean's compiler, this function\ndoes not allocate a new list when its reference to the input list is unshared: it simply walks the\nlinked list and reverses all the node pointers.\n\nExamples:\n* `[1, 2, 3, 4].reverse = [4, 3, 2, 1]`\n* `[].reverse = []`",
+    "origin_def": "List.reverse",
+    "Inst": "Nat",
+    "signature": "test_List_reverse_Nat (as : List Nat) : List Nat"
+  },
+  {
+    "def": "def test_List_rotateRight_Nat := @List.rotateRight Nat",
+    "content": "Rotates the elements of `xs` to the right, moving `i % xs.length` elements from the end of the list\nto the start.\n\nAfter rotation, the element at `xs[n]` is at index `(i + n) % l.length`. `O(|xs|)`.\n\nExamples:\n* `[1, 2, 3, 4, 5].rotateRight 3 = [3, 4, 5, 1, 2]`\n* `[1, 2, 3, 4, 5].rotateRight 5 = [1, 2, 3, 4, 5]`\n* `[1, 2, 3, 4, 5].rotateRight 1 = [5, 1, 2, 3, 4]`",
+    "origin_def": "List.rotateRight",
+    "Inst": "Nat",
+    "signature": "test_List_rotateRight_Nat (xs : List Nat) (i : Nat := 1) : List Nat"
+  },
+  {
+    "def": "def test_List_set_Nat := @List.set Nat",
+    "content": "Replaces the value at (zero-based) index `n` in `l` with `a`. If the index is out of bounds, then\nthe list is returned unmodified.\n\nExamples:\n* `[\"water\", \"coffee\", \"soda\", \"juice\"].set 1 \"tea\" = [\"water\", \"tea\", \"soda\", \"juice\"]`\n* `[\"water\", \"coffee\", \"soda\", \"juice\"].set 4 \"tea\" = [\"water\", \"coffee\", \"soda\", \"juice\"]`",
+    "origin_def": "List.set",
+    "Inst": "Nat",
+    "signature": "test_List_set_Nat (l : List Nat) (n a : Nat) : List Nat"
+  },
+  {
+    "def": "def test_List_splitAt_Nat := @List.splitAt Nat",
+    "content": "Splits a list at an index, resulting in the first `n` elements of `l` paired with the remaining\nelements.\n\nIf `n` is greater than the length of `l`, then the resulting pair consists of `l` and the empty\nlist. `List.splitAt` is equivalent to a combination of `List.take` and `List.drop`, but it is more\nefficient.\n\nExamples:\n* `[\"red\", \"green\", \"blue\"].splitAt 2 = ([\"red\", \"green\"], [\"blue\"])`\n* `[\"red\", \"green\", \"blue\"].splitAt 3 = ([\"red\", \"green\", \"blue], [])`\n* `[\"red\", \"green\", \"blue\"].splitAt 4 = ([\"red\", \"green\", \"blue], [])`",
+    "origin_def": "List.splitAt",
+    "Inst": "Nat",
+    "signature": "test_List_splitAt_Nat (n : Nat) (l : List Nat) : List Nat × List Nat"
+  },
+  {
+    "def": "def test_List_sum_Nat := @List.sum Nat",
+    "content": "Computes the sum of the elements of a list.\n\nExamples:\n* `[a, b, c].sum = a + (b + (c + 0))`\n* `[1, 2, 5].sum = 8`",
+    "origin_def": "List.sum",
+    "Inst": "Nat",
+    "signature": "test_List_sum_Nat [Add Nat] [Zero Nat] : List Nat → Nat"
+  },
+  {
+    "def": "def test_List_tail_Nat := @List.tail Nat",
+    "content": "Drops the first element of a nonempty list, returning the tail. Returns `[]` when the argument is\nempty.\n\nExamples:\n * `[\"apple\", \"banana\", \"grape\"].tail = [\"banana\", \"grape\"]`\n * `[\"apple\"].tail = []`\n * `([] : List String).tail = []`",
+    "origin_def": "List.tail",
+    "Inst": "Nat",
+    "signature": "test_List_tail_Nat : List Nat → List Nat"
+  },
+  {
+    "def": "def test_List_tail__Nat := @List.tail! Nat",
+    "content": "Drops the first element of a nonempty list, returning the tail. If the list is empty, this function\npanics when executed and returns the empty list.\n\nSafer alternatives include\n * `tail`, which returns the empty list without panicking,\n * `tail?`, which returns an `Option`, and\n * `tailD`, which returns a fallback value when passed the empty list.\n\nExamples:\n * `[\"apple\", \"banana\", \"grape\"].tail! = [\"banana\", \"grape\"]`\n * `[\"banana\", \"grape\"].tail! = [\"grape\"]`",
+    "origin_def": "List.tail!",
+    "Inst": "Nat",
+    "signature": "test_List_tail__Nat : List Nat → List Nat"
+  },
+  {
+    "def": "def test_List_tail__Nat := @List.tail? Nat",
+    "content": "Drops the first element of a nonempty list, returning the tail. Returns `none` when the argument is\nempty.\n\nAlternatives include `List.tail`, which returns the empty list on failure, `List.tailD`, which\nreturns an explicit fallback value, and `List.tail!`, which panics on the empty list.\n\nExamples:\n * `[\"apple\", \"banana\", \"grape\"].tail? = some [\"banana\", \"grape\"]`\n * `[\"apple\"].tail? = some []`\n * `([] : List String).tail = none`",
+    "origin_def": "List.tail?",
+    "Inst": "Nat",
+    "signature": "test_List_tail__Nat : List Nat → Option (List Nat)"
+  },
+  {
+    "def": "def test_List_take_Nat := @List.take Nat",
+    "content": "Extracts the first `n` elements of `xs`, or the whole list if `n` is greater than `xs.length`.\n\n`O(min n |xs|)`.\n\nExamples:\n* `[a, b, c, d, e].take 0 = []`\n* `[a, b, c, d, e].take 3 = [a, b, c]`\n* `[a, b, c, d, e].take 6 = [a, b, c, d, e]`",
+    "origin_def": "List.take",
+    "Inst": "Nat",
+    "signature": "test_List_take_Nat (n : Nat) (xs : List Nat) : List Nat"
+  },
+  {
+    "def": "def test_List_takeWhile_Nat := @List.takeWhile Nat",
+    "content": "Returns the longest initial segment of `xs` for which `p` returns true.\n\n`O(|xs|)`.\n\nExamples:\n* `[7, 6, 4, 8].takeWhile (· > 5) = [7, 6]`\n* `[7, 6, 6, 5].takeWhile (· > 5) = [7, 6, 6]`\n* `[7, 6, 6, 8].takeWhile (· > 5) = [7, 6, 6, 8]`",
+    "origin_def": "List.takeWhile",
+    "Inst": "Nat",
+    "signature": "test_List_takeWhile_Nat (p : Nat → Bool) (xs : List Nat) : List Nat"
+  },
+  {
+    "def": "def test_List_toArray_Nat := @List.toArray Nat",
+    "content": "Converts a `List α` into an `Array α`.\n\n `O(|xs|)`. At runtime, this operation is implemented by `List.toArrayImpl` and takes time linear in\nthe length of the list. `List.toArray` should be used instead of `Array.mk`.\n\nExamples:\n * `[1, 2, 3].toArray = #[1, 2, 3]`\n * `[\"monday\", \"wednesday\", friday\"].toArray = #[\"monday\", \"wednesday\", friday\"].`",
+    "origin_def": "List.toArray",
+    "Inst": "Nat",
+    "signature": "test_List_toArray_Nat (xs : List Nat) : Array Nat"
+  },
+  {
+    "def": "def test_List_unattach_Nat := @List.unattach Nat",
+    "content": "Maps a list of terms in a subtype to the corresponding terms in the type by forgetting that they\nsatisfy the predicate.\n\nThis is the inverse of `List.attachWith` and a synonym for `l.map (·.val)`.\n\nMostly this should not be needed by users. It is introduced as an intermediate step by lemmas such\nas `map_subtype`, and is ideally subsequently simplified away by `unattach_attach`.\n\nThis function is usually inserted automatically by Lean as an intermediate step while proving\ntermination. It is rarely used explicitly in code. It is introduced as an intermediate step during\nthe elaboration of definitions by [well-founded\nrecursion](https://lean-lang.org/doc/reference/4.22.0/find/?domain=Verso.Genre.Manual.section&name=well-founded-recursion). If this function is encountered in a proof\nstate, the right approach is usually the tactic `simp [List.unattach, -List.map_subtype]`.",
+    "origin_def": "List.unattach",
+    "Inst": "Nat",
+    "signature": "test_List_unattach_Nat {p : Nat → Prop} (l : List { x // p x }) : List Nat"
+  },
+  {
+    "def": "def test_List_zip_Nat := @List.zip Nat",
+    "content": "Combines two lists into a list of pairs in which the first and second components are the\ncorresponding elements of each list. The resulting list is the length of the shorter of the input\nlists.\n\n`O(min |xs| |ys|)`.\n\nExamples:\n* `[\"Mon\", \"Tue\", \"Wed\"].zip [1, 2, 3] = [(\"Mon\", 1), (\"Tue\", 2), (\"Wed\", 3)]`\n* `[\"Mon\", \"Tue\", \"Wed\"].zip [1, 2] = [(\"Mon\", 1), (\"Tue\", 2)]`\n* `[x₁, x₂, x₃].zip [y₁, y₂, y₃, y₄] = [(x₁, y₁), (x₂, y₂), (x₃, y₃)]`",
+    "origin_def": "List.zip",
+    "Inst": "Nat",
+    "signature": "test_List_zip_Nat.{u_1} {β : Type u_1} : List Nat → List β → List (Nat × β)"
+  },
+  {
+    "def": "def test_List_zipIdx_Nat := @List.zipIdx Nat",
+    "content": "Pairs each element of a list with its index, optionally starting from an index other than `0`.\n\n`O(|l|)`.\n\nExamples:\n* `[a, b, c].zipIdx = [(a, 0), (b, 1), (c, 2)]`\n* `[a, b, c].zipIdx 5 = [(a, 5), (b, 6), (c, 7)]`",
+    "origin_def": "List.zipIdx",
+    "Inst": "Nat",
+    "signature": "test_List_zipIdx_Nat (l : List Nat) (n : Nat := 0) : List (Nat × Nat)"
+  },
+  {
+    "def": "def test_List_zipWith_Nat := @List.zipWith Nat",
+    "content": "Applies a function to the corresponding elements of two lists, stopping at the end of the shorter\nlist.\n\n`O(min |xs| |ys|)`.\n\nExamples:\n* `[1, 2].zipWith (· + ·) [5, 6] = [6, 8]`\n* `[1, 2, 3].zipWith (· + ·) [5, 6, 10] = [6, 8, 13]`\n* `[].zipWith (· + ·) [5, 6] = []`\n* `[x₁, x₂, x₃].zipWith f [y₁, y₂, y₃, y₄] = [f x₁ y₁, f x₂ y₂, f x₃ y₃]`",
+    "origin_def": "List.zipWith",
+    "Inst": "Nat",
+    "signature": "test_List_zipWith_Nat.{u_1, u_2} {β : Type u_1} {γ : Type u_2} (f : Nat → β → γ) (xs : List Nat) (ys : List β) : List γ"
+  },
+  {
+    "def": "def test_Nat_cast_Nat := @Nat.cast Nat",
+    "content": "The canonical homomorphism `Nat → R`. In most use cases, the target type will have a (semi)ring\nstructure, and this homomorphism should be a (semi)ring homomorphism.\n\n`NatCast` and `IntCast` exist to allow different libraries with their own types that can be notated\nas natural numbers to have consistent `simp` normal forms without needing to create coercion\nsimplification sets that are aware of all combinations. Libraries should make it easy to work with\n`NatCast` where possible. For instance, in Mathlib there will be such a homomorphism (and thus a\n`NatCast R` instance) whenever `R` is an additive monoid with a `1`.\n\nThe prototypical example is `Int.ofNat`.",
+    "origin_def": "Nat.cast",
+    "Inst": "Nat",
+    "signature": "test_Nat_cast_Nat [NatCast Nat] : Nat → Nat"
+  },
+  {
+    "def": "def test_String_foldl_Nat := @String.foldl Nat",
+    "content": "Folds a function over a string from the left, accumulating a value starting with `init`. The\naccumulated value is combined with each character in order, using `f`.\n\nExamples:\n * `\"coffee tea water\".foldl (fun n c => if c.isWhitespace then n + 1 else n) 0 = 2`\n * `\"coffee tea and water\".foldl (fun n c => if c.isWhitespace then n + 1 else n) 0 = 3`\n * `\"coffee tea water\".foldl (·.push ·) \"\" = \"coffee tea water\"`",
+    "origin_def": "String.foldl",
+    "Inst": "Nat",
+    "signature": "test_String_foldl_Nat (f : Nat → Char → Nat) (init : Nat) (s : String) : Nat"
+  },
+  {
+    "def": "def test_String_foldr_Nat := @String.foldr Nat",
+    "content": "Folds a function over a string from the right, accumulating a value starting with `init`. The\naccumulated value is combined with each character in reverse order, using `f`.\n\nExamples:\n * `\"coffee tea water\".foldr (fun c n => if c.isWhitespace then n + 1 else n) 0 = 2`\n * `\"coffee tea and water\".foldr (fun c n => if c.isWhitespace then n + 1 else n) 0 = 3`\n * `\"coffee tea water\".foldr (fun c s => c.push s) \"\" = \"retaw dna aet eeffoc\"`",
+    "origin_def": "String.foldr",
+    "Inst": "Nat",
+    "signature": "test_String_foldr_Nat (f : Char → Nat → Nat) (init : Nat) (s : String) : Nat"
+  }
+]

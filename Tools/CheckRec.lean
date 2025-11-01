@@ -4,6 +4,41 @@ open Lean Meta Elab Command
 
 namespace RecursionChecker
 
+/-- List of known recursive functions from standard library (实际的递归函数，不包括类型构造器) -/
+def knownRecursiveFunctions : List Name := [
+  -- Array functions
+  `Array.eraseIdx,
+  -- List functions
+  `List.any, `List.beq, `List.concat, `List.decidableBAll, `List.decidableBEx,
+  `List.dropLast, `List.enumFrom, `List.eraseIdx, `List.filter, `List.filterMap,
+  `List.flatten, `List.foldl, `List.forM, `List.get, `List.get?,
+  `List.instDecidablePairwise, `List.length, `List.lookup, `List.mergeSort,
+  `List.range', `List.replicate, `List.set, `List.take, `List.zipIdx, `List.zipWith,
+  `List.eraseDups,
+  -- Nat functions
+  `Nat.add, `Nat.beq, `Nat.decidableBallLT, `Nat.decidableExistsLT,
+  `Nat.gcd, `Nat.pow
+]
+
+/-- List of recursive type constructors (types that are mutually recursive, usually not causing recursion in user code) -/
+def recursiveTypeConstructors : List Name := [
+  -- `And, `Array, `BEq, `Bool, `ByteArray, `Char, `Decidable, `Eq, `Except,
+  -- `Exists, `Fin, `Float, `ForInStep, `GetElem, `HEq, `Hashable, `IO.Error,
+  -- `Iff, `Inhabited, `Int, `LE, `Lean.Loop, `Lean.Name,
+  -- `List, `List.Pairwise, `List.Perm, `List.Sublist,
+  -- `MProd, `Membership, `Nat, `Nat.le, `Option, `Or, `Ord, `Ordering,
+  -- `PProd, `PSigma, `PUnit, `Prod, `Repr, `SizeOf,
+  -- `Std.Iterators.PostconditionT, `Std.Iterators.Types.Attach,
+  -- `Std.Iterators.Types.ULiftIterator, `Std.PRange.RangeIterator,
+  -- `Std.Range, `Std.Slice, `Std.Slice.Internal.SubarrayData,
+  -- `String, `String.Iterator, `String.Pos, `Subtype, `Sum, `ToString,
+  -- `True, `UInt32, `UInt8, `ULift
+]
+
+/-- Check if a name is in the known recursive functions list -/
+def isKnownRecursive (name : Name) : Bool :=
+  knownRecursiveFunctions.contains name
+
 /-- Check if a name is a match helper for the given const name -/
 def isMatchHelper (name : Name) (constName : Name) : Bool :=
   let nameStr := name.toString
@@ -44,6 +79,30 @@ def matchHelperHasRecursion (env : Environment) (constName : Name) (usedConsts :
 
   (!recursiveHelpers.isEmpty, matchHelpers, recursiveHelpers)
 
+/-- Check if a name is a local function of another name (e.g., "func.helper" is local to "func") -/
+def isLocalFunctionOf (localName : Name) (parentName : Name) : Bool :=
+  match localName with
+  | Name.str localPrefix localStr =>
+    -- Check if the prefix matches the parent name
+    (localPrefix == parentName) &&
+    -- Exclude match helpers and unfold helpers by checking the string
+    !localStr.startsWith "match_" &&
+    !localStr.startsWith "_sunfold" &&
+    !localStr.startsWith "_unary"
+  | _ => false
+
+/-- Check if a function has recursive local functions (let rec) -/
+def hasRecursiveLocalFunction (env : Environment) (constName : Name) : Bool :=
+  match env.find? constName with
+  | none => false
+  | some info =>
+    let usedConsts := info.getUsedConstantsAsSet.toList
+    -- Find all local functions using Name structure matching
+    let localFunctions := usedConsts.filter fun dep => isLocalFunctionOf dep constName
+
+    -- If we found any local functions, they indicate recursion (let rec creates recursive locals)
+    !localFunctions.isEmpty
+
 /-- Check if a constant is a recursive definition by examining its value expression -/
 def isRecursive (env : Environment) (constName : Name) : Bool :=
   match env.find? constName with
@@ -56,9 +115,16 @@ def isRecursive (env : Environment) (constName : Name) : Bool :=
 
     let usedConsts := info.getUsedConstantsAsSet.toList
 
+    -- Check if it uses any known recursive functions
+    let usesKnownRecursive := usedConsts.any isKnownRecursive
+
     if valueContainsSelf then
       true
+    else if usesKnownRecursive then
+      true
     else if (matchHelperHasRecursion env constName usedConsts).1 then
+      true
+    else if hasRecursiveLocalFunction env constName then
       true
     else
       -- Check if function uses recursors (brecOn, recOn, etc) which indicates structural recursion
@@ -212,13 +278,45 @@ def analyzeRecursion (constName : Name) : MetaM Unit := do
         | ConstantInfo.defnInfo val => exprContainsConst val.value constName
         | _ => false
 
+      let usesKnownRecursive := usedConsts.any isKnownRecursive
+      let knownRecursiveUsed := usedConsts.filter isKnownRecursive
+
       let hasRecursor := usedConsts.any fun dep =>
         let depStr := dep.toString
         depStr.endsWith ".brecOn" || depStr.endsWith ".recOn" ||
         depStr.endsWith ".rec" || depStr.endsWith "._rec"
 
+      let hasRecursiveLocal := hasRecursiveLocalFunction env constName
+
       if valueContainsSelf then
         IO.println "   Detected: Direct self-reference in function body"
+      else if usesKnownRecursive then
+        IO.println "   Detected: Uses known recursive functions"
+        if knownRecursiveUsed.length <= 10 then
+          for dep in knownRecursiveUsed do
+            IO.println s!"   - {dep}"
+        else
+          IO.println s!"   - {knownRecursiveUsed.length} known recursive functions used"
+          for dep in knownRecursiveUsed.take 5 do
+            IO.println s!"   - {dep}"
+          IO.println s!"   - ... and {knownRecursiveUsed.length - 5} more"
+      else if hasRecursiveLocal then
+        IO.println "   Detected: Contains recursive local function (let rec)"
+        let constNameStr := constName.toString
+        let localFunctions := usedConsts.filter fun dep =>
+          let depStr := dep.toString
+          depStr.startsWith (constNameStr ++ ".") &&
+          !((depStr.splitOn ".match_").length > 1) &&
+          !((depStr.splitOn "._sunfold").length > 1) &&
+          !((depStr.splitOn "._unary").length > 1)
+        let recursiveLocals := localFunctions.filter fun localFunc =>
+          match env.find? localFunc with
+          | some (ConstantInfo.defnInfo val) =>
+            exprContainsDirectConst val.value localFunc ||
+            exprContainsDirectConst val.value constName
+          | _ => false
+        for localFunc in recursiveLocals do
+          IO.println s!"   - Local recursive function: {localFunc}"
       else if hasRecursor then
         IO.println "   Detected: Structural recursion (via pattern matching)"
       else
