@@ -25,7 +25,7 @@ TARGET_FUNCTIONS = ['List.length', 'List.foldl', 'List.map', 'List.filter']
 
 # Deepseek API 配置
 DEEPSEEK_MODEL = "deepseek-chat"  # 或者 "deepseek-coder"
-API_KEY = os.environ.get('DEEPSEEK_API_KEY', "sk-e64c2fb5c4fe476ca67feda8c310b3f9")
+API_KEY = os.environ.get('DEEPSEEK_API_KEY', "")
 MAX_WORKERS = 10  # 并发请求数
 REQUEST_TIMEOUT = 120  # 请求超时时间（秒）
 
